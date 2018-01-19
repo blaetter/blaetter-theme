@@ -1,0 +1,14 @@
+version: "2"
+services:
+  node:
+    image: "ambo/node-php"
+    user: "node"
+    environment:
+      - NODE_ENV=dev
+    working_dir: "/home/node/app"
+    volumes:
+      - ./docker:/opt/scripts
+      - ./particle:/home/node/app
+    ports:
+      - "8080:8080"
+    entrypoint: /opt/scripts/dev/entrypoint.sh
