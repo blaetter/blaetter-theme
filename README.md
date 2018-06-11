@@ -21,6 +21,7 @@ Beyond the contributors for the used open source projects, there are the followi
 
 * Clone this repository to any path, e.g. `blaetter-theme`
 * Change into that directory, e.g. `cd blaetter-theme`
+* You may need to go to `cd particle/apps/pl/pattern-lab` and do a `composer install`
 * Start the docker container: `docker-compose up` or `docker-compose up -d` if you don't want to be attached to the server.
 
 ## Usage
