@@ -1,7 +1,7 @@
 version: "2"
 services:
   node:
-    image: "ambo/node-php"
+    image: "ambo/node-php:latest"
     user: "node"
     environment:
       - NODE_ENV=dev
