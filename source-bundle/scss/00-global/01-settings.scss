@@ -1,0 +1,148 @@
+/***************************************************
+ * OUR PAGE SETTINGS 
+ */
+
+
+/* We can use a wrapperclass to make unique rules and 
+ * avoid conflicts with existing older css classes.
+ *
+ *   <div class="our-namespace-to-isolate-the-rules">
+ *       <div class="teaser">
+ *           [...]
+ *       </div>
+ *   </div>
+ */
+//We can set a global namespace...
+$namespace:                       null; //".mynamespace "; // to use as a wrapper we need a whitespace at the end!
+
+// ...or we enable/disable each set of rules
+//$footer-namespace:              null;
+//$header-namespace:              null;
+// [...]
+
+// Base Colors  
+$white:                         #FFFFFF; 
+$black:                         #000000; 
+$red:                           #E71835;
+$blue:                          #086D9A;
+$bluelight:                     $blue;
+$grey:                          #F5F5F5;  
+$greyDark:                      #EDEDED; // Form filter section background
+$greyDisabled:                  #D5D5D5;  
+// Special Colors 
+$lightestTextGrey:              #555555; // Hellster Text, Barrierefrei: Anzeige, Copyright(mobil) 
+$greyBorder:                    darken($white, 12%);
+$greyInputBorder:               $greyBorder; 
+$greySource:                    $lightestTextGrey;
+$greySourceDesk:                darken($white, 12%); 
+$greyAnzeige:                   $lightestTextGrey;
+$page-background-color:         lighten($grey, 2%);
+$labelColorLight:               $lightestTextGrey; 
+// form validation colors:
+$formElementBorderColor:        $greyInputBorder;
+$formgoupBottomMarginPx:        14px;
+// TextColors in validated forms and messageboxes
+$textSuccessColor:              #008000; // checklist icon
+$textWarningColor:              #f0ad4e;
+$textInfoColor:                 #FFBF00;
+$textErrorColor:                $red;
+// message box colors:
+$messageBaseBg:                 #fcf8e3;
+$messageSuccessBg:              #dff0d8;
+$messageErrorBg:                #f2dede;
+
+// Dimensions
+$smallGapPx:                      12px;
+$mediumGapPx:                     16px;
+$largeGapPx:                      24px;
+$pageWidthDeskPx:               940px;  
+$gridGutter:                    1.500rem; // 24px_16px;
+$blockPaddingPx:                $smallGapPx; // Grey Teaser...
+$blockBottomMarginPx:           30px; // Teaser...
+$teaserBorderedPaddingPx:       $mediumGapPx;
+$teaserBorderedMarginTopPx:     $largeGapPx;
+$breakointSmallest:             (420px / 16px) * 1rem;
+$breakointPalm:                 (720px / 16px) * 1rem;
+$breakointDesk:                 ($pageWidthDeskPx / 16px) * 1rem;
+$articleImageMaxHeightPx:       468px;
+$pageWidthDesk:                 $breakointDesk;
+$pagePaddingPx:                 $mediumGapPx; 
+$pagePaddingPalmPx:             $smallGapPx; 
+$formInputHeightPx:             30px; 
+$formInputHeightPalmPx:         40px; 
+$btn-heightPx:                  $formInputHeightPx;
+$btn-heightPalmPx:              $formInputHeightPalmPx;
+$formItemPaddingPx:             6px;
+$boxPaddingPx:                  $smallGapPx;
+$marginalBoxPaddingPx:          $smallGapPx;
+$easyPopupPaddingPx:            $smallGapPx;
+$formPaddingPx:                 $smallGapPx;
+$formfieldMaxWidth:             none;
+$blockImageMarginBottomPx:      $smallGapPx;
+$channelNavigationElementPadingPx:   10px; // h=42px 
+$accordionTitleElementPaddingPx: $channelNavigationElementPadingPx;
+$heroSwiperHeightPx:            215px; //235px;
+$imageframePaddingRem:          1.25rem;
+$tablecellPaddingEm:            0.3em 0.3em; // Table
+
+// Font
+$base-font-family:              Arial, sans-serif;
+$baseTextColor:                 #000000;
+$fontInactiveColor:             #999999;
+$linkColor:                     $blue; 
+$inlineBottomGutter:            0.7em; // Margin bottom for paragraphs, lists, ...
+$base-font-size:                14px;
+$smallest-font-size:            11px;
+$base-line-height:              20px; 
+$font-size-h1:                  1.313rem; // 21px;
+$line-height-h1:                1.381em; // 29px
+$font-size-h2:                  1rem; // 16px;
+$line-height-h2:                1.438em; // 23px
+$font-size-h3:                  0.875rem; // 14px;
+$line-height-h3:                1.500em; // 21px
+$font-size-h4:                  0.875rem; // 14px;
+$line-height-h4:                1.500em; // 21px
+$font-color-h1:                 $baseTextColor;
+$font-color-h2:                 $baseTextColor;
+$font-color-h3:                 $baseTextColor;
+$font-color-h4:                 $baseTextColor;
+$font-family-h1:                $base-font-family;
+$font-family-h2:                $base-font-family;
+$font-family-h3:                $base-font-family;
+$font-family-h4:                $base-font-family;
+$font-weight-h1:                bold;
+$font-weight-h2:                bold;
+$font-weight-h3:                bold;
+$font-weight-h4:                bold;
+$font-weight-a:                 normal;
+
+// Breakpoints
+$breakpoints: (
+    'smallest' '(max-width: '+$breakointSmallest+')',
+    'smallest-and-up' '(min-width: '+($breakointSmallest + 0.001rem)+')',
+    'palm' '(max-width: '+$breakointPalm+')',
+    'lap' '(min-width: '+($breakointPalm + 0.001rem)+') and (max-width: '+($breakointDesk - 0.001rem)+')',
+    "lap-and-up" '(min-width: '+($breakointPalm + 0.001rem)+')',
+    "portable" '(max-width: '+($breakointDesk - 0.001rem)+')',
+    'desk' '(min-width: '+$breakointDesk+')',
+);
+
+// Do we need some normalize rules (normalize.scss)?
+$use_simple_normalize:          true;
+$use_advanced_normalize:        false;
+
+
+// Pikaday Datepicker
+$pd-font-family:                $base-font-family;
+$pd-text-color:                 $baseTextColor;
+$pd-title-bg:                   $white;
+$pd-picker-border:              $greyBorder;
+$pd-picker-border-bottom:       $greyBorder;
+$pd-th-color:                   $lightestTextGrey;
+$pd-day-color:                  $baseTextColor;
+$pd-day-bg:                     $grey;
+$pd-day-hover-bg:               $blue;
+$pd-day-today-color:            $blue;
+$pd-day-selected-bg:            $blue;
+$pd-week-color:                 $lightestTextGrey;
+$pd-day-selected-shadow:        transparent;

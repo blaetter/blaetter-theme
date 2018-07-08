@@ -1,0 +1,14 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+{{ formgroup(
+    {
+        "label": "Disabled input", 
+    },
+    [{
+        "type":"input", 
+        "disabled": true,
+        "parameter":{
+            "placeholder": "Disabled input",
+        }
+    }]
+) }}

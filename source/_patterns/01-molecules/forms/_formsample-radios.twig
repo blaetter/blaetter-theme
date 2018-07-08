@@ -1,0 +1,68 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+<form class="form--base"> 
+    <fieldset>
+{{ formgroup(
+    {"fieldset": "Radio buttons"},
+    [{ 
+        "type":"radio",
+        "parameter": {
+            "label": "Option 1",
+            "name":"optionsRadios", 
+            "value": "option1"
+        }
+    },{
+        "type":"radio",
+        "parameter": {
+            "label": "Option 2",
+            "name":"optionsRadios",
+            "value": "option2"
+        }
+    }]
+) }}
+{{ formgroup(   
+    {"fieldset": "Gruppe von Checkboxen"},
+    [{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Checkbox 1"
+        }
+    },{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Checkbox 2"
+        }
+    }]
+) }}
+{{ formgroup(
+    {
+        "fieldset": "Stichwörter"
+    },
+    [{
+        "type":"input", 
+        "auralLabel": "Tag",
+        "parameter":{
+            "size": "5",
+            "id": "exampleTempInput1",
+            "placeholder": "Stichwort 1" 
+        }
+    },{
+        "type":"input",
+        "auralLabel": "Monat",
+        "parameter":{
+            "size": "5",
+            "id": "exampleTempInput2",
+            "placeholder": "Stichwort 2" 
+        }
+    },{
+        "type":"input",
+        "auralLabel": "Jahr",
+        "parameter":{
+            "size": "5",
+            "id": "exampleTempInput3",
+            "placeholder": "Stichwort 3"
+        }
+    }]
+) }} 
+    </fieldset>
+</form> 

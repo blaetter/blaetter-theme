@@ -1,0 +1,72 @@
+$message-namespace:                $namespace !default;
+
+#{$message-namespace}.message {
+    @include clearfix();
+    color:              $baseTextColor;
+    background-color:   $messageBaseBg;
+    @include getRem('padding', $boxPaddingPx);
+    @include getRem('margin-top', $blockBottomMarginPx/2);
+    @include getRem('margin-bottom', $blockBottomMarginPx/2);
+    > *:first-child {
+        margin-top:     0;
+    }
+    > *:last-child {
+        margin-bottom:  0;
+    }
+    &:before {
+        font-family:    FontAwesome;
+        display:        inline-block;
+        content:        "";
+        float:          left;
+        font-size:      1.3em;
+        width:          auto;
+        margin:         0;
+        padding:        0;
+        line-height:    1.1em;
+    }
+}
+
+#{$message-namespace}.message--error {
+    @extend .message;
+    //@include getRem('padding-top', 16px);
+    background-color:   $messageErrorBg;
+    > *,
+    > p,
+    > h4 {
+        margin-left:    2em
+    }
+    &:before {
+        content:        "\f071";
+        color:          $textErrorColor;
+    }
+}
+
+#{$message-namespace}.message--success {
+    @extend .message;
+    //@include getRem('padding-top', 16px);
+    background-color:   $messageSuccessBg;
+    > *,
+    > p,
+    > h4 {
+        margin-left:    2em
+    }
+    &:before {
+        content:        "\f00c";
+        color:          $textSuccessColor;
+    }
+}
+
+#{$message-namespace}.message--info {
+    @extend .message;
+    //@include getRem('padding-top', 16px);
+    background-color:   $messageBaseBg;
+     > *,
+    > p,
+    > h4 {
+        margin-left:    2em
+    }
+    &:before {
+        content:        "\f05a";
+        color:          $textInfoColor; 
+    }
+}

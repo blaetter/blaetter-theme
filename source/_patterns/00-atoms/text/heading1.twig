@@ -1,0 +1,5 @@
+<h1{{ data.class?  (' class="'~data.class~'"')|raw }}>
+{{ (data.targetPage)? ('  <a href="'~data.targetPage~'">')|raw  }}
+    {{ data.text|default('Heading 1') }}
+{{ (data.targetPage)? '  </a>'}}
+</h1>

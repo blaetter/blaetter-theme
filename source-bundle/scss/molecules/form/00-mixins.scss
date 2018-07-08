@@ -1,0 +1,126 @@
+/*
+ *  Form Mixins
+ */
+
+
+
+@mixin baseInputFieldLayout() {
+    @include border-radius(0px);
+    font-size:              1em;
+    line-height:            1rem; // ie und safari fix
+    width:                  100%;
+    font-family:            $base-font-family;
+    background-color:       $white;
+    background-image:       none;
+    border:                 1px solid $formElementBorderColor;
+    color:                  $baseTextColor;
+    padding:                $formItemPaddingPx;
+    @include transition((border-color 0.16s ease-in-out 0s, box-shadow 0.16s ease-in-out 0s));
+    max-width:              $formfieldMaxWidth;
+    @include getRem('min-height', $formInputHeightPx);
+    @include media-query('palm') {
+        @include getRem('min-height', $formInputHeightPalmPx);
+    }
+    &:focus {
+        border-color:       #66afe9;
+        box-shadow:         0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+        outline:            0 none;
+    }
+}
+
+@mixin color-inputelement($color: $formErrorColor, $bgColor: $white) {
+    label,
+    .label,
+    legend,
+    .legend,
+    .validation-feedback { 
+        color:              $color;
+    }
+    input,
+    textarea,
+    select {
+        border-color:       $color;
+        background-color:   $bgColor;
+        &:focus {
+            border-color:   $color;
+            box-shadow:     0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $color;
+        }
+    }
+}
+
+
+
+@mixin form--prependlabel() {
+    @include media-query('lap-and-up') {
+        // 1) we cant display fieldsets as table or table-row so we have to use divs
+        // display:                table; // makes problems in complex forms
+        div.form-group {
+            display:                table-row;
+        }
+        label,
+        .label,
+        .legend {
+            width:          auto;
+            max-width:      50%;
+            min-width:      20%;
+            display:        table-cell;
+            vertical-align: top;
+            padding-right:  1em;
+            margin-top:     0;
+            padding-top:    0.3em;
+            @include getRem('padding-bottom', $formgoupBottomMarginPx);
+        }
+        div.controls {
+            width:          100%;
+            display:        table-cell;
+            vertical-align: top;
+            @include getRem('padding-bottom', $formgoupBottomMarginPx);
+        }
+        div.form-actions {
+            // -webkit-column-span:all; /* Chrome, Safari, Opera */
+            //        column-span:all;
+            display:            table-footer-group;
+            margin-top:         0;
+            > * {
+                @include getRem('margin-top', 12px); // because we could not add a margin on the table-footer-group
+            }
+            &::before {
+                content:        "";
+                display:        table-cell;
+            }
+        }
+    }
+}
+
+
+@mixin form--search-horizontal-simple() {
+    // We want to use to two cells so we use a with display table-cell layout
+    // used on searchpage and 404 page search form
+    .form-group {
+        display:                table;
+        &:last-child {
+            margin-bottom:      0;
+        }
+    }
+    .controls {
+        display:            table-cell;
+        vertical-align:     middle;
+        width:              100%;
+        padding-right:      1em;
+        &:last-child {
+            padding-right:  0;
+        }
+    }
+    .form-input,
+    .button-submit {
+        margin:         0;
+        vertical-align: top;
+        @include getRem('height', $formInputHeightPx);
+        @include media-query('palm') {
+            @include getRem('height', $formInputHeightPalmPx);
+        }
+    }
+    .form-input {
+        width:          100%;
+    }
+}

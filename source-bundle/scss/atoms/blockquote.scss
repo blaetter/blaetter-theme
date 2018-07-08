@@ -1,0 +1,13 @@
+$blockquote-namespace:              $namespace !default;
+
+#{$blockquote-namespace}blockquote {
+    background-color:   $grey;
+    border-left:        5px solid darken($grey, 10%);
+    margin-left:        $gridGutter;
+    @include getRem('padding', $blockPaddingPx);
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+    color:              lighten($baseTextColor, 20%);
+    > *:last-child {
+        margin-bottom:  0;
+    }
+}

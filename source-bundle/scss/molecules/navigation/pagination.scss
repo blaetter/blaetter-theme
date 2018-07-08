@@ -1,0 +1,20 @@
+$pagination-namespace:              $namespace !default;
+
+#{$pagination-namespace}.pagination { 
+    @include clearfix();
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+    ul {
+        //@include list--no-arrows();
+        list-style:                     none;
+        padding:                        0;
+        display:                        flex;
+        flex-wrap:                      wrap;
+        margin:                         0;
+        li {
+            @include paginator-item();
+            min-width:                      2.4em;
+        }
+    }
+    @include media-query('palm') {
+    }
+}

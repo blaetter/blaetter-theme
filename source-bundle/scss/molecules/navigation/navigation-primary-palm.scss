@@ -1,0 +1,231 @@
+$navigation-primary-palm-namespace:              $namespace !default;
+
+@include media-query(palm) {
+    
+    // Visibilty of Mobile Navigation:
+    #{$navigation-primary-palm-namespace}#navigation-primary-palm {
+        height:                     0;
+        visibility:                 none;
+        overflow:                   hidden;
+        .navigation-primary-palm__swiper {
+            height:                 0;
+            visibility:             none;
+            overflow:               hidden;
+        }
+        .primary-navigation-palm__tree {
+            height:                 0;
+            visibility:             none;
+            overflow:               hidden;
+        }
+        &.opened {
+            height:                 auto;
+            visibility:             visible;
+            overflow:               visible;
+            .navigation-primary-palm__swiper {
+                height:             auto;
+                visibility:         visible;
+            }
+            .primary-navigation-palm__tree {
+                height:             auto;
+                visibility:         visible;
+                overflow:           visible;
+            }
+        }
+        .metanavi-palm {
+            @include fontsize($base-font-size);
+            margin:                 0 0 0em 0;
+            padding-bottom:         2em;
+            @include getRem('padding-left', $pagePaddingPx);
+            @include getRem('padding-right', $pagePaddingPx);
+            background:             $greyDark;
+            ul {
+                margin:             2em 0 1em 0;
+            }
+        }
+    }
+    
+
+    // TREE
+    #{$navigation-primary-palm-namespace}.primary-navigation-palm__tree {
+        ul,
+        li {
+            margin:                     0;
+            padding:                    0;
+        }
+        
+        // Add a white arrow on top and centered over the mobile navigation tree
+        position: relative; // we need for the top-arrow
+        &::after {
+            	bottom:                 100%;
+                left:                   50%;
+                border:                 solid transparent;
+                content:                " ";
+                height:                 0;
+                width:                  0;
+                position:               absolute;
+                pointer-events:         none;
+                border-color:           rgba(255, 255, 255, 0);
+                border-bottom-color:    $grey;
+                border-width:           1.2em;
+                margin-left:            -1.2em;
+                z-index:                1;
+        }
+        
+        ul.channel {
+            > li {
+                background-color:       $grey;
+                 margin-left:           0;
+                > .menu-item {
+                    display:            none;      
+                }
+                &.active {
+                    ul.topic {
+                        opacity:            1;
+                        visibility:         visible;
+                        height:             auto;
+                        > li.active {
+                            border-bottom:  1px solid $greyBorder;
+                            > .menu-item {
+                                background-color:   $white;
+                                &::after {
+                                    transform: rotate(270deg);
+                                }
+                            }
+                             > ul.subtopic {
+                                max-height:     500px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        ul.topic {
+            opacity:       0;
+            visibility: hidden;
+            height:     0;
+            overflow:   hidden;
+            //@include list--no-arrows();
+            list-style:     none;
+            padding:        0;
+            @include transition(opacity 0.3s ease);
+            > li {
+                @include __mobile_navigation_list_li(14px);
+                > .menu-item {
+                    @include __addNavigationItemArrow();
+                    cursor:         pointer;
+                    display:        block;
+                    &::after {
+                        transform: rotate(90deg);
+                        transform-origin: 30% 60% 0;
+                    }
+                }
+                > .header-item {
+                    display:        block;        
+                    font-weight:    bold;
+                    text-align:     left;
+                    @include getRem('padding', 14px);
+                    @include getRem('padding-left', 16px);
+                    @include getRem('padding-right', 10px);
+                    // add arrow
+                    @include __addNavigationItemArrow();
+                    &::after {
+                        @include fontsize(16px);
+                        margin-left:        0.7em;
+                        position: absolute;
+                        right: 10px;
+                    }
+                }
+                &:last-child {
+                    border-bottom:          1px solid $greyBorder;
+                }
+            }
+        }
+        
+        ul.subtopic {
+            max-height:     0;
+            overflow:   hidden;
+            padding:        0;
+            //@include list--no-arrows();
+            list-style:     none;
+            @include transition(max-height 0.3s ease);
+            > li {
+                @include __mobile_navigation_list_li();
+                > .menu-item {
+                    display:            block;
+                    background-color:   $white;
+                    border-bottom:      0 none;
+                    @include getRem('padding-left', 46px);
+                }
+            }
+        }
+
+    }
+    
+    
+    
+    // blue SWIPER navigation
+    #{$navigation-primary-palm-namespace}.navigation-primary-palm__swiper {
+        background:                 $blue;
+        width:                      100%;
+        z-index:                    auto;
+        padding-bottom:             20px;
+        cursor: grab;
+        .swiper-wrapper {
+            height:                 10.5em; // height is important for chrome 
+            .swiper-slide {
+                text-align:             center;
+                color:                  $white;
+                .inner {
+                    margin-top:         30px;
+                    max-width:          6em;
+                    display:            inline-block;
+                    font-weight:        normal;
+                    @include transition(margin-top 0.3s ease);
+                    
+                }
+                a {
+                    color:              $white;
+                    text-decoration:    none; 
+                    line-height:        1.2em;
+                }
+                .fa,
+                .fa-icon,
+                .bdeicon { 
+                    display:            block;
+                    font-size:          2.3em;
+                    margin-bottom:      1rem;
+                    opacity:            0.8;
+                    z-index:            auto;
+                    height:             1em;
+                    @include transition(transform 0.3s ease);
+
+                }
+            }
+            .swiper-slide-active {
+                .fa,
+                .fa-icon,
+                .bdeicon {
+                    opacity:                1;
+                    -webkit-transform:      scale(1.6);
+                    -moz-transform:         scale(1.6);
+                    -ms-transform:          scale(1.6);
+                    transform:              scale(1.6);
+                }
+            }
+        }
+    }  
+    
+}
+
+
+
+
+
+@include media-query(lap-and-up) {
+    #{$navigation-primary-palm-namespace}#navigation-primary-palm {
+        display:    none !important;
+    }
+}
+
+

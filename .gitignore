@@ -1,29 +1,15 @@
-# Compiled files
-particle/dist/
-particle/source/_patterns/01-atoms/icon/font/
-particle/source/_patterns/01-atoms/icon/scss/_icon-map-generated.scss
-
-# OS generated files
 .DS_Store
-.DS_Store?
-._.DS_Store
-._.DS_Store?
-
-# Dependencies
-particle/node_modules
-particle/vendor
-
-# Generated files
-particle/*.sass-cache/
-particle/.eslintcache
-particle/*unison.*
-
-#IDE plugins
-particle/.idea
-particle/atlassian-ide-plugin.xml
-
-particle/source/styleguide/css
-
-# Errors
-particle/npm-debug.log
-particle/php_errors.log
+.bash_history
+.cache/
+.composer
+.npm
+.project
+.settings
+.yarn
+export/*
+node_modules
+public/*
+source/styleguide
+vendor
+.yarnrc
+yarn-error.log

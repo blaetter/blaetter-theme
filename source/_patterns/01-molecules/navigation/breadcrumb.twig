@@ -1,0 +1,16 @@
+
+<nav class="breadcrumb">
+    <h6 class="aural">Sie befinden sich hier:</h6>
+    <ol>
+        <li>
+            <a class="home" title="Link zu: Startseite" href="">Startseite</a>
+        </li> 
+        {%- for item in breadcrumb -%}
+        {%- if item.title %} 
+        <li>
+            <a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ item.targetPage) }}">{{ item.title }}</a>
+        </li>
+        {%- endif -%}
+        {% endfor %}     
+    </ol>
+</nav>

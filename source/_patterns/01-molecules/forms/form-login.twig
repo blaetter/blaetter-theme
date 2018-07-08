@@ -1,0 +1,59 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+<section class="form-login">
+    <h3>Login</h3>
+    <form method="post" action="#">
+        {{ formgroup(
+            {
+                "class": "prepend",
+                "label": '<i class="fa fa-user" aria-hidden="true"></i><span class="aural">Username</span>', 
+                "for": "username"
+            },
+            [{
+                "type":"input",
+                "parameter":{
+                    "name":"p",
+                    "id": "username",
+                    "title": "Geben Sie hier Ihren Usernamen ein",
+                    "placeholder":  "Username"
+                }
+            }]
+        ) }}
+        {{ formgroup(
+            {
+                "class": "prepend",
+                "label": '<i class="fa fa-lock" aria-hidden="true"></i><span class="aural">Passwort</span>', 
+                "for": "password"
+            },
+            [{
+                "type":"input",
+                "parameter":{
+                    "type": "password",
+                    "title": "Geben Sie hier Ihr Passwort ein",
+                    "name":"p",
+                    "id": "password",
+                    "placeholder":  "Passwort"
+                }
+            }]
+        ) }}
+        <div class="form-actions">
+             {{ formbutton( 
+                {
+                    "text":    "Registrieren",
+                    "parameter": {
+                        "class": "register"
+                    }
+                }
+            ) }}
+            {{ formbutton( 
+                {
+                    "text":    "Login",
+                    "parameter": {
+                        "class": "button-submit"
+                    }
+                }
+            ) }}
+        </div>
+        <a class="forgot" href="#">Passwort vergessen?</a>
+    </form>
+</section>

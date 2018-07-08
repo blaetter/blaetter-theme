@@ -1,0 +1,23 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+
+
+    <h2>Navigation</h2>
+    
+    <h3>Breadcrumb</h3>
+
+    <p>
+        Der Breadcrumb erscheint erst auf den unteren Ebenen der Seiten und nicht auf Channelstartseiten. 
+        Sein Aufbau ist immer gleich. Dabei beginnt er immer mit "Home (Icon)" und der jeweils untergeordneten Channelseite z.B. "Themen".
+    </p>
+    
+    {% include "molecules-breadcrumb" with {"schema": "false", "breadcrumb": [{"title": "Breadcrumb 1"},{"title": "Breadcrumb 2"},{"title": "Breadcrumb 3"}]} %}
+<h4>Basic</h4>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+{% include "molecules-breadcrumb" with {"schema": "false", "breadcrumb": [{"title": "Breadcrumb 1"},{"title": "Breadcrumb 2"},{"title": "Breadcrumb 3"}]} %}
+</code></pre>
+
+
+
+{% endblock %}

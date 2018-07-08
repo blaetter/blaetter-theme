@@ -1,0 +1,120 @@
+$heading-namespace:       $namespace !default;
+
+#{$heading-namespace}h1,
+#{$heading-namespace}h2,
+#{$heading-namespace}h3,
+#{$heading-namespace}h4,
+#{$heading-namespace}h5 {
+    @include heading--reset();
+    a {
+        font-weight:    inherit;
+    }
+    &.heading--bluebox {
+        @include heading--bluebox();
+    }
+}
+
+#{$heading-namespace}h1 {
+    @include headline1();
+}
+#{$heading-namespace}h2 {
+   @include headline2();
+}
+
+#{$heading-namespace}h3 {
+    @include headline3();
+}
+
+#{$heading-namespace}h4 {
+    @include headline4();
+}
+
+
+// Small Headline for channelnavgation on indexpages
+#{$heading-namespace}.heading-navigation {
+   @include headline3();
+   margin-top:              0;
+}
+
+#{$heading-namespace}.add-sectionborder {
+    @include heading--addbottomborder();
+}
+
+
+// Headline for subsections on indexpages, grey border
+#{$heading-namespace}.heading-sectiontitle {
+   //@include headline3();
+   display:                 flex;
+   align-items:             flex-end;
+   justify-content:         space-between;
+   margin-top:              0em;
+   @include heading--addbottomborder();
+   margin-bottom:           1.5em;
+   padding-bottom:          0.5em;
+   .sectiontitle__sectionlogo {
+        @include fontsize($base-font-size);
+        align-self: flex-end;
+        display:            inline-block;
+        max-width:          5em;
+        bottom:             -0.8em;
+        position:           relative;
+   }
+}
+
+// Headline for subsections inside form fieldsets
+#{$heading-namespace}.heading--formsection {
+   margin-top:              2em;
+   @include heading--addbottomborder();
+   margin-bottom:           1.0em;
+   padding-bottom:          0.5em;
+}
+
+// Area headingson frontpage, under article page
+#{$heading-namespace}.heading-channel {
+    @include heading--base();
+    @include headline2();
+}
+
+// Searchpage Resultcounter/Headline
+#{$heading-namespace}.heading-resultcounter {
+    @include getRem('margin-top', 58px);
+    @include getRem('margin-bottom', 28px);
+    font-weight:    normal;
+    font-size:      $base-font-size;
+    color:          $baseTextColor;
+}
+
+#{$heading-namespace}.heading--places {
+    margin-bottom:   0.45em;
+}
+
+
+#{$heading-namespace}.heading--article {
+}
+#{$heading-namespace}.subheading--article {
+    color:          $lightestTextGrey;
+    @include fontsize(18px);
+    margin-bottom:  1.5em;
+    
+}
+
+#{$heading-namespace}.subheading {
+    font-size:              $smallest-font-size;
+    //color:                  $lightestTextGrey;
+    font-weight:            bold; 
+    line-height:            1.4em;
+    margin-bottom:          0.45em;
+    margin-top:             0;
+}
+
+@include media-query(palm) {
+    #{$heading-namespace}.heading-channel {
+        &.land {
+            &:before {
+                bottom:             -3.9vw;
+                background-size:    160vw auto;
+            }
+        }
+    }
+}
+

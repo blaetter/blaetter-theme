@@ -1,0 +1,28 @@
+$block-namespace:              $namespace !default;
+
+// The base block element
+#{$block-namespace}.block {
+    @include block--base();
+    > h2, >h3,
+    .heading {
+        @include block--base-headline();
+    }
+    .readall {
+        @include link-readmore();
+        float:                  right;
+        margin-top:             0.5em;
+    }
+    &.special {
+        @include block--base-special();
+    }
+    .image {
+        @include block--base-image();
+    }
+    ul + .readmore {
+        display: block;
+        margin-top: -1.3em;
+    }
+}
+
+
+

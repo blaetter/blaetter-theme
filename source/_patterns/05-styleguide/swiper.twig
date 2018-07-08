@@ -1,0 +1,49 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <h2>Swiper</h2>
+    
+    <h3>Bühne</h3>
+ 
+    
+    <style>
+        .echo .mfp-content .swiper-articleimage  {margin: 0 auto;}
+        .echo .mfp-content .swiper-container .text {color: #ffffff;}
+        body .mfp-close-btn-in .mfp-close {color: #ffffff;}
+    </style>
+    <h3>Fotogalerie (Swiper) auf Artikelebene</h3>
+    <div id="swiper-lightbox" style="margin: 0 auto;">
+    {% include 'molecules-swiper-articleimage' with {data: article.swiperdata } %} 
+    </div>
+    <blockquote>
+          Optional: Das <strong>erste Bild</strong> wird in diesem Beispiel nicht per Lazyload nachgeladen, sondern direkt eingebettet.
+          Hierzu wird die Klasse "<code>.swiper-lazy</code>" entfernt und sie Bild-Url steht im <code>src</code> anstatt im <code>data-src</code> Attribut. 
+          Für ein Bildbluring muss das entsprechende Bild mit der Klasse "<code>.image-blured</code>" manuell ins Markup eingefügt werden. (siehe Markup)
+    </blockquote>
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-swiper-articleimage' with {data: article.swiperdata} %}</code></pre>   
+    
+    
+
+    <div class="message">
+        <h4 class="heading">Hinweis: Fotogalerie (Swiper) innerhalb einer <u>Lightbox</u></h4>
+        <p>
+            Das Markup des Galerieswipers innerhalb einer Lightbox entspricht dem Markup der Fotogalerie auf Artikelebene. <br />
+            Unterschiede sind die kapselnde css-Klasse "<code>.swiper-lightbox</code>" sowie das Fehlen des Buttons zum öffnen einer Lightbox.
+        </p>
+    </div>
+
+    <br /><br />
+
+    <h3>Galleryselect</h3>
+    {% include 'molecules-swiper-galleryselect' with {data: dummygalleryselect} %} 
+    
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-swiper-galleryselect' with {data: homepage.heroswiper_empty} %}</code></pre>  
+    
+    <h3>Mobile Navigation</h3>
+    {% include 'molecules-navigation-primary-palm' %} 
+    
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-navigation-primary-palm' %}</code></pre>  
+    
+    
+{% endblock %}

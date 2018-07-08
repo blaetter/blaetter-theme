@@ -1,0 +1,11 @@
+{% from 'form.twig' import formgroup %}
+
+{{ formgroup(
+    {"label": "Label"},
+    [{
+        "type":"textarea",
+        "parameter":{
+            "name":"myTextarea",
+        }
+    }]
+) }}

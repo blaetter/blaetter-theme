@@ -1,0 +1,31 @@
+{#
+<nav class="az">
+    {% if data.title %}
+    <h3 class="test">{{ data.title }}</h3>
+    {% else %}
+    <h3 class="aural">A-Z Index</h3>
+    {% endif %}
+{% for letter in 'A'..'Z' %}
+    <a {{ letter == data.activeLetter ? 'class="active"' }} href="#">{{ letter }}</a>
+{% endfor %}
+</nav>
+#}
+
+<nav class="az" aria-label="Ergebnisseiten nach Alphabet sortiert">
+{% if data.title %}
+    <h3 class="test">{{ data.title }}</h3>
+{% else %}
+    <h3 class="aural">Seite wechseln</h3>
+{% endif %}
+    <ul>
+{% for letter in 'A'..'Z' %}
+{% if letter == data.activeLetter %}
+        <li><a  class="active" href="#" aria-label="Aktuelle Seite">{{ letter }}</a></li>
+{% elseif letter in 'X,Y,Z'%}
+        <li><a  class="disabled" href="#" aria-label="Link deaktiviert, keine Inhalte.">{{ letter }}</a></li>
+{% else %}
+        <li><a href="#">{{ letter }}</a></li>
+{% endif %}
+{% endfor %}
+    </ul>
+</nav>

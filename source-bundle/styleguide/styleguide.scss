@@ -1,0 +1,325 @@
+/*
+ *   Styleguide styles. 
+ *   Do not use these classes in production
+ */
+@import "../scss/00-global/01-settings"; 
+@import "../scss/00-global/02-mixins";
+ 
+$styleguide-namespace:              $namespace !default;
+
+
+#{$styleguide-namespace}pre code {
+    background-color:               #FAFCBA; 
+    display:                        block;
+    padding:                        1em; 
+    margin:                         0 0 2em 0;
+    width:                          100%;
+    //white-space:                     pre-wrap; 
+    overflow-x:                     scroll;
+    overflow-x:                     auto;
+    font-size:                      12px;
+    > * {
+        max-width:                  100%; 
+    }
+}
+
+#{$styleguide-namespace}.sg-collapse {
+    background-color:       #FAFCBA;
+    margin-bottom:          3em;
+    code {
+        margin:             0;
+    }
+}
+
+#{$styleguide-namespace}form + .sg-collapse {
+    margin-top:             -$gridGutter;
+}
+
+#{$styleguide-namespace}.sg-code-inline {
+    display:                    inline;
+    margin:                     0;
+    vertical-align:             top;
+    background-color:       #f7f7f9;
+    color:                  #bd4147;
+    font-size:              12px;
+    padding:                0rem 0.4rem;
+    font-family:            monospace;
+    display:                inline-block;
+    width:                  auto;
+    margin:                 0;
+}
+
+#{$styleguide-namespace}.sg-tabs-list {
+    //@include list--no-arrows();
+    list-style:             none;
+    padding:                0;
+}
+
+#{$styleguide-namespace}.sg-boxeditems {
+    ul {
+        overflow: hidden; 
+        list-style: none;
+        list-item-style:    none;  
+        h4 {
+            margin-top:     0;
+        }
+        > li {
+            border:     1px solid #dddddd;
+            margin:     0 0.2em 0.2em 0;
+            overflow:   hidden;
+            padding:    0.3em 1.3em; 
+            float:      left;
+            width:      14em;
+            text-align: center;
+            &::before {
+                display:none; // remove arrows
+            }
+        }
+        
+    }
+    .sg-swatch {
+        display:    block;
+        height:     5em;
+        text-align: center;
+        .fa-icon {
+            vertical-align: middle;
+            text-align:     center;
+            &::after {
+                display:    inline-block;
+                content:    "";
+                height:     100%;
+                vertical-align: middle;
+            }
+        }
+    }
+    .sg-label {
+        text-align:     center;
+        display:        block;
+        &::after {
+            display:    block; 
+        }
+    }
+}
+
+#{$styleguide-namespace}.styelguide-colors {
+    .sg-label {
+        text-align:     center;
+        display:        block;
+        &::after {
+            display:    block;
+        }
+    }
+    .sg-color-white {
+        background-color: $white;
+        + .sg-label::after {
+            //content:    "#{$white}";
+        }
+    }
+    .sg-color-black {
+        background-color: $black;
+        + .sg-label::after {
+           //content:    "#{$black}";
+        }
+    }
+    .sg-color-grey {
+        background-color: $grey;
+        + .sg-label::after {
+            //content:    "#{$grey}";
+        }
+    }
+    .sg-color-red {
+        background-color: $red;
+        + .sg-label::after {
+            //content:    "#{$red}";
+        }
+    }
+    .sg-color-blue {
+        background-color: $blue;
+        + .sg-label::after {
+            //content:    "#{$blue}";
+        }
+    }
+    .sg-color-bluelight {
+        background-color: $bluelight;
+        + .sg-label::after {
+            //content:    "#{$bluelight}";
+        }
+    }
+    .sg-color-greysource {
+        background-color: $greySource;
+        + .sg-label::after {
+            //content:    "#{$greySource}";
+        }
+    }
+    .sg-color-lightestTextGrey {
+        background-color: $lightestTextGrey;
+       &::after {
+            content:    " " !important;
+        }
+    }
+    .sg-color-greyBorder {
+        background-color: $greyBorder;
+        &::after {
+            content:    " " !important;
+        }
+    }
+}
+
+#{$styleguide-namespace}.styleguide {
+    .sg-def-h1::after {
+        //content:    " font: #{$font-weight-h1} #{$font-size-h1}/#{$line-height-h1} #{$font-family-h1}; color: #{$font-color-h1}";
+    }
+    .sg-def-h2::after {
+        //content:    " font: #{$font-weight-h2} #{$font-size-h2}/#{$line-height-h2} #{$font-family-h2}; color: #{$font-color-h2}";
+    }
+    .sg-def-h3::after {
+        //content:    " font: #{$font-weight-h3} #{$font-size-h3}/#{$line-height-h3} #{$font-family-h3}; color: #{$font-color-h3}";
+    }
+    .sg-def-h4::after {
+        //content:    " font: #{$font-weight-h4} #{$font-size-h4}/#{$line-height-h4} #{$font-family-h4}; color: #{$font-color-h4}";
+    }
+    .sg-def-p {
+        display:    block;
+        &::after {
+            //content:    " Basis font: normal #{$base-font-size}/#{$base-line-height} #{$base-font-family}; color: #{$baseTextColor}";
+        }
+    }
+    .sg-def-pb {
+        display:    block;
+        &::after {
+            //content:    " Basis font: bold #{$base-font-size}/#{$base-line-height} #{$base-font-family}; color: #{$baseTextColor}";
+        }
+    }
+    .sg-def-a {
+        display:    block;
+        &::after {
+            //content:    "font: normal #{$base-font-size}/#{$base-line-height} #{$base-font-family}; color: #{$linkColor}";
+        }
+    }
+    .sg-def-source {
+        display:    block;
+        &::after {
+            //content:    "font: normal #{$smallest-font-size}/1.2 #{$base-font-family}; color: #{$greySource}";
+        }
+    }
+    .sg-def-sourceDesk {
+        display:    block;
+        &::after {
+            content:    "font: normal #{$smallest-font-size}/1.2 #{$base-font-family}; color: #{$greySourceDesk}";
+        }
+    }
+    .sg-color-greyBorder {
+        &::after {
+            content:    "#{$greyBorder}";
+        }
+    }
+    .sg-color-lightestTextGrey {
+        &::after {
+            content:    "#{$lightestTextGrey}";
+        }
+    }
+    label {
+        font-weight: bold;
+    }
+}
+
+#{$styleguide-namespace}.styleguide-grids {
+    .grid__item > *:not([class*=grid]) {
+        min-height:         60px;
+        //background-color:   #CDE3F7;
+        box-shadow: 0 0 1px inset;
+        display:            block;
+        margin-bottom:      $gridGutter;
+    }
+    .grid__item .grid__item > *:not([class*=grid]) {
+        //background-color:   #F7E6E6;
+    }
+}
+
+#{$styleguide-namespace}.styleguide-heading-section {
+    @include heading--addbottomborder();
+    margin-top: 3em;
+    margin-bottom: 2em;
+    color:  $baseTextColor;
+}
+
+
+#{$styleguide-namespace}.sg-layout-html {
+    width:              100%;
+    border:             1px solid $black;
+    background-color:   $page-background-color;
+    padding:            0 2em;
+    .sg-layout-page {
+        @include box-shadow(0px, 0px, 10px, 0px, rgba(100, 100, 100, 0.2));
+        background-color:   $white;
+        .sg-layout-header {
+            min-height:     5em;
+            background:     $bluelight;
+            margin-bottom:  $gridGutter;
+        }
+        .sg-layout-footer { 
+            min-height:     5em;
+            background:     $blue;
+            color:          $white;
+        }
+    }
+}
+
+body .sg-layout-content {
+    min-height:     10em;
+    @include getRem('padding-left', $pagePaddingPalmPx);
+    @include getRem('padding-right', $pagePaddingPalmPx);
+    .grid {
+        border:         1px dashed red;
+        padding: 0.5em;
+        margin-left: 0;
+        .grid__item {
+            border:         1px dashed yellowgreen;;
+            padding: 0.5em;
+            span {
+                min-height:     5em;
+                padding: 0.5em;
+                background-color: #fafafa;
+                display:        block;
+                margin-bottom:  0.7em;
+            }
+        }
+    }
+    aside,
+    main {
+        position: relative;
+        border: 1px dotted blue;
+        padding: 0.5em;
+        &::after {
+            border-radius: 4px;
+            background-color: blue;
+            color:  white;
+            display: block;
+            position: absolute;
+            margin: 1px;
+            font-size: 11px;
+            top: -6px;
+            left: -2px;
+        }
+    }
+    main {
+        &::after {
+            content: "main"
+        }
+    }
+    aside {
+        &::after {
+            content: "aside"
+        }
+    }
+}
+
+.sg-dummy-container-2x1-fullwidth {
+    width:  100%;
+    min-height:     15em;
+    background-color: #fafafa;
+    display:        block;
+     margin-bottom:  0.7em;
+}
+
+

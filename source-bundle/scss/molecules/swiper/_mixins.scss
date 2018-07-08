@@ -1,0 +1,31 @@
+
+@mixin swiperButtonsTopRight() {
+    // Move buttons to the top right
+    .swiper-buttons { 
+        position:           absolute;
+        top:                -2.8em;
+        right:              0;
+        left:               auto;
+        z-index:            11;
+        width:              auto;
+        white-space:        nowrap;
+        .swiper-button-next,
+        .swiper-button-prev {
+            position:       static;
+            font-size:      1rem;
+            display:        inline-block;
+            width:          auto;
+            height:         auto;
+            color:          $linkColor;
+            border:         0 none;
+            background:     none;
+            padding:        0.1em 0.4em;
+            border-radius:  0;
+            .fa {
+                margin:     0;
+                color:      $blue;
+            }
+        }
+    }
+    
+}

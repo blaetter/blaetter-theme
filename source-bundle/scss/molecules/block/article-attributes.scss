@@ -1,0 +1,37 @@
+$article-attributes-namespace:              $namespace !default;
+
+#{$article-attributes-namespace}.article-attributes {
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+    ul {
+        list-style:             none;
+        padding-left:           0;
+        display:                table;
+        > li {
+            display:            table-row;
+            line-height:        1.5;
+            > * {
+                display:        table-cell;
+                @include media-query(palm) {
+                    display:    block;
+                }
+                padding-bottom: 0.2em;
+            }
+            .title {
+                padding-right:  2.2em;
+                white-space:    nowrap;
+                font-weight:    bold;
+                .fa {
+                    margin-right:   0.3em;
+                    min-width:      1.1em;
+                    text-align:     center;
+                }
+            }
+            .text {
+                @include media-query(palm) {
+                    margin-bottom:  0.75em;
+                }
+            }      
+        }
+    }
+}
+

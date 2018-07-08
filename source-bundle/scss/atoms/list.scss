@@ -1,0 +1,176 @@
+$list-namespace:                $namespace !default;
+
+#{$list-namespace}dt {
+    font-weight:                bold;
+}
+
+#{$list-namespace}ul {
+    padding-inline-start:       1.1em;
+    padding-left:               1.1em;
+    @include getRem('margin-bottom', $blockBottomMarginPx/2);
+    margin-top:                 0;
+    list-style-image:           none;
+    li {
+        margin-left:            0;
+        line-height:            1.3em;
+        margin-bottom:          0.5em;
+    }
+    > li.grid__item {
+        padding-left:           $gridGutter;   
+        &::before {
+            display:            none;
+        }
+    }
+    &.nav {
+        list-style:             none;
+        padding-left:           0;
+    }
+}
+
+#{$list-namespace}ol {
+    padding-inline-start:       0.5em;
+    padding-left:               0.5em;
+    li {
+        margin-left:           0.7em;
+    }
+}
+
+#{$list-namespace}.list--downloads {
+    @include arrowlist--base("\f019", inherit, 12px);  // fa-download
+}
+
+#{$list-namespace}ul.list--checklist {
+    @include arrowlist--base("\f00c", $textSuccessColor, 12px); // fa-check
+}
+
+#{$list-namespace}.list-footer-portallinks {
+    @include list--horizontal();
+    @include fontsize(11px);
+    margin:                     0 0 0 33.33%;
+    padding:                    0 0 0 10px;
+    li {
+        margin:                 0 1.2em 0 0;
+        padding:                0 1.2em 0 0;
+        border-right:           1px solid $black;
+        &:last-child {
+            margin-right:       0;
+            padding-right:      0;
+            border:             0 none;
+        }
+    }
+}
+
+#{$list-namespace}ul.list--horizontal {
+    @include list--horizontal($itemBorder: false);
+}
+
+#{$list-namespace}ul.list--horizontal-border {
+    @include list--horizontal($itemBorder: true);
+}
+
+@include media-query(palm) {
+    #{$list-namespace}.list-footer-portallinks {
+        margin-left:            0;
+        li {
+            margin-bottom:      2em; 
+            display:            inline-block;     
+        }
+    }
+}
+ 
+// Listitems(!) have half width
+#{$list-namespace}ul.list--double {
+    @include media-query('lap-and-up') {
+        display: flex;
+        flex-wrap: wrap;
+        > li {
+            vertical-align:         top;
+            width:                  50%;
+            padding-right:          1em;
+        }
+    }
+}
+
+// Listitems(!) have third width
+#{$list-namespace}ul.list--triple {
+    @include media-query('lap-and-up') {
+        display: flex;
+        flex-wrap: wrap;
+        > li {
+            vertical-align:         top;
+            width:                  33.33%;
+            padding-right:          1em;
+        }
+    }
+}
+
+// Lists(!) have half width. We can place two lists side by side (Befi A-Z Letterlist)
+#{$list-namespace}ul.list--half {
+    column-count:               1;
+    + ul.list--half {
+    }
+    > li {
+        -webkit-column-break-inside: avoid;
+                  page-break-inside: avoid;
+                       break-inside: avoid;
+    }
+    @include media-query('lap-and-up') {
+        column-count:               2;
+        padding-left:               0;
+        li {
+            list-style-position: outside;
+            margin-left: 1.1em;
+	    	.nowidows {
+	    		display: table-cell;	// »widows« property is not supported by FF
+			}
+        }
+    }
+}
+
+
+#{$list-namespace}ul.list--bullets {
+    > li {
+        @include list--bullet-item();
+    }
+}
+
+#{$list-namespace}ul.list--clean {
+    @include list--no-arrows();
+}
+
+#{$list-namespace}.dl--horizontal {
+    display: table;
+    @include media-query('smallest') {
+        display: unset;
+    }
+    dt {
+        float:          left; // IE
+        margin:         0 0.5em 0 0;
+        display:        unset;
+    }
+    dd {
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+            margin-bottom: 0.2em;
+        }
+        margin:         0 0 0.5em 0;
+        //display:        block;
+        display: initial;
+    }
+}
+
+
+#{$list-namespace}.text ul.decoda-list {
+    margin-bottom:      0; // befi bbcode-liste im textfeld
+}
+
+
+#{$list-namespace}li.highlight > a{
+    font-weight:        700;
+}
+
+#{$list-namespace}ul.list--arrowlist {
+    @include arrowlist--base(); 
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de_DE">
+    <head>
+{% block head %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+        <title>{% block pagetitle %}{% endblock %} - Berlin.de</title>  
+        <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+        {{ patternLabHead | raw }}
+        <link rel="stylesheet" href="../../bundle/styleguide.css?{{ cacheBuster }}" media="all" />
+        <!-- End Pattern Lab -->
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=e">
+        <link rel="manifest" href="/manifest.json?v=e">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg?v=e" color="#253276">
+        <link rel="shortcut icon" href="/favicon.ico?v=e">
+        <meta name="theme-color" content="#253276">
+        
+        <link rel="stylesheet" href="../../bundle/portal.css?{{ cacheBuster }}" media="all" />
+        <script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+        <script src="../../bundle/portal.js?{{ cacheBuster }} " id="echo-behavior-js"></script>
+{% endblock %}
+    </head>
+    <body class="echo">
+        

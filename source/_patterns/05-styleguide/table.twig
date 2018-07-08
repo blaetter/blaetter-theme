@@ -1,0 +1,84 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <h2>Tabellen</h2>
+    
+    <p>
+       Tabellen werden in einen Container mit der Klasse <code>.table-responsive-wrapper</code> gekapselt. Dadurch erhalten besonders breite Tabellen automatisch einen Scrollbalken.
+       Zelleninhalte brechen nicht um. Ein Umbruch kann aber mit der Klasse <code>.wrap</code> erzwungen werden.
+    </p>
+    
+    <pre><code class="sg-code-inline">
+    <div class="table-responsive-wrapper">
+        <table class="table--base">
+            <thead>
+                <tr>
+                    <th>[...]</th>
+                    <th>[...]</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[...]</td>
+                    <td>[...]</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </code></pre>
+
+    <br />
+    <h2>Tabellenstyles</h2>
+
+    <h3>Base</h3>
+    <p><code>table.table--base</code></p>
+    {% include "atoms-table-short" with {data: {tableClass: "table--base"}}  %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-table-short" with {data: {tableClass: "table--base"}}  %}</code></pre>
+    
+    <h3>Zebra</h3>
+    <p><code>table.table--zebra</code></p>
+    {% include "atoms-table-short" with {data: {tableClass: "table--zebra"}} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-table-short"  with {data: {tableClass: "table--zebra"}} %}</code></pre>
+    
+    <h3>Bordered</h3>
+    <p><code>table.table--bordered</code></p>
+    {% include "atoms-table-short" with {data: {tableClass: "table--bordered"}} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-table-short" with {data: {tableClass: "table--bordered"}} %}</code></pre>
+    
+    <h3>Bordered Light</h3>
+    <p><code>table.table--bordered-light</code></p>
+    {% include "atoms-table-short" with {data: {tableClass: "table--bordered-light"}} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-table-short" with {data: {tableClass: "table--bordered-light"}} %}</code></pre>
+    
+
+    <h3>Grey</h3>
+    <p><code>table.table--grey</code></p>
+    {% include "atoms-table-short" with {data: {tableClass: "table--grey"}} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-table-short" with {data: {tableClass: "table--grey"}} %}</code></pre>
+    
+
+    <br />
+    <h2>Tabellenverhalten</h2>
+
+    <h3>Prevent line-breaking</h3>
+    <blockquote>
+        Mehrere Wörter in einer Zelle brechen standardmäßig um, sobald nicht mehr genug Platz vorhanden ist.
+        Wir können diesen Zeilenumbruch durch die Klasse "</code>.cell--nowrap</code>" verhindern.
+    </blockquote>
+    {% include "atoms-table" with {data: {tableClass: "table--base"}} %}
+    <p><code>th.cell--nowrap, td.cell--nowrap</code></p>
+    {% include "atoms-table-nowrap" with {data: {tableClass: "table--base"}} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-table-nowrap" with {data: {tableClass: "table--base"}} %}</code></pre>
+    
+    <h3>Responsive Collapse Rows</h3>
+    <p></code>table.table--collapse</code></p>
+    <blockquote>
+        Collape the table rows on small screens (can be combined with other table classes).
+        We can add responsive labels by adding a data-label attribute to the cells.
+    </blockquote>
+    {% include "atoms-table-collapse" with {data: {tableClass: "table--collapse"}} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-table-collapse" with {data: {tableClass: "table--collapse"}} %}</code></pre>
+    
+
+{% endblock %}

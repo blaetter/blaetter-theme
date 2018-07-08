@@ -1,0 +1,237 @@
+$button-namespace:              $namespace !default;
+$buttonMargin:                  0em !default;
+$btn-background:                $blue !default;
+$btn-background-hover:          lighten($btn-background, 5%) !default;
+$btn-font-color:                $white !default;
+$btn-border-color:              $blue !default;
+
+
+#{$button-namespace}button {
+    font-family:            $base-font-family;
+    cursor:                 pointer;
+    &:focus {
+        outline:            1px dotted;
+    }
+}
+
+#{$button-namespace}.btn {
+    @include getRem('height', $btn-heightPx);
+    @include media-query('palm') {
+        @include getRem('height', $btn-heightPalmPx);
+    }
+    @include getRem('margin-bottom', $blockBottomMarginPx/2);
+    @include media-query('palm') {
+        line-height:        2em;
+    }
+    box-shadow:             none;
+    /* margin:                 $buttonMargin; // not here */
+    text-decoration:        none;
+    padding:                0.286em 0.643em; // 4px / 9px
+    font-size:              1rem;
+    display:                inline-block;
+    vertical-align:         top;
+    font:                   inherit;
+    text-align:             center;
+    cursor:                 pointer; 
+    overflow:               visible;
+    background-color:       $btn-background;
+    color:                  $btn-font-color;
+    border: 1px solid       $btn-border-color;
+    &:hover,
+    &:active,
+    &:focus {
+        /* color:              $btn-font-color; // not here */
+        /* background-color:   $btn-background-hover; // not here */
+    }
+    &:focus {
+        outline:            1px dotted black;
+        outline-offset:     0;
+    }
+}
+
+
+
+// Link as Button
+@mixin link_as_button() {
+    @extend .btn;
+    color:                  $btn-font-color;
+    &:hover,
+    &:focus {
+        text-decoration:    none;
+        background-color:   $btn-background-hover;
+    }
+}
+
+@mixin button_as_link() {
+    background:     transparent;
+    border:         0 none;
+    color:          $linkColor;
+    padding:        0;
+    margin:         0;
+    text-align:     left;
+    height:         auto;
+    cursor:         pointer;
+    font-size:      1em;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus,
+    &:active {
+        outline:    1px dotted;
+    }
+}
+
+@mixin button--ghost() {
+    @extend .btn;
+    background-color:           transparent;
+    border:                     1px solid $white;
+    color:                      $white;
+    font-weight:                normal;
+    opacity:                    0.75;
+    &:hover,
+    &:focus {
+        opacity:                1;
+        background-color:       transparent;
+        text-decoration:        none;
+        outline-color:          $white;
+    }
+}
+
+@mixin button--reversed() {
+    @extend .btn;
+    background-color:       transparent;
+    border:                 1px solid $blue;
+    color:                  $blue;
+    font-weight:            normal;
+    opacity:                1;
+    &:hover,
+    &:focus {
+        background-color:   transparent;
+        color:              $linkColor;
+        text-decoration:    none;
+        opacity:            0.75;
+    }
+}
+
+@mixin button--disabled() {
+    @extend .btn;
+    background-color:       transparent;
+    border:                 1px solid $greyDisabled;
+    color:                  $greyDisabled;
+    font-weight:            normal;
+    opacity:                1;
+    cursor:                 not-allowed;
+}
+
+@mixin button--white() {
+    @extend .btn;
+    background-color:$white;
+    border:         1px solid $white;
+    color:          $linkColor;
+    font-weight:    normal;
+    opacity:        0.9;
+    &:hover,
+    &:focus {
+        opacity:                1;
+        color:                  $linkColor;
+        background-color:       $white;
+        outline-color:          $white;
+    }
+}
+
+
+#{$button-namespace}button.button {
+    @extend .btn;
+    background-color:   $btn-background;
+    color:              $btn-font-color;
+    &:hover,
+    &:focus {
+        background-color:   $btn-background-hover;
+    }
+}
+
+#{$button-namespace}.button-submit {
+    @extend .btn;
+    background-color:   $btn-background;
+    color:              $btn-font-color;
+    &:hover,
+    &:focus {
+        background-color:   $btn-background-hover;
+    }
+}
+
+// Ajax reload button as alternative pager
+#{$button-namespace}button.searchmore,
+#{$button-namespace}.button--pagination {
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+    border:                         1px solid $greyBorder;
+    color:                          $linkColor;
+    font-size:                      $base-font-size;
+    text-align:                     center;
+    padding:                        0.4em 0.75em 0.3em 0.75em;
+    display:                        inline-block;
+    text-decoration:                none;
+    background-color:               $white;
+    outline-color:                  black;
+    width:                          100%;
+    text-align:                     center;
+    @include getRem('min-height', $btn-heightPx);
+    @include media-query('palm') {
+        @include getRem('min-height', $btn-heightPalmPx);
+    }
+    &:hover,
+    &:active {
+        background-color:           $grey;
+        color:                      $linkColor;
+    }
+    &::after {
+        content:                    "\f078"; // fa-chevron-down
+        font-family:                FontAwesome;
+        margin-left:                0.55em;
+    }
+}
+
+#{$button-namespace}.button--spaced {
+    @extend .btn;
+    width:                  100%;
+    display:                block;
+}
+
+#{$button-namespace}a.button {
+    @include link_as_button();
+}
+
+#{$button-namespace}.button--footer {
+    @extend .button--ghost;
+    border:                 1px solid;
+    display:                inline-block;
+    padding:                4px 12px;
+}
+
+
+
+#{$button-namespace}.button--ghost {
+    @include button--ghost();
+}
+
+
+#{$button-namespace}.button--reversed {
+    @include button--reversed();
+}
+
+#{$button-namespace}.button--disabled {
+    @include button--disabled();
+}
+
+#{$button-namespace}.button--white {
+    @include button--white();
+}
+
+
+
+// Button as Link (form reset button, ...)
+#{$button-namespace}button.link,
+#{$button-namespace}input.link {
+    @include button_as_link();
+}
+

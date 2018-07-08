@@ -1,0 +1,6 @@
+{% from 'form.twig' import formgroup %}
+
+<div class="formfilter--checkbox js-checkbox-formfilter"  data-closetext="Diesen Filter löschen">
+    <input id="{{ data.id }}" checked="1" type="checkbox" {{ data.disabled? 'disabled="disabled"' }}>
+    <label for="{{ data.id }}">{{ data.label|default('uncheck me') }}</label>    
+</div>

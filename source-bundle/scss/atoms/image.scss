@@ -1,0 +1,26 @@
+$image-namespace:           $namespace !default;
+
+#{$image-namespace}figure {
+    margin:                 0;
+}
+
+#{$image-namespace}img {
+    max-height:             100%;
+    max-width:              100%; 
+    border:                 0;
+}
+
+#{$image-namespace}.image,
+#{$image-namespace}.mainimage {
+    img {
+        width:              100%;
+        max-width:          100%; 
+    }
+    .caption {
+        margin:             0;
+    }
+}
+
+#{$image-namespace}.image {
+    overflow:               visible;
+}

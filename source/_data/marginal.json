@@ -1,0 +1,43 @@
+{   
+    "marginal": {
+        "blocks": [
+            {
+                "pattername": "molecules-rectangle"
+            },{
+                "pattername": "molecules-linklist",
+                "title": "Informationen des Landes",
+                "blockClass": "land float"
+            },{
+                "pattername": "molecules-linklist",
+                "title": "Empfehlungen",
+                "blockClass": "ad float"
+            },{
+                "pattername": "molecules-teaser",
+                "blockClass": "ad float",
+                "title": "Schiffstouren & Dampferfahrten",
+                "text": "Schiffstouren durch die Berliner Innenstadt auf Spree und Landwehrkanal.",
+                "hideTeaserImage": false
+            },{
+                "pattername": "molecules-rectangle-mobile"
+            },{
+                "pattername": "molecules-teaser",
+                "title": "Trapattoni '98",
+                "text": "Diese Spieler beklagen mehr als sie spielen!",
+                "hideTeaserImage": true,
+                "blockClass": "float"
+            },{
+                "pattername": "molecules-teaser",
+                "title": "Er hörte leise ipsum dolor sit amet consectetur lorem",
+                "text": "Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen.",
+                "hideTeaserImage": true,
+                "blockClass": "float"
+            },{
+                "pattername": "molecules-teaser",
+                "title": "Werther ",
+                "text": "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen.",
+                "hideTeaserImage": true,
+                "blockClass": "float"
+            }
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{% from 'form.twig' import formgroup %}
+
+<form method="GET" action="/suche/" class="form-searchpage {{ (class? class)|default('bdePortalSearch')}}">
+    <div class="form-group">
+        <div class="controls">
+            <input name="q" value="" placeholder="Suchbegriff" class="form-input" type="text">
+        </div>
+        <div class="controls">
+            <button class="button-submit" type="submit" name="search" value="" title="Suchanfrage abschicken">Suche</button>
+        </div>
+    </div>
+</form>
+

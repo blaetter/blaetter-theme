@@ -1,0 +1,67 @@
+$progressbar-namespace:               $namespace !default;
+
+
+#{$progressbar-namespace}.progressbar {
+    display:                flex;
+    justify-content:        space-between;
+    align-items:            center;
+    list-style:             outside none none;
+    padding:                0;
+    width:                  100%;
+    .progressbar__title {
+        display:            block;
+        white-space:        nowrap;
+        font-weight:        700;
+    }
+    .progressbar__step {
+        flex:               0 1 auto;
+        width:              3em;
+    }
+    .progressbar__icon {
+        display:            inline-block;
+        border:             1px solid transparent;
+        background-color:   $grey;
+        color:              $lightestTextGrey;
+        padding:            0.5em;
+        border-radius:      2.3em;
+        width:              2.3em;
+        height:             2.3em;
+    }
+    .progressbar__linewrapper {
+        flex:                   1 0 auto;
+        text-align:             center;
+        flex-flow:              row nowrap;
+        display:                flex;
+        &::before {
+            flex:                   1 0 auto;
+            content:                "";
+            display:                block;
+            height:                 5px;
+            width:                  auto;
+            background-color:       $grey;
+            margin:                 1em 0.2em;
+        }
+        &.active {
+            .progressbar__icon {
+                background-color:   $blue;
+                color:              $white;
+            }
+            &::before {
+                background-color:   $blue;
+            }
+        }
+        &:first-child {
+            flex:                   0 1 auto;
+            &::before {
+                display:            none !important;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+

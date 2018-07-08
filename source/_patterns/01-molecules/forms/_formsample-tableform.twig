@@ -1,0 +1,93 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+<form class="form--prependlabel form--base">
+    <fieldset>
+{{ formgroup(
+    {
+        "label": "Eingabefeld", 
+        "for": "exampleFormtableInput1"
+    },
+    [{
+        "type":"input",
+        "parameter":{
+            "id": "exampleFormtableInput1",
+            "placeholder": "Geben Sie hier einen Text ein"
+        }
+    }]
+) }}
+{{ formgroup(
+    {
+        "label": "Select", 
+        "for": "exampleFormtableSelect1",
+    },
+    [{ 
+        "type":"select",
+        "parameter":{ 
+            "id": "exampleFormtableSelect1",
+            "options": [
+                {"name": "Option wählen","value": ""},
+                {"name": "Option 1","value": "1"},
+                {"name": "Option 2","value": "2"}
+            ]
+        }
+    }] 
+) }}
+{{ formgroup(
+    {
+        "fieldset": "Inlinegroup", 
+        "class": "form-group--inline"
+    },
+    [{
+        "type":"input",
+        "auralLabel": "Tag",
+        "parameter":{
+            "size": "5",
+            "id": "exampleFormtableInlineInput1",
+            "placeholder": "Tag"
+        }
+    },{
+        "type":"input",
+        "auralLabel": "Monat",
+        "parameter":{
+            "size": "5",
+            "id": "exampleFormtableInlineInput2",
+            "placeholder": "Monat"
+        }
+    },{
+        "type":"input",
+        "auralLabel": "Jahr",
+        "parameter":{
+            "size": "5",
+            "id": "exampleFormtableInlineInput3",
+            "placeholder": "Jahr"
+        }
+    }]
+) }}
+{{ formgroup(
+    {
+        "label": "Textfeld", 
+        "for": "exampleFormtableTextarea1"
+    },
+    [{ 
+        "type":"textarea",
+        "parameter":{ 
+            "id": "exampleFormtableTextarea1",
+            "rows": "3"
+        }
+    }]
+) }}
+       
+        <div class="form-actions">
+             <small class="form-helptext">
+                Hinweis: Pflichfelder sind mit einem <span class="star">*</span> markiert.
+            </small>
+{{ formbutton( 
+    {
+        "text":    "Finden",
+        "parameter": {
+        }
+    }
+) }}
+        </div>
+    </fieldset>
+</form>

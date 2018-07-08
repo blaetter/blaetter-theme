@@ -1,0 +1,40 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+
+    <h2>Linklistenformate</h2>
+    
+    <p>
+        Alle Seiten arbeiten mit Bild-Text-Linklisten, bei denen die Bilder im Verhältnis 4:3 aber optional sind. 
+    </p>
+    
+    <blockquote>
+        Linklisten in der mobilen Ansicht, in der Marginalspalte und außerhalb eines Grids werden mit floatendem Bild (optional) in der Breite 33.33% angezeigt.
+    </blockquote>
+    
+    {% include "molecules-linklist" with {data: {title: "linklist","source":"Quelle", blockClass: null, text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet."}} %}
+        
+    <h2>Linklisten im Grid</h2>
+    
+    <blockquote>
+        In der Desktopansicht werden Linklisten innerhalb eines Grids nebeneinander und ohne Bildfloating angezeigt. (".clearimagefloat")
+    </blockquote>
+    
+    <div class="grid">
+        <div class="grid__item one-half">
+            {% include "molecules-linklist" with {data: {title: "linklist","source":"Quelle","showLinklistImage":"false"}} %}
+        </div>
+        <div class="grid__item one-half">
+            {% include "molecules-linklist" with {data: {title: "linklist","source":"Quelle","showLinklistImage":"false"}} %}
+        </div>
+    </div>
+    
+    
+    
+    
+    <pre><code>{% include "molecules-linklist" with {data: {text: "Lorem ipsum [...] adipisicing elit.","source":"Quelle", blockClass: null, imageSrc: "bildurl.jpg","showLinklistImage":"true"}} %}</code></pre>
+    
+    
+    
+{% endblock %}

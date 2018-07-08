@@ -1,0 +1,28 @@
+{
+    "dummygalleryselect": [
+        {
+            "title": "Weitere aktuelle Fotostrecken",
+            "content": [
+                {
+                    "imageurl": "../../images/sample/dummy_4x3_300.jpg",
+                    "title": "Title Test123"
+                },{
+                    "imageurl": "../../images/sample/dummy_4x3_300.jpg",
+                    "title": "Title Test123"
+                },{
+                    "imageurl": "../../images/sample/dummy_4x3_300.jpg",
+                    "title": "Title Test123"
+                },{
+                    "imageurl": "../../images/sample/dummy_4x3_300.jpg",
+                    "title": "Title Test123"
+                },{
+                    "imageurl": "../../images/sample/dummy_4x3_300.jpg",
+                    "title": "Title Test123"
+                },{
+                    "imageurl": "../../images/sample/dummy_4x3_300.jpg",
+                    "title": "Title Test123"
+                }
+            ]
+        }
+    ]
+}

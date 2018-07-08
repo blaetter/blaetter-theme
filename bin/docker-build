@@ -1,0 +1,18 @@
+#!/bin/sh
+
+if [ "$(id -u)" -ge 1000 ]
+then
+    APP_UID=$(id -u)
+    APP_GID=$(id -g)
+else
+    APP_UID=1000
+    APP_GID=1000
+fi
+
+cd $(dirname $0)/.. \
+    && docker build \
+        --build-arg APP_UID=${APP_UID} \
+        --build-arg APP_GID=${APP_GID} \
+        -t patternlab-corporate  \
+        -t registry.gitlab.berlinonline.net/portalbetrieb/bde-corporate-masterlayout/www \
+        -f Dockerfile .

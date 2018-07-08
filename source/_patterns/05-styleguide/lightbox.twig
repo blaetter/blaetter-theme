@@ -1,0 +1,57 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+<h2>Lightbox</h2>
+
+<blockquote>
+    Hinweis: Wird zum öffnen einer Lightbox ein Button anstatt einem Anker verwendet, so wird statt dem "<code>href</code>"-Attribut das "<code>data-mfp-src</code>"-Attribut zur Bestimmung des Inhaltsziels verwendet.
+</blockquote>
+
+<!--
+<p>Dokumentation: http://dimsemenov.com/plugins/magnific-popup/documentation.html</p>
+-->
+
+<h3>Simple Image</h3>
+{% include 'molecules-lightbox' with {data: {type: "image"}} %} 
+<pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-lightbox' with {data: {type: "image", imageurl_small: "SMALL_IMAGE_URL", imageurl_big: "BIG_IMAGE_URL" }} %} </code></pre> 
+
+
+
+<h3>Image gallery</h3>
+{% include 'molecules-lightbox' with {data: {
+                                            type: "gallery", 
+                                            images: [
+                                                {
+                                                    imageurl_small: "../../images/sample/dummy_4x3_300.jpg", 
+                                                    imageurl_big: "../../images/sample/dummy_4x3_300.jpg" 
+                                                },{
+                                                    imageurl_small: "../../images/sample/dummy_4x3_300.jpg", 
+                                                    imageurl_big: "../../images/sample/dummy_4x3_300.jpg" 
+                                                }
+                                            ]
+}} %} 
+<pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>
+{% include 'molecules-lightbox' with {data: {
+                                            type: "gallery", 
+                                            images: [
+                                                {
+                                                    imageurl_small: "SMALL_IMAGE_URL", 
+                                                    imageurl_big: "BIG_IMAGE_URL" 
+                                                },{
+                                                    imageurl_small: "SMALL_IMAGE_URL", 
+                                                    imageurl_big: "BIG_IMAGE_URL" 
+                                                }
+                                            ]
+}} %} 
+</code></pre> 
+
+<h3>Iframe</h3>
+{% include 'molecules-lightbox' with {data: {type: "iframe"}} %} 
+<pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-lightbox' with {data: {type: "iframe", contentUrl: "URL_TO_PAGE" }} %} </code></pre> 
+
+<h3>Ajax</h3>
+{% include 'molecules-lightbox' with {data: {type: "ajax"}} %} 
+<pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-lightbox' with {data: {type: "ajax", contentUrl: "URL_TO_HTML_CONTENT" }} %} </code></pre> 
+
+{% endblock %}

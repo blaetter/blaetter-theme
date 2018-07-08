@@ -1,0 +1,108 @@
+$grid-namespace:            $namespace !default;
+
+
+/***************************************************
+ *
+ *   GRID SETUP
+ *
+ */
+
+@mixin flexgrid--base() {
+    list-style:             none;               
+    padding:                0;        
+    margin-left:            -$gridGutter; 
+    display:                flex;
+    //display:              -webkit-box; //breaks in chrome! webkit 2009 Syntax
+    display:                -ms-flexbox; // IE10 2009 Syntax
+    flex-wrap:              wrap;
+    //-ms-flex-flow:        wrap; // do not use, breaks in ie!
+    align-items:            flex-start;
+    
+}
+
+@mixin flexgrid-item--base() {
+    padding-left:           $gridGutter;      
+    width:                  100%;  
+}
+
+#{$grid-namespace}.flex-column--reversed {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column-reverse;
+    > * {
+        max-width:          100%; // IE fix
+    }
+}
+
+
+#{$grid-namespace}.grid {
+    @include flexgrid--base();
+    @include media-query(lap-and-up) {
+        > .auto {
+            -webkit-flex:   1;
+                    flex:   1;
+        }
+        > .grid__item.one-half {
+            @include flexgrid-item--base();
+            width:          50%;
+        }
+        > .grid__item.one-third {
+            @include flexgrid-item--base();
+            width:          33.333%;
+        }
+        > .grid__item.one-fourth { 
+            @include flexgrid-item--base();
+            width:          25%;
+        }
+        > .grid__item.two-thirds {
+            @include flexgrid-item--base();
+            width:          66.666%;
+        }
+        > .grid__item.one-sixth { @include flexgrid-item--base();
+            @include flexgrid-item--base();
+            width:          16.666%; 
+        }
+        > .grid__item.five-sixths { 
+            @include flexgrid-item--base();
+            width:          83.333%; 
+        }
+    }
+}
+
+.grid--reversed {
+    flex-direction:         row-reverse;
+}
+
+.grid > .grid__item {
+    @include flexgrid-item--base();
+    &.flexcontent-autoheight {
+        @include media-query(lap-and-up) {
+            // we can set the height of the widgetform or the tabcontainer to 100% height of its neighbor
+            // (used on homepage and channelpage hero areas)
+            display:                flex;
+            flex-direction:         column;
+            > * {
+                display:            flex;
+                flex:               1 1 0;
+                flex-direction:     column;
+                height:             100%; // ie fix
+                flex-shrink:        1; // ie fix
+            }
+        }
+    }
+}
+
+
+// Todo: Change live markup
+.grid--searchpage {
+    @include flexgrid--base();
+    > [class*="grid__item"] {
+        @include flexgrid-item--base();
+        @include media-query(lap-and-up) {
+            width:                  66.666%;
+            &:nth-child(2n+0) {
+                width:              33.333%;
+            }
+        }
+    }
+}

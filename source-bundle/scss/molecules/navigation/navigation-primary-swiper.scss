@@ -1,0 +1,97 @@
+$navigation-primary-swiper-namespace:              $namespace !default;
+
+@include media-query(palm) {
+    #{$navigation-primary-swiper-namespace}#navigation-primary-swiper {
+        background:                 $blue;
+        width:                      100%;
+        z-index:                    auto;
+        padding-bottom:             20px;
+        cursor: grab;
+        .swiper-wrapper {
+            .swiper-slide {
+                text-align:             center;
+                color:                  $white;
+                .inner {
+                    margin-top:         30px;
+                    max-width:          6em;
+                    display:            inline-block;
+                    font-weight:        normal;
+                    @include transition(margin-top 0.3s ease);
+                    
+                }
+                a {
+                    color:              $white;
+                    text-decoration:    none; 
+                }
+                .fa-icon{ 
+                    display:            block;
+                    font-size:          2.3em;
+                    line-height:        1em;
+                    margin-bottom:      20px;
+                    opacity:            0.8;
+                    z-index:            auto;
+                    height:             1em;
+                    @include transition(transform 0.3s ease);
+
+                }
+            }
+            .swiper-slide-active {
+                .fa-icon {
+                    opacity:                1;
+                    -webkit-transform:      scale(1.6);
+                    -moz-transform:         scale(1.6);
+                    -ms-transform:          scale(1.6);
+                    transform:              scale(1.6);
+                }
+            }
+        }
+    }  
+}
+
+
+
+@include media-query(lap-and-up) {
+    #{$navigation-primary-swiper-namespace}#navigation-primary-swiper {
+        display:                    table;
+        width:                      100%;
+        padding:                    0;
+        @include getRem('padding-left', $pagePaddingPx);
+        @include getRem('padding-right', $pagePaddingPx);
+        background-color:           $grey;
+        .swiper-wrapper {
+            display:                table-row;
+            transform:              none !important;
+            .swiper-slide {
+                display:            table-cell;
+                white-space:        nowrap;
+                width:              auto;
+                span[class*='icon'] {
+                    display:        none;
+                }
+                .inner {
+                    padding:        0.938em 1.563rem 0.938em; 
+                    padding-left:   0;
+                    display:        inline-block;
+                    text-align:     center;
+                }
+            }
+        }
+    }
+}
+
+@include media-query(desk) {
+    #{$navigation-primary-swiper-namespace}#navigation-primary-swiper {
+        .swiper-wrapper {
+            .swiper-slide {
+                .inner {
+                    text-align:     left;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,20 @@
+{% from 'form.twig' import formgroup %}
+
+{{ formgroup(
+    {},
+    [{
+        "type":"checkbox",
+        "parameter":{
+            "label": "Check 1",
+            "name":"myCheckbox",
+            "value": "1"
+        }
+    },{
+        "type":"checkbox",
+        "parameter":{
+            "label": "Check 2",
+            "name":"myCheckbox",
+            "value": "2"
+        }
+    }]
+) }}

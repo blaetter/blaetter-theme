@@ -1,0 +1,7 @@
+<button class="js-simple-toggler" data-target="#{{ data.target_id|default("mask01") }}" {{ data.opentext? ' data-closetext='~data.closetext }}{{ data.opentext? ' data-opentext='~data.opentext }} {{ data.allowtoggle is defined ? ' data-allowtoggle='~data.allowtoggle }}>
+    {{ data.buttontext|default('Click me') }}
+</button>
+<div id="{{ data.target_id|default("mask01") }}"{{ (data.initialopen == 'true')? ' class="display-block"' }}>
+    <p>Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+</div>
+

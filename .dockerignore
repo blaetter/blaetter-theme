@@ -1,0 +1,11 @@
+.DS_Store
+.bash_history
+.cache/
+.composer
+.gitlab-ci.yml
+.npm
+.project
+.settings
+.yarn
+node_modules
+vendor

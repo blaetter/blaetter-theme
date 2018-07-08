@@ -1,0 +1,23 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <h2>Messages</h2>
+        
+    <h3>Standard</h3>
+    {% include "molecules-message" with {data: {class: 'message'}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-message" with {data: {class: 'message'}} %}</code></pre>
+    
+    <h3>Info</h3>
+    {% include "molecules-message" with {data: {class: 'message--info'}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-message" with {data: {class: 'message--info'}} %}</code></pre>
+    
+    <h3>Error</h3>
+    {% include "molecules-message" with {data: {class: 'message--error'}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-message" with {data: {class: 'message--error'}} %}</code></pre>
+    
+    <h3>Success</h3>
+    {% include "molecules-message" with {data: {class: 'message--success'}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-message" with {data: {class: 'message--success'}} %}</code></pre>
+    
+{% endblock %}

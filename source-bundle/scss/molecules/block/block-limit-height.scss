@@ -1,0 +1,54 @@
+$block-namespace:                   $namespace !default;
+
+// A blockelement with this class can be limited in height (with fade out and open button)
+
+#{$block-namespace}.js-block-limit-height {
+    display:                            block;
+    position:                           relative;
+    max-height:                         none;
+    overflow:                           hidden;
+    @include transition(max-height 0.2s ease-out);
+    .js-block-limit-height__toggler {
+        position:                       relative;
+        bottom:                         0;
+        left:                           0;
+        display:                        block;
+        width:                          100%;
+        .toggler {
+            margin:                     0;
+            display:                    block;
+            width:                      100%;
+            @include getRem('padding', $accordionTitleElementPaddingPx);
+            padding-left:               0;
+            @include getRem('padding-right', 10px);
+            border-bottom:              1px solid $greyBorder;
+            margin-top:                 15px;
+            background-color:           $white;
+            outline-offset:             -1px;
+            &::after {
+                // add arrow
+                display:                inline-block;
+                font-family:            FontAwesome;
+                content:                "\f078";
+                color:                  $linkColor;
+                float:                  right;
+                font-weight:            normal;
+                transform:              rotate(180deg);
+            }
+        }
+    }
+    &.closed {
+        max-height:                     15.5em; // fallback
+        .js-block-limit-height__toggler {
+            position:                   absolute;
+            display:                    initial;    
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 60%,rgba(255,255,255,1) 100%); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+        }
+        .toggler {
+            margin-top:                     4em;
+            &:after {
+                transform:                  rotate(0deg);
+            }
+        }
+    }
+}

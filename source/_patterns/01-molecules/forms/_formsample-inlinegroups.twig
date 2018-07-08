@@ -1,0 +1,121 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+<form class="form--base">
+    <fieldset>
+{{ formgroup( 
+    {
+        "fieldset": "Inlinegroup 1",
+        "class": "form-group--inline"
+    },
+    [{
+        "type":"checkbox",
+        "parameter":{
+            "label": "Checkbox 1",
+            "value": "option1"
+        }
+    },{
+        "type":"checkbox",
+        "parameter":{
+            "label": "Checkbox 2",
+            "value": "option2"
+        } 
+    },{
+        "type":"checkbox",
+        "parameter":{
+            "label": "Checkbox 3", 
+            "value": "option3"
+        }
+    }]
+) }}
+{{ formgroup(
+    {
+        "fieldset": "Inlinegroup 2", 
+        "class": "form-group--inline"
+    },
+    [{
+        "type":"input", 
+        "auralLabel": "Tag",
+        "parameter":{
+            "size": "5",
+            "id": "exampleInlineInput1",
+            "placeholder": "Tag" 
+        }
+    },{
+        "type":"input",
+        "auralLabel": "Monat",
+        "parameter":{
+            "size": "5",
+            "id": "exampleInlineInput2",
+            "placeholder": "Monat" 
+        }
+    },{
+        "type":"input",
+        "auralLabel": "Jahr",
+        "parameter":{
+            "size": "5",
+            "id": "exampleInlineInput3",
+            "placeholder": "Jahr"
+        }
+    }]
+) }} 
+{{ formgroup(
+    {
+        "fieldset": "Inlinegroup", 
+        "class": "form-group--inline"
+    },
+    [{
+        "type":"input", 
+        "auralLabel": "Postleitzahl",
+        "parameter":{
+            "size": "3",
+            "id": "exampleInlineInputb1",
+            "placeholder": "PLZ" 
+        }
+    },{
+        "type":"input",
+        "auralLabel": "Monat",
+        "parameter":{
+            "size": "20",
+            "id": "exampleInlineInputab2",
+            "placeholder": "Stadt" 
+        }
+    }]
+) }} 
+{{ formgroup(
+    {
+        "fieldset": "Inlinegroup 3", 
+        "class": "form-group--inline"
+    },
+    [{
+        "type":"input",
+        "auralLabel": "Name",
+        "parameter":{
+            "id": "exampleInlineInputc1",
+            "placeholder": "Name" 
+        }
+    },{ 
+        "type":"select",
+        "auralLabel": "Anrede",
+        "parameter":{ 
+            "id": "exampleInlineSelectc1",
+            "options": [
+                {"name": "Anrede wählen","value": ""},
+                {"name": "Herr","value": "1"},
+                {"name": "Frau","value": "2"}
+            ]
+        }
+    },{
+        "type":"checkbox",
+        "parameter":{
+            "label": "Check me!",
+            "value": "option3"
+        }
+    },{
+        "type":"button",
+        "text": "Button",
+        "parameter":{
+        }
+    }]
+) }}
+    </fieldset>
+</form>

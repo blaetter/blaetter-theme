@@ -1,0 +1,52 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+
+    <h2>Buttons und Links</h2>
+    
+    <p>
+        Die Buttons im Bereich der Seiten, werden je nach Funktion eingesetzt.
+        Standardbuttons können für alle Zwecke eingesetzt werden. Marketing-Buttons 
+        sind eindeutigen Konvertierungs-Funktionen vorbehalten.
+    </p>
+    
+    <h3>Default Anker</h3>
+    <div class="sg-element">
+        {% include "atoms-anker" %}
+        <span class="sg-def-a"></span>
+    </div>
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-anker" %}</code></pre>
+
+
+    <h3>Standard Button</h3>
+    {% include "atoms-button-default" %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-default" %}</code></pre>
+    
+    <h3>Reversed Button</h3>
+    {% include "atoms-button-reversed" %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-reversed" %}</code></pre>
+    
+    <h3>Disabled Button</h3>
+    {% include "atoms-button-disabled" %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-disabled" %}</code></pre>
+    
+    <div style="background-color: #253276; padding: 1em; color:#ffffff;">
+    <h3 style="color:#ffffff;margin-top:0;">Ghost Button</h3>
+    {% include "atoms-button-ghost" %}
+    </div>
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-ghost" %}</code></pre>
+    
+    <div style="background-color: #253276; padding: 1em; color:#ffffff;">
+    <h3 style="color:#ffffff;margin-top:0;">White Button</h3>
+    {% include "atoms-button-white" %}
+    </div>
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-white" %}</code></pre>
+    
+
+    <h3>Link as Button</h3>
+    {% include "atoms-anker-button" %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-anker-button" %}</code></pre>
+       
+
+{% endblock %}

@@ -1,0 +1,16 @@
+$searchresult-namespace:              $namespace !default;
+
+#{$searchresult-namespace}.searchresult {
+    @include block--base();
+    @include getRem('margin-bottom', 50px);
+    > h2,
+    > h3 {
+        @include block--base-headline();
+        @include getRem('margin-bottom', 3px);
+    }
+    p {
+        @include getRem('margin-bottom', 12px);
+    }
+}
+
+

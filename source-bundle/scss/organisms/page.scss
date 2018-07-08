@@ -1,0 +1,9 @@
+
+#{$namespace}.page-anzeige {
+    // Anzeigekennzeichnung für verkaufte Seiten (z.B. Befi Place Premium)
+    @include fontsize(11px);
+    color:                  $greyAnzeige;
+    float:                  right;
+    margin:                 0.6em 0;
+    text-transform:         uppercase;
+}

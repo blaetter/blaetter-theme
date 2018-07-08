@@ -1,0 +1,75 @@
+$portal-search-namespace:           $namespace !default;
+$portalSearchWidth:                 10.000rem !default; // 160px_16px
+$portalSearchHeight:                1.875rem !default; // 30px_16px
+$portalSearchButtonWidth:           2.1875rem !default; //35px_16px
+
+#{$portal-search-namespace}.portal-search {
+    padding:                    0;
+    margin:                     0;
+    background:                 transparent;
+    border:                     0 none;
+    display:                    inline-block;
+    width:                      11.5em;
+    .form-group {
+        margin:                 0;
+        max-width:              none;
+        .controls {
+            position:               relative;
+            background-color:       $white;
+        }
+        input {
+            width:                  100%;
+            border:                 1px solid transparent; // Barrierefreiheit 
+            padding:                5px;
+            margin:                 0;
+            display:                inline-block;
+            max-width:              none;
+            padding-right:          2.1875rem;
+        }
+        button {
+            height:                 1.875rem;
+            position:               absolute;
+            display:                inline-block;
+            padding:                0 0 0 8px;
+            margin:                 0;
+            color:                  $blue;
+            right:                  0;
+            top:                    0;
+            background-color:       transparent;
+            float:                  none;
+            width:                  2.1875rem;
+            overflow:               hidden;
+            text-align:             center;
+            border:                 0 none;
+            line-height:            1rem;
+            @include media-query('palm') {
+                line-height:        2em;
+            }
+            display:                flex;
+            @include getRem('min-height', $btn-heightPx);
+            @include media-query('palm') {
+                @include getRem('min-height', $btn-heightPalmPx);
+            }
+            &::before {
+                padding:            4px;
+                content:            "";
+                display:            inline-block;
+                font-family:        FontAwesome;
+                color:              $blue;
+                height:             100%;
+                margin-right:           35px; // hide the text
+            }
+        }
+    }
+} 
+
+
+@include media-query(palm) {
+    #{$portal-search-namespace}.portal-search {
+        width:                  100%;
+        display:                none !important;
+        &.show {
+            display:            block !important;
+        }
+    }
+}

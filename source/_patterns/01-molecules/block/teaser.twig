@@ -1,0 +1,23 @@
+<article class="block teaser{{ data.blockClass ? ' ' ~ data.blockClass }}">
+{% if data.timestamp %}
+    <div class="timestamp">{{ data.timestamp }}</div>
+{% endif %}
+{% if data.hideTeaserImage != 'true' %}
+    <figure class="image">
+        <a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}" title="Link zu: {{ data.title }}">
+            {% include "atoms-teaser-image-4x3" with {data: data} %}
+        </a>
+        {% if data.source %}<figcaption class="source">© {{ data.source|default('Muster Media') }}</figcaption>{% endif %}  
+    </figure>
+{% endif %}
+    <h3 class="heading">
+        <a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}">{{ data.title|default('Teaser') }}</a>
+    </h3>
+{% if data.subheading %}
+    <p class="subheading">{{ data.subheading }}</p>
+{% endif %}
+    <p>
+        {{ data.text|default('Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.') }}
+        <a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage) }}" class="readmore" title="Link zu: {{ data.title }}">mehr</a>
+    </p>
+</article>

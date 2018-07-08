@@ -1,33 +1,33 @@
-# Theme for www.blaetter.de
+# Berlin.de Corporate Masterlayout
 
-This project contains the Drupal 8 theme for the homepage of the "Blätter für deutsche und internationale Politk". It is build with Patternlab using the particle starting project from phase2.
+## Masterlayout für Berlin.de Rebrush »echo« ab 2016
 
-We extend the approach from particle to make use of docker and make the development possible in any environment.
+Definition und Styleguide der Berlin.de Betreiber-Seiten mit Hilfe von [Pattern Lab](http://patternlab.io/)
 
-## Contributors
+### Buildprozess
 
-Beyond the contributors for the used open source projects, there are the following maintainers working on this theme:
+* `all` – build all (patternlab and webpack) and [/export](/export/)
+* `watch` – listen for changes in [/source-bundle](/source-bundle/) and build using webpack (no patternlab build)
+* `clean` – Enfernen aller dynamisch erzeugten Dateien um den Build-Prozess zu erzwingen
+* `distclean` – Entfernen aller dynamisch erzeugten Dateien und der für den Build-Vorgang benötigten Abhängkeiten
 
-* [ambo](https://github.com/ambo)
-* [Neuronaut2](https://github.com/Neuronaut2)
+### Patternlab
 
-## Requirements
+* `php core/console --generate`
+* `php core/console --export`
+* `php core/console --watch`
 
-* Docker
-* Docker-compose
-* Some sort of terminal to get started
+### Docker
 
-## Installation
+* [`bin/docker-build`](bin/docker-build) – build docker image using [Dockerfile](/Dockerfile)
+* [`bin/docker-update-shell`](/bin/docker-update-shell) – run image, show dynamic allocated port, open shell in container
 
-* Clone this repository to any path, e.g. `blaetter-theme`
-* Change into that directory, e.g. `cd blaetter-theme`
-* You may need to go to `cd particle/apps/pl/pattern-lab` and do a `composer install`
-* Start the docker container: `docker-compose up` or `docker-compose up -d` if you don't want to be attached to the server.
+Working copy is mounted to the container by the default [docker-compose.yml](/docker-compose.yml). You have to run `make all` in the container. 
 
-## Usage
+### Abhängkeiten
 
-After starting the server, you can visit the patternlab installation via `http://localhost:8080/pl/`.
-
-You can simply work within the `particle\source\` directory, make changes ans so one. The webpack server in the container will recognize any changes and reload the server and the browser window for you.
-
-
+* composer – https://getcomposer.org/
+* gnu make
+* nodejs8
+* php
+* yarn – https://yarnpkg.com/en/

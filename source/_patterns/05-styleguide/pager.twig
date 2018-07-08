@@ -1,0 +1,38 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <h2>Pager</h2>
+    
+    <h3>Pagination</h3>
+    <p>
+        Die Pagerelemente werden in einer ungeordneten Liste gekapselt. 
+        Das aktive Element hat die Klasse <code>.active</code>. 
+        Die vor/zurück-Links sowie das aktive Element sind mit <code>aria-label</code>, 
+        die vor/zurück-Symbole außerdem mit <code>aria-hidden</code> zu versehen.
+    </p>
+    {% include "molecules-pagination" with {activePage: "2", maxPages: "11", pages: "3"} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-pagination" with {activePage: "2", maxPages: "11", pages: "3"}  %}</code></pre>
+    
+    <p>
+        Elemente, die nicht benutzbar sind werden nicht ausgeblendet, sondern mit der Klasse <code>.disabled</code> versehen.
+    </p>
+    {% include "molecules-pagination" with {activePage: "1", pages: "3"} %}
+    {% include "molecules-pagination" with {activePage: "3", pages: "3"} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-pagination" with {activePage: "3", maxPages: "11", pages: "3"}  %}</code></pre>
+    
+    <p>
+        Wird die maximale Anzahl an Elementen überschritten, so werden Platzhalter<code>…</code> eingefügt. Die erste und letzte Seite sind dabei immer zu sehen.
+        Bei mehr als 5 Ergebnisseiten bekommen die vor/zurück-Elemente die Klasse <code>.smallest-hide</code> um ein Umbruch des Pagers auf kleinen Screens zu vermeiden.
+    </p>
+    {% include "molecules-pagination" with {activePage: "3", pages: "26"} %}
+    {% include "molecules-pagination" with {activePage: "17", pages: "2674"} %}    
+    {% include "molecules-pagination" with {activePage: "24", pages: "26"} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-pagination" with {activePage: "17", maxPages: "11", pages: "26"}%}</code></pre>
+    
+    <h3>A-Z Index</h3>
+    {% include "molecules-az" with {data: {activeLetter: "E"}} %} 
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-az" with {data: {activeLetter: "E"}} %}</code></pre>
+    
+    
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <h2>Listenformate</h2>
+    
+    <p>
+       Das Design enthält drei Listenformate, die immer auf folgende Art dargestellt werden.
+    </p>
+    
+    <h3>Unordered List</h3>
+    {% include "atoms-unordered" %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-unordered" %}</code></pre>
+    
+    <h3>Ordered List</h3>
+    {% include "atoms-ordered" %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-ordered" %}</code></pre>
+    
+    <h3>Definition List</h3>
+    {% include "atoms-definition" %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-definition" %}</code></pre>
+    
+    <h3>Definition List (Horizontal)</h3>
+    <p><code>dl.dl--horizontal</code></p>
+    {% include "atoms-definition" with {class: "dl--horizontal"} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-definition" with {class: "dl--horizontal"} %}</code></pre>
+    
+    <h3>Liste mit zwei Elementen pro Zeile (sortierung links nach rechts)</h3>
+    <p><code>ul.list--double</code></p>
+    {% include "atoms-unordered" with {data: {class: 'list--double', listitems: listitems_alphabetic|slice(0,10)} } %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-unordered" with {data: {class: 'list--double', listitems: listitems_alphabetic|slice(0,10)} } %}</code></pre>
+
+    <h3>Halbbreite Liste (sortierung oben nach unten)</h3>
+    <p><code>ul.list--half</code></p>
+    {% include "atoms-unordered" with { data: {class: 'list--half', listitems: listitems_alphabetic|slice(0,10)} } %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-unordered" with {data: {class: 'list--half', listitems: listitems_alphabetic|slice(0,10)} } %}</code></pre>
+    
+    <h3>Liste mit drei Elementen pro Zeile (sortierung links nach rechts)</h3>
+    <p><code>ul.list--triple</code></p>
+    {% include "atoms-unordered" with {data: {class: 'list--triple', listitems: listitems_alphabetic|slice(0,10)} } %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-unordered" with {data: {class: 'list--triple', listitems: listitems_alphabetic|slice(0,10)} } %}</code></pre>
+
+    <h3>Liste mit Pfeilen </h3>
+    <p><code>ul.list--arrowlist</code></p>
+    {% include "atoms-unordered" with {data: {class: 'list--arrowlist', listitems: listitems_alphabetic|slice(0,10)} } %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-unordered" with {data: {class: 'list--arrowlist', listitems: listitems_alphabetic|slice(0,10)} } %}</code></pre>
+    
+    <h3>Liste ohne Listensymbole</h3>
+    <p><code>ul.list--clean</code></p>
+    {% include "atoms-unordered" with {data: {"class": "list--clean"}} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-unordered" with {data: {"class": "list--clean"}}  %}</code></pre>
+
+    <h3>Downloadliste</h3>
+    <p><code>ul.list--downloads</code></p>
+    {% include "atoms-unordered" with { data: {
+        "class": "list--downloads",
+        "listitems": [
+            {"title": "<a href=\"#\">Downloadlink 1 (PDF)</a>"},
+            {"title": "<a href=\"#\">Downloadlink 2 (PDF)</a>"},
+            {"title": "<a href=\"#\">Downloadlink 3 (PDF, Englisch)</a>"},
+            {"title": "<a href=\"#\">Downloadlink 4 (PDF)</a>"},
+            {"title": "<a href=\"#\">Downloadlink 5 (PDF, Englisch)</a>"}
+        ]
+    }} %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-unordered" with { data: {
+        "class": "list--downloads",
+        "listitems": [
+            {"title": "<a href=\"#\">Downloadlink 1 (PDF)</a>"},
+            {"title": "<a href=\"#\">Downloadlink 2 (PDF)</a>"},
+            {"title": "<a href=\"#\">Downloadlink 3 (PDF, Englisch)</a>"},
+            {"title": "<a href=\"#\">Downloadlink 4 (PDF)</a>"},
+            {"title": "<a href=\"#\">Downloadlink 5 (PDF, Englisch)</a>"}
+        ]
+    }} %}</code></pre>
+
+    <h3>Checkliste </h3>
+    <p><code>ul.list--checklist</code></p>
+    {% include "atoms-unordered" with {data: {class: 'list--checklist list--triple', listitems: listitems_alphabetic|slice(0,15)} } %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-unordered" with {data: {class: 'list--checklist list--triple', listitems: listitems_alphabetic|slice(0,10)} } %}</code></pre>
+
+
+    <h3>Attributliste</h3>
+    {% include "molecules-article-attributes" %}
+    <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "molecules-article-attributes" %}</code></pre>
+    
+  
+{% endblock %}

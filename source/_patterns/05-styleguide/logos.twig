@@ -1,0 +1,22 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <h2>Logos</h2>
+    
+    <p>
+        Unten steht das offizielle Logo in unterschiedlichen Formaten zum Download bereit. 
+        Sollten Sie andere Logoversionen benötigen, nehmen Sie bitte Kontakt mit uns auf.
+    </p>
+    
+    {% include "atoms-logo" %}
+    
+    <br /><br />
+    
+    <p>Zum Download mit der rechten Maustaste auf den Link klicken und "Ziel speichen unter..." wählen</p>
+    <ul>
+        <li>SVG: <a target="_blank" href="../../images/logo.svg">logo.svg</a> (empfohlen)</li>
+        <li>PNG: <a target="_blank" href="../../images/logo.png">logo.png</a></li>
+    </ul>
+    
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends "main.twig" %}
+
+    {% block pagetitle %}{{ article.title }}{% endblock %}
+                  
+    {% block content %}
+        
+        <div class="grid">
+            <main class="grid__item two-thirds main-content">                
+                {% block breadcrumb %}
+                    {% include "molecules-breadcrumb" with { breadcrumb: article.breadcrumb } %}
+                {% endblock %}   
+
+                <article>
+                    <h1 class="heading--article">{{ article.title }}</h1>
+                    
+                    {% if article.introtext %}
+                    <p class="introtext">
+                        {{ article.introtext }}
+                    </p>
+                    {% endif %}
+                    
+                    {% include "molecules-share" %} 
+                                    
+                    {% if article.mainimage %}
+                    <div class="article-mainimage js-articleimage-add-blur">
+                        <img src="{{ article.mainimage }}" alt="" />
+                         {% if article.mainimage_source %}
+                        <p class="source">© Muster Media</p>
+                        {% endif %}
+                    </div>
+                        {% if article.mainimage_caption %}
+                        <div class="caption">
+                        {% include 'atoms-image-caption' with {data: {'text': article.mainimage_caption }} %}
+                        </div>
+                        {% endif %}
+                    {% endif %}
+                    
+                    {% for block in article.content %}
+                        {% include block.pattername with { "data": block } %}
+                    {% endfor %}
+                                    
+                    {% include "molecules-share" %} 
+                    
+                    {% if article.asidecontent %}
+                    <aside>
+                        {% if article.asidecontent.title %}
+                        <h2>{{ article.asidecontent.title }}</h2>
+                        {% endif %}
+                        {% for block in article.asidecontent.content %}
+                            {% include block.pattername with { "data": block } %}
+                        {% endfor %}
+                    </aside>
+                    {% endif %}
+
+                </article>
+
+            </main><!-- /grid__item -->
+            
+            <aside class="grid__item one-third marginal">
+                
+                {% for item in article.marginal.blocks %}
+                    {% include item.pattername with { "data": item } %}
+                {% endfor %} 
+                
+            </aside><!-- /grid__item -->
+        </div><!-- /grid -->
+
+        {% if article.appendix %}
+        <aside class="appendix">
+            
+            
+        </aside>
+        {% endif %}
+        
+    {% endblock %}

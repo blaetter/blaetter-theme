@@ -1,0 +1,136 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+
+{{ formgroup(
+    {
+        "label": "Input with success", 
+        "for": "exampleValidationInput1",
+        "validationFeedback": "Success! You've done it.",
+        "class": "has-success"
+    },
+    [{
+        "type":"input",
+        "parameter":{
+            "id": "exampleValidationInput1"
+        }
+    }]
+) }}
+{#{ formgroup(
+    {
+        "label": "Input with warning", 
+        "for": "exampleValidationInput2",
+        "validationFeedback": "Shucks, check the formatting of that and try again.",
+        "class": "has-warning"
+    },
+    [{
+        "type":"input",
+        "parameter":{
+            "id": "exampleValidationInput2"
+        }
+    }]
+) }#}
+{{ formgroup(
+    {
+        "label": "Input with error", 
+        "for": "exampleValidationInput3",
+        "validationFeedback": "Sorry, that username's taken. Try another?",
+        "class": "has-error"
+    },
+    [{
+        "type":"input",
+        "parameter":{
+            "id": "exampleValidationInput3"
+        }
+    }]
+) }}
+{{ formgroup(  
+    {
+        "class": "has-success"
+    },
+    [{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Checkbox with success"
+        }
+    }]
+) }}
+{#{ formgroup(  
+    {
+        "class": "has-warning"
+    },
+    [{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Checkbox with warning"
+        }
+    }]
+) }#}
+{{ formgroup(  
+    {
+        "class": "has-error"
+    },
+    [{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Checkbox with error"
+        }
+    }]
+) }}
+{{ formgroup(  
+    {
+        "fieldset": "Radio with success",
+        "class": "form-group--inline has-success"
+    },
+    [{
+        "type":"radio", 
+        "parameter":{
+            "label": "Option 1",
+            "name":"optionsValidationRadios1"
+        }
+    },{
+        "type":"radio", 
+        "parameter":{
+            "label": "Option 2",
+            "name":"optionsValidationRadios1"
+        }
+    }]
+) }}
+{#{ formgroup(  
+    {
+        "fieldset": "Radio with warning",
+        "class": "form-group--inline has-warning"
+    },
+    [{
+        "type":"radio", 
+        "parameter":{
+            "label": "Option 1",
+            "name":"optionsValidationRadios2"
+        }
+    },{
+        "type":"radio", 
+        "parameter":{
+            "label": "Option 2",
+            "name":"optionsValidationRadios2"
+        }
+    }]
+) }#}
+{{ formgroup(  
+    {
+        "fieldset": "Radio with error",
+        "class": "form-group--inline has-error"
+    },
+    [{
+        "type":"radio", 
+        "parameter":{
+            "label": "Option 1",
+            "name":"optionsValidationRadios3" 
+        }
+    },{
+        "type":"radio", 
+        "parameter":{
+            "label": "Option 2",
+            "name":"optionsValidationRadios3"
+        }
+    }]
+) }}
+

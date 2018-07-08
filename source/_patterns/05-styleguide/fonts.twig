@@ -1,0 +1,171 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <script>
+        jQuery(function($) {
+            /* write the original background color of the elements below the element */
+            var hexDigits = new Array
+            ("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"); 
+            //Function to convert rgb color to hex format
+            function rgb2hex(rgb) {
+                rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+            }
+            function hex(x) {
+                return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+            }
+            $('.styleguide-fonts .sg-element').each(function() {
+                var colorRGB = $(this).children().first().css('color');
+                var fontFamily = $(this).children().first().css('font-family');
+                var fontSize = Math.round($(this).children().first().css('font-size').replace('px',''));
+                var fontLineheight = Math.round($(this).children().first().css('line-height').replace('px',''));
+                $(this).after('<div class="sg-label">color: ' + colorRGB + '; hex: ' + rgb2hex(colorRGB) + '</div>');
+                $(this).after('<div class="sg-label">font-family: ' + fontFamily + '</div>');
+                $(this).after('<div class="sg-label">font-size: ' + fontSize + 'px; line-height: ' + fontLineheight + 'px</div>');
+            });
+        });
+    </script>
+    
+    
+    <h2>Schrift und Text</h2>
+    
+    <p>
+        Hauptschrift ist immer Arial. Hier werden alle existierenden Schriftschnitte für unterschiedliche 
+        Verwendungen gezeigt. Andere Schriften oder Schriftschnitte kommen nicht vor und von ihrer Verwendung ist abzusehen.
+    </p>
+    
+    <div class="styleguide-fonts">
+        
+        <div class="sg-element">
+            {% include "atoms-heading1" %}
+            {% include "atoms-heading1" with {data: {'text': 'Heading 1, verlinkt', 'targetPage':'#'}} %}
+            <span class="sg-def-h1"></span>
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading1") %}</code></pre>
+        
+        <div class="sg-element">
+            {% include ("atoms-heading2") %}
+            {% include "atoms-heading2" with {data: {'text': 'Heading 2, verlinkt', 'targetPage':'#'}} %}
+            <span class="sg-def-h2"></span>
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading2") %}</code></pre>
+         
+        <div class="sg-element">
+            {% include ("atoms-heading3") %}
+            {% include "atoms-heading3" with {data: {'text': 'Heading 3, verlinkt', 'targetPage':'#'}} %}
+            <span class="sg-def-h3"></span>
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading3") %}</code></pre>
+        
+        <div class="sg-element">
+            {% include ("atoms-heading4") %}
+            {% include "atoms-heading4" with {data: {'text': 'Heading 4, verlinkt', 'targetPage':'#'}} %}
+            <span class="sg-def-h4"></span>
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading4") %}</code></pre>
+        
+        <div class="sg-element__">
+            {% include ("atoms-heading-sectiontitle") %}
+        </div>
+        <div class="sg-element__">
+            {% include "atoms-heading-sectiontitle" with {data:{"targetPage":"#","text": "Heading Sectiontitle, verlinkt"}} %}
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading-sectiontitle") %}</code></pre>
+        
+        <div class="sg-element__">
+            {% include ("atoms-heading-formsection") %}
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading-formsection") %}</code></pre>
+
+        <h3>Paragraph</h3>
+        <div class="sg-element">
+            {% include "atoms-paragraph" %}
+            <span class="sg-def-p"></span>
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-paragraph" with {data: {text: "Lorem ipsum dolor [...] Cras dapibus." }} %}</code></pre>
+        
+        <h3>Link</h3>
+        <div class="sg-element">
+            {% include "atoms-anker" %}
+            <span class="sg-def-a"></span>
+         </div>
+         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-anker" %}</code></pre>
+       
+        <h3>Bildunterschrift</h3>
+        <code>.image-caption</code>
+        <div class="sg-element">
+            {% include "atoms-image-caption" with {data:{"text": null}}%}
+         </div>
+         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-image-caption" %}</code></pre>
+
+
+        <br /><br />
+        
+        <h2>Ausrichtungen</h2>
+
+        <code>.text--small</code>
+        <div class="sg-element__">
+            <p class="text-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </div>
+         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+         <p class="text-small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </code></pre>
+
+        <code>.text-light</code>
+        <div class="sg-element__">
+            <p class="text-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </div>
+         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+         <p class="text-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </code></pre>
+
+        <code>.float-left</code>
+        <div class="block sg-element__">
+            <p class="float-left">Left floating text.</p>
+            <p>Lorem ipsum</p>
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+        <p class="float-left">Left floating text.</p>
+        <p>Lorem ipsum</p>
+        </code></pre>
+
+        <code>.float-right</code>
+        <div class="block sg-element__">
+            <p class="float-right">Right floating text.</p>
+            <p>Lorem ipsum</p>
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+        <p class="float-right">Right floating text.</p>
+        <p>Lorem ipsum</p>
+        </code></pre>
+
+         <code>.align-left</code>
+        <div class=" sg-element__">
+            <p class="align-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </div>
+         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+         <p class="align-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </code></pre>
+
+        <code>.align-right</code>
+        <div class="sg-element__">
+            <p class="align-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </div>
+         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+         <p class="align-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </code></pre>
+
+        <code>.align-center</code>
+        <div class="sg-element__">
+            <p class="align-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </div>
+         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+         <p class="align-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+         </code></pre>
+
+    </div>
+
+
+    
+{% endblock %}

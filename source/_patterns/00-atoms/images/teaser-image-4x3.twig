@@ -1,0 +1,4 @@
+{% set srcSmall = (data.imageurl? data.imageurl~'/'~imageSizeTeaserSmall ~'/' : '../../images/sample/dummy_4x3_170.jpg') %}
+{% set srcNormal = (data.imageurl? data.imageurl~'/'~imageSizeTeaserNormal ~'/' : '../../images/sample/dummy_4x3_300.jpg') %}
+{% set src = srcNormal %}
+<img src="{{ data.imageurl? data.imageurl : '../../images/sample/dummy_4x3_300.jpg' }}" alt="Bildbeschreibung" /> 

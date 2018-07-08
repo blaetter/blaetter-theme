@@ -1,0 +1,56 @@
+$multicheckboxselect-namespace:              $namespace !default;
+
+
+// We build a list of checkboxes from a multiselect via js. Only Desktop!
+
+#{$multicheckboxselect-namespace}.js-multiselect2checkboxes {    
+    @include media-query('lap-and-up') {
+        position:                   relative;
+        background:                 $white !important; // because of downarrow
+        .arrow:before {
+            content:                "\f078";
+            font-family:            FontAwesome;
+            font-size:              0.8em;
+            display:                inline-block;
+            width:                  1em;
+            height:                 1em;
+            position:               absolute;
+            right:                  0.5em;
+            top:                    0.5em;
+        }
+        select {
+            display:            none;
+        }
+        .checkbox-container {
+            position:           absolute;
+            display:            none;
+            width:              100%;
+            background:         white;
+            padding:            0;
+            z-index:            1;
+            border:             1px solid $greyBorder;
+            border-width:       0 1px 1px 1px;
+            label {
+                display:        block;
+                padding:        0.3em 0.5em;
+                font-weight:    normal;
+                + label {
+                    border-top: 1px solid $greyBorder;
+                }
+                input[type="checkbox"] {
+                    float:      right;
+                }
+            }
+        } 
+    }
+}
+
+// A faked select field to display some text (input set to readonly)
+#{$multicheckboxselect-namespace}.js-multiselect2checkboxes__fakeselect {
+    background:                 transparent !important; // because of downarrow
+    text-overflow:              ellipsis;
+    padding-right:              1.5em;
+    position:                   relative;
+}
+
+

@@ -1,0 +1,59 @@
+$link-namespace:           $namespace !default;
+
+@mixin link--base() {
+    text-decoration:        none;
+    color:                  $linkColor;
+    &:hover,
+    &:focus {
+        text-decoration:    underline;
+    }
+    &:focus {
+        outline:            1px dotted;
+        outline-offset:     0px;
+    }
+}
+
+
+
+#{$link-namespace}a {
+    @include link--base();
+    font-weight:            $font-weight-a;
+    p {
+        color:              $baseTextColor;
+    }
+    &.readmore {
+        @include link-readmore();
+    }
+    &.fa {
+        &:hover,
+        &:focus {
+            text-decoration:        none;
+        }
+    }
+    &.right {
+        float:                      right;
+    }
+    &::after {
+        text-decoration:    underline; // IE10 fix
+    }
+    &:after,
+    &:hover:after {
+        text-decoration:    none; // IE10 fix
+    }
+}
+
+.link--download {
+    display:                    inline-block;
+    margin-right:               0.5em;
+    &::before {
+        color:                  #777777;
+        content:                "\f016";
+        display:                inline-block;
+        font-family:            FontAwesome;
+        font-size:              1.0em;
+        margin-right:           0.5em;
+        vertical-align:         -0.05em;
+    }
+}
+
+

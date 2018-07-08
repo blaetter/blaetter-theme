@@ -1,0 +1,27 @@
+$lightbox-namespace:              $namespace !default;
+
+#{$lightbox-namespace}.mfp-container {
+    // We want a transparent lightbox. 
+    // The Background, Padding, etc. is defined by its content
+     .mfp-content {
+       // background-color:       transparent;
+       // padding:                0;
+    }
+     &.mfp-ajax-holder .mfp-content, 
+     &.mfp-inline-holder .mfp-content {
+        //width:                  auto; // no!
+    }
+    .mfp-close {
+        color:                      $white;
+        font-weight:                bold;
+        opacity:                    1;
+
+    }
+}
+
+#{$lightbox-namespace}.mfp-bg {
+    opacity:                .9;
+}
+
+
+

@@ -1,0 +1,256 @@
+{#
+ # ############# FORM GROUP MACRO (FORMELEMENT WRAPPER) ##############
+ # (We dont want to use fieldsets because they dont works with horizontal forms in a display: table layout)
+ #}
+
+{%- macro formgroup(groupargs, elements) %}
+    <div class="form-group {{ groupargs.class }}">
+        {% if groupargs.label -%}
+        <label{% if groupargs.labelClass %} class="{{ groupargs.labelClass }}"{% endif %}{% if groupargs.for %} for="{{groupargs.for}}"{% endif %}{% if groupargs.ariaLabel %} aria-label="{{groupargs.ariaLabel}}"{% endif %}{% if groupargs.title %} title="{{groupargs.title}}"{% endif %}>{{ groupargs.label|raw }}{% if groupargs.required %}<span class="required-symbol">*</span>{% endif %}</label>
+        {% elseif groupargs.fieldset -%}
+        <p class="legend {{ groupargs.labelClass }}">{{ groupargs.fieldset }}{% if groupargs.required %}<span class="required-symbol">*</span>{% endif %}</p>
+        {% endif -%}
+        <div class="controls">
+{% for element in elements -%}
+
+        {%- if element.type == "select" -%}
+            {{- _self.selectfield(element, groupargs) -}}
+        {%- endif -%}
+        
+        {%- if element.type == "multiselect_checkbox" -%}
+            {{- _self.multiselect_checkbox(element, groupargs) -}}
+        {%- endif -%}
+
+        {%- if element.parameter.prepend -%}
+            <span class="prepend">
+                {{ element.parameter.prepend }}
+            </span>
+        {% endif -%}
+
+        {%- if element.type == "input" -%}
+            {{ _self.inputfield(element, groupargs) -}}
+        {% endif -%}
+
+        {%- if element.type == "button" -%}
+            {{ _self.formbutton(element, groupargs) -}}
+        {% endif -%}
+        
+        {%- if element.type == "bookingbutton" -%}
+            {{ _self.bookingbutton(element) -}}
+        {% endif -%}
+
+        {%- if element.type == "checkbox" -%}
+            {{- _self.checkboxfield(element, groupargs) -}}
+        {% endif -%}
+
+        {%- if element.type == "radio" -%}
+            {{ _self.radiobuttonfield(element, groupargs) -}}
+        {% endif -%}
+
+        {%- if element.type == "textarea" -%}
+            {{ _self.textareafield(element, groupargs) -}}
+        {% endif -%}
+
+        {%- if element.type == "datepicker" -%}
+            {{ _self.datepickerfield(element, groupargs) -}}
+        {% endif -%}
+
+        {%- if element.type == "prepend" -%}
+            {{ _self.prepend(element.parameter) -}}
+        {% endif -%}
+
+        {%- if element.type == "append" -%}
+            {{ _self.append(element.parameter) -}}
+        {% endif -%}
+
+        {%- if element.type == "counter" -%}
+            {{ _self.counterfield(element.parameter) -}}
+        {% endif -%}
+
+        {%- if element.parameter.append %}
+            <span class="append">{{ element.parameter.append }}</span>
+        {% endif -%}
+
+{%- endfor -%}
+{% if groupargs.errors -%}
+        {{  _self.errormessage(groupargs.errors) -}}
+{% endif %}
+{% if groupargs.validationFeedback -%}
+        {{ _self.groupValidationFeedback(groupargs) }}
+{%- endif %}
+{% if groupargs.description -%}
+        {{ _self.groupdescription(groupargs) }}
+{%- endif %}
+        </div>
+    </div>
+{%- endmacro -%}
+
+
+
+{#
+############## FORM ELEMENT MACROS ##############
+#}
+
+
+{% macro inputfield(element, groupargs) %}
+{%- set inputtype = element.parameter.type|default('text') %}
+{% if element.auralLabel %}
+            <label class="aural" {{ element.parameter.id ? ('for="'~element.parameter.id~'"')|raw }}>{{element.auralLabel}}</label>
+{% endif %}
+            <input {{ (' type="' ~ inputtype ~ '"')|raw -}}
+            {{- groupargs.description and element.parameter.id ? (' aria-describedby="' ~ element.parameter.id ~ 'Help"')|raw -}}
+            {%- for key, arg in element.parameter -%}
+                {{ arg and key != 'type' ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+            {%- endfor -%}
+            {{- element.disabled ? ' disabled="disabled"' -}}
+            {{- element.readonly ? ' readonly="readonly"' }}>
+{% endmacro %}
+
+{% macro inputsubmit(args) -%}
+        <input type="submit" name="{{ args.name }}" value="{{ args.value|e }}" class="button-{{ args.type|default('submit') }}"{% if args.id %} id="{{ args.id }}"{% endif %}>
+{% endmacro %}
+
+{% macro datepickerfield(element, groupargs) %}    
+            <div class="datepicker-icon-wrapper">
+                <input type="text" class="datepicker-input{{ element.parameter.class? ' '~element.parameter.class }}" 
+                {%- for key, arg in element.parameter -%}
+                    {{ (arg and arg is not iterable and key != 'class') ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+                {%- endfor -%}>
+            </div>
+{% endmacro %}
+
+
+{% macro selectfield(element, groupargs) %}
+{% if element.auralLabel %}
+            <label class="aural" {{ element.parameter.id ? ('for="'~element.parameter.id~'"')|raw }}>{{element.auralLabel}}</label>
+{% endif %}
+            <select{{ groupargs.description and element.parameter.id ? (' aria-describedby="' ~ element.parameter.id ~ 'Help"')|raw -}}
+                {%- for key, arg in element.parameter -%}
+                    {{ (arg and arg is not iterable) ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+                {%- endfor -%}
+                {{- element.disabled ? ' disabled="disabled"' -}}
+                {{- element.readonly ? ' readonly="readonly"' }}>
+{% for option in element.parameter.options %}
+                <option {% if option.selected %}selected="selected"{% endif %} value="{{ option.value }}" {% if option.class %} class="{{ option.class }}"{% endif %}>{{ option.name }}</option>
+{% endfor %}
+            </select>
+{% endmacro %}
+
+
+
+{% macro multiselect_checkbox(element, groupargs) %}
+            <div class="multicheckboxselect js-multiselect2checkboxes">
+{% if element.auralLabel %}
+                <label class="aural" {{ element.parameter.id ? ('for="'~element.parameter.id~'"')|raw }}>{{element.auralLabel}}</label>
+{% endif %}
+                <select {{ groupargs.description and element.parameter.id ? (' aria-describedby="' ~ element.parameter.id ~ 'Help"')|raw -}}
+                {%- for key, arg in element.parameter -%}
+                    {{ (arg and arg is not iterable) ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+                {%- endfor -%}
+                {{- element.disabled ? ' disabled="disabled"' -}}
+                {{- element.readonly ? ' readonly="readonly"' }}>
+{% for option in element.parameter.options %}
+                    <option {% if option.selected %}selected="selected"{% endif %} value="{{ option.value }}">{{ option.name }}</option>
+{% endfor %}
+                </select>
+            </div>
+{% endmacro %}
+
+
+
+{% macro textareafield(element, groupargs) %}
+            <textarea{{ groupargs.description and args.id ? (' aria-describedby="' ~ element.parameter.id ~ 'Help"')|raw -}}
+                {%- for key, arg in element.parameter -%}
+                    {{ (arg and arg is not iterable) ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+                {%- endfor %}
+                {{- element.disabled ? ' disabled="disabled"' -}}
+                {{- element.readonly ? ' readonly="readonly"' }}>{{ element.value|e }}</textarea>
+{% endmacro %}
+
+
+{% macro checkboxfield(element, groupargs) %}
+            <label class="form-check-label{{ element.disabled == true ? ' disabled' }}{{ element.parameter.id ? (' for="'~element.parameter.id~'"')|raw }}">  
+                <input type="checkbox"
+                    {%- for key, arg in element.parameter -%}
+                        {{ (arg and arg is not iterable and key != 'label') ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+                    {%- endfor -%}
+                    {{- element.disabled ? ' disabled="disabled"' -}}
+                    {{- element.readonly ? ' readonly="readonly"' }}>
+                {{ element.parameter.label -}}
+                {% if element.parameter.required -%}
+                <span class="required-symbol">*</span>
+                {% endif %}    
+            </label>
+{% endmacro %}
+
+
+{% macro radiobuttonfield(element, groupargs) %}
+            <label class="form-check-label{{ element.disabled == true ? ' disabled' }}{{ element.parameter.id ? (' for="'~element.parameter.id~'"')|raw }}">
+                <input type="radio"
+                    {%- for key, arg in element.parameter -%}
+                        {{ (arg and arg is not iterable and key != 'label') ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+                    {%- endfor -%} 
+                    {{- element.disabled ? ' disabled="disabled"' -}}
+                    {{- element.readonly ? ' readonly="readonly"' }}>
+                {{ element.parameter.label|raw -}}
+                {% if aelementrgs.parameter.required -%}
+                <span class="required-symbol">*</span>
+                {% endif %}     
+            </label>
+{% endmacro %}
+
+
+{% macro counterfield(args) %}
+<div class="form-input-counter">
+    <div class="input-counter">
+        <a class="decrement">−</a> 
+        <input type="text" value="{{ args.value|default(0) }}" readonly="readonly"{% if args.size %} size="{{args.size}}"{% endif %} class="form-input{% if args.width %} input--size-{{ args.width }}{% endif %}" /> 
+        <a class="increment">+</a> 
+    </div>
+    <span class="label">{{ args.label -}}</span>
+</div>
+{% endmacro %}
+
+
+{% macro formbutton(element) %}
+        <button {{ ('type="'~args.type|default('submit')~'"')|raw -}}
+            {%- for key, arg in element.parameter -%}
+                {{ arg != 'label' ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+            {%- endfor -%}
+            {% if 'class' not in element.parameter|keys %}
+                {{- ' class="button"' -}}
+            {% endif %}
+            {{- element.disabled ? ' disabled="disabled"' -}}
+            {{- element.readonly ? ' readonly="readonly"' }}>{{element.text}}</button>
+{%- endmacro %}
+
+{% macro bookingbutton(element) %}
+        <button type="submit" 
+            {%- for key, arg in element.parameter -%}
+                    {{ arg != 'label' ? (' ' ~ key ~ '="' ~ arg ~ '"')|raw }}
+                {%- endfor -%}
+                {{- element.disabled ? ' disabled="disabled"' -}}
+                {{- element.readonly ? ' readonly="readonly"' }}>
+{% if element.parameter.price %}
+            <span class="price">{{ element.price}}</span>
+{% endif %}
+            <span class="text">{{ element.text}}</span>
+        </button>
+{% endmacro %}
+
+{% macro errormessage(messages) %}
+<ul class="list--error">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endmacro %}
+
+
+{% macro groupdescription(groupargs) %}
+            <small class="description"{{ groupargs.for  ? (' id="' ~ groupargs.for ~ 'Help"')|raw }}>{{ groupargs.description }}</small>
+{% endmacro %}
+
+{% macro groupValidationFeedback(groupargs) %}
+            <p class="validation-feedback">{{ groupargs.validationFeedback }}</p>
+{% endmacro %}

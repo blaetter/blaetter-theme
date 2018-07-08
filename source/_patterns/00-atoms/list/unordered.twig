@@ -1,0 +1,11 @@
+<ul{{ data.class?  (' class="'~data.class~'"')|raw }}>
+{% if data.listitems %}
+{% for item in data.listitems %}
+    <li>{{ item.title|raw }}</li>
+{% endfor %}
+{% else %}
+{% for listItem in listItems.four %}
+    <li>{{ listItem.title }}</li>
+{% endfor %}
+{% endif %}
+</ul>

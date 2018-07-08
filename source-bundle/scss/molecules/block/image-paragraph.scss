@@ -1,0 +1,29 @@
+$image-namespace:              $namespace !default;
+
+#{$image-namespace}.image--paragraph {
+    .source {
+        @include block-source--base();
+    }
+    .inner {
+        position:       relative;
+    }
+    @include block--base-image(); // keep this behind .source!
+    margin-bottom:      0.25em;
+    .caption {
+        @include fontImageCaption();
+    }
+    &.t_left {
+        float:          left;
+        @include getRem('margin-right', $largeGapPx);
+    }
+    &.t_right {
+        float:          right;
+        @include getRem('margin-left', $largeGapPx);
+    }
+    width:              100%;
+    float:              none;
+    @include media-query('lap-and-up') {
+        width:          30.5%;
+    }
+}
+

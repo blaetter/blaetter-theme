@@ -1,0 +1,106 @@
+// Our global page header
+$portal-head-namespace:              $namespace !default;
+
+#{$portal-head-namespace}.portal-head {
+    @include clearfix();
+    @include getRem('padding-top', 21px);
+    @include getRem('padding-bottom', 14px);
+    @include getRem('padding-left', 19px);
+    @include getRem('padding-right', 19px);
+    position:                   relative;
+    margin:                     0;
+    background-color:           $bluelight;
+    width:                      100%;
+    .portal-headborder {
+        position:               absolute;
+        left:                   0;
+        top:                    0;
+    }
+    .aside {
+        // right section: search, meta, languageselect,...
+        float:                  right;
+        text-align:             left;
+        min-width:              30%;
+        margin-top:             0.1em;
+         > * {
+            display:            inline-block;
+            vertical-align:     middle;
+            margin-right:       0.75em;
+            &:last-child {
+                margin-right:   0;
+            }
+        }
+        .language-select {
+            border-left:        1px solid $blue;
+        }
+        @media print {
+            display:            none;
+        }
+    }
+    .portal-headborder {
+        @include getRem('height', 5px);  
+        width:               100%;
+        background-color:    $blue;
+        display:             block;
+        &::after {
+            @include getRem('height', 5px);  
+            width:               31%;
+            background-color:    $red;
+            display:             block;
+            content:             " ";
+            float:               right;
+        }
+    }
+    .portal-logo {
+        display:        inline-block;
+        position:       relative;
+        @include getRem('width', 131px);
+        @include getRem('height', 36px); // IE
+        margin:         0;
+    }
+    .portal-claim {
+        display:        inline-block;
+        margin:         0.5em 0 0 1.2em;
+        position:       relative;
+        vertical-align: top;
+        color:          $blue;
+        @include fontsize($base-font-size);
+        font-weight:    normal;
+    }
+    .portal-meta {
+        display: inline-block;
+        position: relative;
+    }
+}
+
+
+@include media-query(palm) {
+    #{$portal-head-namespace}.portal-head {
+        @include getRem('padding', 12px);
+        @include getRem('padding-bottom', 12px/2);
+        .aside {
+            // right section: search, meta, languageselect,...
+            float:              none;
+            text-align:         left;
+            > * {
+                display:        none;
+            }
+            .portal-search {
+                display:        block;
+                margin-left:    0;
+                margin-right:   0;
+                @include getRem('margin-bottom', 5px);
+                @include getRem('margin-top', 5px);
+            }
+        }
+        .portal-logo {
+            @include getRem('width', 123px);
+        }
+        .portal-claim {
+            display:        none;
+        }
+        .portal-meta {
+            display:        none;
+        }
+    }
+}

@@ -1,0 +1,177 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+<form class="form--base">
+    <fieldset> 
+    <h3 class="heading--formsection">Überschrift einer Formularsektion</h3>
+{{ formgroup( 
+    {
+        "label": "Eingabefeld", 
+        "for": "exampleInput5"
+    },
+    [{
+        "type":"input",
+        "parameter":{
+            "id": "exampleInput5",
+            "type": "text",
+            "placeholder": "Geben Sie hier einen Text ein"
+        }
+    }]
+) }}
+{{ formgroup(
+    {
+        "label": "E-Mail Adresse", 
+        "for": "exampleInputEmail5",
+        "required": true,
+        "description": "We'll never share your email with anyone else."
+    },
+    [{
+        "type":"input",  
+        "parameter":{
+            "type": "email",
+            "id": "exampleInputEmail5",
+            "placeholder": "Geben Sie hier Ihre E-Mail Adresse ein"
+        } 
+    }] 
+) }}  
+{{ formgroup( 
+    {
+        "label": "Passwort", 
+        "for": "exampleInputPassword5"
+    },
+    [{ 
+        "type":"input",
+        "parameter":{   
+            "type": "password",
+            "id": "exampleInputPassword5",
+            "placeholder": "Geben Sie hier Ihr Passwort ein" 
+        }
+    }]
+) }}
+{{ formgroup( 
+    {
+        "label": "Anzahl", 
+        "for": "exampleInputAnzahl5"
+    },
+    [{ 
+        "type":"input",
+        "parameter":{   
+            "type": "number",
+            "id": "exampleInputAnzahl5",
+            "placeholder": "Bitte geben Sie eine Nummer ein" 
+        }
+    }]
+) }}
+{{ formgroup(  
+    { 
+        "label": "Select",  
+        "for": "exampleSelect5",
+    }, 
+    [{  
+        "type":"select", 
+        "parameter":{ 
+            "id": "exampleSelect5",
+            "options": [
+                {"name": "Option wählen","value": ""},
+                {"name": "Option 1","value": "1"},
+                {"name": "Option 2","value": "2"}
+            ]
+        }
+    }] 
+) }}
+{{ formgroup(
+    { 
+        "label": "Multiselect",  
+        "for": "exampleMultiselect5",
+        "description": "Sie können mit gedrückter Strg-Taste mehrer Optionen wählen" 
+    }, 
+    [{ 
+        "type":"select",
+        "parameter":{   
+            "id": "exampleMultiselect5",
+            "multiple": "multiple",  
+            "options": [
+                {"name": "Option 1","value": "1"},
+                {"name": "Option 2","value": "2"},
+                {"name": "Option 2","value": "3"},
+                {"name": "Option 2","value": "4"}
+            ]
+        } 
+    }]  
+) }}  
+{{ formgroup(
+    {
+        "label": "Textfeld", 
+        "for": "exampleTextarea5" 
+    },
+    [{ 
+        "type":"textarea",
+        "parameter":{ 
+            "id": "exampleTextarea5",
+            "rows": "3"
+        }
+    }]
+) }}
+{{ formgroup(
+    {
+        "label": "Datum",
+        "class": false,
+        "for": "date1"
+    },
+    [{
+        "type":"datepicker",
+        "parameter":{
+            "name":"date",
+            "id": "date1",
+            "title": "Wählen Sie ein Datum",
+            "placeholder": "datum wählen"
+        }
+    }]
+) }}
+{{ formgroup( 
+    {
+        "label": "Datei Upload", 
+        "for": "exampleInputFile5",
+        "description": "This is some placeholder help text for the above input."
+    },
+    [{ 
+        "type":"input",
+        "parameter":{ 
+            "type": "file",
+            "id": "exampleInputFile5"
+        }
+    }]
+) }}
+{{ formgroup(   
+    {},
+    [{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Check me"
+        }
+    }]
+) }}
+    
+    <div class="form-actions">
+        <small class="form-helptext">
+            Hinweis: Pflichfelder sind mit einem <span class="star">*</span> markiert.
+        </small>
+{{ formbutton(  
+    {
+        "text":    "Finden",
+        "parameter": {
+        }
+    }
+) }}
+{{ formbutton(  
+    {
+        "text":    "Felder löschen",
+        "type":    "reset",
+        "parameter": {
+            "class": "link formreset"
+        }
+    }
+) }}
+
+    </div>
+    </fieldset>
+</form> 

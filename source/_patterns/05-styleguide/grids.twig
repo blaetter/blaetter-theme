@@ -1,0 +1,216 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <h2>Grids</h2>
+    
+    <p>
+        Das Design der Seiten beruht auf einem flexiblen Gridsystem, wobei die Verhältnisse der Container zueinander 
+        immer klar definiert sind. Layouts im Umfeld von Berlin.de sind unbedingt in Übereinstimmung mit diesem Grid-System 
+        zu gestalten, um die Homogenität der Umgebung zu gewährleisten. Die untenstehende Übersicht zeigt, welche Verhältnisse  
+        von Containern zueinander in einer Zeile des vollbreiten Layouts vorkommen können.
+    </p>
+    <p>
+        Weiterführend finden Sie im Bereich <a href="{{ attribute(link, page_prefix|default('styleguide') ~ '-layout') }}">Layout</a> 
+        eine Übersicht zum Aufbau der verschiedenen Seitentypen.
+    </p>
+    
+    <div class="styleguide-grids__ sg-layout-content">
+        <h3>Grid 1/2</h3>
+        <div class="grid">
+            <div class="grid__item one-third">
+                <span>Left (33.333%)</span>
+            </div>
+            <div class="grid__item two-thirds">
+                <span>Right (66.666%)</span>
+            </div>
+        </div>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code><div class="grid">
+    <div class="grid__item one-third">
+        [...]
+    </div>
+    <div class="grid__item two-thirds">
+        [...]
+    </div>
+</div></code></pre>
+        
+        <h3>Grid 2/1</h3>
+        <div class="grid">
+            <div class="grid__item two-thirds">
+                <span>Left (66.666%)</span>
+            </div>
+            <div class="grid__item one-third">
+                <span>Right (33.333%)</span>
+            </div>
+        </div>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code><div class="grid">
+    <div class="grid__item two-thirds">
+        [...]
+    </div>
+    <div class="grid__item one-third">
+        [...]
+    </div>
+</div></code></pre>
+
+        <h3>Grid Reversed</h3>
+        <div class="grid grid--reversed">
+             <div class="grid__item one-third">
+                <span>Left (33.333%)</span>
+            </div>
+            <div class="grid__item two-thirds">
+                <span>Right (66.666%)</span>
+            </div>
+        </div>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code><div class="grid grid--reversed">
+    <div class="grid__item one-third">
+        [...]
+    </div>
+    <div class="grid__item two-thirds">
+        [...]
+    </div>
+</div></code></pre>
+        
+        <h3>Grid 1/1</h3>
+        <div class="grid">
+            <div class="grid__item one-half">
+                <span>Left (50%)</span>
+            </div>
+            <div class="grid__item one-half">
+                <span>Right (50%)</span>
+            </div>
+        </div>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code><div class="grid">
+    <div class="grid__item one-half">
+        [...]
+    </div>
+    <div class="grid__item one-half">
+        [...]
+    </div>
+</div></code></pre>
+
+        <h3>Grid 1/1/1</h3>
+        <div class="grid">
+            <div class="grid__item one-third">
+                <span>Left (33.333%)</span>
+            </div>
+            <div class="grid__item one-third">
+                <span>Middle (33.333%)</span>
+            </div>
+            <div class="grid__item one-third">
+                <span>Right (33.333%)</span>
+            </div>
+        </div>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code><div class="grid">
+    <div class="grid__item one-third">
+        [...]
+    </div>
+    <div class="grid__item one-third">
+        [...]
+    </div>
+    <div class="grid__item one-third">
+        [...]
+    </div>
+</div></code></pre>        
+
+        <h3>Grid 1/1 inside Grid 1/2</h3>
+        <div class="grid">
+            <div class="grid__item one-third">
+                <span>Grid 1/2 Left (33.333%)</span>
+            </div>
+            <div class="grid__item two-thirds">
+                <div class="grid">
+                    <div class="grid__item one-half">
+                        <span>Grid 1/1 item A (50%)</span>
+                    </div>
+                    <div class="grid__item one-half">
+                        <span>Grid 1/1 item B (50%)</span>
+                    </div>
+                    <div class="grid__item one-half">
+                        <span>Grid 1/1 item C (50%)</span>
+                    </div>
+                    <div class="grid__item one-half">
+                        <span>Grid 1/1 item D (50%)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code><div class="grid">
+    <div class="grid__item one-third">
+        [...]
+    </div>
+    <div class="grid__item two-thirds">
+        <div class="grid">
+            <div class="grid__item one-half">
+                [...]
+            </div>
+            <div class="grid__item one-half">
+                [...]
+            </div>
+            <div class="grid__item one-half">
+                [...]
+            </div>
+            <div class="grid__item one-half">
+                [...]
+            </div>
+        </div>
+    </div>
+</div></code></pre>        
+
+        <h3>Grid inside Grid reversed (Channelsection)</h3>
+        <div class="grid grid--reversed">
+            <div class="grid__item two-thirds">
+                <div class="grid">
+                    <div class="grid__item one-third">
+                        <span>Grid 1/1/1 item A (33.333%)</span>
+                    </div>
+                    <div class="grid__item one-third">
+                        <span>Grid 1/1/1 item B (33.333%)</span>
+                    </div>
+                    <div class="grid__item one-third">
+                        <span>Grid 1/1/1 item C (33.333%)</span>
+                    </div>
+                    <div class="grid__item one-third">
+                        <span>Grid 1/1/1 item D (33.333%)</span>
+                    </div>
+                    <div class="grid__item one-third">
+                        <span>Grid 1/1/1 item E (33.333%)</span>
+                    </div>
+                    <div class="grid__item one-third">
+                        <span>Grid 1/1/1 item F (33.333%)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__item one-third">
+                <span>Grid 1/2 Right (33.333%)</span>
+            </div>
+        </div>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code><div class="grid grid--reversed">
+    <div class="grid__item two-thirds">
+        <div class="grid">
+            <div class="grid__item one-third">
+                [...]
+            </div>
+            <div class="grid__item one-third">
+                [...]
+            </div>
+            <div class="grid__item one-third">
+                [...]
+            </div>
+            <div class="grid__item one-third">
+                [...]
+            </div>
+            <div class="grid__item one-third">
+                [...]
+            </div>
+            <div class="grid__item one-third">
+                [...]
+            </div>
+        </div>
+    </div>
+    <div class="grid__item one-third">
+        [...]
+    </div>
+</div></code></pre>     
+
+    
+{% endblock %}

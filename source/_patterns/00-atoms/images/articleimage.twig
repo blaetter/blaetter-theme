@@ -1,0 +1,18 @@
+<div class="article-mainimage">
+    <img src="{{ data.imageurl? data.imageurl : '../../images/sample/dummy_4x3_624.jpg' }}" alt="Bildbeschreibung" />     
+    <p class="source">© dpa</p> 
+{% if data.overlay %}
+    <div class="mainimage__overlay">
+        <p>
+            <span class="overlay__text">{{ data.overlayText|default('Overlay Text') }}</span>
+            <span class="overlay__price" aria-label="Preis">{{ data.overlayPrice|default('00,00 €') }}</span>
+        </p>
+        {% include "atoms-button-booking" with {color: "clean", text: data.overlayButtontext|default('Click me') } %}
+    </div>
+{% endif %}
+</div>  
+{% if data.imagecaption %}
+<p class="caption">
+    {{ data.imagecaption }}
+</p>
+{% endif %}

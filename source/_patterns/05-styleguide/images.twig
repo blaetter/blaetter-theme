@@ -1,0 +1,75 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <h2>Bilder</h2>
+    
+    <p>
+        Im Bereich der Seiten existieren nur zwei Bild-Ratios: 4:3 und 2:1. 
+        Die endgültigen Bildgrößen ergeben sich durch das umgebende Grid, haben aber immer eine der beiden Ratios. 
+    </p>
+    
+    <h4>Ratio 4:3</h4>
+    {% include "atoms-landscape-4x3" %}
+
+    <div class="grid">
+        <div class="grid__item one-half">
+            {% include "atoms-teaser-image-4x3" %}
+        </div>
+        <div class="grid__item one-half">
+            {% include "atoms-teaser-image-4x3" %}
+        </div>
+    </div>
+    
+    <div class="grid">
+        <div class="grid__item one-third">
+            {% include "atoms-teaser-image-4x3" %}
+        </div>
+        <div class="grid__item one-third">
+            {% include "atoms-teaser-image-4x3" %}
+        </div>
+        <div class="grid__item one-third">
+            {% include "atoms-teaser-image-4x3" %}
+        </div>
+    </div>
+    
+     
+    
+    <h4>Ratio 2:1</h4>
+    {% include "atoms-landscape-2x1" %}
+ 
+    
+    <h4>Artikelbild (4:3)</h4>
+    <p><code>.article-mainimage</code></p>
+    {% include "atoms-articleimage" %}    
+    <div class="caption">
+    <p class="image-caption">
+        Image caption: Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+    </p>
+    </div>
+<pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>
+{% include "atoms-articleimage" with {data: {imageurl: "Bildpfad"}} %}
+<p class="image-caption">
+    Image caption: Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.
+</p>
+</code></pre>
+   
+    <h4>Artikelbild mit Blur Effekt (4:3)</h4>
+    <p><code>.article-mainimage</code> und <code>.js-articleimage-add-blur</code></p>
+    {% include "atoms-articleimage-blured" with {data: {imageurl: "../../images/sample/teaser_ch_1.jpg"}} %}    
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-articleimage-blured" with {data: {imageurl: "Bildpfad"}} %} </code></pre>
+   
+   
+    <h4>Bilder im Fließtext</h4>
+    <p><code>.image--paragraph.t_left [t_right]</code></p>
+    {% include "molecules-image-paragraph" with {data: {imageClass: "t_left"}} %}
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    
+    {% include "molecules-image-paragraph" with {data: {imageClass: "t_right"}} %}
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-image-paragraph" with {data: {imageClass: "t_left [t_right]"}} %}</code></pre>
+   
+
+   
+{% endblock %}

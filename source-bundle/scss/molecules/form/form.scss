@@ -1,0 +1,361 @@
+$form-namespace:            $namespace !default;
+
+// form--base is used to give fieldsets the grey background and padding instead of the form 
+#{$form-namespace}form.form--base {
+    background-color:                   transparent;
+    border:                             0 none;
+    padding:                            0;
+    margin-bottom:                      $gridGutter;
+    fieldset {
+        @include FormBaseBackground();
+        > *:first-child {
+            margin-top:                 0;
+        }
+        > *:last-child {
+            margin-bottom:              0;
+        }
+    }
+}
+
+#{$form-namespace}form {
+    @include clearfix();
+    margin-bottom:                  $gridGutter;
+    > h2,
+    > h3 {
+        margin-top:                 0;
+        margin-bottom:              0.5em;
+    }
+    fieldset {
+        margin-bottom:              $gridGutter;
+        &:last-child {
+            margin-bottom:          0em;
+        }
+    }
+    .description {
+        @include fontsize($smallest-font-size);
+        display:                    block;
+        color:                      $lightestTextGrey;
+        margin-bottom:              0;
+    }
+    label, 
+    .legend {
+        display:        block;
+        font-weight:    bold;
+        margin-bottom:  0.4em;
+        margin-top:     0;
+        //@include getRem('margin-top', 8px); // inkl. Fontspace = 12px
+        
+    }
+        
+    .form-check-label {
+        font-weight:    normal;
+        display:        flex;
+        align-items:  center;
+        @include getRem('min-height', $formInputHeightPx);
+        @include media-query('palm') {
+            @include getRem('min-height', $formInputHeightPalmPx);
+        }
+    }
+    
+    
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin:                 0px 0.3em 0;
+        padding:                0; 
+        line-height:            normal;
+        width:                  auto;
+        height:                 auto;
+        min-height:             auto;
+        &:focus {
+            outline:            thin dotted;
+            outline-offset:     -2px;
+        }
+    }
+    
+    input[disabled], 
+    input[disabled="disabled"], 
+    select[disabled], 
+    select[disabled="disabled"], 
+    textarea[disabled], 
+    textarea[disabled="disabled"] {
+        cursor:                 not-allowed;
+        background-color:       $grey;
+        opacity:                1;
+        color:                  $lightestTextGrey;
+    }
+    
+    input[readonly], 
+    input[readonly="readonly"], 
+    select[readonly], 
+    select[readonly="readonly"], 
+    textarea[readonly], 
+    textarea[readonly="readonly"] {
+        cursor:                 default ;
+        background-color:       $grey;
+        opacity:                1;
+        color:                  $lightestTextGrey;
+        &.input-plaintext {
+            padding-left:       0;
+            padding-right:      0;
+            color:              $baseTextColor;
+            background-color:   transparent;
+            border:             1px solid transparent;
+            box-shadow:         none;
+        }
+    }
+     
+    
+
+    // Formgroups with success or error status
+    .has-success {
+       @include color-inputelement($textSuccessColor, $white);
+    }
+    .has-error {
+        @include color-inputelement($textErrorColor, #FFF8F7);
+    }
+    .validation-feedback { 
+        @include fontsize($smallest-font-size);
+    }
+    
+    .form-group {
+        @include getRem('margin-bottom', $formgoupBottomMarginPx);
+        max-width:              $formfieldMaxWidth;
+        display:                block;
+        &:first-child {
+            label, 
+            .label, 
+            .legend {
+                margin-top:     0;
+            }
+        }
+        &.prepend {
+            @include formgroup--prepend-label();
+        }
+    }
+    .form-group--inline {
+        .controls {
+            > * {
+                width:              auto;
+                float:              none;
+                display:            inline-block;
+                vertical-align:     middle;
+                @include getRem('margin-right', 3px);
+                margin-bottom:      0;
+            }
+            > select {
+                /*vertical-align:     top;*/ // ie fix. not here!
+            }
+            .form-check-label {
+                display:            inline-flex;
+            }
+        }
+    }
+    
+    .datepicker-icon-wrapper {
+        background-color:       white;
+        $icon-width:            2em;
+        position:               relative; 
+        display:                inline-block;
+        width:                  100%;
+        max-width:              $formfieldMaxWidth;
+        input,
+        input[type="date"],
+        .datepicker-input {
+            padding-right:      $icon-width;    
+            background-color:   $white;    
+            cursor:             pointer;
+            background-color:   transparent;
+            position:           relative;
+            z-index:            1; // input has to be over the icon to be clickable
+        }
+        input[type="date"] {
+            @include getRem('height', $formInputHeightPx);
+            @include media-query('palm') {
+                @include getRem('height', $formInputHeightPalmPx);
+            }
+        }
+        &:hover {
+            cursor:             pointer;
+        }
+        &::after {
+            z-index:            0; // icon has to be under the input to not block mouseclick
+            content:            "\f073";
+            font-family:        FontAwesome;
+            display:            block;
+            @include getRem('height', $formInputHeightPx);
+            @include media-query('palm') {
+                @include getRem('height', $formInputHeightPalmPx);
+            }
+            position:           absolute;
+            right:              1px;
+            top:                1px;
+            width:              $icon-width;
+            text-align:         center;
+            line-height:        $formInputHeightPx;
+            @include media-query('palm') {
+                line-height:        $formInputHeightPalmPx;
+            }
+        }
+    }
+
+    // Form Reset Button
+    button.formreset,
+    a.formreset,
+    input.formreset {
+        @include fontsize($smallest-font-size);
+        @include getRem('height', $btn-heightPx);
+        display:            inline-block;
+        float:              right;
+        margin:             0;
+        text-align:         right;
+    }
+    
+    .required-symbol {
+        color:              $red;
+    }
+
+ 
+}
+
+// display the label beside the input, using css table classes 
+.form--prependlabel {
+    @include form--prependlabel();
+}
+
+#{$form-namespace}.form-actions { 
+    @include clearfix();
+    @include getRem('margin-top', $formgoupBottomMarginPx);
+    > button,
+    > .button {
+        width:                  100%;
+        margin-bottom:          1em;
+        @include media-query('lap-and-up') {  
+            width:              auto;
+            float:              right;   
+            margin-bottom:      0em;     
+            margin-left:        1em;
+        }
+    }
+    .form-helptext {
+        display:                    inline-block;
+        margin:                     0;
+        @include getRem('margin-top', $btn-heightPx/3.5);
+    }
+    .quicklinks {
+        display:                inline-block;
+    }
+    > button:last-child,
+    > .button:last-child {
+        margin-left:            0;
+    }
+}
+@include media-query('lap-and-up') {
+    #{$form-namespace}form .grid + .form-actions { 
+        margin-top:                 0;
+    }
+}
+
+#{$form-namespace}fieldset,
+#{$form-namespace}.fieldset {
+    margin:                     0;
+    border:                     0 none;
+    padding:                    0;
+}
+
+
+
+// Common form input
+#{$form-namespace}input,
+#{$form-namespace}textarea,
+#{$form-namespace}select,
+#{$form-namespace}.form-input {
+    @include baseInputFieldLayout();
+}
+
+#{$form-namespace}textarea {
+    overflow:               auto;
+    line-height:            $base-line-height; 
+}
+
+#{$form-namespace}select[multiple] {
+    padding:                0;
+}
+#{$form-namespace}select:not([multiple]) {
+    padding:                0 0px 0 2px;
+    min-height:             2.1em; // ie fix
+    @include getRem ('height',$formInputHeightPx);
+    @include media-query('palm') {
+        @include getRem('height', $formInputHeightPalmPx);
+    }
+}
+#{$form-namespace}select > option {
+    padding:                $formItemPaddingPx;
+}
+
+
+
+
+
+/*
+ *
+ * MODIFICATIONS
+ *
+ **/
+
+
+// Split the formgroups in two rows
+#{$form-namespace}.form--split {
+    @include media-query('lap-and-up') {
+        .logo {
+            position:                       absolute;
+            width:                          8em;
+            left:                           1em;
+            top:                            18%;
+        }
+        padding-left:                       9em !important;
+        padding-top:                        1.5em !important;                
+        .inner {
+            display:                        block;
+        }
+        .form-group {
+            display:                        block;
+            width:                          50%;
+            float:                          left;
+            @include getRem('padding-left', $smallGapPx);
+        }
+        .button-submit {
+            margin-left:                    1em;
+            display:                        -ms-flexbox;
+            display:                        flex;
+            width:                          auto;
+            float:                          right;
+        }
+    }
+}
+
+// Form with all inputs in one row
+#{$form-namespace}.form--inarow {
+    @include media-query('lap-and-up') {
+        .inner {
+            display:                    flex;
+            align-items:                center;
+            > * {
+                margin:                 0;
+            }
+        }
+        .form-group {
+            flex-grow:                  1;
+            flex-shrink:                1;
+            @include getRem('padding-left', $smallGapPx);
+        }
+        .form-actions {
+            @include getRem('padding-left', $smallGapPx);
+        }
+        .button-submit {
+            margin-left:                    0;
+        }
+        label {
+            margin-top:                     0;
+        }
+    }
+}

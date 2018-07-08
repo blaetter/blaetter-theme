@@ -1,0 +1,640 @@
+{   
+    "navigation":  {
+        "primary": [
+            {
+                "title": "Title",
+                "targetPage": null,
+                "url": null,
+                "iconclass": null,
+                "identifier": null,
+                "subnavigation": [
+                    {
+                        "title": "Subtitle",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title", 
+                                "targetPage": null,
+                                "url": null
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    }
+                ]
+            },{
+                "title": "Title",
+                "targetPage": null,
+                "url": null,
+                "iconclass": null,
+                "identifier": null,
+                "subnavigation": [
+                    {
+                        "title": "Subtitle",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title", 
+                                "targetPage": null,
+                                "url": null
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    }
+                ]
+            },{
+                "title": "Title",
+                "targetPage": null,
+                "url": null,
+                "iconclass": null,
+                "identifier": null,
+                "subnavigation": [
+                    {
+                        "title": "Subtitle",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title", 
+                                "targetPage": null,
+                                "url": null
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    }
+                ]
+            },{
+                "title": "Title",
+                "targetPage": null,
+                "url": null,
+                "iconclass": null,
+                "identifier": null,
+                "subnavigation": [
+                    {
+                        "title": "Subtitle",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title", 
+                                "targetPage": null,
+                                "url": null
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    }
+                ]
+            },{
+                "title": "Title",
+                "targetPage": null,
+                "url": null,
+                "iconclass": null,
+                "identifier": null,
+                "subnavigation": [
+                    {
+                        "title": "Subtitle",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title", 
+                                "targetPage": null,
+                                "url": null
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    },{
+                        "title": "Title",
+                        "targetPage": null,
+                        "subnavigation": [
+                            {
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "Title",
+                                "targetPage": null    
+                            },{
+                                "title": "mehr",
+                                "class": "readmore",
+                                "targetPage": null    
+                            }
+                        ]            
+                    }
+                ]
+            }
+        ],
+        "secondary": [
+            {
+                "title": "Test 1",
+                "targetPage": null
+            },{
+                "title": "Test 2",
+                "targetPage": null
+            },{
+                "title": "Test 3",
+                "targetPage": null
+            }
+        ]
+        
+    }
+}

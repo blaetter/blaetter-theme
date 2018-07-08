@@ -1,0 +1,59 @@
+{% set maxPages = maxPages|default(5) %}
+{% set pages = pages|default(15)%}
+{% set activePage = activePage|default(1)%}
+
+{#
+<nav class="pagination" aria-label="Suchergebnisseiten">
+    <h3 class="aural">Pagination</h3>
+    <a href="#" title="Eine Seite zurück blättern"><span aria-hidden="true">&laquo;</span></a>
+    {% for page in '1'..'5' -%}
+    <a {{ page == activePage ? 'class="active"' }} href="#">{{ page }}</a>
+    {% endfor -%}
+    <a href="#" title="Eine Seite weiter blättern" ><span aria-hidden="true">&raquo;</span></a>
+</nav>
+#}
+{#
+<nav class="pagination" aria-label="Suchergebnisse nach Seiten sortiert">
+    <h3 class="aural">Seite wechseln</h3>
+    <ul>
+        <li{{ activePage==1? ' class="disabled"' }}><a href="#" aria-label="{{ activePage==firstPage? 'Keine vorigen Seiten verfügbar':'Eine Seite zurück blättern' }}"><span aria-hidden="true">&laquo;</span></a></li>
+{% for page in firstPage..lastPage %}
+        <li {{ page==activePage? 'class="active"' }}><a href="#"{{ page==activePage? ' aria-label="Aktuelle Seite"' }}>{{ page }}</a></li>
+{% endfor %}
+        <li{{ activePage==lastPage? ' class="disabled"' }}><a href="#" aria-label="{{ activePage==lastPage? 'Keine weiteren Seiten verfügbar':'Eine Seite weiter blättern' }}"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+#}
+
+<nav class="pagination" aria-label="Suchergebnisse nach Seiten sortiert">
+    <h3 class="aural">Seite wechseln</h3>
+    <ul>
+        <li{{ pages>maxPages? ' class="smallest-hide"'}}><a{{ activePage==1? ' class="disabled"' }} href="#" aria-label="{{ activePage==1? 'Keine vorigen Seiten verfügbar':'Eine Seite zurück blättern' }}"><span aria-hidden="true">&laquo;</span></a></li>
+{% if pages < 10 %}
+{% for page in range(1, pages) %}
+        <li><a{{ page == activePage ? ' class="active"' }} href="#"{{ page==activePage? ' aria-label="Aktuelle Seite"' }}>{{ page }}</a></li>
+{% endfor %}
+{% elseif activePage < maxPages %}
+{% for page in range(1, maxPages) %}
+        <li><a{{ page == activePage ? ' class="active"' }} href="#"{{ page==activePage? ' aria-label="Aktuelle Seite"' }}>{{ page }}</a></li>
+{% endfor %}
+        <li><span aria-hidden="true">…</span></li>
+        <li><a href="#" rel="last">{{ pages }}</a></li>
+{% elseif activePage > (pages - maxPages) %}
+        <li><a href="#" rel="first">1</a></li>
+        <li><span aria-hidden="true">…</span></li>
+{% for page in range(pages - maxPages + 1, pages) %}
+        <li><a{{ page == activePage ? ' class="active"' }} href="#"{{ page==activePage? ' aria-label="Aktuelle Seite"' }}>{{ page }}</a></li>
+{% endfor %}
+{% else %}
+        <li><a href="#" rel="first">1</a></li>
+        <li><span aria-hidden="true">…</span></li>
+{% for page in range(activePage - 1, activePage + 1) %}
+        <li><a{{ page == activePage ? ' class="active"' }} href="#"{{ page==activePage? ' aria-label="Aktuelle Seite"' }}>{{ page }}</a></li>
+{% endfor %}
+        <li><span aria-hidden="true">…</span></li>
+        <li><a href="#" rel="last">{{ pages }}</a></li>
+{% endif %}
+        <li{{ pages>maxPages? ' class="smallest-hide"'}}><a{{ activePage==pages? ' class="disabled"' }} href="#" aria-label="{{ activePage==pages? 'Keine weiteren Seiten verfügbar':'Eine Seite weiter blättern' }}"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>

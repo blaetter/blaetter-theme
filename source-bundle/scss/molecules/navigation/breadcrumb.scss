@@ -1,0 +1,49 @@
+$breadcrumb-namespace:              $namespace !default;
+
+#{$breadcrumb-namespace}.breadcrumb {
+    margin-bottom:              1em;
+    ol {
+        display:                flex;
+        flex-wrap:              wrap;
+        list-style:             none;
+        padding:                0;
+        margin-top:             0;
+        > li {
+            margin:             0 0.7em 0 0;
+            padding:            0;
+            .home {
+                font-size:      1.5em;
+                display:        inline-block;
+                height:         1em;
+                overflow:       hidden;
+                padding:        0 1em 0 0;
+                margin-top:     -0.1em;
+                width:          0;
+                line-height:    1em;
+                min-height:     0;
+                &:before {
+                    @extend %icon-home;
+                }
+            }
+            &::before {
+                color:          $blue;
+                content:        "\f054"; // fa-chevron-right 
+                font-family:    FontAwesome;
+                font-size:      0.625rem;
+                margin:         0 0.5em 0 0;
+                width:          1em;
+                vertical-align: 0.1em;
+            }
+            &:first-child::before {
+                display:        none;
+            }
+        }
+    }
+}
+
+
+@include media-query(palm) {
+    #{$breadcrumb-namespace}.breadcrumb {
+        display:            none;
+    }
+}

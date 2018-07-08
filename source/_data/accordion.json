@@ -1,0 +1,39 @@
+{   
+    "accordion":  {
+        "dummy": {
+            "allowtoggle": true,
+            "allowmultiple": false,
+            "id":   "accordion",
+            "panels": [
+                {
+                    "title": "Accordion Titel 1",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Searchterm Lorem ipsum dolor sit amet. <br/>Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+                },{
+                    "title": "Accordion Titel 2",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Searchterm Lorem ipsum dolor sit amet. <br/>Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+                },{
+                    "title": "Accordion Titel 3",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Searchterm Lorem ipsum dolor sit amet. <br/>Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+                }
+            ]            
+        },
+        "dummy2": {
+            "allowtoggle": true,
+            "allowmultiple": true,
+            "id":   "accordion2",
+            "panels": [
+                {
+                    "title": "Accordion Titel 1",
+                    "expanded": true,
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Searchterm Lorem ipsum dolor sit amet. <br/>Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+                },{
+                    "title": "Accordion Titel 2",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Searchterm Lorem ipsum dolor sit amet. <br/>Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+                },{
+                    "title": "Accordion Titel 3",
+                    "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Searchterm Lorem ipsum dolor sit amet. <br/>Consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+                }
+            ]            
+        }
+    }
+}

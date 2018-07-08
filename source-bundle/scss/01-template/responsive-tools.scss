@@ -1,0 +1,36 @@
+$responsive-tools-namespace:           $namespace !default;
+
+// Some simple responsive helper classes
+
+@include media-query(lap-and-up) {
+    #{$responsive-tools-namespace}.desk-hide {
+        display:    none !important;
+    }
+    #{$responsive-tools-namespace}.palm-show {
+        display:    none !important;
+    }
+}
+
+@include media-query(lap-and-up) {
+    #{$responsive-tools-namespace}.palm-show {
+        display:    none !important;
+    }
+}
+
+@include media-query(palm) {
+    #{$responsive-tools-namespace}.palm-hide {
+        display:    none !important;
+    }
+    #{$responsive-tools-namespace}.palm-show {
+        display:    inline-block !important;
+    }
+}
+
+@include media-query(smallest) {
+    #{$responsive-tools-namespace}.smallest-hide {
+        display:    none !important;
+    }
+    #{$responsive-tools-namespace}.smallest-show {
+        display:    inline-block !important;
+    }
+}

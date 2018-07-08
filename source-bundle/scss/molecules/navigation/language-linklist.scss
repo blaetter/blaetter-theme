@@ -1,0 +1,23 @@
+/* List of languages over an article or indexpage */
+
+$language-linklist-namespace:              $namespace !default;
+
+$language-linklist-margin:      0.4em;
+
+#{$language-linklist-namespace}.language-linklist {
+    text-align:                 right;
+    display:                    block;
+    a {
+        text-transform:         uppercase;
+        display:                inline-block;
+        border-right:           1px solid $blue;
+        margin-right:           $language-linklist-margin;
+        padding-right:          0.6em;
+        line-height:            1em;
+        &:last-child {
+            margin-right:       0;
+            padding-right:      0;
+            border-right:       0 none;
+        }
+    }
+}

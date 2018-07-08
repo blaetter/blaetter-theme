@@ -1,0 +1,15 @@
+{% set class = (data.limit_height? 'js-block-limit-height ') %}
+{% set class = class ~ (data.class? data.class) %}
+<p{{ class?  (' class="'~class~'"')|raw }} {{ data.limit_height_minheight?  (' data-minheight="'~data.limit_height_minheight~'"')|raw }}{{ data.limit_height_opentext?  (' data-opentext="'~data.limit_height_opentext~'"')|raw }}{{ data.limit_height_closetext?  (' data-closetext="'~data.limit_height_closetext~'"')|raw }}>
+{% if data.text %}
+    {{ data.text|raw }}
+{% else %}
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+    {% include "atoms-anker" %}
+    Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, 
+    imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. 
+    Cras dapibus.
+{% endif %}  
+</p>

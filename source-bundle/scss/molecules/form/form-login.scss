@@ -1,0 +1,55 @@
+$form-login-namespace:              $namespace !default;
+
+// Todo: New Markup
+#{$form-login-namespace}.form-login {
+    @include block--base();
+    > h2,
+    > h3 {
+        //@include heading--bluebox();
+        @include block--base-headline();
+        background-color:   transparent;
+        padding-left:       0;
+    }
+    form {
+        @include FormBaseBackground();
+    }
+    .form-group {
+        //@include formgroup--prepend-label();
+    } 
+    .options {
+        a {
+            display: inline-block;
+            margin-top: 0.3em;
+        }
+    }
+    label .fa {
+        @include fontsize(19px);
+        color:                  $lightestTextGrey;
+        min-width:              1em;
+        text-align:             center;
+        line-height:            0;
+        vertical-align:         -0.1em;
+    }
+    .forgot {
+        @include fontsize($smallest-font-size);
+        display:                inline-block;
+        float:                  right;
+        margin-top:             1em;
+    }
+    .form-actions {
+        > * {
+            display:            ínline-block;
+            margin:             0 0 0 0;
+        }
+        .register {
+            @include  button--reversed();
+            width:              48%;
+            float:              left;
+        }
+        .submit,
+        .button-submit {
+            width:              48%;
+            float:              right;
+        }
+    }
+} 

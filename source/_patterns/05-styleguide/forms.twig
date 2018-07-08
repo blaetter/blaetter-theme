@@ -1,0 +1,442 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+{% extends "main-styleguide.twig" %}
+
+ 
+{% block content %} 
+
+  
+<h2>Formulare</h2> 
+
+<p>
+    Unten sind existierende Gestaltungen für Inputs, deren Labels und ihre unterschiedlichen Zustände aufgeführt. 
+    Alle Formulare in der Umgebung werden auf dieser Grundlage gestaltet.
+</p>
+
+<h4>Grundlegendes Formularmarkup</h4>
+<p>
+    Alle Formularelemente, bestehend aus <code class="sg-code-inline">label</code> und <code class="sg-code-inline">.controls</code>, werden von einer <code class="sg-code-inline">.form-group</code> umschlossen.
+    Buttons für Formularaktionen, z.B. abschicken, werden im container <code class="sg-code-inline">.form-actions</code> gekapselt. Das <code class="sg-code-inline">fieldset</code> gibt den Formulargruppen den grauen Hintergrund und den Innenabstand.
+</p>
+<pre><code class="sg-code-inline">
+<form class="form--base">
+    <fieldset>
+        <div class="form-group">
+            <label for="exampleInput">Label</label>
+            <div class="controls">
+                <input id="exampleInput" type="text">
+            </div>
+        </div>
+        <div class="form-actions">
+            <small class="form-helptext">Formular Hilfetext</small>
+            <button type="submit">Submit</button>
+        </div>
+    </fieldset>
+</form>
+</code></pre>
+
+
+
+<h2>Standardformular </h2>
+<p>
+    Das Standardformular und dessen Eingabeelemente haben eine Breite von 100%. 
+    Labels stehen oberhalb, Eingabehinweise unterhalb des Eingabefeldes.
+</p>
+
+{% include ("molecules-formsample") %}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">{% include ("molecules-formsample") %}</code></pre>
+    
+
+{% include ("atoms-heading-formsection") %}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{% include ("atoms-heading-formsection") %}
+</code></pre>
+
+
+<form>
+<h2>Eingabefelder</h2>
+{{ formgroup( 
+    {
+        "label": "Eingabefeld", 
+        "for": "exampleInput5"
+    },
+    [{
+        "type":"input",
+        "parameter":{
+            "id": "exampleInput5",
+            "type": "text",
+            "placeholder": "Geben Sie hier einen Text ein"
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup( {"label": "Eingabefeld", "for": "exampleEingabefeld"}, [{"type":"input", "parameter":{"id": "exampleEingabefeld","type": "text","placeholder": "Geben Sie hier einen Text ein"}}]) }}
+</code></pre>
+
+{{ formgroup(
+    {
+        "label": "E-Mail Adresse", 
+        "for": "exampleInputEmail",
+        "required": true,
+        "description": "We'll never share your email with anyone else."
+    },
+    [{
+        "type":"input",  
+        "parameter":{
+            "type": "email",
+            "id": "exampleInputEmail",
+            "placeholder": "Geben Sie hier Ihre E-Mail Adresse ein"
+        } 
+    }] 
+) }}  
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup({"label": "E-Mail Adresse", "for": "exampleInputEmail","required": true,"description": "We'll never share your email with anyone else."},[{"type":"input",  "parameter":{"type": "email","id": "exampleInputEmail","placeholder": "Geben Sie hier Ihre E-Mail Adresse ein"} }]) }}  
+</code></pre>
+
+{{ formgroup( 
+    {
+        "label": "Passwort", 
+        "for": "exampleInputPassword"
+    },
+    [{ 
+        "type":"input",
+        "parameter":{   
+            "type": "password",
+            "id": "exampleInputPassword",
+            "placeholder": "Geben Sie hier Ihr Passwort ein" 
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup(  { "label": "Passwort",  "for": "exampleInputPassword" }, [{ "type":"input", "parameter":{   "type": "password",  "id": "exampleInputPassword", "placeholder": "Geben Sie hier Ihr Passwort ein"  }}]) }}
+</code></pre>
+
+{{ formgroup( 
+    {
+        "label": "Anzahl", 
+        "for": "exampleInputAnzahl"
+    },
+    [{ 
+        "type":"input",
+        "parameter":{   
+            "type": "number",
+            "id": "exampleInputAnzahl",
+            "placeholder": "Bitte geben Sie eine Nummer ein" 
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup( {"label": "Anzahl", "for": "exampleInputAnzahl"},[{ "type":"input","parameter":{   "type": "number","id": "exampleInputAnzahl","placeholder": "Bitte geben Sie eine Nummer ein" }}]) }}
+</code></pre>
+
+
+
+{{ formgroup(  
+    { 
+        "label": "Select",  
+        "for": "exampleSelect",
+    }, 
+    [{  
+        "type":"select", 
+        "parameter":{ 
+            "id": "exampleSelect",
+            "options": [
+                {"name": "Option wählen","value": ""},
+                {"name": "Option 1","value": "1"},
+                {"name": "Option 2","value": "2"}
+            ]
+        }
+    }] 
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup(  { "label": "Select",  "for": "exampleSelect",}, [{  "type":"select", "parameter":{ "id": "exampleSelect","options": [{"name": "Option wählen","value": ""},{"name": "Option 1","value": "1"},{"name": "Option 2","value": "2"}]}}] ) }}
+</code></pre>
+
+{{ formgroup(
+    { 
+        "label": "Multiselect",  
+        "for": "exampleMultiselect",
+        "description": "Sie können mit gedrückter Strg-Taste mehrer Optionen wählen" 
+    }, 
+    [{ 
+        "type":"select",
+        "parameter":{   
+            "id": "exampleMultiselect",
+            "multiple": "multiple",  
+            "options": [
+                {"name": "Option 1","value": "1"},
+                {"name": "Option 2","value": "2"},
+                {"name": "Option 3","value": "3"},
+                 {"name": "Option 4","value": "4"}
+            ]
+        } 
+    }]  
+) }}  
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup({ "label": "Multiselect",  "for": "exampleMultiselect","description": "Sie können mit gedrückter Strg-Taste mehrer Optionen wählen" }, [{ "type":"select","parameter":{   "id": "exampleMultiselect","multiple": "multiple",  "options": [{"name": "Option 1","value": "1"},{"name": "Option 2","value": "2"},{"name": "Option 3","value": "3"},{"name": "Option 4","value": "4"}]} }]  ) }}  
+</code></pre>
+
+
+{{ formgroup(
+    {
+        "label": "Textfeld", 
+        "for": "exampleTextarea" 
+    },
+    [{ 
+        "type":"textarea",
+        "parameter":{ 
+            "id": "exampleTextarea",
+            "rows": "3",
+             "placeholder": "Geben Sie hier Ihre Nachricht ein"
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup({"label": "Textfeld", "for": "exampleTextarea" },[{ "type":"textarea","parameter":{ "id": "exampleTextarea","rows": "3","placeholder": "Geben Sie hier Ihre Nachricht ein"}}]) }}
+</code></pre>
+
+
+{{ formgroup(
+    {
+        "label": "Datum",
+        "class": false,
+        "for": "exampleDate"
+    },
+    [{
+        "type":"datepicker",
+        "parameter":{
+            "name":"date",
+            "id": "exampleDate",
+            "title": "Wählen Sie ein Datum",
+            "placeholder": "Datum wählen"
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup({"label": "Datum","class": false,"for": "exampleDate"},[{"type":"datepicker","parameter":{"name":"date","id": "exampleDate","title": "Wählen Sie ein Datum","placeholder": "Datum wählen"}}]) }}
+</code></pre>
+
+
+{{ formgroup( 
+    {
+        "label": "Datei Upload", 
+        "for": "exampleInputFile",
+        "description": "This is some placeholder help text for the above input."
+    },
+    [{ 
+        "type":"input",
+        "parameter":{ 
+            "type": "file",
+            "id": "exampleInputFile"
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup( {"label": "Datei Upload", "for": "exampleInputFile","description": "This is some placeholder help text for the above input."},[{ "type":"input","parameter":{ "type": "file","id": "exampleInputFile"}}]) }}
+</code></pre>
+
+<h2>Checkboxen und Radiobuttons</h2>
+{{ formgroup(   
+    {},
+    [{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Check me",
+            "name":"checkbox", 
+            "value": "value"
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup(   {},[{"type":"checkbox", "parameter":{"label": "Check me","name":"checkbox", "value": "value"}}]) }}
+</code></pre>
+
+<p>
+    Form-groups erlauben die horizontale Darstellung von Elementen.
+    Dabei wird die Klasse<code class="sg-code-inline">.form-group</code> durch die Klasse <code class="sg-code-inline">.form-group--inline</code> erweitert.
+</p>
+
+{{ formgroup(   
+    {"fieldset": "Gruppe von Checkboxen","class": "form-group--inline"}, 
+    [{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Checkbox 1",
+            "name":"checkboxgroup", 
+            "value": "value1"
+        }
+    },{
+        "type":"checkbox", 
+        "parameter":{
+            "label": "Checkbox 2",
+            "name":"checkboxgroup", 
+            "value": "value2"
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup(  {"fieldset": "Gruppe von Checkboxen","class": "form-group--inline"},[{"type":"checkbox", "parameter":{"label": "Checkbox 1","name":"checkboxgroup", "value": "value1"}},{"type":"checkbox", "parameter":{"label": "Checkbox 2","name":"checkboxgroup", "value": "value2"}}]) }}
+</code></pre>
+
+{{ formgroup(
+    {"fieldset": "Radio buttons","class": "form-group--inline"},
+    [{ 
+        "type":"radio",
+        "parameter": {
+            "label": "Option 1",
+            "name":"radios", 
+            "value": "option1"
+        }
+    },{
+        "type":"radio",
+        "parameter": {
+            "label": "Option 2",
+            "name":"radios",
+            "value": "option2"
+        }
+    }]
+) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup({"fieldset": "Radio buttons","class": "form-group--inline"},[{ "type":"radio","parameter": {"label": "Option 1","name":"radios", "value": "option1"}},{"type":"radio","parameter": {"label": "Option 2","name":"radios","value": "option2"}}]) }}
+</code></pre>
+
+
+
+
+    {{ formgroup(
+        {
+            "label": "Multiselect Checkboxen",
+            "labelClass": false,
+            "for": "suche_category"
+        },
+        [{
+            "type":"multiselect_checkbox",
+            "parameter":{
+                "name":"categories[]",
+                "id": "suche_category",
+                "title": "Wählen Sie eine Kategorie",
+                "multiple": "multiple",
+                "placeholder": "Alle Kategorien",
+                "options": [
+                    {"name": "Kategorie 1","value": "1"},
+                    {"name": "Kategorie 2","value": "2","selected":false},
+                    {"name": "Kategorie 3","value": "3","selected":false},
+                    {"name": "Kategorie 4","value": "4"},
+                    {"name": "Kategorie 5","value": "5"},
+                ]
+            }
+        }]
+    ) }}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code class="escape">
+{{ formgroup(
+{"label": "Multiselect Checkboxen","labelClass": false,"for": "suche_category","class": null},
+[{"type":"multiselect_checkbox","parameter":{"name":"categories[]","id": "suche_category","title": "Wählen Sie eine Kategorie","multiple": "multiple","placeholder": "Alle Kategorien",
+        "options": [{"name": "Kategorie 1","value": "1"},{"name": "Kategorie 2","value": "2","selected":false},{"name": "Kategorie 3","value": "3","selected":false},{"name": "Kategorie 4","value": "4"},{"name": "Kategorie 5","value": "5"},
+]}}]) }}
+</code></pre>
+
+</form>
+
+
+{#
+<h2>Eingabegruppen</h2>
+<p>
+    <!--
+    Bei der Verwendung von mehreren Eingabefeldern, die zu einer Gruppe gehören werden Fieldsets verwendet.
+    Da das Label hier nicht mehr eindeutig einem Element zugewiesen werden kann, wird das die Formulargruppe zu einem <code class="sg-code-inline">fieldset</code> und das <code class="sg-code-inline">label</code> zu einer <code class="sg-code-inline">legend</code>.
+    Für Screenreader empfiehlt sich bei Eingabefeldern zusätzlich der Einsatz von labeln mit der Klasse <code class="sg-code-inline">.aural</code>.
+    -->
+    Bei der Verwendung von mehreren Eingabefeldern, die zu einer Gruppe gehören werden normalerweise Fieldsets verwendet.
+    Aus layoutorischen Gründen benutzen wir <code class="sg-code-inline">div.fieldset</code>.
+    Da das Label hier nicht mehr eindeutig einem Element zugewiesen werden kann, wird es zu einem <code class="sg-code-inline">p.legend</code>.
+    Für Screenreader empfiehlt sich bei Eingabefeldern zusätzlich der Einsatz von unsichtbaren labeln mit der Klasse <code class="sg-code-inline">.aural</code>.
+    Zusatzlich empfehlen wir den Einsatz von <code class="sg-code-inline">aria-describedby</code> Technik zur erweiterten Beschreibung der Eingabefelder (zum Beispiel bei Radiobutton ja/nein).
+</p>
+{% include ("molecules-formsample-radios") %}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-formsample-radios") %}</code></pre>
+#}
+
+{#
+<h2>Inline Elemente</h2>
+<p>
+    Form-groups erlauben die horizontale Darstellung von Elementen.
+    Dabei wird die Klasse<code class="sg-code-inline">.form-group</code> durch die Klasse <code class="sg-code-inline">.form-group--inline</code> erweitert.
+    Auch hier empfiehlt sich der Einsatz von Fieldsets.
+</p>
+{% include ("molecules-formsample-inlinegroups") %}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-formsample-inlinegroups") %}</code></pre>
+#}
+
+{#
+<h2>Horizontale Formulare</h2>
+<p>
+    Durch die Klasse <code class="sg-code-inline">.form--prependlabel</code> können die Labels links neben die Eingabefelder gestellt werden. (Nur im Desktoplayout aktiv)
+</p>
+{% include ("molecules-formsample-tableform") %}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-formsample-tableform") %}</code></pre>
+#}
+
+
+<h2>Attribute</h2>
+<p>
+    Über das Attribut <code class="sg-code-inline">disabled="disabled"</code> werden Eingabefelder deaktiviert.
+</p>
+<form>
+{% include ("molecules-formsample-disabledstates") %}
+</form>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-formsample-disabledstates") %}</code></pre>
+
+<p>
+    Über das Attribut <code class="sg-code-inline">readonly="readonly"</code> werden Eingabefelder für Änderungen gesperrt.
+</p>
+<form>
+{% include ("molecules-formsample-readonlystates") %}
+</form>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-formsample-readonlystates") %}</code></pre>
+
+
+<p>
+    Über die Klasse "<code class="sg-code-inline">.input-plaintext</code>" werden "readonly" Eingabefelder wie normaler Text angezeigt.
+</p>
+<form>
+{% include ("molecules-formsample-readonly-plain") %}
+</form>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-formsample-readonly-plain") %}</code></pre>
+
+
+
+<h2>Beschreibungs Text</h2>
+<p>
+    Der Beschreibungstext hat die Klasse <code class="sg-code-inline">.description</code>. Standardmäßig wird er unterhalb des Eingabefeldes angezeigt.
+    Für Screenreader werden die Beschreibungstexte über das Attribut <code class="sg-code-inline">aria-describedby</code> und dem id des Textes mit dem Eingabeelement verknüpft.
+</p>
+<form>
+{% include ("molecules-formsample-helptext") %}
+</form>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-formsample-helptext") %}</code></pre>
+
+<h2>Validierung</h2>
+<ul>
+    <li>
+        Über die Klassen 
+        <code class="sg-code-inline">.has-success</code> und
+        <code class="sg-code-inline">.has-error</code>
+        können Formulargruppen und Elemente mit einem Status farblich gekennzeichnet werden.
+    </li>
+    <li>
+        Ein zusätzlicher Statustext mit der Klasse <code class="sg-code-inline">.validation-feedback</code> wird unterhalb des validierten Elementes angezeigt.
+    </li>
+</ul>
+<form>
+{% include ("molecules-formsample-validation") %}
+</form>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-formsample-validation") %}</code></pre>
+
+{#
+<a id="ems"></a>
+<h2>EMS Suchformular (Special)</h2>
+{% include ("molecules-form-search-ems") %}
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen" data-closetext="Markup ausblenden"><code>{% include ("molecules-form-search-ems") %}</code></pre>
+#}
+
+{% endblock %}

@@ -1,0 +1,78 @@
+
+/***************************************************
+ * 
+ *  Navigation mixins
+ * 
+ */
+
+// Navigation list item li
+@mixin __mobile_navigation_list_li($paddingPx: 14px, $fontsize: 16px) {
+    @include fontsize($fontsize);
+    display:                block;
+    margin:                 0;
+    padding:                0;
+    width:                  100%;
+    word-wrap:              break-word;
+    border-bottom:          1px solid $greyBorder;
+    &:last-child {
+        border-bottom:      0px solid;
+    }
+    > .menu-item {
+        @include getRem('padding', $paddingPx);
+        @include getRem('padding-left', $pagePaddingPx);
+        @include getRem('padding-right', 10px);
+        display:            block;
+        
+    }
+}
+
+@mixin __addNavigationItemArrow() {
+    &::after {
+        // add arrow
+        font-family:        FontAwesome;
+        content:            "\f054"; // fa-chevron-right
+        color:              $red;
+        float:              right;
+    }
+}
+
+
+@mixin channel-navigation--base() {
+    ul {
+        @include list--no-arrows();
+        margin:                         0;
+        @include getRem('margin-bottom', 30px);
+        list-style:                     none;
+        padding:                        0;
+        background-color:               $white;
+        > li {
+            @include __mobile_navigation_list_li($channelNavigationElementPadingPx);
+            @include __addNavigationItemArrow();
+            position:   relative;
+            &::after {
+                position:               absolute;
+                right:                  0.5em;
+                top:                    25%;
+            }
+            > * {
+                display:                block;
+                padding-left:           0;
+                padding-right:          1.5em;
+                @include getRem('padding-top', 10px);
+                @include getRem('padding-bottom', 10px);
+            }
+            &.active {
+                font-weight:            bold;
+                > * {
+                    font-weight:        bold;
+                    &::after {
+                        color:          $grey;
+                        content:        "";
+                    }
+                }
+            }
+        }
+    }
+}
+
+

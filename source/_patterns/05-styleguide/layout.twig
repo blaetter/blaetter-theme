@@ -1,0 +1,113 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+
+    <h2>Layout</h2>
+    
+    <p>
+        Die untenstehenden Modelle zeigen den grundsätzlichen Aufbau der unterschiedlichen existierenden Seitentypen. 
+    </p>
+
+<h4>Grundlegendes Bodymarkup</h4>
+<pre><code class="sg-code-inline">
+<div id="page-wrapper">
+  <div class="pw-inner">
+    <header id="header">
+        [HEADER]
+    </header>
+    <div id="content-wrapper">
+        [PAGECONTENT]
+    </div>
+    <footer id="footer">
+        [FOOTER]
+    </footer>
+  </div>
+</div>
+</code></pre>
+
+
+
+
+
+
+    <h3>Startseite</h3>
+    <div class="sg-layout-html">
+        <div class="sg-layout-page">
+            <div class="sg-layout-header">
+                <span>HEADER</span>
+            </div>
+            <div class="sg-layout-content">
+            <main>
+               <span>MAIN</span>
+            </main>
+            </div>
+            <div class="sg-layout-footer">
+                <span>FOOTER</span>
+            </div>
+        </div>
+    </div>
+    <p>
+        <a href="{{ attribute(link, 'pages-startseite') }}" title="Link zu: Beispiel Startseite" target="_blank">Beispiel Startseite</a><br />
+    </p>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+<main>
+    MAIN
+</main>
+</code></pre>
+    
+
+
+
+
+
+
+    
+    <h3>Artikelseite</h3>
+    <div class="sg-layout-html">
+        <div class="sg-layout-page">
+            <div class="sg-layout-header">
+                <span>HEADER</span>
+            </div>
+            <div class="sg-layout-content">
+                <div class="grid">
+                    <main class="grid__item two-thirds main-content">
+                        <article>
+                            <span>MAIN ARTICLE</span>
+                        </article>
+                    </main>
+                    <aside class="grid__item one-third marginal">
+                        <div>
+                            <span>MARGINAL ITEM</span>
+                        </div>
+                    </aside>
+                </div>
+                <aside class="appendix"> 
+                    <p>APPENDIX</p>
+                </aside>
+            </div>
+            <div class="sg-layout-footer">
+                <span>FOOTER</span>
+            </div>
+        </div>
+    </div>
+    <p>
+        <a href="{{ attribute(link, 'pages-zucker') }}" title="Link zu: Beispiel Indexseite" target="_blank">Beispiel Artikelseite</a><br />
+    </p>
+<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
+<div class="grid">
+    <main class="grid__item two-thirds main-content">
+        <article>
+            [MAINCONTENT]
+        </article>
+    </main>
+    <aside class="grid__item one-third marginal">
+        [MARGINALCONTENT]
+    </aside>
+</div>
+<aside class="appendix"> 
+    [APPENDIX]
+</aside>
+</code></pre>
+
+{% endblock %}

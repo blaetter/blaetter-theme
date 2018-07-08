@@ -1,0 +1,153 @@
+$table-namespace:           $namespace !default;
+
+// Global table rules
+table {
+    border-collapse:            collapse;
+    border-spacing:             0;
+}
+
+// Rebrush base table rules
+#{$table-namespace}.table--base {
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+    td,th {
+        text-align:             left;
+        //white-space:            nowrap; // set "nowrap" as our standard!
+        padding:                $tablecellPaddingEm;
+        text-align:             left;
+        vertical-align:         top;
+    }
+    .cell--max {
+        width:                  100%;
+    }
+    .cell--min {
+        max-width:              0;
+    }
+    .cell--nowrap {
+        white-space:            nowrap;
+    }
+    .wrap,
+    &.wrap {
+        white-space:            initial;
+        td,th {
+            white-space:        initial;
+        }
+    }
+}
+
+
+
+
+#{$table-namespace}.table-responsive-wrapper {
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+    overflow-x:                 visible;
+    border:                     0px solid $greyBorder;
+    overflow-y:                 hidden;
+    width:                      100%;
+    min-height:                 0.01%;
+    padding:                    0;
+    table {
+        width:                  100%;
+        margin-bottom:          0;
+    }
+}
+#{$table-namespace}.table--bordered {
+    @extend .table--base;
+    th, td {
+        border:                 1px solid $greyBorder;
+    }
+    tfoot td {
+        border-width:           1px 0 0 0;
+    }
+}
+
+#{$table-namespace}.table--bordered-light {
+    @extend .table--base;
+    th, td {
+        border-bottom:          1px solid #f0f0f0;
+        
+    }
+    tr:last-child {
+        th, td {
+            border-bottom:      0 none;
+        }
+    }
+}
+
+#{$table-namespace}.table--zebra {
+    @extend .table--base;
+    th {
+        //background-color:       $grey;
+    }
+    tr:nth-child(odd) td {
+        background-color:       $grey;
+    }
+}
+
+#{$table-namespace}.table--grey {
+    @extend .table--base;
+    td,th {
+        background-color:           #F8F8F8;
+        border:                     1px solid $white;
+    }
+    tfoot td {
+        background-color:           transparent;
+    }
+}
+
+#{$table-namespace}.table--collapse {
+    @extend .table--base;
+    @include media-query('palm') {
+        display:                        block;
+        thead {
+            border:                     none;
+            clip:                       rect(0 0 0 0);
+            height:                     1px;
+            margin:                     -1px;
+            overflow:                   hidden;
+            padding:                    0;
+            position:                   absolute;
+            width:                      1px;
+        }
+        tr {
+            display:                    block;
+            margin-bottom:              1em;
+            padding-bottom:              1em;
+            border-bottom:              1px solid $greyBorder;
+        }
+        td,th {
+            display:                    inline-block;
+            width:                      100%;
+            border:                     none;
+        }
+        td::before {
+            content: attr(data-label);
+            display:                    inline;
+            font-weight:                bold;
+        }
+        &.table--zebra {
+            tr {
+                margin-bottom:          0;
+                border:                 0 none;
+                padding:                0;
+            }
+        }
+        &.table--bordered {
+            tr {
+                margin-bottom:          0em;
+                padding:                1em;
+                border:                 1px solid $greyBorder;
+                border-width:           1px 1px 0 1px;
+                &:last-child {
+                    border-bottom-width:1px;      
+                }
+            }
+        }
+        &.table--bordered-light, {
+            tr {
+                margin-bottom:              1em;
+                padding-bottom:             1em;
+                border-bottom:              1px solid $greyBorder;
+            }
+        }
+    }
+}

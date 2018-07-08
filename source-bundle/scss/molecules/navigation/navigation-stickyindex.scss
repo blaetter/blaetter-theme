@@ -1,0 +1,149 @@
+/* STICKY NAVIGATION ON INDEXPAGES */
+
+$navigation-stickyindex-namespace:              $namespace !default;
+$stickyheaderIndex_Height:      40px;
+$stickyheaderIndex_ItemSpace:   45px;
+$stickyheaderIndex_ItemPadding: 13px;
+
+#{$navigation-stickyindex-namespace}#navigation-stickyindex {
+    @include box-shadow(0px, 3px, 4px, 0px, rgba(100, 100, 100, 0.2));
+    position:                   fixed;
+    width:                      100%;
+    left:                       auto;
+    right:                      auto;
+    height:                     auto;
+    padding:                    0;
+    margin-top:                 0;
+    width:                      $pageWidthDesk;
+    max-width:                  100%;
+    @include getRem('margin-left', -$pagePaddingPx);
+    background-color:           $blue;
+    color:                      $white;
+    @include getRem('height', $stickyheaderIndex_Height); 
+    overflow:                   visible;
+    z-index:                    2000000;
+    top:                        -$stickyheaderIndex_Height;
+    @include transition(top 0.3s ease-in-out);
+    &.show {
+        top:                    0;
+        .collect-container {
+            display:            block;
+        }
+    }
+    &:not(.show) {
+        > * { 
+            display:                    none;  // Barrierfreiheit: Disable Tabbing through hidden links
+        } 
+    }
+    .menu-items, 
+    .collect-container {
+        @include getRem('height', $stickyheaderIndex_Height); 
+        overflow:               hidden; 
+    }
+    /*
+    .sticky-logo {
+        @include getRem('width', 82px); 
+        box-sizing:             content-box;
+        @include getRem('padding-top', 10px); 
+        @include getRem('padding-left', $pagePaddingPx); 
+        @include getRem('padding-right', $stickyheaderIndex_ItemPadding); 
+        @include getRem('margin-right', $stickyheaderIndex_ItemSpace - $stickyheaderIndex_ItemPadding*2);
+    }
+    */
+    ul.menu-items {
+        list-style:             none;
+        padding:                0;
+        max-width:              96%;
+        > li {
+            float:              left;
+            @include getRem('height', $stickyheaderIndex_Height); 
+            white-space:        nowrap;
+            padding:            0;
+            margin:             0 0 0 0;
+            line-height:        1em;
+            a {
+                @include getRem('padding', $stickyheaderIndex_ItemPadding);
+                @include getRem('margin-right', $stickyheaderIndex_ItemSpace - $stickyheaderIndex_ItemPadding*2);
+                display:        inline-block;
+                color:          $white;
+            }
+            &:first-child a {
+                padding-left:   $pagePaddingPx;
+            }
+            &:last-child a {
+                padding-right:  $pagePaddingPx;
+            }
+            &.active a {
+                font-weight:    bold;
+            }
+        }
+    }
+    .collect-container {
+        @include channel-navigation--base();
+        position:               absolute;
+        right:                  0; 
+        top:                    0;
+        overflow:               visible;
+        display:                none;
+        > .toggler { 
+            @include __addNavigationItemArrow();
+            &::after {
+                @include getRem('margin-left', 16px);
+                transform:      rotate(90deg);
+                color:          inherit;
+            }  
+            color:              $white;
+            float:              right;
+            padding:            $stickyheaderIndex_ItemPadding;
+            @include getRem('padding-right', $pagePaddingPx);
+            line-height:        1em;
+        }
+        ul {
+            background-color:   $grey;
+            height:             0;
+            overflow:           hidden;
+            @include box-shadow(2px, 2px, 5px, 0px, rgba(100,100,100,0.2));
+            padding:            0 0.5em;
+            position:           absolute;
+            @include getRem('top', $stickyheaderIndex_Height);  
+            right:              10%;
+            width:              300px;
+            max-height:         90vh;
+            overflow-x:         hidden;
+            overflow-y:         auto;
+        }
+        &.opened {
+            ul {
+                height:             auto;
+                overflow:           auto;
+            }
+            > .toggler { 
+                &::after {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+    @media print {
+        display:    none;
+    }
+}
+
+
+@include media-query(palm) {
+    #{$navigation-stickyindex-namespace}#navigation-stickyindex {
+        width:                  100%;
+        max-width:              100%;
+        ul.menu-items {
+            // js will move all menuitems into the collect dropdown
+        }
+        .collect-container {
+            width:              100%;
+            ul {
+                width:          100%;
+                left:           0;
+                right:          0;
+            }
+        }
+    }
+}

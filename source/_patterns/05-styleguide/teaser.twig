@@ -1,0 +1,41 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+
+    <h2>Teaser</h2>
+       
+    
+    <h3>Teaser</h3>
+    <blockquote>
+        Teaser in der mobilen Ansicht und außerhalb eines Grids werden mit floatendem Bild (Breite 33.33%) angezeigt.
+    </blockquote>
+    
+    {% include "molecules-teaser" with {data: {title: "teaser", "subheading": "Subheading 01.01.1980", "source":"Quelle", blockClass: null, text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet."}} %}
+    
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-teaser" with {data: {text: "Lorem ipsum [...] adipisicing elit.","subheading": "Subheading 01.01.1980","source":"Quelle", blockClass: null, imageSrc: "bildurl.jpg"}} %}</code></pre>
+
+  
+    <h3>Teaser im Grid</h3>
+    
+    <blockquote>
+        Im Grid werden Teaser ohne Bildfloating angezeigt. (In Ausnahmefällen kann durch die Wrapperklasse ".clearimagefloat" das Bildfloating auch manuell gelöscht werden.)
+    </blockquote>
+    
+    <div class="grid">
+        <div class="grid__item one-half">
+            {% include "molecules-teaser" with {data: {title: "teaser","source":"Quelle"}} %}
+        </div>
+        <div class="grid__item one-half">
+            {% include "molecules-teaser" with {data: {title: "teaser","source":"Quelle"}} %}
+        </div>
+    </div>
+    
+
+    
+    
+
+{% endblock %}
+
+
+

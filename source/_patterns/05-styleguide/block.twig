@@ -1,0 +1,40 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+
+    <h2>Block</h2>
+
+    <div class="block">
+        <h3 class="heading">Default Block</h3>
+        <p>
+            Standardcontainer für neutrale Inhalte mit der Klasse "<code>.block</code>". 
+            Die Überschrift mit der Klasse "<code>.heading</code>" bekommt ein Standardstyling, unabhängig ihrer Gewichtung.
+        </p>
+    </div>
+
+<pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code><div class="block">
+    <h3 class="heading">Default Block</h3>
+    <p>
+        Standardcontainer für neutrale Inhalte mit der Klasse "<code>.block</code>". 
+        Die Überschrift mit der Klasse "<code>.heading</code>" bekommt ein Standardstyling, unabhängig ihrer Gewichtung.
+    </p>
+</div></code></pre>
+
+    <div class="block special">
+        <h3 class="heading">Special Block</h3>
+        <p>
+            In Ausnahmefällen(!) kann es sinnvoll sein einen Block optisch abzugrenzen. 
+            Benutze <code>.block.special</code>.
+        </p>
+    </div>
+
+<pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code><div class="block special">
+    <h3 class="heading">Special Block</h3>
+    <p>
+        In Ausnahmefällen kann es sinnvoll sein einen Block optisch abzugrenzen. 
+        Benutze <code>.block.special</code>.
+    </p>
+</div></code></pre>
+
+{% endblock %}

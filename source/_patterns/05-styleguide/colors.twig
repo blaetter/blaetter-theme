@@ -1,0 +1,102 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %}
+ 
+    <script>
+        jQuery(function($) {
+            /* write the original background color of the elements below the element */
+            var hexDigits = new Array
+            ("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"); 
+            //Function to convert rgb color to hex format
+            function rgb2hex(rgb) {
+                rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+            }
+            function hex(x) {
+                return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+            }
+            $('.styelguide-colors .sg-swatch').each(function() {
+                var colorRGB = $(this).css('background-color');
+                $(this).after('<span class="sg-label">' + colorRGB + '</span>');
+                $(this).after('<span class="sg-label">' + rgb2hex(colorRGB) + '</span>');
+            });
+        });
+    </script>
+
+
+    <h2>Farben</h2>
+        
+    <div class="styelguide-colors sg-boxeditems">
+        <ul> 
+            <li>
+                <h4>black</h4>
+                <span class="sg-swatch sg-color-black"></span>
+                
+            </li>
+            <li>
+                <h4>white</h4>
+                <span class="sg-swatch sg-color-white"></span>
+            </li>
+            <li>
+                <h4>grey</h4>
+                <span class="sg-swatch sg-color-grey"></span>
+            </li>
+            <li>
+                <h4>red</h4>
+                <span class="sg-swatch sg-color-red"></span>
+            </li>
+            <li>
+                <h4>blue</h4>
+                <span class="sg-swatch sg-color-blue"></span>
+            </li>
+            <li>
+                <h4>bluelight</h4>
+                <span class="sg-swatch sg-color-bluelight"></span>
+            </li>
+        </ul>
+    </div>
+
+
+    <br />
+
+    
+    <h4>Abgeschwächte Textdarstellung </h4>
+
+    <div class="block">
+        <p>
+            Für einige Elemente steht ein nicht voll gesättigter Ton der Schriftfarbe zur Verfügung.  
+            (Z.B. für Anzeigenkennzeichnung, mobile Copyrightangaben oder Hilfetextexte an Eingabefeldern.)
+            <div class="styelguide-colors sg-boxeditems">
+                <ul>
+                    <li>
+                        <h4>lightestTextGrey</h4>
+                        <span class="sg-swatch sg-color-lightestTextGrey"></span>
+                    </li>
+                </ul>
+            </div>
+        </p>
+    </div>
+
+    <br />
+
+    <h2>Linien</h2>
+    
+    <p>
+        Die Seiten haben einen Standard-Linientyp, der in Navigationsmenüs eingesetzt wird und flexibel 
+        in anderen Zusammenhängen auftreten kann. 
+    </p>    
+    <p>
+        border: 1px solid <span class="sg-color-greyBorder"></span>
+    </p>
+
+        <div class="styelguide-colors sg-boxeditems">
+            <ul>
+                <li>
+                    <h4>greyBorder</h4>
+                    <span class="sg-swatch sg-color-greyBorder"></span>
+                </li>
+            </ul>
+        </div>
+    
+    
+{% endblock %}

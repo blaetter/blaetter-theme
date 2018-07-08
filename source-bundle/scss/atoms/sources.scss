@@ -1,0 +1,17 @@
+$source-namespace:                $namespace !default;
+
+#{$source-namespace}.source {
+    @include source--base();
+}
+
+#{$source-namespace}.sources-text {
+    @include source--base();
+    @include fontsize(11px);
+    
+}
+
+#{$source-namespace}.sources-images {
+    @include source--base();
+    @include fontsize(11px);
+}
+

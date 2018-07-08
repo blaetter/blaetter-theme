@@ -1,0 +1,610 @@
+/***************************************************
+ *
+ *  some little präfix mixins
+ *
+ */
+ 
+@mixin box-sizing($box-model) {
+          box-sizing: $box-model;
+}
+
+@mixin opacity($opacity) {
+          transition: $opacity;
+}
+
+@mixin transition($transition) {
+    transition:         $transition;
+}
+
+@mixin box-shadow($top, $left, $blur, $spred, $color:"rgba(0,0,0,0.75)", $inset:"") {
+  box-shadow:           $top $left $blur $spred $color #{$inset};
+}
+
+@mixin border-radius($radius) {
+          border-radius:    $radius;
+}
+
+/***************************************************
+ *
+ *  px to rem functions
+ *
+ */
+ 
+@mixin fontsize($fontSizePx: 14px, $base: 16px) {
+    font-size:          ($fontSizePx / $base) * 1rem;
+}
+
+/**
+ * get any css-rule with rem and px from px
+ */
+@mixin getRem($rule: font-size, $sizePx: 16px, $base: 16px) {
+    #{$rule}:              ($sizePx / $base) * 1rem;
+}
+
+
+
+
+/***************************************************
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+ * over and over in your markup.
+ */
+@mixin clearfix() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+.clearfix {
+    @include clearfix();
+}
+
+
+
+
+/***************************************************
+ *
+ *  Headings
+ *
+ */
+ 
+@mixin heading--reset() {
+    font-weight:            bold;
+    color:                  $baseTextColor;
+    border:                 0 none;
+}
+
+@mixin heading--base() {
+     @include clearfix();
+    .right {
+        float:              right;
+        width:              auto;
+    }
+}
+
+@mixin headline1() {
+    font-size:              $font-size-h1;
+    color:                  $font-color-h1;
+    margin-top:             0;
+    margin-bottom:          0.619em;
+    line-height:            $line-height-h1;
+    font-weight:            $font-weight-h1;
+    a {
+        color:              $font-color-h1;
+    }
+    @media print {
+        page-break-after:   avoid !important;
+    }
+}
+
+@mixin headline2() {
+    font-size:              $font-size-h2;
+    color:                  $font-color-h2;
+    margin-top:             1em;
+    margin-bottom:          0.45em;
+    line-height:            $line-height-h2;
+    font-weight:            $font-weight-h2;
+    a {
+        color:              $font-color-h2;
+    }
+    @media print {
+        page-break-before:  auto;
+        page-break-after:   avoid !important;
+    }
+}
+
+@mixin headline3() {
+    font-size:              $font-size-h3;
+    margin-top:             1.5em;
+    margin-bottom:          0.45em;
+    line-height:            $line-height-h3;
+    color:                  $font-color-h3;
+    font-weight:            $font-weight-h3;
+    a {
+        color:              $blue;
+    }
+    @media print {
+        page-break-before:  auto;
+        page-break-after:   avoid !important;
+    }
+}
+
+@mixin headline4() {
+    font-size:              $font-size-h4;
+    margin-top:             1em;
+    margin-bottom:          0.4em;
+    color:                  $font-color-h4;
+    font-weight:            $font-weight-h4;
+    line-height:            $line-height-h4;
+    a {
+        color:              $blue;
+    }
+    @media print {
+        page-break-after:   avoid;
+    }
+}
+
+@mixin fontImageCaption() {
+    font-size:              $smallest-font-size;
+    font-weight:            bold; 
+    line-height:            1.4em;
+    margin-bottom:          1.2em;
+}
+
+@mixin heading--addbottomborder() {
+    border-bottom:          5px solid $greyBorder;
+    margin-top:             0;
+    margin-bottom:          0.6rem;
+    padding-bottom:         0.2rem;
+}
+
+
+@mixin heading--bluebox(){
+    font-size:              1rem;
+    background-color:       $blue;
+    color:                  $white !important;
+    padding:                0.425rem 0.625rem;
+    margin-bottom:          0;
+    margin-top:             0;
+    font-weight:            normal;
+    a {
+        color:              $white;
+    }
+    + form {
+        border-top:         0 none;
+    }
+}
+
+/***************************************************
+ * 
+ *  Source / Copyright
+ * 
+ */
+@mixin source--base() {
+    color:              $greySource;
+    display:            inline-block;
+    a {
+        color: inherit;
+    }
+}
+
+
+
+/***************************************************
+ * 
+ *  List mixins
+ * 
+ */
+
+
+@mixin list--bullet-item() {
+    // i am a li 
+    line-height:            1.3em;
+    margin-bottom:          0.5em;
+    margin-left:            0;
+    padding-left:           1em;
+    &::before {
+        content:            "\f111";
+        font-size:          0.5em;
+        vertical-align:     0.3em;
+        text-indent:        -0.5em;
+        color:              $black;
+        margin-left:        -1.3em;
+        display:            inline-block;
+        float:              none; 
+        height:             1em;
+        line-height:        1em;
+        font-family:        FontAwesome;
+        height:             1em;
+        width:              1.3em;
+    }
+ 
+}
+
+// Basic horizontal lists
+// itemborder: adds a vertical line between listitems
+@mixin list--horizontal($itemBorder: false) {
+    @include clearfix();
+    @include list--no-arrows();
+    display:                table; // !
+    padding:                0;
+    margin:                 0 0 0.5em 0;
+    list-style:             none;
+    line-height:            $base-line-height;
+    li {
+        float:              none;
+        display:            inline;
+        @include getRem('line-height', $base-line-height);
+        margin:             0 0.25em 0 0;
+        padding-left:       0 !important;
+        @if $itemBorder {
+            > *::after {
+                content:        "|";
+                display:        inline-block;
+                margin-left:    0.5em;
+                line-height:    1.25;
+            }
+            &:last-child > * {
+                &:after {
+                    content:        "";
+                    margin-left:    0em;
+                }
+            }
+        }
+    }
+}
+
+
+
+@mixin list--zebra() {
+    > li {
+        padding:                0.45em 0.5em 0.4em 1.5em;
+        &:nth-child(odd) {
+            background-color:   $grey;
+        }
+    } 
+}
+
+@mixin list--bordered() {
+    > li {
+        border-bottom:          1px solid $greyBorder;
+        margin-bottom:          1em;
+        padding-bottom:         1em;
+        &:last-child {
+            border-bottom:      0 none;
+        }
+    } 
+}
+
+@mixin list--add-disc() {
+    list-style-type:            disc;
+    padding-left:               1em;
+    > li {
+        padding-left:           0;
+    }
+}
+
+
+// Add a symbol (default is an arrow) as list item style:
+@mixin arrowlist--base($icon: "\f054", $iconcolor: $red, $iconsize: 10px) {
+    margin-left:  0;
+    padding: 0;
+    list-style: none;
+    > li {    
+        margin-left:            0;
+        padding-left:           1em;
+        &::before {
+            margin-left:        -1.3em;
+            color:              $iconcolor;
+            content:            $icon; // fa-chevron-right
+            display:            inline-block;
+            float:              left;
+            @include fontsize($iconsize);
+            height:             1em;
+            //line-height:        1.9em;
+            vertical-align:     baseline;
+            font-family:        FontAwesome;
+            height:             1em;
+            width:              1.3em;
+            text-indent:        0;
+        }
+    } 
+}
+
+@mixin list--zebra() {
+    > li {
+        padding:                0.45em 0.5em 0.4em 1.5em;
+        &:nth-child(odd) {
+            background-color:   $grey;
+        }
+    } 
+}
+
+@mixin list--no-arrows() {
+    padding-left:               0;
+    list-style:                 none;
+    > li {
+        padding-left:           0;
+        &::before {
+            content:            "" !important;
+            margin:             0 !important;
+            display:            none !important;
+        }
+    }
+}
+
+
+// new: with list wrapper
+@mixin paginator-item() {
+    > * {
+        border:                         1px solid $greyBorder;
+        margin-right:                   -1px;
+        color:                          $linkColor;
+        min-height:                     2.4em;
+        min-width:                      2.6em;
+        text-align:                     center;
+        padding:                        0.4em 0.75em 0.3em 0.75em;
+        display:                        block;
+        text-decoration:                none;
+        background-color:               $white;
+        outline-color:                  black;
+    }
+    a:hover,
+    a:focus {
+        background-color:           $grey;
+        color:                      $linkColor;
+    }
+    .disabled {
+        color:                      $greyDisabled;
+        background-color:           $white;
+        pointer-events:             none;
+        &:hover,
+        &:focus {
+            background-color:       $white;
+            color:                  $greyDisabled;
+        }
+    }
+    .active {
+        color:                      $white;
+        background-color:           $blue;
+        border-color:               $blue;
+        pointer-events:             none;
+        &:hover,
+        &:focus {
+            background-color:       $blue;
+            color:                  $white;
+        }
+    }
+    &:first-child > * {
+        border-top-left-radius:     4px;
+        border-bottom-left-radius:  4px;
+    }
+    &:last-child > * {
+        border-top-right-radius:    4px;
+        border-bottom-right-radius: 4px;
+    }
+}
+
+
+/***************************************************
+ * A simple mixin to quickly generate whole media queries from the aliases and
+ * conditions defined in `_settings.responsive.scss`.
+ *
+ * Usage:
+ *
+ * .foo {
+ *     color: green;
+ *
+ *     @include media-query(palm) {
+ *         color: red;
+ *     }
+ *
+ * }
+ */
+@mixin media-query($mq) {
+    $breakpoint-found: false;
+    // Loop through the list of breakpoints we’ve provided in our settings file.
+    @each $breakpoint in $breakpoints {
+        // Grab the alias and the condition from their respective locations in
+        // the list.
+        $alias:     nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
+        // If the media query we’ve specified has an alias and a condition...
+        @if $mq == $alias and $condition {
+            $breakpoint-found: true; 
+            
+            // note: 
+            // Opera Browser seems to have 530px width in print layout (so it turns tomobile layout)
+            // so we have to add screen and print mediatype
+            @if $alias == "palm" {
+                @media screen and #{$condition} {
+                    @content;
+                }
+            } @else {
+                @media print, #{$condition} {
+                    @content;
+                }
+            }
+        }
+    }
+    // If the user specifies a non-exitent alias, send them a warning.
+    @if $breakpoint-found == false{
+        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+    }
+}
+
+
+
+
+
+
+/***************************************************
+ *
+ *   FORM
+ *   
+ */
+
+@mixin formgroup--prepend-label() {
+    @include clearfix();
+    label {
+        background:                 $white none repeat scroll 0 0;
+        display:                    inline-block;
+        float:                      left;
+        padding:                    $formItemPaddingPx;
+        margin:                     0;
+        font-weight:                bold;
+        border:                     1px solid $formElementBorderColor;
+        border-right:               0 none;
+        margin-top:                 0;
+        line-height:                1rem; 
+        @include getRem('min-height', $btn-heightPx);
+        @include media-query('palm') {
+            @include getRem('min-height', $btn-heightPalmPx);
+        }
+    }
+    .controls {
+        display:                    flex;
+    }
+    input[type="number"] {
+        min-width: 0;   // firefox fix
+    }
+}
+
+@mixin FormBaseBackground() {
+    @include getRem('padding', $formPaddingPx);
+    padding-bottom:                 1.1rem;
+    background-color:               $grey;
+    border:                         1px solid $grey; // Barrierefreiheit 
+}
+
+
+
+/***************************************************
+ *
+ *   BUTTON
+ *   
+ */
+
+/*
+ * Twitter Follow Button
+ * 
+ **/
+@mixin button--twitter-follow() {
+    background-color:       #f5f8fa;
+    background-image:       linear-gradient(#fff, #f5f8fa);
+    border:                 1px solid #e1e8ed;
+    border-radius:          4px;
+    color:                  $baseTextColor;
+    display:                inline-block;
+    font-weight:            700;
+    line-height:            1;
+    padding:                0.5em 0.9em 0.5em 0.8em;
+    &:active, 
+    &:focus, 
+    &:hover {
+        background-color:   #e1e8ed;
+        background-image:   linear-gradient(#fff, #e1e8ed);
+        text-decoration:    none;
+    }
+    &::before {
+        content:            "\f099"; // fa-twitter
+        font-family:        FontAwesome;
+        display:            inline-block;
+        width:              1em;
+        height:             1em;
+        color:              #1DA1F2;
+        margin-right:       0.3em;
+    }
+}
+
+
+
+/***************************************************
+ *
+ *   Links
+ *   
+ */
+@mixin link-readmore() {
+    color:                  $linkColor;
+    display:                inline;
+    white-space:            nowrap; 
+    &::after {
+        content:            "»";
+        display:            inline-block;
+        width:              0.8em;
+        height:             1em;
+        margin-left:        0.2em;
+        line-height:        0.8em;
+        text-align:         center;
+        text-decoration:    underline; // IE10 fix
+    }
+    &:after,
+    &:hover:after {
+        text-decoration:    none; // IE10 fix
+    }
+}
+
+/***************************************************
+ *
+ *   Icons
+ *   
+ */
+@mixin icon-base() {    
+    display:                inline-block;
+    font-family:            FontAwesome;
+    line-height:            1;
+    font-size:              inherit; // can't have font-size inherit on line above, so need to override
+}
+
+
+%icon-base {    
+    @include icon-base();
+}
+
+
+%icon-search {
+    @extend %icon-base;
+    content:            "\f002"; // fa-search
+}
+
+%icon-home {
+    @extend %icon-base;
+    content:            "\f015"; // fa-home
+}
+
+@mixin icon-hamburger() {
+    @include icon-base();
+    content:            "\f0c9"; // fa-bars
+    width:              0.7em;
+}
+
+%icon-hamburger {
+    @include icon-hamburger();
+}
+
+// clears text for icon instead
+%icon-clear-text {
+    display:            inline-block;
+    height:             1em;
+    line-height:        1em;
+    width:              0;
+    min-height:         0;
+    overflow:           hidden;
+    padding-right:      1em;   
+}
+
+/***************************************************
+ *
+ *   Widget
+ *   
+ */
+@mixin widgetform_add_background_image($imageurl, $bgposition: 5% center, $bgsize: 25% 80%) {
+    background-position:        $bgposition;
+    background-size:            $bgsize;
+    background-image:           url($imageurl);
+    background-repeat:          no-repeat;
+    padding-left:               35%; // 7.5rem;
+    @include getRem ('padding-top', 24px);
+    @include getRem ('padding-right', 12px);
+}

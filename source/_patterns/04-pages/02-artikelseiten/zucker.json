@@ -1,0 +1,75 @@
+{   
+    "page_prefix": null,
+    "active_channel": "themen",
+    "article": {
+        "title": "Zucker: Wie viel pro Tag ist gesund?",
+        "mainimage": "../../images/sample/dummy_4x3_300.jpg",
+        "mainimage_caption": "Laut Foodwatch enthalten viele Erfrischungsgetränke viel zu viel Zucker.",
+        "mainimage_source": "dpa",
+        "introtext": "Mehr als die Hälfte aller Erfrischungsgetränke enthält zu viel Zucker - mit fatalen Folgen für die Gesundheit. Doch ab welcher Zuckermenge am Tag wird es kritisch?",
+        "billboard": true,
+        "breadcrumb": [ 
+            {
+                "title": "Breadcrumb 1",
+                "targetPage": null
+            },{
+                "title": "Breadcrumb 2",
+                "targetPage": null
+            },{
+                "title": "Breadcrumb 3",
+                "targetPage": null
+            },{
+                "title": null
+            }
+        ],
+        "content": [
+            {
+                "pattername": "atoms-paragraph",
+                "text": "Mehr als jedes zweite Erfrischungsgetränk in Deutschland enthält zu viel Zucker. Nach einer im August 2016 von Foodwatch veröffentlichten Studie fanden sich bei insgesamt 463 untersuchten Limonaden, Energydrinks, Fruchtsäften, Schorlen, Brausen und Eistees in rund 60 Prozent der Produkte mehr als fünf Prozent Zucker. In mehr als einem Drittel (37 Prozent) der Flaschen und Dosen wiesen die Kontrolleure der Verbraucherorganisation mehr als acht Prozent Zucker nach - das entspreche sechseinhalb Stück Würfelzucker auf 250 Milliliter. Doch wie viel Zucker am Tag ist eigentlich gesund?"
+            },{
+                "pattername": "atoms-heading4",
+                "text": "WHO empfiehlt maximal sechs Teelöffel Zucker am Tag"
+            },{
+                "pattername": "atoms-paragraph",
+                "text": "Die Weltgesundheitsorganisation empfiehlt in ihrer jüngsten Richtlinie aus dem Jahr 2015 im Mittel nicht mehr als sechs Teelöffel (25 Gramm) Zucker in verarbeiteten Lebensmitteln pro Tag. Das reduziere das Risiko von Übergewicht, Fettsucht und Karies. In der Realität liege die Zuckeraufnahme durch Lebensmittel in Deutschland bereits bei 90 Gramm pro Tag, sagte Andreas Pfeiffer, Ernährungswissenschaftler am Berliner Uniklinikum Charité. Getränke seien nur ein Teil davon und fielen vor allem bei Kindern ins Gewicht. Zucker sei aber auch in Produkten wie Joghurt versteckt."
+            },{
+                "pattername": "atoms-heading4",
+                "text": "Zucker erhöht Risiko für Fettleibigkeit und Diabetes"
+            },{
+                "pattername": "atoms-paragraph",
+                "text": "Zucker erhöhe das Risiko für Fettleibigkeit und Typ-2-Diabetes, sagt Wieland Kiess, Direktor der Klinik für Kinder- und Jugendmedizin des Uniklinikums Leipzig bei der Vorstellung der Studie. Foodwatch fordert deshalb eine Zucker-Abgabe für die Getränke-Industrie. Ferner fordern die Verbraucherschützer eine Nährwertkennzeichnung von Lebensmitteln in den Farben einer Ampel sowie eine gesetzliche Beschränkung der Werbung, die sich mit Spielzeugbeigaben oder Comicfiguren speziell an Kinder richtet. Bisher sind solche Forderungen zum Nachteil der Verbraucher an der mächtigen Lebensmittelindustrie gescheitert."
+            }
+        ],
+        "appendix": null,
+        "marginal": {
+            "blocks": [
+                {
+                    "pattername": "molecules-teaser",
+                    "targetPage": null,
+                    "imageurl": null,
+                    "title": "Geführte Radtouren",
+                    "text": "Berlin on Bike bietet komfortable Leihräder und täglich geführte Radtouren: Mauertour, Oasen der Großstadt...",
+                    "blockClass": null
+                },{
+                    "pattername": "molecules-linklist",
+                    "title": {
+                        "text": "Informationen",
+                        "targetPage": null
+                    },
+                    "blockClass": null,
+                    "listitems": [
+                        {
+                            "title": "Listitem 1"
+                        }, {
+                            "title": "Listitem 2"
+                        }, {
+                            "title": "Listitem 3"
+                        }, {
+                            "title": "Listitem 4"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

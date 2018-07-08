@@ -1,0 +1,5 @@
+<p class="keywords">
+{% for keyword in data.keywords %}
+    {{ keyword }}{% if not loop.last %}, {% endif %}
+{% endfor %}
+</p>

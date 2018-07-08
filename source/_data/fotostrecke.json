@@ -1,0 +1,54 @@
+{   
+    "page_prefix": null,
+    "active_channel": "testchannel",
+    "gallery": {
+        "title": "Hier ein Titel",
+        "mainimage": null,
+        "mainimage_caption": null,
+        "introtext": "Hier steht ein Text",
+        "breadcrumb": [ 
+            {
+                "title": "ghgfhfdgh",
+                "targetPage": null
+            },{
+                "title": "dfgsdfg",
+                "targetPage": null
+            },{
+                "title": null
+            },{
+                "title": null
+            }
+        ],
+        "content": [
+            {
+                "pattername": "molecules-swiper-articleimage",
+                "title": null,
+                "content": [
+                    {
+                        "imageurl": null,
+                        "title": "Ausflugsschiff am Bundeskanzleramt",
+                        "text": "Ein hell erleuchtetes Ausflugsschiff auf der Spree passiert in der Dämmerung das Bundeskanzleramt im Regierungsviertel in Berlin-Mitte.",
+                        "source": "dpa"
+                    },{
+                        "imageurl": null,
+                        "title": "Ausflugsschiff am Bundeskanzleramt",
+                        "text": "Ein hell erleuchtetes Ausflugsschiff auf der Spree passiert in der Dämmerung das Bundeskanzleramt im Regierungsviertel in Berlin-Mitte.",
+                        "source": "dpa"
+                    },{
+                        "imageurl": null,
+                        "title": "Ausflugsschiff am Bundeskanzleramt",
+                        "text": "Ein hell erleuchtetes Ausflugsschiff auf der Spree passiert in der Dämmerung das Bundeskanzleramt im Regierungsviertel in Berlin-Mitte.",
+                        "source": "dpa"
+                    }
+                ]
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            }
+        ],
+        "marginal": null
+    }
+}

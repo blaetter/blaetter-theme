@@ -1,0 +1,28 @@
+    <div id="page-wrapper" class="{{ globalTempStylingClass }}">   
+        <div class="pw-inner">                 
+            <header id="header">
+            {% block global_header %}
+                {% include "organisms-header" %}
+            {% endblock %}
+            
+            {% block navigation_primary %}
+                {% include "molecules-navigation-primary-desk" %}
+                {% include "molecules-navigation-primary-palm" %}
+            {% endblock %}
+            </header>
+            
+            <div id="content-wrapper">
+            {% block content %}
+                {% block breadcrumb %}
+                {% endblock %}
+            {% endblock %}
+            </div>
+            
+            {% block subcontent %}
+            {% endblock %}
+            
+            {% block global_footer %}
+                {% include "organisms-footer" %}
+            {% endblock %}
+        </div>
+    </div><!--/page-wrapper-->

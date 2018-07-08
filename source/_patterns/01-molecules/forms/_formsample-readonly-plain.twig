@@ -1,0 +1,19 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+{{ formgroup(
+    {
+        "label": "Readonly plain text", 
+        "for": "exampleReadonlyPlain1"
+    },
+    [{
+        "type":"input", 
+        "readonly": true,
+        "parameter":{
+            "class": "input-plaintext",
+            "id": "exampleReadonlyPlain1",
+            "placeholder": "If you see this, something went wrong",
+            "value": "This readonly input field is displayed as plain Text"
+        }
+    }]
+) }}
+

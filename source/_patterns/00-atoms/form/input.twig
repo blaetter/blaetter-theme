@@ -1,0 +1,12 @@
+{% from 'form.twig' import formgroup %}
+
+{{ formgroup(
+    {"label": "Label"},
+    [{
+        "type":"input",
+        "parameter":{
+            "name":"myInput",
+            "placeholder":  "Placeholder"
+        }
+    }]
+) }}

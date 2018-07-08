@@ -1,0 +1,17 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+{{ formgroup( 
+    {
+        "label": "Passwort", 
+        "for": "exampleHelptextPassword1",
+        "description": "Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji."
+    },
+    [{ 
+        "type":"input",
+        "parameter":{ 
+            "type": "password",
+            "id": "exampleHelptextPassword1",
+            "placeholder": "Geben Sie hier Ihr Passwort ein"
+        }
+    }]
+) }}

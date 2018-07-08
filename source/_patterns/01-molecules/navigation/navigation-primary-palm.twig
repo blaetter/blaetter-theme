@@ -1,0 +1,47 @@
+
+
+<nav id="navigation-primary-palm" class="closed">
+  <h6 class="aural">Hauptnavigation</h6>
+  <button class="hamburger-palm" aria-label="Öffnet und schließt die Navigation" data-target="primary-navigation-palm__tree">Menü</button>
+  <div class="navigation-wrapper">
+    <!-- Swiper Start -->
+    <div class="navigation-primary-palm__swiper swiper-container">
+      <ul class="nav swiper-wrapper">
+        {% for channel_item in navigation.primary %}
+        <li class="swiper-slide {{ channel_item.identifier == active_channel ? 'swiper-slide-active active' }}" data-swiper-activate="channel--{{ channel_item.identifier }}"><a href="#" class="inner"><span class="{{ channel_item.iconclass }}"></span>
+          {{ channel_item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <!-- /Swiper End -->
+
+    <!-- Primary Navigation Tree Start-->
+    <div class="primary-navigation-palm__tree fade">
+      <ul class="nav channel">
+        {% for channel_item in navigation.primary %}
+        <li class="channel--{{ channel_item.identifier }} {{ channel_item.identifier == active_channel ? 'active' }}"><span class="menu-item">{{ channel_item.title }}</span>
+          <ul class="topic">
+            <li class="header"><a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ channel_item.targetPage)|default(channel_item.url) }}" class="header-item">Zur Startseite {{ channel_item.title }}</a></li>
+            {% for topic_item in channel_item.subnavigation %}
+            {% if topic_item.subnavigation %}
+            <li><span class="menu-item">{{ topic_item.title }}</span>
+              <ul class="subtopic">
+                {% for subtopic_item in topic_item.subnavigation %}
+                <li><a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ subtopic_item.targetPage)|default(subtopic_item.url) }}" class="menu-item{{subtopic_item.class? ' '~subtopic_item.class}}">{{ subtopic_item.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <!-- /Primary Navigation Tree End-->
+    
+    <div class="metanavi-palm">
+        
+    </div>
+    
+  </div>
+</nav>

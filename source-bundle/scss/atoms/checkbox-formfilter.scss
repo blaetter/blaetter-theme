@@ -1,0 +1,66 @@
+
+
+#{$namespace}.formfilter {
+    &.hide {
+        visibility:             hidden;
+        overflow:               hidden;
+        width:                  0;
+        height:                 0;
+        padding:                0;
+        margin:                 0;
+        border:                 0 none;
+        display:                inline-block;
+    }
+}
+
+#{$namespace}.formfilter--checkbox {
+    background-color:           $white;
+    padding:                    .25em 2em .25em .5em;
+    margin-right:               0.5em;
+    margin-bottom:               0.5em;
+    border:                     1px solid darken($greyBorder,7%);
+    position:                   relative;
+    display:                    inline-block;
+    &.hide {
+        visibility:             hidden;
+        overflow:               hidden;
+        width:                  0;
+        height:                 0;
+        padding:                0;
+        margin:                 0;
+        border:                 0 none;
+        display:                flex;
+        position:               absolute;
+        z-index:                -1;
+    }
+    .close {
+        padding:                0.25em 0.5em;
+        border:                 0px solid;
+        cursor:                 pointer;
+        position:               absolute;
+        right:                  0;
+        top:                    0;
+        display:                inline-block;
+        &:after {
+            font-family:        FontAwesome;
+            content:            "\f00d";
+            display:            inline-block;
+        }
+    }
+    input[type=checkbox]:disabled + label + .close {
+        cursor:             not-allowed;
+        &:after {
+            //content:          "\f00c"; 
+            color:              $greyDisabled;
+        }
+    }
+    input.hide {
+        opacity:                0; // keep it tab-able
+        position:               absolute;
+        z-index:                -1;
+    }
+    @include media-query('palm') {
+        display:                block;
+        margin-right:           0em;
+    }
+}

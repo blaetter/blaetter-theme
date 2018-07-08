@@ -1,0 +1,82 @@
+$paragraph-namespace:                $namespace !default;
+
+#{$paragraph-namespace}p {
+    margin-top:         0;
+    margin-bottom:      $inlineBottomGutter;
+    + h4 {
+        margin-top:             1.357em;
+    }
+}
+#{$paragraph-namespace}.introtext {
+    margin-top:         1em;
+    margin-bottom:      1em; 
+    font-weight:        bold;
+}
+#{$paragraph-namespace}.paragraph {
+    // paragraph blocks inside articles
+    margin-bottom:          1.5rem;
+}
+
+#{$paragraph-namespace}small {
+    display:            inline-block;
+    line-height:        1.4;
+    margin-bottom:      1em;
+    @include fontsize($smallest-font-size);
+}
+
+#{$paragraph-namespace}p a,
+#{$paragraph-namespace}.inner a {
+    word-wrap:              break-word;
+}
+
+#{$paragraph-namespace}.text-light {
+    color:                  $lightestTextGrey;
+}
+
+#{$paragraph-namespace}.text-small {
+    @include fontsize($smallest-font-size);
+}
+
+#{$paragraph-namespace}.float-right {
+    float:                  right;
+}
+
+#{$paragraph-namespace}.float-left {
+    float:                  left;
+}
+
+#{$paragraph-namespace}.align-left {
+    text-align:              left;
+}
+
+#{$paragraph-namespace}.align-right {
+    text-align:              right;
+}
+
+#{$paragraph-namespace}.align-center {
+    text-align:              center;
+}
+
+#{$paragraph-namespace}.disclaimer {
+    color:                  $lightestTextGrey;
+    @include fontsize($smallest-font-size);
+    @include getRem('margin-top', $blockBottomMarginPx/2);
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+}
+
+#{$paragraph-namespace}p.keywords {
+    color:                  $lightestTextGrey;
+    @include fontsize($smallest-font-size);
+    @include getRem('margin-top', $blockBottomMarginPx/2);
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+}
+
+#{$paragraph-namespace}.article-maintext {
+    @include getRem('margin-bottom', $blockBottomMarginPx);
+    @include getRem('margin-top', $blockBottomMarginPx/2);
+}
+
+
+#{$paragraph-namespace}.image-caption {
+    @include fontImageCaption();
+}

@@ -1,0 +1,85 @@
+{% extends "main-styleguide.twig" %}
+
+{% block content %} 
+ 
+    <h2>Accordion</h2>
+    <ul>
+        <li>data-allow-toggle: Allow for each toggle to both open and close individually </li>
+        <li>data-allow-multiple: Allow for multiple accordion sections to be expanded at the same time</li>
+        <li>aria-expanded="true" on the trigger initial expands the panal</li>
+    </ul>
+    <h3>Beispiel 1</h3>
+    {% include 'molecules-accordion' with {data: accordion.dummy} %} 
+    
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-accordion' with { data: accordion.dummy } %} </code></pre> 
+    
+    
+    <h3>Beispiel 2</h3>
+    {% include 'molecules-accordion' with {data: accordion.dummy2} %} 
+    
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-accordion' with { data: accordion.dummy2 } %} </code></pre> 
+    
+    
+    <h2>Textblockhöhe begrenzen</h2>
+    
+    {% include 'atoms-paragraph' with {data: 
+            {
+                "limit_height": true,
+                "limit_height": true,
+                "limit_height_minheight": "200",
+                "limit_height_opentext": "Weiterlesen",
+                "limit_height_closetext": "Weniger lesen",
+                "text": "Das Hotel hat 224 Zimmer in fünf verschiedenen Kategorien. Im gesamten Haus ist kostenloses W-Lan verfügbar. Das Hotel bietet mit der Alten Meierei einen Frühstücksraum, wo auch Veranstaltungen stattfinden können. Außerdem befindet sich im Haus das Restaurant Lanninger. Gäste können hier Kochkurse bei dem bekannten Koch Rainer Strobel belegen. Das Hotel verfügt über fünf klimatisierte Konferenzräume mit bis zu 432qm. Von der hoteleigenen Schiffsanlegestelle aus können Gäste Stadtrundfahrten auf dem Wasser unternehmen. In unmittelbarer Umgebung des Hotels befinden sich das Schloss Bellevue, wo der Bundespräsident seinen Sitz hat, das Hansaviertel und der Tiergarten mit der Siegessäule. Den Reichstag und das Brandenburger Tor erreicht man zu Fuß in ca. 20 bis 30 Minuten. In wenigen Gehminuten gelangt man zur U-Bahnstation Turmstraße und zur S-Bahnstation Bellevue. Von dort besteht eine direkte Verbindung zum Hauptbahnhof, zur Friedrichstraße, zum Alexanderplatz und zum Bahnhof Zoo. Das Hotel hat 224 Zimmer in fünf verschiedenen Kategorien. Im gesamten Haus ist kostenloses W-Lan verfügbar. Das Hotel bietet mit der Alten Meierei einen Frühstücksraum, wo auch Veranstaltungen stattfinden können. Außerdem befindet sich im Haus das Restaurant Lanninger. Gäste können hier Kochkurse bei dem bekannten Koch Rainer Strobel belegen. Das Hotel verfügt über fünf klimatisierte Konferenzräume mit bis zu 432qm. Von der hoteleigenen Schiffsanlegestelle aus können Gäste Stadtrundfahrten auf dem Wasser unternehmen. In unmittelbarer Umgebung des Hotels befinden sich das Schloss Bellevue, wo der Bundespräsident seinen Sitz hat, das Hansaviertel und der Tiergarten mit der Siegessäule. Den Reichstag und das Brandenburger Tor erreicht man zu Fuß in ca. 20 bis 30 Minuten. In wenigen Gehminuten gelangt man zur U-Bahnstation Turmstraße und zur S-Bahnstation Bellevue. Von dort besteht eine direkte Verbindung zum Hauptbahnhof, zur Friedrichstraße, zum Alexanderplatz und zum Bahnhof Zoo.Das Hotel hat 224 Zimmer in fünf verschiedenen Kategorien. Im gesamten Haus ist kostenloses W-Lan verfügbar. Das Hotel bietet mit der Alten Meierei einen Frühstücksraum, wo auch Veranstaltungen stattfinden können. Außerdem befindet sich im Haus das Restaurant Lanninger. Gäste können hier Kochkurse bei dem bekannten Koch Rainer Strobel belegen. Das Hotel verfügt über fünf klimatisierte Konferenzräume mit bis zu 432qm. Von der hoteleigenen Schiffsanlegestelle aus können Gäste Stadtrundfahrten auf dem Wasser unternehmen. In unmittelbarer Umgebung des Hotels befinden sich das Schloss Bellevue, wo der Bundespräsident seinen Sitz hat, das Hansaviertel und der Tiergarten mit der Siegessäule. Den Reichstag und das Brandenburger Tor erreicht man zu Fuß in ca. 20 bis 30 Minuten. In wenigen Gehminuten gelangt man zur U-Bahnstation Turmstraße und zur S-Bahnstation Bellevue. Von dort besteht eine direkte Verbindung zum Hauptbahnhof, zur Friedrichstraße, zum Alexanderplatz und zum Bahnhof Zoo. Das Hotel hat 224 Zimmer in fünf verschiedenen Kategorien. Im gesamten Haus ist kostenloses W-Lan verfügbar. Das Hotel bietet mit der Alten Meierei einen Frühstücksraum, wo auch Veranstaltungen stattfinden können. Außerdem befindet sich im Haus das Restaurant Lanninger. Gäste können hier Kochkurse bei dem bekannten Koch Rainer Strobel belegen. Das Hotel verfügt über fünf klimatisierte Konferenzräume mit bis zu 432qm. Von der hoteleigenen Schiffsanlegestelle aus können Gäste Stadtrundfahrten auf dem Wasser unternehmen. In unmittelbarer Umgebung des Hotels befinden sich das Schloss Bellevue, wo der Bundespräsident seinen Sitz hat, das Hansaviertel und der Tiergarten mit der Siegessäule. Den Reichstag und das Brandenburger Tor erreicht man zu Fuß in ca. 20 bis 30 Minuten. In wenigen Gehminuten gelangt man zur U-Bahnstation Turmstraße und zur S-Bahnstation Bellevue. Von dort besteht eine direkte Verbindung zum Hauptbahnhof, zur Friedrichstraße, zum Alexanderplatz und zum Bahnhof Zoo."
+            } 
+        }
+    %} 
+    
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'atoms-paragraph' with { data: 
+            {
+                "limit_height": true,
+                "limit_height": true,
+                "limit_height_minheight": "200",
+                "limit_height_opentext": "Weiterlesen",
+                "limit_height_closetext": "Weniger lesen",
+                "text": "[...TEXT...]"
+            } 
+         } %} </code></pre> 
+
+
+    <br /><br />
+
+
+    <h2 id="simple-toggler">Simple Toggler</h2>
+
+    <blockquote>
+        Simply show and hide an element by clicking a trigger. The trigger needs the class <code>".js-simple-toggler"</code> AND a target id to the element to show/hide. 
+        We can set the initial state to visible by adding the class <code>".display-block"</code> to the content element.
+        <h4>Data attributes:</h4>
+        <ul>
+            <li>data-target: The id of the element we want to toggle</li>
+            <li>data-allowtoggle: (default true) set to false to hide the trigger after showing the content</li>
+            <li>data-opentext: (optional) Text on the trigger, when content is hidden</li>
+            <li>data-closetext: (optional) Text on the trigger, when content is visible</li>
+        </ul>
+        We show/hide the element by CSS so you can overwrite the base rules by your own if needed.
+    </blockquote>
+
+    <h4>Simple show / hide</h4>
+    {% include 'atoms-js-simple-toggle' with {data: {target_id: 'mask01'}} %} 
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'atoms-js-simple-toggle' with {data: {target: 'mask01'}} %}</code></pre>
+  
+    <h4>Changing the buttontext when show/hide</h4>
+    {% include 'atoms-js-simple-toggle' with {data: {target_id: 'mask03', closetext:'Close', opentext:'Open'}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'atoms-js-simple-toggle' with {data: {target_id: 'mask03', closetext:'Close', opentext:'Open'}} %}</code></pre>
+
+    <h4>Show only, button disappear after showing the content</h4>
+    {% include 'atoms-js-simple-toggle' with {data: {target_id: 'mask02', allowtoggle: 'false'}} %} 
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'atoms-js-simple-toggle' with {data: {target_id: 'mask02', allowtoggle: 'false'}} %}</code></pre>
+    
+
+    <h4>Initial visible</h4>
+    {% include 'atoms-js-simple-toggle' with {data: {target_id: 'mask04', closetext:'Close', opentext:'Open', initialopen: 'true'}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'atoms-js-simple-toggle' with {data: {target_id: 'mask04', closetext:'Close', opentext:'Open', initialopen: 'true'}} %}</code></pre>
+
+
+{% endblock %}

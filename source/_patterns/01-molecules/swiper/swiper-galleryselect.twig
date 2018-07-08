@@ -1,0 +1,34 @@
+{% if data[0] is iterable %}
+    {% set data = data %}
+{% else %}
+    {% set data = {'':data} %}
+{% endif %}
+
+{% for swiper in data %}
+<div class="block swiper-galleryselect {{ swiper.blockClass }}">
+    <h3>
+        {{ swiper.title|default('Swiper Galleryselect Title') }}
+    </h3>
+    <div class="swiper-container swiper"{{ (swiper.slidesperview? ' data-slidesperview="'~swiper.slidesperview~'"')|raw }}{{ (swiper.slidespergroup? ' data-slidesperview="'~swiper.slidespergroup~'"')|raw }}> 
+        <ul class="swiper-wrapper">
+{% for swiperitem in swiper.content %}
+            <li class="swiper-slide">
+                <div class="image">
+                    <a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ swiperitem.targetPage) }}">
+                        <img class="swiper-lazy gs-img" data-src="{{ swiperitem.imageurl }}" alt="" />
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader"></div>
+                        <span class="source">© dpa</span>
+                    </a>
+                </div>
+                <div class="text">{{ swiperitem.title|default('Galleryitem') }}</div>
+            </li>
+{% endfor %}
+        </ul>
+        <span class="swiper-buttons">
+            <button class="swiper-button-prev" aria-label="Nach links blättern"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <button class="swiper-button-next" aria-label="Nach rechts blättern"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </span>
+    </div>      
+</div>
+{% endfor %}
+

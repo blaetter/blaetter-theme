@@ -1,0 +1,18 @@
+{% from 'form.twig' import formgroup, formbutton %}
+
+{{ formgroup(
+    {
+        "label": "Readonly input", 
+        "for": "exampleReadonlyInput1"
+    },
+    [{
+        "type":"input", 
+        "readonly": true,
+        "parameter":{
+            "id": "exampleReadonlyInput1",
+            "placeholder": "Readonly input",
+            "value": "This is readonly text"
+        }
+    }]
+) }}
+

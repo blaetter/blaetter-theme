@@ -1,0 +1,29 @@
+$share-namespace:              $namespace !default;
+
+#{$share-namespace}.shariff {
+    margin:         $gridGutter 0;
+    min-height:     2.75em; // reserve place
+    @media print {
+        display:    none;
+    } 
+    ul.orientation-horizontal {
+        // shariff css is loading very late, so we make a basic list styling
+        display: flex;
+        list-style: outside none none;
+        padding: 0;
+        li {
+            margin-right: 1.8%;
+        }
+    }
+    @include media-query('palm') {
+        ul.orientation-horizontal li {
+            min-width: auto;
+            flex-grow: 0;
+        }
+    }
+}
+
+#{$share-namespace}.shariff-init {
+    margin:         $gridGutter 0;
+    min-height:     2.75em; // reserve place
+}
