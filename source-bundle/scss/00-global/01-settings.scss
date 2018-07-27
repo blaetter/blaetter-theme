@@ -31,7 +31,7 @@ $greyDark:                      #EDEDED; // Form filter section background
 $greyDisabled:                  #D5D5D5;  
 // Special Colors 
 $lightestTextGrey:              #555555; // Hellster Text, Barrierefrei: Anzeige, Copyright(mobil) 
-$greyBorder:                    darken($white, 12%);
+$greyBorder:                    #CCCCCC;
 $greyInputBorder:               $greyBorder; 
 $greySource:                    $lightestTextGrey;
 $greySourceDesk:                darken($white, 12%); 

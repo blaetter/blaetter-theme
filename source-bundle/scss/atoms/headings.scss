@@ -43,6 +43,10 @@ $heading-namespace:       $namespace !default;
 
 // Headline for subsections on indexpages, grey border
 #{$heading-namespace}.heading--sectiontitle {
+    border-top:                     1px solid $greyBorder;
+    border-bottom:                  4px solid $greyBorder;
+    padding:                        0.8em 0 0.7em 0;
+    margin:                         3em 0 2em 0;
     @include media-query('palm') {
         padding-left:            $pagePaddingPalmPx;
         padding-right:            $pagePaddingPalmPx;
