@@ -33,17 +33,20 @@
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
                         "text": "false",
-                        "imageurl": "https://picsum.photos/300/400/?random"
+                        "imageurl": "https://picsum.photos/300/400/?random",
+                        "source": "unsplash.com"
                     },{
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
                         "text": "false",
-                        "imageurl": "https://picsum.photos/300/400/?random"
+                        "imageurl": "https://picsum.photos/300/400/?random",
+                        "source": "unsplash.com"
                     },{
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
                         "text": "false",
-                        "imageurl": "https://picsum.photos/300/400/?random"
+                        "imageurl": "https://picsum.photos/300/400/?random",
+                        "source": "unsplash.com"
                     }
                 ]
             },{
@@ -112,22 +115,26 @@
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
                         "text": "false",
-                        "imageurl": "https://picsum.photos/220/295/?random"
+                        "imageurl": "https://picsum.photos/220/295/?random",
+                        "source": "unsplash.com"
                     },{
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
                         "text": "false",
-                        "imageurl": "https://picsum.photos/220/295/?random"
+                        "imageurl": "https://picsum.photos/220/295/?random",
+                        "source": "unsplash.com"
                     },{
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
                         "text": "false",
-                        "imageurl": "https://picsum.photos/220/295/?random"
+                        "imageurl": "https://picsum.photos/220/295/?random",
+                        "source": "unsplash.com"
                     },{
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
                         "text": "false",
-                        "imageurl": "https://picsum.photos/220/295/?random"
+                        "imageurl": "https://picsum.photos/220/295/?random",
+                        "source": "unsplash.com"
                     }
                 ]
             }

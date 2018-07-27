@@ -42,6 +42,7 @@ $teaser-namespace:              $namespace !default;
         .heading {
             color:          $white;
             margin:         0;
+            font-size:      1.7em;
         }
         .inner {
             z-index:            2;
@@ -69,3 +70,10 @@ $teaser-namespace:              $namespace !default;
     }
 }
 
+.one-fourth .teaser--poster {
+    .heading {
+        @include media-query('lap-and-up') {
+            font-size:      1.3em;
+        }
+    }
+}
