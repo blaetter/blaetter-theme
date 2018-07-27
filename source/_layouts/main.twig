@@ -1,28 +1,34 @@
-    <div id="page-wrapper" class="{{ globalTempStylingClass }}">   
-        <div class="pw-inner">                 
+    <div class="page-wrapper" class="{{ globalTempStylingClass }}">   
+                    
             <header id="header">
-            {% block global_header %}
-                {% include "organisms-header" %}
-            {% endblock %}
-            
-            {% block navigation_primary %}
-                {% include "molecules-navigation-primary-desk" %}
-                {% include "molecules-navigation-primary-palm" %}
-            {% endblock %}
+                <div class="page-wrapper__inner">   
+                    {% block global_header %}
+                        {% include "organisms-header" %}
+                    {% endblock %}
+                    {#% block navigation_primary %}
+                        {% include "molecules-navigation-primary-desk" %}
+                        {% include "molecules-navigation-primary-palm" %}
+                    {% endblock %#}
+                </div>
             </header>
             
-            <div id="content-wrapper">
-            {% block content %}
-                {% block breadcrumb %}
-                {% endblock %}
-            {% endblock %}
-            </div>
-            
-            {% block subcontent %}
-            {% endblock %}
-            
-            {% block global_footer %}
-                {% include "organisms-footer" %}
-            {% endblock %}
-        </div>
+            <main id="main-content">
+                <div class="page-wrapper__inner">  
+                    {% block content %}
+                        {#% block breadcrumb %}
+                        {% endblock %#}
+                    {% endblock %}
+                </div>
+            </main>
+
+            {#
+            <footer id="footer">
+                <div class="page-wrapper__inner">  
+                    {% block global_footer %}
+                        {% include "organisms-footer" %}
+                    {% endblock %}
+                </div>
+            </footer>
+            #}
+
     </div><!--/page-wrapper-->

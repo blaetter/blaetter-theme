@@ -4,6 +4,11 @@
     "active_channel": null,
     "homepage": {  
         "title": "Startseite",
-        "content": null
+        "hero": [
+            {
+                "pattername": "molecules-homepage-heroimage"
+            }
+        ],
+        "content":  null
     }
 }

@@ -1,7 +1,7 @@
 // Our global page footer
 $footer-namespace:              $namespace !default;
-$footerFontColor:               #C9CDDE !default;
-$footerBGColor:                 $blue !default;
+$footerFontColor:               $baseTextColor !default;
+$footerBGColor:                 transparent !default;
 
 #footer {
     padding:                $gridGutter $pagePaddingPx;
@@ -9,40 +9,6 @@ $footerBGColor:                 $blue !default;
     background-color:       $footerBGColor;
     text-align:             left;
     color:                  $footerFontColor;
-    a {
-        color:              $footerFontColor;
-        margin:             0;
-    }
-    h3, h4 {
-        color:              $footerFontColor;
-        font-size:          $base-font-size;
-        font-weight:        bold;
-        margin:             0 0 0.9em 0;
-        line-height:        1.2em;
-        display:            block;
-    }
-    .logo {
-        @include getRem('width', 135px);
-        height:             auto;
-        opacity:            0.7;
-        margin-bottom:      1.2em;
-    }
-    .footer-search {
-        margin-bottom:      1.8em;
-    }
-    .footer_newsletter {
-         margin-bottom:     4.3em;
-         .button--footer {
-            margin-top: 1em;
-        }
-    }
-    .footer_social {
-        margin-bottom:      4.3em;
-        .fa {
-            padding:        10px;
-            @include fontsize(24px);
-        }
-    }
     .footer_totop {
         display:            block;
         text-align:         right;
@@ -55,11 +21,10 @@ $footerBGColor:                 $blue !default;
 		}
     }
     @media print {
-        display:            none;
     }
     @include media-query('palm') {
         &.hide {
-            display:    none;
+            display:        none;
         }
     }
 }

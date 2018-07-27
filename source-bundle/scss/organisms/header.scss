@@ -4,6 +4,7 @@ $header-namespace:              $namespace !default;
 #{$header-namespace}#header,
 #header#{$header-namespace} {
     position:                   relative;
+    background-color:   $white;
     @include media-query(palm) {
         &.fixed {
             position:           absolute;
@@ -12,7 +13,6 @@ $header-namespace:              $namespace !default;
             z-index:            1000;
             width:              100vw;
             height:             105vh;
-            background-color:   $grey;
             overflow-y:         scroll;
         }
     }

@@ -1,0 +1,136 @@
+{
+    "homepage": {  
+        "title": "Startseite",
+        "hero": [
+            {
+                "pattername": "molecules-homepage-heroimage"
+            }
+        ],
+        "content":  [
+            {
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-third",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser"
+                    },{
+                        "pattername": "molecules-teaser"
+                    },{
+                        "pattername": "molecules-teaser"
+                    }
+                ]
+            },{
+                "pattername": "atoms-heading2",
+                "text": "<span class=\"text--red\">AKTUELLE AUSGABE</span> MONAT JAHR</h2>",
+                "class": "heading--sectiontitle"
+            },{
+                "pattername": "molecules-homepage-probeabo"
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-third",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/300/400/?random"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/300/400/?random"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/300/400/?random"
+                    }
+                ]
+            },{
+                "pattername": "atoms-heading2",
+                "text": "<span class=\"text--red\">DOSIER</span> TITLE</h2>",
+                "class": "heading--sectiontitle"
+            },{
+                "pattername": "molecules-homepage-dosierteaser"
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-fourth",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true"
+                    }
+                ]
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-fourth",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false"
+                    }
+                ]
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-fourth",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/220/295/?random"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/220/295/?random"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/220/295/?random"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/220/295/?random"
+                    }
+                ]
+            }
+        ]
+    }
+}

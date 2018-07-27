@@ -19,8 +19,7 @@ module.exports = {
 		filename: '[name].js',
 		chunkFilename: '[name]-[chunkhash].js',
 		path: path.resolve(__dirname, 'public/bundle'),
-		publicPath: '/css/berlin_de/echo/bundle/',
-		//publicPath: '/bundle/',
+		publicPath: '/bundle/',
 		sourceMapFilename: '[file]-[chunkhash].map'
 	},
 	externals: {

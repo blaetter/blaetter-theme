@@ -50,6 +50,7 @@
     position:           static;
     padding:            2px 2px 2px 4px;
     word-wrap:          break-word;
+    z-index:            1;
 }
 
 // put the source over the image (desktop)
@@ -61,17 +62,18 @@
         position:           absolute;
         bottom:             0;
         right:              0;
+        z-index:            1;
     }
 }
 
 
 
 @mixin source-style() {
-    background-color:   rgba(0, 0, 0, 0.5);
+    //background-color:   rgba(0, 0, 0, 0.5);
     display:            inline-block;
     margin:             0;
     padding:            1px 3px 1px 3px;
-    color:              $greySourceDesk;
+    color:              $greySource;
     @include fontsize($smallest-font-size);
     line-height:        1.2;
     text-align:         right;
@@ -82,7 +84,7 @@
 @mixin source-style--light() {
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.9);
     opacity: 0.6;
-    color:              $greySourceDesk;
+    color:              $greySource;
     @include fontsize($smallest-font-size);
     line-height:        1.2;
     text-align:         right;
@@ -105,9 +107,7 @@
         display:            block;
         max-width:          100%;
     }
-    @include media-query(lap-and-up) {
-        @include block-source--overlay();
-    }
+    @include block-source--overlay();
 }
 
 

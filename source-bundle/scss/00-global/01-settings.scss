@@ -35,8 +35,9 @@ $greyBorder:                    darken($white, 12%);
 $greyInputBorder:               $greyBorder; 
 $greySource:                    $lightestTextGrey;
 $greySourceDesk:                darken($white, 12%); 
+$greyAuthor:                    #aaaaaa;
 $greyAnzeige:                   $lightestTextGrey;
-$page-background-color:         lighten($grey, 2%);
+$page-background-color:         darken($grey, 2%);
 $labelColorLight:               $lightestTextGrey; 
 // form validation colors:
 $formElementBorderColor:        $greyInputBorder;
@@ -54,10 +55,12 @@ $messageErrorBg:                #f2dede;
 // Dimensions
 $smallGapPx:                      12px;
 $mediumGapPx:                     16px;
-$largeGapPx:                      24px;
-$pageWidthDeskPx:               940px;  
-$gridGutter:                    1.500rem; // 24px_16px;
-$blockPaddingPx:                $smallGapPx; // Grey Teaser...
+$largeGapPx:                      20px;
+$pageWidthDeskPx:               1200px;  // max width for hero units and header
+$contentWidthDeskPx:            940px; // max width for inner content units
+$gridGutter:                    1.250rem; // 20px_16px;
+$blockPaddingPx:                $largeGapPx; // Grey Teaser...
+$teaserInnerPadding:            $largeGapPx;
 $blockBottomMarginPx:           30px; // Teaser...
 $teaserBorderedPaddingPx:       $mediumGapPx;
 $teaserBorderedMarginTopPx:     $largeGapPx;
@@ -67,7 +70,7 @@ $breakointDesk:                 ($pageWidthDeskPx / 16px) * 1rem;
 $articleImageMaxHeightPx:       468px;
 $pageWidthDesk:                 $breakointDesk;
 $pagePaddingPx:                 $mediumGapPx; 
-$pagePaddingPalmPx:             $smallGapPx; 
+$pagePaddingPalmPx:             $largeGapPx; 
 $formInputHeightPx:             30px; 
 $formInputHeightPalmPx:         40px; 
 $btn-heightPx:                  $formInputHeightPx;

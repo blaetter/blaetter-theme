@@ -2,15 +2,20 @@
 
     {% block pagetitle %}{{ homepage.title }}{% endblock %}
     
-    {% block breadcrumb %}
-    {% endblock %}
+    {#% block breadcrumb %}{% endblock %#}
     
     {% block content %}
-    <main class="main-content">
-        
+    
         <h1 class="aural">{{ homepage.title }}</h1>
-         
         
+         {% for block in homepage.hero %}
+            {% include block.pattername with { "data": block } %}
+        {% endfor %}
 
-    </main>
+        <div class="content-wrapper">
+        {% for block in homepage.content %}
+            {% include block.pattername with { "data": block } %}
+        {% endfor %}
+        </div>
+
     {% endblock %}

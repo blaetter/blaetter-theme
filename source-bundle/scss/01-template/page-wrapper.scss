@@ -6,56 +6,52 @@ $page-wrapper-namespace:           $namespace !default;
     @include clearfix();
     border:             0px solid;
     position:           relative;
-	> .pw-inner {
-		background: $white;
-		position: relative;
-	}
-	@include media-query(lap-and-up) { 
-        width:          $pageWidthDesk;
-        max-width:      $pageWidthDesk;
-        margin:         0 auto;
-      	> .pw-inner {
-        	@include box-shadow(0px, 0px, 10px, 0px, rgba(100, 100, 100, 0.2));
-    	}
-        .fradSection {
-            &.Skyscraper {
-                position: absolute;
-                left: 100%;
-                top: 0;
-            }
-            &.Billboard,
-            &.Billboard2 {
-                display: flex;
-                justify-content: center;
-                > div {
-                    iframe {
-                        margin-top: ($blockBottomMarginPx / 2) !important;
-                    }
-                }
-            }
-            &.Content {
-                > div {
-                    margin-bottom:  $blockBottomMarginPx;
-                }
-            }
-		}
-	}
-    @include media-query(palm) {
-        .fradSection {
-            @include flexgrid-item--base();
-            display: flex;
-            justify-content: center;
-            > div {
-                > :first-child {
-                    iframe {
-                        margin-bottom: $blockBottomMarginPx / 2 !important;
-                    }
-                }
-            }            
-        }
-    }
+    width:              100%;
     @media print {
          width:         auto;
          box-shadow:    none;
     }
+}
+
+// Our Wrapper around the main page sections to maximize withs
+
+.page-wrapper__inner {
+    //@include box-shadow(0px, 0px, 10px, 0px, rgba(100, 100, 100, 0.2));
+    background:         transparent;
+    position:           relative;
+    //border:             1px dotted red;
+    @include media-query(palm) {
+        width:          100%;
+        margin:         0;   
+    }
+    @include media-query(lap-and-up) { 
+        width:              100%;
+        max-width:          $pageWidthDesk;
+        margin:             0 auto;
+	}
+}
+
+
+
+
+// Our Wrapper around the main content area between header and footer
+$content-wrapper-namespace:              $namespace !default;
+
+#{$content-wrapper-namespace}.content-wrapper {
+    @include clearfix();
+    //border:             1px dotted blue;
+    padding:        0;
+    @include media-query(palm) {
+        width:          100%;
+        margin:         0;   
+        &.hide {
+            display:    none;
+        }
+    }
+    @include media-query(lap-and-up) { 
+        width:          $contentWidthDeskPx;
+        max-width:      $contentWidthDeskPx;
+        margin:         0 auto;
+	}
+    
 }

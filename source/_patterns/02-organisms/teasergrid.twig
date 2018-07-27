@@ -1,0 +1,7 @@
+<div class="grid">
+{% for block in data.content %}
+    <div class="grid__item {{ data.gridItenClass|default('one-third') }}">
+    {% include block.pattername with { "data": block } %}
+    </div>
+{% endfor %}
+</div>

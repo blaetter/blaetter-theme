@@ -3,14 +3,35 @@ $portal-head-namespace:              $namespace !default;
 
 #{$portal-head-namespace}.portal-head {
     @include clearfix();
-    @include getRem('padding-top', 21px);
-    @include getRem('padding-bottom', 14px);
-    @include getRem('padding-left', 19px);
-    @include getRem('padding-right', 19px);
+    @include getRem('padding-top', 10px);
+    @include getRem('padding-bottom', 10px);
+    @include getRem('padding-left', 20px); 
+    @include getRem('padding-right', 20px);
     position:                   relative;
     margin:                     0;
-    background-color:           $bluelight;
+    background-color:           transparent;
     width:                      100%;
+    .portal-logo {
+        display:        inline-block;
+        position:       relative;
+        @include getRem('width', 131px);
+        @include getRem('height', 36px); // IE
+        margin:         0;
+    }
+    .portal-claim {
+        display:        inline-block;
+        margin:         0.5em 0 0 1.2em;
+        position:       relative;
+        vertical-align: top;
+        color:          $blue;
+        @include fontsize($base-font-size);
+        font-weight:    normal;
+    }
+    .portal-meta {
+        display: inline-block;
+        position: relative;
+    }
+    /*
     .portal-headborder {
         position:               absolute;
         left:                   0;
@@ -51,26 +72,8 @@ $portal-head-namespace:              $namespace !default;
             float:               right;
         }
     }
-    .portal-logo {
-        display:        inline-block;
-        position:       relative;
-        @include getRem('width', 131px);
-        @include getRem('height', 36px); // IE
-        margin:         0;
-    }
-    .portal-claim {
-        display:        inline-block;
-        margin:         0.5em 0 0 1.2em;
-        position:       relative;
-        vertical-align: top;
-        color:          $blue;
-        @include fontsize($base-font-size);
-        font-weight:    normal;
-    }
-    .portal-meta {
-        display: inline-block;
-        position: relative;
-    }
+    */
+    
 }
 
 
@@ -78,6 +81,7 @@ $portal-head-namespace:              $namespace !default;
     #{$portal-head-namespace}.portal-head {
         @include getRem('padding', 12px);
         @include getRem('padding-bottom', 12px/2);
+        /*
         .aside {
             // right section: search, meta, languageselect,...
             float:              none;
@@ -93,6 +97,7 @@ $portal-head-namespace:              $namespace !default;
                 @include getRem('margin-top', 5px);
             }
         }
+        */
         .portal-logo {
             @include getRem('width', 123px);
         }

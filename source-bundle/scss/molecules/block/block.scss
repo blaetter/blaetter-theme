@@ -3,7 +3,6 @@ $block-namespace:              $namespace !default;
 // The base block element
 #{$block-namespace}.block {
     @include block--base();
-    > h2, >h3,
     .heading {
         @include block--base-headline();
     }
