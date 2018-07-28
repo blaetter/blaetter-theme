@@ -1,4 +1,18 @@
 #{$namespace}.homepage-probeabo {
     background:             $white;
     padding:                $blockPaddingPx;
+    .image {
+        float:              left;
+        width:              30%;
+        margin-left:        0;
+        margin-right:       $largeGapPx;
+        @include media-query('lap-and-up') {
+            float:          right;
+            width:          30%;
+            margin-left:    $largeGapPx;
+            margin-right:   0;
+        }
+    }
+    .text {
+    }
 }

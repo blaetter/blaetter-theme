@@ -1,5 +1,8 @@
 #{$namespace}.homepage-dosierteaser {
-    background:             $white;
+    background:                 transparent;
+    @include media-query('lap-and-up') {
+        background:             $white;
+    }
     padding:                0;
     .grid__item > *:last-child {
         margin-bottom:      0;
@@ -8,11 +11,13 @@
         padding:                $blockPaddingPx;
     }
     .teaser.teaser--poster {
-        .heading {
-            font-size:          4em;
-        }´
-        .author {
-            font-size:          1.5em;
+        @include media-query('lap-and-up') {
+            .heading {
+                font-size:          4em;
+            }´
+            .author {
+                font-size:          1.5em;
+            }
         }
     }
 }

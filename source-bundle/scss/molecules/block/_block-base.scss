@@ -4,6 +4,7 @@
 
 @mixin block--base() {
     @include getRem('margin-bottom', $blockBottomMarginPx);
+    @include clearfix();
     width:                      100%;
     overflow:                   visible; // overwrite bde2010 style
     position:                   relative;

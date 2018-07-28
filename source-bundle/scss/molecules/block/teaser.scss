@@ -22,6 +22,27 @@ $teaser-namespace:              $namespace !default;
     .author-name {
         color:          $linkColor;
     }
+    &.teaser--base {
+        @include media-query('palm') {
+            // make 16:9 image to 1:1
+            .image {
+                width:          30vw;
+                height:         30vw;
+                float:          left;
+                margin:         20px;
+                overflow:       hidden;
+                position:       relative;
+                img {
+                    position:   absolute;
+                    left:       -30%;
+                    top:        0;
+                    height:     100%;
+                    width:      auto;
+                    max-width:  none;
+                }
+            }
+        }
+    }
     &.teaser--text {
         background:             transparent;
         .inner {
