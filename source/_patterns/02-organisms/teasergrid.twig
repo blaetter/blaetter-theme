@@ -1,4 +1,4 @@
-<div class="grid">
+<div class="grid {{ data.gridClass }}">
 {% for block in data.content %}
     <div class="grid__item {{ data.gridItenClass|default('one-third') }}">
     {% include block.pattername with { "data": block } %}

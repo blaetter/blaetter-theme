@@ -16,6 +16,17 @@
         {% for block in homepage.content %}
             {% include block.pattername with { "data": block } %}
         {% endfor %}
+
+
+    
+    
+        {% block footer %}
+            {% include "organisms-footer" %}
+        {% endblock %}
+
+        
+
         </div>
 
+          
     {% endblock %}

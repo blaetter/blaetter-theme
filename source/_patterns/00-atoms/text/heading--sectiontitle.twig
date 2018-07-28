@@ -1,0 +1,23 @@
+<h2 class="heading--sectiontitle">
+    <div class="text">
+{% if data.targetPage %}
+        <a class="text" href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}">{{ (data.text|default('Heading Sectiontitle'))|raw }}</a>
+{% else %}
+        {{ (data.text|default('Heading Sectiontitle'))|raw }}
+{% endif %} 
+   </div>
+  
+
+{% if data.asideText %}   
+  <div class="aside">
+  {% if (data.asideTargetPage) %}
+    <a class="readmore" href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}">{{ data.asideText|raw }}</i></a>
+  {% else %}
+    {{ data.asideText|raw }}
+  {% endif %} 
+  </div>
+{% endif %}
+ 
+
+</h2>
+

@@ -1,0 +1,15 @@
+<div class="grid {{ data.gridClass }}">
+    <div class="grid__item one-third">
+{% for block in data.content_left %}
+    {% include block.pattername with { "data": block } %}
+{% endfor %}
+    </div>
+    <div class="grid__item two-thirds">
+{% for block in data.content_right_top %}
+    {% include block.pattername with { "data": block } %}
+{% endfor %}
+{% for block in data.content_right_bottom %}
+    {% include block.pattername with { "data": block } %}
+{% endfor %}
+    </div>
+</div>

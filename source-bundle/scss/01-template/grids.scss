@@ -73,6 +73,7 @@ $grid-namespace:            $namespace !default;
     flex-direction:         row-reverse;
 }
 
+
 .grid > .grid__item {
     @include flexgrid-item--base();
     &.flexcontent-autoheight {
@@ -104,5 +105,14 @@ $grid-namespace:            $namespace !default;
                 width:              33.333%;
             }
         }
+    }
+}
+
+
+// make grid content container 100% height
+.grid.grid--stretch {
+    align-items:            stretch;
+    > .grid__item {
+        display: flex;
     }
 }

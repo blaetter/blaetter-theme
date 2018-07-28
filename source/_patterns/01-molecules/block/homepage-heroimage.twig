@@ -1,6 +1,7 @@
 <a href="#" class="homepage-heroimage">
     <div class="image">
-        <div class="image-placeholder" style="background-image:url({{ data.imageurl? data.imageurl : 'https://picsum.photos/1200/675/?image=836' }});"></div>
+        <!--<div class="image-placeholder" style="background-image:url({{ data.imageurl? data.imageurl : 'https://picsum.photos/1200/675/?image=836' }});"></div>-->
+        <img class="image-placeholder" src="{{ data.imageurl? data.imageurl : 'https://picsum.photos/1200/675/?image=836' }}" />
         <p class="source">@ {{ data.title|default('unsplash.com') }}</p>
     </div>
     <div class="body">

@@ -1,4 +1,18 @@
 #{$namespace}.homepage-dosierteaser {
     background:             $white;
-    padding:                $blockPaddingPx;
+    padding:                0;
+    .grid__item > *:last-child {
+        margin-bottom:      0;
+    }
+    .grid__item.one-third {
+        padding:                $blockPaddingPx;
+    }
+    .teaser.teaser--poster {
+        .heading {
+            font-size:          4em;
+        }´
+        .author {
+            font-size:          1.5em;
+        }
+    }
 }

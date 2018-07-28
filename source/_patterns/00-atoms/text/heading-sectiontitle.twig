@@ -1,7 +1,0 @@
-<h2 class="heading-sectiontitle">
-{% if data.targetPage %}
-    <a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}">{{ data.text|default('Heading Sectiontitle') }}</a>
-{% else %}
-    {{ data.text|default('Heading Sectiontitle') }}
-{% endif %}
-</h2>

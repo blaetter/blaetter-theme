@@ -30,83 +30,32 @@ $heading-namespace:       $namespace !default;
 }
 
 
-// Small Headline for channelnavgation on indexpages
-#{$heading-namespace}.heading-navigation {
-   @include headline3();
-   margin-top:              0;
-}
-
-#{$heading-namespace}.add-sectionborder {
-    @include heading--addbottomborder();
-}
-
-
 // Headline for subsections on indexpages, grey border
 #{$heading-namespace}.heading--sectiontitle {
+    display:                        flex;
+    flex-wrap:                      wrap;
+    text-transform:                 uppercase;
     border-top:                     1px solid $greyBorder;
     border-bottom:                  4px solid $greyBorder;
     padding:                        0.8em 0 0.7em 0;
     margin:                         3em 0 2em 0;
-    @include media-query('palm') {
-        padding-left:            $pagePaddingPalmPx;
-        padding-right:            $pagePaddingPalmPx;
+    color:                          $red;
+    .text {
+        flex-grow:                  1;
     }
-}
-
-// Headline for subsections inside form fieldsets
-#{$heading-namespace}.heading--formsection {
-   margin-top:              2em;
-   @include heading--addbottomborder();
-   margin-bottom:           1.0em;
-   padding-bottom:          0.5em;
-}
-
-// Area headingson frontpage, under article page
-#{$heading-namespace}.heading-channel {
-    @include heading--base();
-    @include headline2();
-}
-
-// Searchpage Resultcounter/Headline
-#{$heading-namespace}.heading-resultcounter {
-    @include getRem('margin-top', 58px);
-    @include getRem('margin-bottom', 28px);
-    font-weight:    normal;
-    font-size:      $base-font-size;
-    color:          $baseTextColor;
-}
-
-#{$heading-namespace}.heading--places {
-    margin-bottom:   0.45em;
-}
-
-
-#{$heading-namespace}.heading--article {
-}
-#{$heading-namespace}.subheading--article {
-    color:          $lightestTextGrey;
-    @include fontsize(18px);
-    margin-bottom:  1.5em;
-    
-}
-
-#{$heading-namespace}.subheading {
-    font-size:              $smallest-font-size;
-    //color:                  $lightestTextGrey;
-    font-weight:            bold; 
-    line-height:            1.4em;
-    margin-bottom:          0.45em;
-    margin-top:             0;
-}
-
-@include media-query(palm) {
-    #{$heading-namespace}.heading-channel {
-        &.land {
-            &:before {
-                bottom:             -3.9vw;
-                background-size:    160vw auto;
-            }
+    .aside {
+        flex-grow:                  0;
+        display:                    inline-block;
+        font-weight:                normal;
+        a {
+            color:                  $linkColor;
         }
     }
+    @include media-query('palm') {
+        padding-left:               $pagePaddingPalmPx;
+        padding-right:              $pagePaddingPalmPx;
+    }
 }
+
+
 

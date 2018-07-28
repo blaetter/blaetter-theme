@@ -9,18 +9,24 @@ $footerBGColor:                 transparent !default;
     background-color:       $footerBGColor;
     text-align:             left;
     color:                  $footerFontColor;
-    .footer_totop {
+    text-align:             center;
+    margin-top:             40px;
+    .heading {
+        font-size:          1.2em;
+        font-weight:        700;
         display:            block;
-        text-align:         right;
-        margin-bottom:      1.5em;
-		&:after {
-			content: "\00f077"; // chrefron-up
-			font: 1em FontAwesome;
-			display: inline-block;
-			padding-left: 1em;
-		}
+        margin-top:         20px;
+        margin-bottom:      0.4em;
     }
-    @media print {
+    .author {
+        color:              $linkColor;   
+        display:            block;
+        margin-bottom:      0.6em;
+    }
+    .copyright {
+        color:              $greyAuthor;
+        display:            block;
+        margin-bottom:      0.6em;
     }
     @include media-query('palm') {
         &.hide {
