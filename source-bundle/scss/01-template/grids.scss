@@ -54,6 +54,10 @@ $grid-namespace:            $namespace !default;
             @include flexgrid-item--base();
             width:          25%;
         }
+        > .grid__item.three-fourths { 
+            @include flexgrid-item--base();
+            width:          75%;
+        }
         > .grid__item.two-thirds {
             @include flexgrid-item--base();
             width:          66.666%;

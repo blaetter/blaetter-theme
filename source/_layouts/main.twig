@@ -1,4 +1,4 @@
-    <div class="page-wrapper" class="{{ globalTempStylingClass }}">   
+    <div class="page-wrapper" class="{{ globalTempStylingClass }} {{ pagetype }}">   
                     
             <header id="header">
                 <div class="page-wrapper__inner">   
@@ -12,14 +12,13 @@
                 </div>
             </header>
             
-            <main id="main-content">
-                <div class="page-wrapper__inner">  
-                    {% block content %}
-                        {#% block breadcrumb %}
-                        {% endblock %#}
-                    {% endblock %}
-                </div>
-            </main>
+    
+            {% block content %}
+                {#% block breadcrumb %}
+                {% endblock %#}
+            {% endblock %}
+   
+     
 
           
 

@@ -1,32 +1,26 @@
 {% extends "main.twig" %}
 
-    {% block pagetitle %}{{ homepage.title }}{% endblock %}
     
-    {#% block breadcrumb %}{% endblock %#}
-    
-    {% block content %}
-    
-        <h1 class="aural">{{ homepage.title }}</h1>
+        {% block pagetitle %}{{ homepage.title }}{% endblock %}
         
-         {% for block in homepage.hero %}
-            {% include block.pattername with { "data": block } %}
-        {% endfor %}
+        {#% block breadcrumb %}{% endblock %#}
+        
+        {% block content %}
+        <main class="page-wrapper__inner">
+            <h1 class="aural">{{ homepage.title }}</h1>
+            
+            {% for block in homepage.hero %}
+                {% include block.pattername with { "data": block } %}
+            {% endfor %}
 
-        <div class="content-wrapper">
-        {% for block in homepage.content %}
-            {% include block.pattername with { "data": block } %}
-        {% endfor %}
-
-
-    
-    
-        {% block footer %}
-            {% include "organisms-footer" %}
+            <div class="content-wrapper">
+                {% for block in homepage.content %}
+                    {% include block.pattername with { "data": block } %}
+                {% endfor %}
+                {% block footer %}
+                    {% include "organisms-footer" %}
+                {% endblock %}
+            </div>
+        </main>
         {% endblock %}
-
-        
-
-        </div>
-
-          
-    {% endblock %}
+   

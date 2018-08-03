@@ -1,0 +1,53 @@
+{% extends "main.twig" %}
+
+    {% block pagetitle %}{{ article.title }}{% endblock %}
+    
+    {#% block breadcrumb %}{% endblock %#}
+    
+    {% block content %}
+    
+        <div class="page-wrapper__inner">
+
+            <div class="content-wrapper content-wrapper--article ">
+                
+                <div class="grid">
+                    <div class="grid__item one-half">
+
+                        <main class="main">
+
+                            <h1 class="heading--article">{{ article.title }}</h1>
+
+                            {% for block in article.content %}
+                                {% include block.pattername with { "data": block } %}
+                            {% endfor %}
+
+                        </main>
+                    </div><!-- /grid__item -->
+
+                    <div class="grid__item spacer">
+                    </div>
+
+                    <div class="grid__item one-fourth">
+                        <aside class="marginal">
+                            {% for item in article.marginal %}
+                                {% include item.pattername with { "data": item } %}
+                            {% endfor %} 
+                        </aside>
+                    </div><!-- /grid__item -->
+
+
+                </div>
+
+                <div class="content-wrapper">
+                    {% block footer %}
+                        {% include "organisms-footer" %}
+                    {% endblock %}
+                </div>
+
+            </div>
+
+        </div>
+
+          
+    {% endblock %}
+

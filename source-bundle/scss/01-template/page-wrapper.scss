@@ -28,7 +28,8 @@ $page-wrapper-namespace:           $namespace !default;
         width:              100%;
         max-width:          $pageWidthDesk;
         margin:             0 auto;
-	}
+    }
+    
 }
 
 
@@ -53,5 +54,42 @@ $content-wrapper-namespace:              $namespace !default;
         max-width:      100%;
         margin:         0 auto;
 	}
+   
+}
+
+#{$content-wrapper-namespace}.content-wrapper--article {
+    @include media-query(lap-and-up) { 
+        width:              100%;
+        max-width:          $contentWidthDeskArticlePx;
+        margin:             0 0 0 auto;
+        > .grid {
+            flex-wrap:      nowrap;
+            > .two-fourths,
+            > .one-half {
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+            > .spacer {
+                flex-grow: 1;
+                flex-shrink: 1;
+                width: auto;
+                max-width: 180px;
+            }
+            > .one-fourth {
+                flex-grow: 0;
+                flex-shrink: 0;
+                min-width: 300px;
+            }
+        }
+        .main {
+            //padding-right:  160px;
+            padding-left:  $pagePaddingPx;
+        }
+        .marginal {
     
+        }
+    }
+    @include media-query(palm) { 
+        padding:  0 $pagePaddingPalmPx;
+    }
 }

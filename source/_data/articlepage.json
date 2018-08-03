@@ -1,0 +1,36 @@
+{
+    "pagetype": "pagetype-article",
+    "article": {  
+        "title": "Artikelseite",
+        "content":  [
+            {
+                "pattername": "atoms-heading2"
+            },{
+                "pattername": "atoms-paragraph"
+            },{
+                "pattername": "atoms-paragraph"
+            },{
+                "pattername": "atoms-heading2"
+            },{
+                "pattername": "atoms-paragraph"
+            },{
+                "pattername": "atoms-paragraph"
+            }
+        ],
+        "marginal":  [
+            {
+                "pattername": "atoms-heading2"
+            },{
+                "pattername": "atoms-paragraph"
+            },{
+                "pattername": "atoms-paragraph"
+            },{
+                "pattername": "atoms-heading2"
+            },{
+                "pattername": "atoms-paragraph"
+            },{
+                "pattername": "atoms-paragraph"
+            }
+        ]
+    }
+}
