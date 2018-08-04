@@ -6,34 +6,106 @@
     <h2>Teaser</h2>
        
     
-    <h3>Teaser</h3>
-    <blockquote>
-        Teaser in der mobilen Ansicht und außerhalb eines Grids werden mit floatendem Bild (Breite 33.33%) angezeigt.
-    </blockquote>
-    
-    {% include "molecules-teaser" with {data: {title: "teaser", "subheading": "Subheading 01.01.1980", "source":"Quelle", blockClass: null, text: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet."}} %}
-    
-    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-teaser" with {data: {text: "Lorem ipsum [...] adipisicing elit.","subheading": "Subheading 01.01.1980","source":"Quelle", blockClass: null, imageSrc: "bildurl.jpg"}} %}</code></pre>
+    {% include "organisms-teasergrid" with {data: {
+                "gridItenClass": "one-third",
+                "gridClass": "grid--stretch",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--base",
+                        "title": "Basisteaser",
+                    }
+                ]
+    }} %}   
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-teaser" with {data: {
+        "class": "teaser--base"
+    }} %}</code></pre>
 
-  
-    <h3>Teaser im Grid</h3>
+
+     
+    {% include "organisms-teasergrid" with {data: {
+                "gridItenClass": "one-third",
+                "gridClass": "grid--stretch",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "title": "Posterteaser",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/300/400/?random",
+                        "source": "unsplash.com"
+                    }
+                ]
+    }} %}   
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-teaser" with {data: {
+        "class": "teaser--poster",
+        "text": "false",
+        "imageurl": "https://picsum.photos/300/400/?random",
+        "source": "unsplash.com"
+    }} %}</code></pre>
     
-    <blockquote>
-        Im Grid werden Teaser ohne Bildfloating angezeigt. (In Ausnahmefällen kann durch die Wrapperklasse ".clearimagefloat" das Bildfloating auch manuell gelöscht werden.)
-    </blockquote>
     
-    <div class="grid">
-        <div class="grid__item one-half">
-            {% include "molecules-teaser" with {data: {title: "teaser","source":"Quelle"}} %}
-        </div>
-        <div class="grid__item one-half">
-            {% include "molecules-teaser" with {data: {title: "teaser","source":"Quelle"}} %}
-        </div>
+    
+    {% include "organisms-teasergrid" with {data: {
+                "gridItenClass": "one-third",
+                "gridClass": "grid--stretch",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "title": "Textteaser",
+                        "class": "teaser--text",
+                        "text": "false"
+                    }
+                ]
+    }} %}   
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-teaser" with {data: {
+        "hideTeaserImage": true,
+        "class": "teaser--text",
+        "text": "false"
+    }} %}</code></pre>
+
+    {% include "organisms-teasergrid" with {data: {
+                "gridItenClass": "one-third",
+                "gridClass": "grid--stretch",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "title": "Textteaser",
+                        "hideAuthor": "true"
+                    }
+                ]
+    }} %} 
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-teaser" with {data: {
+        "hideTeaserImage": true,
+        "class": "teaser--text",
+        "hideAuthor": "true"
+    }} %}</code></pre>
+    
+
+
+    <div class="marginal">
+    {% include "organisms-teasergrid" with {data: {
+                "gridItenClass": "one-half",
+                "gridClass": "grid--stretch",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--marginal",
+                        "title": "Marginalteaser",
+                        "imageurl": "https://picsum.photos/250/250/?random",
+                        "text": "false"
+                    }
+                ]
+    }} %}   
     </div>
-    
-
-    
-    
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-teaser" with {data: {
+        "class": "teaser--marginal",
+        "imageurl": "https://picsum.photos/250/250/?random",
+        "text": "false"
+    }} %}</code></pre>
 
 {% endblock %}
 

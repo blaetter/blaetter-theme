@@ -58,11 +58,11 @@ $content-wrapper-namespace:              $namespace !default;
 }
 
 #{$content-wrapper-namespace}.content-wrapper--article {
-    margin-top:             1em;
+    margin-top:             0;
     @include media-query(lap-and-up) { 
         width:              100%;
         max-width:          $contentWidthDeskArticlePx;
-        margin:             2em 0 0 auto;
+        margin:             0 0 0 auto;
         > .grid {
             flex-wrap:      nowrap;
             > .two-fourths,

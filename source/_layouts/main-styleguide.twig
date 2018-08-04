@@ -1,33 +1,34 @@
-
-        <div id="page-wrapper" class="echo styleguide">
-        <!-- display ad pos : superbanner -->
-        <div class="pw-inner">            
+        <div class="page-wrapper" class="{{ globalTempStylingClass }} {{ pagetype }}">   
+                    
             <header id="header">
-            {% block global_header %}
-                {% include "organisms-header" with {hideAside: true} %}
-            {% endblock %}
+                <div class="page-wrapper__inner">   
+                    {% block global_header %}
+                        {% include "organisms-header" %}
+                    {% endblock %}
+                </div>
             </header>
-            <!-- display ad position : billboard -->
-            <main id="content-wrapper">
-                <h1>Styleguide</h1>
-                <div class="grid">
-                    <div class="grid__item one-third">
-                        {% include "styleguide-tableofcontent" %}
-                    </div>
-                    <div class="grid__item  two-thirds">
-                        {% block content %}
-                            {% block breadcrumb %}
+            
+            <main  class="page-wrapper__inner">
+                <div class="content-wrapper">
+                    
+                    <div class="grid">
+                        <div class="grid__item one-third">
+                            <h1>Styleguide</h1>
+                            {% include "styleguide-tableofcontent" %}
+                        </div>
+                        <div class="grid__item  two-thirds">
+                            {% block content %}
+                                {% block breadcrumb %}
+                                {% endblock %}
                             {% endblock %}
-                        {% endblock %}
-                    </div>
+                        </div>
+                    </div> 
                 </div> 
-                
             </main>
-        </div>
-        <!-- display ad position : skyscaper -->
+     
         </div><!--/page-wrapper-->
-        <!-- display ad position : out of page -->
-        
+
+
         <script>
             // we dont want js to change our code so lets add some entities
             $('code').each(function() {

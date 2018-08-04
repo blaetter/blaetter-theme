@@ -1,4 +1,4 @@
-<h2 class="heading--sectiontitle">
+<h2 class="heading--sectiontitle {{ data.class }}">
     <div class="text">
 {% if data.targetPage %}
         <a class="text" href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}">{{ (data.text|default('Heading Sectiontitle'))|raw }}</a>

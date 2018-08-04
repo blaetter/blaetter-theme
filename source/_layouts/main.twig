@@ -12,14 +12,15 @@
                 </div>
             </header>
             
-    
             {% block content %}
                 {#% block breadcrumb %}
                 {% endblock %#}
             {% endblock %}
-   
+
+            <footer class="page-wrapper__inner" id="footer">
+                {% block footer %}
+                    {% include "organisms-footer" %}
+                {% endblock %}
+            </footer>
      
-
-          
-
     </div><!--/page-wrapper-->

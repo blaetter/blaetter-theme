@@ -1,0 +1,11 @@
+<h2 class="heading--sectiontitle-marginal">
+    <div class="text">
+{% if data.targetPage %}
+        <a class="text" href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}">{{ (data.text|default('Heading Sectiontitle'))|raw }}</a>
+{% else %}
+        {{ (data.text|default('Sectiontitle Marginal'))|raw }}
+{% endif %} 
+   </div>
+
+</h2>
+

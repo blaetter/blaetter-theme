@@ -66,17 +66,56 @@
         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading4") %}</code></pre>
         
         <div class="sg-element__">
-            {% include ("atoms-heading-sectiontitle") %}
+            {% include ("atoms-heading--sectiontitle") %}
         </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading--sectiontitle") %}</code></pre>
+
         <div class="sg-element__">
-            {% include "atoms-heading-sectiontitle" with {data:{"targetPage":"#","text": "Heading Sectiontitle, verlinkt"}} %}
+            {% include "atoms-heading--sectiontitle" with {data:{"targetPage":"#","text": "Heading Sectiontitle, verlinkt"}} %}
         </div>
-        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading-sectiontitle") %}</code></pre>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-heading--sectiontitle" with {data:{"targetPage":"#","text": "Heading Sectiontitle, verlinkt"}} %}</code></pre>
         
+        <div class="sg-element__">
+            {% include "atoms-heading--sectiontitle" with {data: {
+                    "targetPage": null,
+                    "text": "<span class=\"text--red\">Rote Schrift</span> in Sectiontitle",
+                    "asideText": null,
+                    "asideTargetPage": null
+            }} %}
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-heading--sectiontitle" with {data: {
+                "targetPage": null,
+                "text": "<span class=\"text--red\">Rote Schrift</span> in Sectiontitle",
+                "asideText": null,
+                "asideTargetPage": null
+        }} %}</code></pre>
+
+        <div class="sg-element__">
+            {% include "atoms-heading--sectiontitle" with {data: {
+                    "targetPage": null,
+                    "text": "Sectiontitle mit asidelink",
+                    "asideText": "Link",
+                    "asideTargetPage": "#"
+            }} %}
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-heading--sectiontitle" with {data: {
+                "targetPage": null,
+                "text": "Sectiontitle mit asidelink",
+                "asideText": "Link",
+                    "asideTargetPage": "#"
+        }} %}</code></pre>
+
+        <div class="sg-element__">
+            {% include ("atoms-heading--sectiontitle-marginal") %}
+        </div>
+        <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading--sectiontitle-marginal") %}</code></pre>
+
+        {#
         <div class="sg-element__">
             {% include ("atoms-heading-formsection") %}
         </div>
         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading-formsection") %}</code></pre>
+        #}
 
         <h3>Paragraph</h3>
         <div class="sg-element">
@@ -92,13 +131,14 @@
          </div>
          <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-anker" %}</code></pre>
        
+        {#
         <h3>Bildunterschrift</h3>
         <code>.image-caption</code>
         <div class="sg-element">
             {% include "atoms-image-caption" with {data:{"text": null}}%}
          </div>
          <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-image-caption" %}</code></pre>
-
+        #}
 
         <br /><br />
         

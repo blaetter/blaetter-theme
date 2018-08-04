@@ -29,7 +29,7 @@
             },{
                 "pattername": "atoms-heading--sectiontitle",
                 "targetPage": null,
-                "text": "AKTUELLE AUSGABE <span class=\"text--black\">MONAT JAHR</span>",
+                "text": "<span class=\"text--red\">AKTUELLE AUSGABE</span> MONAT JAHR",
                 "asideText": null,
                 "asideTargetPage": null
             },{
@@ -62,7 +62,7 @@
             },{
                 "pattername": "atoms-heading--sectiontitle",
                 "targetPage": null,
-                "text": "DOSIER <span class=\"text--black\">TITLE</span>",
+                "text": "<span class=\"text--red\">DOSIER</span> TITLE",
                 "asideText": "Übersicht",
                 "asideTargetPage": "#"
             },{
@@ -154,6 +154,7 @@
                 "content_left": [
                     {
                         "pattername": "atoms-heading--sectiontitle",
+                        "class": "red",
                         "text": "Aktuelle Dokumente"
                     },{
                         "pattername": "molecules-teaser",
@@ -189,6 +190,7 @@
                 "content_right_top": [
                     {
                         "pattername": "atoms-heading--sectiontitle",
+                        "class": "red",
                         "text": "Zurückgeblättert"
                     },{
                         "pattername": "atoms-paragraph",
@@ -203,6 +205,7 @@
                 "content_right_bottom": [
                     {
                         "pattername": "atoms-heading--sectiontitle",
+                        "class": "red",
                         "text": "Blog"
                     },{
                         "pattername": "molecules-teaser",
@@ -227,7 +230,7 @@
                 ]
             },{
                 "pattername": "atoms-heading--sectiontitle",
-                "text": "BLÄTTER <span class=\"text--black\">- HERAUSGEBER</span>"
+                "text": "<span class=\"text--red\">BLÄTTER</span> - HERAUSGEBER"
             },{
                 "pattername": "organisms-teasergrid",
                 "gridClass": "grid--stretch",

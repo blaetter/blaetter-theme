@@ -1,3 +1,7 @@
-#{$namespace}.marginal > *:first-child {
-    margin-top:     0;
+#{$namespace}.marginal {
+    background-color:               $greyBgMarginal;
+    padding:                        $blockPaddingPx;
+     > *:first-child {
+        margin-top:                 0;
+     }
 }

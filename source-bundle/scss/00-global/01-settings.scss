@@ -26,9 +26,10 @@ $black:                         #000000;
 $red:                           #E71835;
 $blue:                          #086D9A;
 $bluelight:                     $blue;
-$grey:                          #F5F5F5;  
-$greyDark:                      #EDEDED; // Form filter section background
+$grey:                          #f2f2f2;  
+$greyDark:                      #e3e3e3; 
 $greyDisabled:                  #D5D5D5;  
+$greyBgMarginal:                $greyDark; // Marginal Background Color
 // Special Colors 
 $lightestTextGrey:              #555555; // Hellster Text, Barrierefrei: Anzeige, Copyright(mobil) 
 $greyBorder:                    #CCCCCC;
@@ -37,7 +38,7 @@ $greySource:                    $lightestTextGrey;
 $greySourceDesk:                darken($white, 12%); 
 $greyAuthor:                    #aaaaaa;
 $greyAnzeige:                   $lightestTextGrey;
-$page-background-color:         darken($grey, 2%);
+$page-background-color:         $grey;
 $labelColorLight:               $lightestTextGrey; 
 // form validation colors:
 $formElementBorderColor:        $greyInputBorder;

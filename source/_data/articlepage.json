@@ -10,26 +10,65 @@
             },{
                 "pattername": "atoms-paragraph"
             },{
-                "pattername": "atoms-heading2"
-            },{
                 "pattername": "atoms-paragraph"
             },{
                 "pattername": "atoms-paragraph"
+            },{
+                "pattername": "atoms-heading--sectiontitle"
             }
         ],
         "marginal":  [
             {
-                "pattername": "atoms-heading2"
+                "pattername": "atoms-sectiontitle-marginal"
             },{
-                "pattername": "atoms-paragraph"
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
             },{
-                "pattername": "atoms-paragraph"
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
             },{
-                "pattername": "atoms-heading2"
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
             },{
-                "pattername": "atoms-paragraph"
+                "pattername": "atoms-sectiontitle-marginal"
             },{
-                "pattername": "atoms-paragraph"
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
+            },{
+                "pattername": "atoms-sectiontitle-marginal"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?random",
+                "text": "false"
             }
         ]
     }
