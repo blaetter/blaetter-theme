@@ -4,7 +4,7 @@
         "title": "Artikelseite",
         "content":  [
             {
-                "pattername": "atoms-heading2"
+                "pattername": "atoms-articleimage"
             },{
                 "pattername": "atoms-paragraph"
             },{

@@ -10,8 +10,7 @@ $image-namespace:           $namespace !default;
     border:                 0;
 }
 
-#{$image-namespace}.image,
-#{$image-namespace}.mainimage {
+#{$image-namespace}.image {
     img {
         width:              100%;
         max-width:          100%; 

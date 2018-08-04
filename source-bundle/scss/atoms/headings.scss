@@ -30,6 +30,11 @@ $heading-namespace:       $namespace !default;
 }
 
 
+#{$heading-namespace}.heading--article {
+    font-size:                      4em;
+    margin-bottom:                  0.3em;
+}
+
 // Headline for subsections on indexpages, grey border
 #{$heading-namespace}.heading--sectiontitle {
     display:                        flex;

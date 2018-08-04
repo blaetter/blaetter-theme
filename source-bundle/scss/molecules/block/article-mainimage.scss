@@ -1,67 +1,27 @@
 $article-mainimage-namespace:              $namespace !default;
 
-$swiper-articleimage--minHeight-mobileVw:     93vw * 3 / 4; // image ratio!
-$swiper-articleimage--minHeight-desktopPx:    624px * 3 / 4;
+$swiper-articleimage--minHeight-mobileVw:     93vw * 9 / 16; // image ratio!
+$swiper-articleimage--minHeight-desktopPx:    700px * 9 / 16;
 
-#{$article-mainimage-namespace}.page-mainimage, /* old name but still in use */
 #{$article-mainimage-namespace}.article-mainimage {
     position:               relative;
     margin-bottom:          $gridGutter;
     img {
-        width:              auto; // because of portrait images
+        width:              100%;
         max-width:          100%; 
         display:            block;
-        margin:             0 auto; // center portait images
+        margin:             0 auto;
     }
-    + .caption,
-    + .image-caption {
+    + .caption {
         @include fontImageCaption();
         margin-top:         -1.5em;
     }
     .source {
         @include block-source--base();
+        margin-left:        0;
+        padding-left:       0;
     }
     @include media-query(lap-and-up) {
-        @include block-source--overlay();
-    }
-    &.js-articleimage-add-blur {
-        align-items: center;
-        display: flex;
-        overflow: hidden;
-        position: relative;
-        @include media-query(palm) {
-            height:                 $swiper-articleimage--minHeight-mobileVw;
-        }
-        @include media-query(lap-and-up) {
-            @include getRem('height', $swiper-articleimage--minHeight-desktopPx);
-        }
-    }
-}
-
-// Sales Overlay
-#{$article-mainimage-namespace}.mainimage__overlay {
-    position:               absolute;
-    right:                  0;
-    top:                    $gridGutter;
-    min-width:              40%;
-    max-width:              47%;
-    @include media-query(palm) {
-        max-width:              85%;
-    }
-    min-height:             6em;
-    background-color:       rgba(255, 255, 255, 0.9);
-    @include getRem('padding', $blockPaddingPx);
-    text-align:             right;
-    .overlay__text {
-        font-weight:        bold;
-        @include fontsize(18px);
-        display:            block;
-        margin-bottom:      0.4em;
-    }
-    .overlay__price {
-        font-weight:        bold;
-        @include fontsize(26px);
-        display:            block;
-        margin-bottom:      0.2em;
+       // @include block-source--overlay();
     }
 }
