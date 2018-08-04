@@ -33,6 +33,10 @@ $heading-namespace:       $namespace !default;
 #{$heading-namespace}.heading--article {
     font-size:                      4em;
     margin-bottom:                  0.3em;
+    @include media-query('palm') {
+        font-size:                  2em;
+    margin-bottom:                  0.5em;
+    }
 }
 
 // Headline for subsections on indexpages, grey border
