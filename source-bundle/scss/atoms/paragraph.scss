@@ -16,7 +16,18 @@ $paragraph-namespace:                $namespace !default;
     // paragraph blocks inside articles
     margin-bottom:          1.5rem;
 }
-
+#{$paragraph-namespace}.quote {
+   display:            flex;
+   font-size:           2.5em;
+   color:               $lightestTextGrey;
+   margin:              $inlineBottomGutter 0;
+   &:before {
+       content:         "\f101";
+       display:         inline-block;
+       font-family:     fontawesome;
+       margin-right:    0.5em;
+   }
+}
 #{$paragraph-namespace}small {
     display:            inline-block;
     line-height:        1.4;

@@ -1,7 +1,8 @@
 {
-    "pagetype": "pagetype-article",
-    "article": {  
-        "title": "Artikelseite",
+    "pagetype": "pagetype-dossier",
+    "dossier": {  
+        "category": "Category",
+        "title": "Title",
         "content":  [
             {
                 "pattername": "atoms-articleimage"
@@ -10,39 +11,11 @@
             },{
                 "pattername": "atoms-paragraph"
             },{
-                "pattername": "atoms-paragraph",
-                "class": "quote",
-                "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-            },{
                 "pattername": "atoms-paragraph"
-            },{
-                "pattername": "atoms-heading--sectiontitle"
-            },{
-                "pattername": "organisms-teasergrid",
-                "gridItenClass": "one-third",
-                "gridClass": "grid--stretch",
-                "content": [
-                    {
-                        "pattername": "molecules-teaser",
-                        "class": "teaser--base",
-                        "text":"false"
-                    },{
-                        "pattername": "molecules-teaser",
-                        "class": "teaser--base",
-                        "author": "Author 1, Author 2, Author 3, Author 4",
-                        "text":"false"
-                    },{
-                        "pattername": "molecules-teaser",
-                        "class": "teaser--base",
-                        "text":"false"
-                    }
-                ]
             }
         ],
         "marginal":  [
             {
-                "pattername": "atoms-sectiontitle-marginal"
-            },{
                 "pattername": "molecules-teaser",
                 "class": "teaser--marginal",
                 "imageurl": "https://picsum.photos/250/250/?random",
@@ -58,8 +31,6 @@
                 "imageurl": "https://picsum.photos/250/250/?random",
                 "text": "false"
             },{
-                "pattername": "atoms-sectiontitle-marginal"
-            },{
                 "pattername": "molecules-teaser",
                 "class": "teaser--marginal",
                 "imageurl": "https://picsum.photos/250/250/?random",
@@ -74,8 +45,6 @@
                 "class": "teaser--marginal",
                 "imageurl": "https://picsum.photos/250/250/?random",
                 "text": "false"
-            },{
-                "pattername": "atoms-sectiontitle-marginal"
             },{
                 "pattername": "molecules-teaser",
                 "class": "teaser--marginal",

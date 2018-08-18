@@ -31,7 +31,7 @@ $greyDark:                      #e3e3e3;
 $greyDisabled:                  #D5D5D5;  
 $greyBgMarginal:                $greyDark; // Marginal Background Color
 // Special Colors 
-$lightestTextGrey:              #555555; // Hellster Text, Barrierefrei: Anzeige, Copyright(mobil) 
+$lightestTextGrey:              #999999; // quote
 $greyBorder:                    #CCCCCC;
 $greyInputBorder:               $greyBorder; 
 $greySource:                    $lightestTextGrey;
@@ -57,9 +57,9 @@ $messageErrorBg:                #f2dede;
 $smallGapPx:                      12px;
 $mediumGapPx:                     16px;
 $largeGapPx:                      20px;
-$pageWidthDeskPx:               1400px;  // max width for hero units and header
+$pageWidthDeskPx:               1420px;  // max width for hero units and header
 $contentWidthDeskPx:            940px; // max width for inner content units
-$contentWidthDeskArticlePx:     1188px;
+$contentWidthDeskArticlePx:     700px;
 $gridGutter:                    1.250rem; // 20px_16px;
 $blockPaddingPx:                $largeGapPx; // Grey Teaser...
 $teaserInnerPadding:            $largeGapPx;

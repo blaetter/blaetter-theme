@@ -13,13 +13,12 @@ $page-wrapper-namespace:           $namespace !default;
     }
 }
 
-// Our Wrapper around the main page sections to maximize withs
 
+
+// Our Wrapper around the main page sections to maximize withs
 .page-wrapper__inner {
-    //@include box-shadow(0px, 0px, 10px, 0px, rgba(100, 100, 100, 0.2));
     background:         transparent;
     position:           relative;
-    //border:             1px dotted red;
     @include media-query(palm) {
         width:          100%;
         margin:         0;   
@@ -40,7 +39,6 @@ $content-wrapper-namespace:              $namespace !default;
 
 #{$content-wrapper-namespace}.content-wrapper {
     @include clearfix();
-    //border:             1px dotted blue;
     padding:        0;
     @include media-query(palm) {
         width:          100%;
@@ -57,40 +55,32 @@ $content-wrapper-namespace:              $namespace !default;
    
 }
 
-#{$content-wrapper-namespace}.content-wrapper--article {
+#{$content-wrapper-namespace}.content-wrapper-article,
+#{$content-wrapper-namespace}.content-wrapper-dossier  {
     margin-top:             0;
     @include media-query(lap-and-up) { 
-        width:              100%;
-        max-width:          $contentWidthDeskArticlePx;
-        margin:             0 0 0 auto;
-        > .grid {
-            flex-wrap:      nowrap;
-            > .two-fourths,
-            > .one-half {
-                flex-grow: 1;
-                flex-shrink: 1;
-            }
-            > .spacer {
-                flex-grow: 1;
-                flex-shrink: 1;
-                width: auto;
-                max-width: 180px;
-            }
-            > .one-fourth {
-                flex-grow: 0;
-                flex-shrink: 0;
-                min-width: 320px;
+        flex-wrap:      nowrap;
+        .content-left {
+            flex-grow: 1;
+            flex-shrink: 1;
+            margin-left:        $pagePaddingPx;    
+            .content-left__inner {
+                width:              100%;
+                max-width:          $contentWidthDeskArticlePx + ($pagePaddingPx*2);
+                margin:             0 0 0 auto;
             }
         }
-        .main {
-            //padding-right:  160px;
-            padding-left:  $pagePaddingPx;
+        .content-spacer {
+            max-width:              180px;
         }
-        .marginal {
-    
+        .content-right {
+            flex-grow:              0;
+            flex-shrink:            0;
+            min-width:              300px;
         }
     }
     @include media-query(palm) { 
         padding:  0 $pagePaddingPalmPx;
     }
+   
 }

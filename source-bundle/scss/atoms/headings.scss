@@ -92,4 +92,22 @@ $heading-namespace:       $namespace !default;
     }
 }
 
+#{$heading-namespace}.heading--dossiercat {
+    @include headline2();
+    display:                        block;
+    font-weight:                    700;
+    text-transform:                 uppercase;
+    border-bottom:                  4px solid $greyBorder;
+    padding:                        0.8em 0 0.7em 0;
+    margin:                         1em 0 2em 0;
+    width:                          100%; 
+
+        
+
+   
+    @include media-query('palm') {
+       // padding-left:               $pagePaddingPalmPx;
+      //  padding-right:              $pagePaddingPalmPx;
+    }
+}
 

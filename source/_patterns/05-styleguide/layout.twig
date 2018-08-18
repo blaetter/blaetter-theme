@@ -16,135 +16,55 @@
   <header id="header">
     <div class="page-wrapper__inner">   
         <div class="portal-head" role="banner">
-         [... HEADER CONTENT HERE ...]
+         <!-- HEADER CONTENT HERE -->
         </div>
     </div>
   </header>
   
-  [... PAGETYP MARKUP (siehe unten) ...]
+  <main class="page-wrapper__inner">
+    <!-- PAGETYP MARKUP (siehe unten) -->
+  </main>
 
   <footer class="page-wrapper__inner" id="footer">
-    [... FOOTER CONTENT HERE ...]
+    <!-- FOOTER CONTENT HERE -->
   </footer>
 </div>
 </code></pre>
 
+
+
 <h3>Typ Startseite</h3>
 <pre><code class="sg-code-inline">
 
-  <main class="page-wrapper__inner">
-    [... HERO CONTENT HERE ...]
-    <div class="content-wrapper">
-      [... MAIN CONTENT HERE ...]
-    </div>
-  </main>
-
-</code></pre>
-
-
-<h3>Typ Artikelseite</h3>
-<pre><code class="sg-code-inline">
-
-  <div class="page-wrapper__inner">
-    <div class="content-wrapper content-wrapper--article ">
-      <div class="grid">
-        <div class="grid__item one-half">
-            [... MAIN CONTENT HERE ...]
-        </div>
-        <div class="grid__item spacer">
-        </div>
-        <div class="grid__item one-fourth">
-          <aside class="marginal">
-            [... MARGINAL CONTENT HERE ...]
-          </aside>
-        </div>
-      </div>
-    </div>
+  <!-- HERO CONTENT HERE -->
+  <div class="content-wrapper">
+    <!-- MAIN CONTENT HERE -->
   </div>
 
 </code></pre>
 
 
-{#
-    <h3>Startseite</h3>
-    <div class="sg-layout-html">
-        <div class="sg-layout-page">
-            <div class="sg-layout-header">
-                <span>HEADER</span>
-            </div>
-            <div class="sg-layout-content">
-            <main>
-               <span>MAIN</span>
-            </main>
-            </div>
-            <div class="sg-layout-footer">
-                <span>FOOTER</span>
-            </div>
-        </div>
+<h3>Typ Artikelseite / Dossier</h3>
+<pre><code class="sg-code-inline">
+
+<div class="grid content-wrapper-article">
+  <div class="grid__item eight-tenths content-left">
+    <!-- DOSSIER HEADING: --><div class="heading--dossiercat"><span class="text--red">Dossier</span> Category</div>
+    <div class="content-left__inner">
+      <!-- MAIN CONTENT HERE -->
     </div>
-    <p>
-        <a href="{{ attribute(link, 'pages-startseite') }}" title="Link zu: Beispiel Startseite" target="_blank">Beispiel Startseite</a><br />
-    </p>
-<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
-<main>
-    MAIN
-</main>
-</code></pre>
-    
-#}
-
-
-
-
-{#
-    
-    <h3>Artikelseite</h3>
-    <div class="sg-layout-html">
-        <div class="sg-layout-page">
-            <div class="sg-layout-header">
-                <span>HEADER</span>
-            </div>
-            <div class="sg-layout-content">
-                <div class="grid">
-                    <main class="grid__item two-thirds main-content">
-                        <article>
-                            <span>MAIN ARTICLE</span>
-                        </article>
-                    </main>
-                    <aside class="grid__item one-third marginal">
-                        <div>
-                            <span>MARGINAL ITEM</span>
-                        </div>
-                    </aside>
-                </div>
-                <aside class="appendix"> 
-                    <p>APPENDIX</p>
-                </aside>
-            </div>
-            <div class="sg-layout-footer">
-                <span>FOOTER</span>
-            </div>
-        </div>
-    </div>
-    <p>
-        <a href="{{ attribute(link, 'pages-zucker') }}" title="Link zu: Beispiel Indexseite" target="_blank">Beispiel Artikelseite</a><br />
-    </p>
-<pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>
-<div class="grid">
-    <main class="grid__item two-thirds main-content">
-        <article>
-            [MAINCONTENT]
-        </article>
-    </main>
-    <aside class="grid__item one-third marginal">
-        [MARGINALCONTENT]
-    </aside>
+  </div><!-- /grid__item -->
+  <div class="grid__item two-tenths content-spacer">
+    <!-- NO CONTENT HERE --> 
+  </div><!-- /grid__item -->
+  <aside class="marginal grid__item two-tenths content-right">
+    <!-- MARGINAL CONTENT HERE -->
+  </aside><!-- /grid__item -->
 </div>
-<aside class="appendix"> 
-    [APPENDIX]
-</aside>
+  
+
 </code></pre>
 
-#}
+
 
 {% endblock %}

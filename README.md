@@ -1,8 +1,8 @@
-# Berlin.de Corporate Masterlayout
+# Blaetter.de
 
-## Masterlayout für Berlin.de Rebrush »echo« ab 2016
+## Masterlayout für Blaetter.de
 
-Definition und Styleguide der Berlin.de Betreiber-Seiten mit Hilfe von [Pattern Lab](http://patternlab.io/)
+Definition und Styleguide von Blaetter.de mit Hilfe von [Pattern Lab](http://patternlab.io/)
 
 ### Buildprozess
 
@@ -21,6 +21,9 @@ Definition und Styleguide der Berlin.de Betreiber-Seiten mit Hilfe von [Pattern 
 
 * [`bin/docker-build`](bin/docker-build) – build docker image using [Dockerfile](/Dockerfile)
 * [`bin/docker-update-shell`](/bin/docker-update-shell) – run image, show dynamic allocated port, open shell in container
+
+### In den Container gehen
+* `docker-compose exec --user app www bash`
 
 Working copy is mounted to the container by the default [docker-compose.yml](/docker-compose.yml). You have to run `make all` in the container. 
 
