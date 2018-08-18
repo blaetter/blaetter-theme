@@ -6,7 +6,7 @@
         {#% block breadcrumb %}{% endblock %#}
         
         {% block content %}
-        <main class="page-wrapper__inner">
+    
             <h1 class="aural">{{ homepage.title }}</h1>
             
             {% for block in homepage.hero %}
@@ -18,7 +18,7 @@
                     {% include block.pattername with { "data": block } %}
                 {% endfor %}
             </div>
-        </main>
+
 
 
 

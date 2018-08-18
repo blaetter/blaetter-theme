@@ -91,3 +91,17 @@ $paragraph-namespace:                $namespace !default;
 #{$paragraph-namespace}.image-caption {
     @include fontImageCaption();
 }
+
+.initiale {
+    &::first-line {
+        line-height: 100%;
+    }
+    &::first-letter {
+        font-size: 4em;
+        font-weight: 700;
+        padding: 0 0 0 0;
+        margin: 0 0.1em 0 0;
+        float: left;
+        line-height: 0.9;
+    }
+}
