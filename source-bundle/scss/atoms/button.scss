@@ -26,7 +26,7 @@ $btn-border-color:              $blue !default;
     box-shadow:             none;
     /* margin:                 $buttonMargin; // not here */
     text-decoration:        none;
-    padding:                0.286em 0.643em; // 4px / 9px
+    padding:                0.7em 1em; // 4px / 9px
     font-size:              1rem;
     display:                inline-block;
     vertical-align:         top;
@@ -236,3 +236,12 @@ $btn-border-color:              $blue !default;
     @include button_as_link();
 }
 
+
+#{$button-namespace}.button--addtocart {
+    .text {
+        font-weight: bold;
+    }
+    .price {
+        font-weight: normal;
+    }
+}

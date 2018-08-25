@@ -1,6 +1,6 @@
 <div class="article-mainimage">
     <img src="{{ data.imageurl? data.imageurl : 'https://picsum.photos/700/331/?random' }}" alt="Bildbeschreibung" />     
-    <p class="source">Foto: {{ data.source|default('unsplash.com') }}</p> 
+    <p class="source">Foto: {{ data.source|default('picsum.photos') }}</p> 
 </div>  
 {% if data.imagecaption %}
 <p class="caption">

@@ -81,10 +81,16 @@ $swiper-articleimage--minHeight-desktopPx:    $pageWidthDesk * 16 / 9;
             color:          $white;
             margin:         0;
             font-size:      4em;
+            @include media-query('palm') {
+                font-size:                  2em;
+            }
         }
         .author {
             color:          $greyAuthor;
             font-size:      3em;
+            @include media-query('palm') {
+                font-size:                  1.5em;
+            }
 
         }
         .author-name {

@@ -21,7 +21,7 @@ $swiper-articleimage--minHeight-desktopPx:    700px * 9 / 16;
         margin-left:        0;
         padding-left:       0;
     }
-    @include media-query(lap-and-up) {
+    @include media-query(palm) {
        // @include block-source--overlay();
     }
 }

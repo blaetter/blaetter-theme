@@ -9,7 +9,7 @@
             {% include "atoms-teaser-image-16x9" with {data: data} %}
         {#</a>#}
         {% if data.source != 'false' %}
-        <figcaption class="source">© {{ data.source|default('unsplash.com') }}</figcaption>
+        <figcaption class="source">© {{ data.source|default('picsum.photos') }}</figcaption>
         {% endif %}
     </figure>
 {% endif %}

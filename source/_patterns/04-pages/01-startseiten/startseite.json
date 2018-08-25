@@ -58,7 +58,7 @@
                         "title": "Die Herrschaft der Superreichen",
                         "author": "Harald Schumann",
                         "imageurl": "https://picsum.photos/300/400/?image=972",
-                        "source": "unsplash.com"
+                        "source": "picsum.photos"
                     },{
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
@@ -66,7 +66,7 @@
                         "title": "Der graue Markt der Schattenbanken",
                         "author": "Axel Troost, Nicola Liebert und Rainald Ötsch",
                         "imageurl": "https://picsum.photos/300/400/?image=736",
-                        "source": "unsplash.com"
+                        "source": "picsum.photos"
                     },{
                         "pattername": "molecules-teaser",
                         "class": "teaser--poster",
@@ -74,7 +74,7 @@
                         "title": "Gaza ohne Partner",
                         "author": "Riad Othman",
                         "imageurl": "https://picsum.photos/300/400/?image=657",
-                        "source": "unsplash.com"
+                        "source": "picsum.photos"
                     }
                 ]
             },{
@@ -165,7 +165,7 @@
                         "class": "teaser--poster",
                         "text": "false",
                         "imageurl": "https://picsum.photos/220/295/?image=320",
-                        "source": "unsplash.com",
+                        "source": "picsum.photos",
                         "title": "Wir stehen auf für Menschlichkeit und Toleranz",
                         "author": "Steffen Vogel"
                     },{
@@ -173,7 +173,7 @@
                         "class": "teaser--poster",
                         "text": "false",
                         "imageurl": "https://picsum.photos/220/295/?image=355",
-                        "source": "unsplash.com",
+                        "source": "picsum.photos",
                         "title": "Die Wiederkehr der Dreißiger Jahre?",
                         "author": "Paul Mason"
                     },{
@@ -181,7 +181,7 @@
                         "class": "teaser--poster",
                         "text": "false",
                         "imageurl": "https://picsum.photos/220/295/?image=580",
-                        "source": "unsplash.com",
+                        "source": "picsum.photos",
                         "title": "Das Dilemma der Loyalität",
                         "author": "Norman Birnbaum"
                     },{
@@ -189,7 +189,7 @@
                         "class": "teaser--poster",
                         "text": "false",
                         "imageurl": "https://picsum.photos/220/295/?image=473",
-                        "source": "unsplash.com",
+                        "source": "picsum.photos",
                         "title": "Die Mär vom unpolitischen Hooligan",
                         "author": "Richard Gebhardt"
                     }

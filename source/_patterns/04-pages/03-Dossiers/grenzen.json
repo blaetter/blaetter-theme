@@ -1,4 +1,134 @@
-{   
-    "page_prefix": null,
-    "dossier": null
+{
+    "pagetype": "pagetype-dossier",
+    "dossier": {  
+        "category": "Politik",
+        "title": "Trump und die Folgen: Demokratie am Scheideweg",
+        "author": "Albrecht von Lucke",
+        "content":  [
+            {
+                "pattername": "atoms-articleimage",
+                "imageurl": "https://picsum.photos/700/331/?image=1070"
+            },{
+                "pattername": "atoms-paragraph",
+                "text": "Der 8. November, der Sieg Donald Trumps bei den US-Präsidentschaftswahlen, bedeutet eine historische Zäsur, deren ganzes Ausmaß bisher noch gar nicht annähernd abzusehen ist. Was hingegen bereits feststeht: Auch die Niederlage Hillary Clintons markiert eine Zäsur – nämlich das Ende und das Scheitern eines langen liberalen Zyklus."
+            },{
+                "pattername": "atoms-paragraph",
+                "text": "Dieser Zyklus begann vor fast einem Vierteljahrhundert, nämlich kurz nach der Zeitenwende von 1989/1990 und unmittelbar nach der epochalen Weltklimakonferenz von Rio – und zwar mit dem Sieg Bill Clintons bei der Präsidentschaftswahl am 3. November 1992. Er setzte sich fort mit der Regentschaft Tony Blairs, von 1997 bis 2007, und der Amtszeit Gerhard Schröders, von 1998 bis 2005. Und er umfasst, gewissermaßen als einen späten Ausläufer, schließlich auch die Amtszeit von François Hollande, die offenbar bereits heute gescheitert ist. Alle diese Politiker stehen für den Versuch einer doppelten Liberalisierung – in kultureller wie in ökonomischer Hinsicht, der Gesellschaft wie der Wirtschaft, insbesondere der Finanzmärkte. Doch während die gesellschaftliche Liberalisierung, etwa in Form umfangreicher Minderheitenrechte, weit gediehen ist, ist die ökonomische Liberalisierung fundamental gescheitert. Ob Clintons Bankengesetz, das die Geldhäuser von lästigen Regulierungsfesseln befreite, Blairs New-Labour-Politik oder Schröders und Steinmeiers Agenda 2010, inklusive Hartz IV: Am Ende stand stets die Expansion des Finanzsektors und die Deregulierung der Arbeitsmärkte, samt eines gewaltigen Niedriglohnsektors. Das Modell eines gehegten Kapitalismus, in Europa der sozialen Markwirtschaft oder des Rheinischen Kapitalismus, gehört damit für zunehmende Teile der Gesellschaft der Vergangenheit an. Aus der einstigen Aufstiegsgesellschaft der Nachkriegsära ist in der Ära der „Marktsozialdemokratie“ eine „Abstiegsgesellschaft“ geworden.[1] Die Folge ist eine zunehmende Spaltung der Gesellschaft: in eine liberal-offene metropolitane Elite und eine zunehmend deklassierte Unterschicht, deren Abstiegsängste immer stärker nach oben ausstrahlen und dort für zunehmende „Panik im Mittelstand“ (Theodor Geiger) sorgen."
+            },{
+                "pattername": null
+            }
+        ],
+        "marginal":  [
+            {
+                "pattername": "atoms-button-addtocart",
+                "text": "14 Beiträge kaufen",
+                "price": "(7,00 €)"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=55",
+                "text": "false",
+                "title": "Großbritanien oder: Das Ende der",
+                "author": "Jason Brown"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=65",
+                "text": "false",
+                "title": "Was ist Politik?",
+                "author": "Lothar Probst"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=70",
+                "text": "false",
+                "title": "Die rechten Führer",
+                "author": "Stephan Schulmeister"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=75",
+                "text": "false",
+                "title": "Großbritanien oder: Das Ende der",
+                "author": "Jason Brown"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=80",
+                "text": "false",
+                "title": "Was ist Politik?",
+                "author": "Lothar Probst"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=55",
+                "text": "false",
+                "title": "Großbritanien oder: Das Ende der",
+                "author": "Jason Brown"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=65",
+                "text": "false",
+                "title": "Was ist Politik?",
+                "author": "Lothar Probst"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=70",
+                "text": "false",
+                "title": "Die rechten Führer",
+                "author": "Stephan Schulmeister"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=75",
+                "text": "false",
+                "title": "Großbritanien oder: Das Ende der",
+                "author": "Jason Brown"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=80",
+                "text": "false",
+                "title": "Was ist Politik?",
+                "author": "Lothar Probst"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=55",
+                "text": "false",
+                "title": "Großbritanien oder: Das Ende der",
+                "author": "Jason Brown"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=65",
+                "text": "false",
+                "title": "Was ist Politik?",
+                "author": "Lothar Probst"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=70",
+                "text": "false",
+                "title": "Die rechten Führer",
+                "author": "Stephan Schulmeister"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=75",
+                "text": "false",
+                "title": "Großbritanien oder: Das Ende der",
+                "author": "Jason Brown"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "imageurl": "https://picsum.photos/250/250/?image=80",
+                "text": "false",
+                "title": "Was ist Politik?",
+                "author": "Lothar Probst"
+            }
+        ]
+    }
 }
