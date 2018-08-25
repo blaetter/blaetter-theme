@@ -1,0 +1,12 @@
+$comment-namespace:              $namespace !default;
+
+#{$comment-namespace}.comment {
+    .text {
+        
+    }
+    .meta {
+        color:          $lightestTextGrey;
+        font-size:      $smallest-font-size;
+    }
+}
+

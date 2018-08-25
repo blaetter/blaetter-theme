@@ -100,14 +100,14 @@ $btn-border-color:              $blue !default;
 
 @mixin button--reversed() {
     @extend .btn;
-    background-color:       transparent;
-    border:                 1px solid $blue;
-    color:                  $blue;
+    background-color:       $white;
+    border:                 1px solid #999999 ;
+    color:                  #999999;
     font-weight:            normal;
     opacity:                1;
     &:hover,
     &:focus {
-        background-color:   transparent;
+        //background-color:   transparent;
         color:              $linkColor;
         text-decoration:    none;
         opacity:            0.75;

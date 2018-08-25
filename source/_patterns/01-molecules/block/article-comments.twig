@@ -1,0 +1,13 @@
+<div class="block article-comments{{ data.blockClass ? ' ' ~ data.blockClass }}">
+{% if data.comments %}
+{% for comment in data.comments%}
+        {% include 'molecules-comment' with {data: comment} %}
+{% endfor %}
+{% else %}
+       {% include 'molecules-comment' %}
+       {% include 'molecules-comment' %}
+       {% include 'molecules-comment' %}
+{% endif %}
+    <button class="button--reversed">Anmelden</button>
+    <button class="button--reversed">Registrieren</button>
+</div>
