@@ -14,5 +14,6 @@
 }
 
 #{$namespace}.text--big {
-    font-size:              1.2em;
+    font-size:              $bigFontSizePx;
+    line-height:            1.7em;
 }
