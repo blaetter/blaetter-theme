@@ -4,8 +4,7 @@ $teaser-namespace:              $namespace !default;
     position:                   relative;
     background-color:           $white;
     .heading {
-        font-size:              1.2em;
-        font-weight:            700;
+        @include block--base-headline();
     }
     .inner {
         padding:                 $teaserInnerPadding;
@@ -18,6 +17,8 @@ $teaser-namespace:              $namespace !default;
         white-space:    nowrap;
         overflow:       hidden;
         text-overflow:  ellipsis;
+        font-size:      16px;
+        line-height:    25px;
     }
     .author-name {
         color:          $linkColor;

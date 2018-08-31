@@ -23,10 +23,8 @@
  *      HEADLINE
  */
  
-@mixin block--base-headline() {
-    @include fontsize(14px);
+@mixin block--base-headline() {            
     margin-top:             0;
-    line-height:            1.250em;
     word-wrap:              break-word;
     overflow-wrap:          break-word;
     a {
@@ -43,7 +41,8 @@
  
 // put source under the image (palm)
 @mixin block-source--base() {
-    @include fontsize($smallest-font-size);
+    font-size:          14px;
+    font-family:        'drois-sans', sans-serif, Arial;
     color:              $greySource;
     display:            block;
     line-height:        1.2em;

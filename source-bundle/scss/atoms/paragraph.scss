@@ -7,27 +7,35 @@ $paragraph-namespace:                $namespace !default;
         margin-top:             1.357em;
     }
 }
+
 #{$paragraph-namespace}.introtext {
     margin-top:         1em;
     margin-bottom:      1em; 
     font-weight:        bold;
 }
+
 #{$paragraph-namespace}.paragraph {
     // paragraph blocks inside articles
     margin-bottom:          1.5rem;
 }
+
 #{$paragraph-namespace}.quote {
+    font-family:       'droid-serif', serif;
+    font-size:          50px;
+    font-weight:        400;
+    line-height:        70px;
    display:            flex;
-   font-size:           2.5em;
    color:               $lightestTextGrey;
    margin:              $inlineBottomGutter 0;
    &:before {
-       content:         "\f101";
+       content:         "»";
        display:         inline-block;
-       font-family:     fontawesome;
-       margin-right:    0.5em;
+       margin-right:    30px;
+       font-size:       1.5em;
+       line-height:     0.75;
    }
 }
+
 #{$paragraph-namespace}small {
     display:            inline-block;
     line-height:        1.4;
@@ -94,14 +102,13 @@ $paragraph-namespace:                $namespace !default;
 
 .initiale {
     &::first-line {
-        line-height: 100%;
     }
     &::first-letter {
-        font-size: 4em;
-        font-weight: 700;
+        font-size: 95px;
+        font-weight: 400;
         padding: 0 0 0 0;
         margin: 0 0.1em 0 0;
         float: left;
-        line-height: 0.9;
+        line-height: 0.92;
     }
 }

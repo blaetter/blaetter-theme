@@ -80,21 +80,24 @@ $swiper-articleimage--minHeight-desktopPx:    $pageWidthDesk * 16 / 9;
         .heading {
             color:          $white;
             margin:         0;
-            font-size:      4em;
+            font-size:      90px;
+            line-height:    110px;
+            max-width:      1170px;
             @include media-query('palm') {
-                font-size:                  2em;
+                font-size:                  40px;
             }
         }
         .author {
             color:          $greyAuthor;
-            font-size:      3em;
+            font-size:      50px;
+            font-family:    'droid-sans', sans-serif, Arial;
             @include media-query('palm') {
-                font-size:                  1.5em;
+                font-size:                  20px;
             }
 
         }
         .author-name {
-            color:          $linkColor;
+            color:          $blueAuthor;
         }
     }
     

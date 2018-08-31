@@ -37,6 +37,7 @@ $greyInputBorder:               $greyBorder;
 $greySource:                    $lightestTextGrey;
 $greySourceDesk:                darken($white, 12%); 
 $greyAuthor:                    #aaaaaa;
+$blueAuthor:                    #4ac6ff;
 $greyAnzeige:                   $lightestTextGrey;
 $page-background-color:         $grey;
 $labelColorLight:               $lightestTextGrey; 
@@ -91,36 +92,36 @@ $imageframePaddingRem:          1.25rem;
 $tablecellPaddingEm:            0.3em 0.3em; // Table
 
 // Font
-$base-font-family:              Arial, sans-serif;
+$base-font-family:              'droid-serif', serif;
 $baseTextColor:                 #000000;
 $fontInactiveColor:             #999999;
 $linkColor:                     $blue; 
 $inlineBottomGutter:            0.7em; // Margin bottom for paragraphs, lists, ...
-$base-font-size:                14px;
-$smallest-font-size:            11px;
-$bigFontSizePx:                 18px; // some big text blocks
-$base-line-height:              20px; 
-$font-size-h1:                  1.313rem; // 21px;
-$line-height-h1:                1.381em; // 29px
-$font-size-h2:                  1rem; // 16px;
-$line-height-h2:                1.438em; // 23px
-$font-size-h3:                  0.875rem; // 14px;
-$line-height-h3:                1.500em; // 21px
+$base-font-size:                18px;
+$smallest-font-size:            20px;
+$bigFontSizePx:                 20px; // some big text blocks
+$base-line-height:              30px; 
+$font-size-h1:                  60px;
+$line-height-h1:                75px;
+$font-size-h2:                  40px; 
+$line-height-h2:                50px;
+$font-size-h3:                  18px;
+$line-height-h3:                25px;
 $font-size-h4:                  0.875rem; // 14px;
 $line-height-h4:                1.500em; // 21px
 $font-color-h1:                 $baseTextColor;
 $font-color-h2:                 $baseTextColor;
 $font-color-h3:                 $baseTextColor;
 $font-color-h4:                 $baseTextColor;
-$font-family-h1:                $base-font-family;
-$font-family-h2:                $base-font-family;
-$font-family-h3:                $base-font-family;
+$font-family-h1:                'droid-serif', serif;
+$font-family-h2:                'droid-serif', serif;
+$font-family-h3:                'droid-serif', serif;
 $font-family-h4:                $base-font-family;
-$font-weight-h1:                bold;
-$font-weight-h2:                bold;
-$font-weight-h3:                bold;
-$font-weight-h4:                bold;
-$font-weight-a:                 normal;
+$font-weight-h1:                700;
+$font-weight-h2:                700;
+$font-weight-h3:                700;
+$font-weight-h4:                700;
+$font-weight-a:                 400;
 
 // Breakpoints
 $breakpoints: (

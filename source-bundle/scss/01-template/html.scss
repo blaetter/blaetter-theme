@@ -27,6 +27,8 @@ html {
     -moz-osx-font-smoothing:    grayscale; /* [5] */
         -webkit-font-smoothing: antialiased; /* [5] */
     font-family:                $base-font-family; /* 6 */
+    font-style:                 normal;
+    font-weight:                400;
     -ms-text-size-adjust:       100%; /* 7 */
     -webkit-text-size-adjust:   100%; /* 7 */
     @media print {

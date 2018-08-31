@@ -7,73 +7,59 @@ $portal-head-namespace:              $namespace !default;
     @include getRem('padding-bottom', 10px);
     @include getRem('padding-left', 20px); 
     @include getRem('padding-right', 20px);
+    display:                    flex;
+    align-items:                center;
+    justify-content:            space-between;
     position:                   relative;
     margin:                     0;
     background-color:           transparent;
-    width:                      100%;
     .portal-logo {
-        display:        inline-block;
-        position:       relative;
-        @include getRem('width', 131px);
-        @include getRem('height', 36px); // IE
-        margin:         0;
+        flex-grow:              1;
+        .logo {
+        }
     }
-    .portal-claim {
-        display:        inline-block;
-        margin:         0.5em 0 0 1.2em;
-        position:       relative;
-        vertical-align: top;
-        color:          $blue;
-        @include fontsize($base-font-size);
-        font-weight:    normal;
-    }
-    .portal-meta {
-        display: inline-block;
-        position: relative;
-    }
-    /*
-    .portal-headborder {
-        position:               absolute;
-        left:                   0;
-        top:                    0;
-    }
-    .aside {
-        // right section: search, meta, languageselect,...
-        float:                  right;
-        text-align:             left;
-        min-width:              30%;
-        margin-top:             0.1em;
-         > * {
-            display:            inline-block;
-            vertical-align:     middle;
-            margin-right:       0.75em;
-            &:last-child {
-                margin-right:   0;
+    .meta {
+        flex-grow:              0;
+        display:                inline-block;
+        position:               relative;
+        display:            flex;
+        align-items:        center;
+        float:              right;
+        .fa {
+            color:          $baseTextColor;
+            font-size:      1.3em;
+            &.fa-shopping-cart {
+                font-size:  1.8em;
             }
         }
-        .language-select {
-            border-left:        1px solid $blue;
-        }
-        @media print {
-            display:            none;
+        > * {
+            padding:        0.5em;
+            margin-left:    1.3em;
         }
     }
-    .portal-headborder {
-        @include getRem('height', 5px);  
-        width:               100%;
-        background-color:    $blue;
-        display:             block;
-        &::after {
-            @include getRem('height', 5px);  
-            width:               31%;
-            background-color:    $red;
-            display:             block;
-            content:             " ";
-            float:               right;
-        }
+}
+
+.portal-head__cart {
+    position:           relative;
+    .counter {
+        position:       absolute;
+        background:     $red;
+        color:          $white;
+        top:            0;
+        right:          0;
+        border-radius:  50%;
+        min-width:      1.3em;
+        min-height:     1.3em;
+        text-align:     center;
+        vertical-align: middle;
+        font-size:      0.7em;
     }
-    */
-    
+}
+.portal-head__search {
+   
+}
+.portal-head__hamburger {
+   
 }
 
 
