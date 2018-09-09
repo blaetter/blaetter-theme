@@ -4,4 +4,7 @@
      > *:first-child {
         margin-top:                 0;
      }
+     @include media-query('palm') {
+         display:                   none;
+    }
 }

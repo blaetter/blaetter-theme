@@ -13,12 +13,17 @@
                 {% include block.pattername with { "data": block } %}
             {% endfor %}
 
-            <div class="content-wrapper">
+            <main class="content-wrapper">
                 {% for block in homepage.content %}
                     {% include block.pattername with { "data": block } %}
                 {% endfor %}
-            </div>
+            </main>
 
+            <footer class="page-wrapper__inner" id="footer">
+                {% block footer %}
+                    {% include "organisms-footer" %}
+                {% endblock %}
+            </footer>
 
 
 

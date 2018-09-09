@@ -21,13 +21,10 @@
     </div>
   </header>
   
-  <main class="page-wrapper__inner" id="main">
+  <div class="page-wrapper__inner" id="main">
     <!-- PAGETYP MARKUP (siehe unten) -->
-  </main>
+  </div>
 
-  <footer class="page-wrapper__inner" id="footer">
-    <!-- FOOTER CONTENT HERE -->
-  </footer>
 </div>
 </code></pre>
 
@@ -37,9 +34,13 @@
 <pre><code class="sg-code-inline">
 
   <!-- HERO CONTENT HERE -->
-  <div class="content-wrapper">
+  <main class="content-wrapper">
     <!-- MAIN CONTENT HERE -->
-  </div>
+  </main>
+
+  <footer class="page-wrapper__inner" id="footer">
+    <!-- FOOTER CONTENT HERE -->
+  </footer>
 
 </code></pre>
 
@@ -50,9 +51,12 @@
 <div class="grid content-wrapper-article">
   <div class="grid__item eight-tenths content-left">
     <!-- DOSSIER HEADING: --><div class="heading--dossiercat"><span class="text--red">Dossier</span> Category</div>
-    <div class="content-left__inner">
+    <main class="content-left__inner">
       <!-- MAIN CONTENT HERE -->
-    </div>
+    </main>
+    <footer class="page-wrapper__inner" id="footer">
+      <!-- FOOTER CONTENT HERE -->
+    </footer>
   </div><!-- /grid__item -->
   <div class="grid__item two-tenths content-spacer">
     <!-- NO CONTENT HERE --> 

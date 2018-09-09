@@ -14,6 +14,7 @@
         @include media-query('lap-and-up') {
             .heading {
                 font-size:          4em;
+                line-height:        1.1;
             }´
             .author {
                 font-size:          1.5em;

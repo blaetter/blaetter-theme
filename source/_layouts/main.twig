@@ -12,16 +12,11 @@
                 </div>
             </header>
             
-            <main class="page-wrapper__inner" id="main">   
+            <div class="page-wrapper__inner" id="main">   
             {% block content %}
                 {#% block breadcrumb %}{% endblock %#}
             {% endblock %}
-            </main>
-
-            <footer class="page-wrapper__inner" id="footer">
-                {% block footer %}
-                    {% include "organisms-footer" %}
-                {% endblock %}
-            </footer>
+            </div>
+            
      
     </div><!--/page-wrapper-->

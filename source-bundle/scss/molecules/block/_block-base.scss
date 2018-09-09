@@ -74,7 +74,7 @@
     margin:             0;
     padding:            1px 3px 1px 3px;
     color:              $greySource;
-    @include fontsize($smallest-font-size);
+    font-size:          $smallest-font-size;
     line-height:        1.2;
     text-align:         right;
     word-break:         break-word;

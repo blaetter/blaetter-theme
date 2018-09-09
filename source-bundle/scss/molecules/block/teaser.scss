@@ -19,6 +19,7 @@ $teaser-namespace:              $namespace !default;
         text-overflow:  ellipsis;
         font-size:      16px;
         line-height:    25px;
+        max-width:      100%;
     }
     .author-name {
         color:          $linkColor;

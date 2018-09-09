@@ -17,7 +17,7 @@ $btn-border-color:              $blue !default;
 #{$button-namespace}.btn {
     @include getRem('height', $btn-heightPx);
     @include media-query('palm') {
-        @include getRem('height', $btn-heightPalmPx);
+        height:             2.5em;
     }
     @include getRem('margin-bottom', $blockBottomMarginPx/2);
     @include media-query('palm') {
@@ -26,8 +26,8 @@ $btn-border-color:              $blue !default;
     box-shadow:             none;
     /* margin:                 $buttonMargin; // not here */
     text-decoration:        none;
-    padding:                0.7em 1em; // 4px / 9px
-    font-size:              1rem;
+    padding:                0.3em 1em; // 4px / 9px
+    font-size:              $base-font-size;
     display:                inline-block;
     vertical-align:         top;
     font:                   inherit;
