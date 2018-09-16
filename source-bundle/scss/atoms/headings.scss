@@ -110,13 +110,17 @@ $heading-namespace:       $namespace !default;
     padding:                        0.8em 0 0.7em 0;
     margin:                         1em 0 2em 0;
     width:                          100%; 
-
-        
-
-   
-    @include media-query('palm') {
-       // padding-left:               $pagePaddingPalmPx;
-      //  padding-right:              $pagePaddingPalmPx;
-    }
 }
 
+#{$heading-namespace}.heading--profilcat {
+    font-family:                    'droid-sans', Arial, sans-serif;
+    font-size:                      18px;          
+    line-height:                    1em;    
+    display:                        block;
+    //font-weight:                    700;
+    //text-transform:                 uppercase;
+    border-bottom:                  4px solid $greyBorder;
+    padding:                        0.8em 0 0.7em 0;
+    margin:                         1em 0 2em 0;
+    width:                          100%; 
+}

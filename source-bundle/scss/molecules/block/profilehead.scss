@@ -1,0 +1,37 @@
+$namespace:              $namespace !default;
+
+#{$namespace}.profilehead {
+    @include clearfix();
+    margin-top:                     40px;
+    margin-bottom:                  50px;
+    .image {
+        padding:                    0;
+        text-align:                 center;
+        @include media-query('lap-and-up') {
+            max-width:                  190px;
+            float:                      left;
+            margin-right:               50px;
+        }
+        img {
+            @include border-radius(100%);
+            overflow:               hidden;
+            margin:                 0 auto;
+        }
+        .heading {
+            font-size:              18px;
+            line-height:            1.4;
+            color:                  $baseTextColor;
+            margin:                 20px 6px 14px 6px;
+        }
+    }
+    
+    .text {
+        @include media-query('palm') {
+            text-align:                 center;
+            display:                    table;
+        }
+    }
+}
+
+
+

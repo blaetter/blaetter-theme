@@ -56,4 +56,18 @@ $link-namespace:           $namespace !default;
     }
 }
 
+a.back {
+    display:                    inline-block;
+    margin-left:               0.5em;
+    &::before {
+        color:                  inherit;
+        content:                "\f104";
+        display:                inline-block;
+        font-family:            FontAwesome;
+        font-size:              1.0em;
+        margin-right:           0.5em;
+        vertical-align:         -0.05em;
+        font-size:              1.2em;
+    }
+}
 

@@ -56,6 +56,7 @@ $content-wrapper-namespace:              $namespace !default;
 }
 
 #{$content-wrapper-namespace}.content-wrapper-article,
+#{$content-wrapper-namespace}.content-wrapper-profil,
 #{$content-wrapper-namespace}.content-wrapper-dossier  {
     margin-top:             0;
     @include media-query(lap-and-up) { 

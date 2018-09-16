@@ -1,0 +1,36 @@
+{
+    "pagetype": "pagetype-profil",
+    "profil": {  
+        "title": null,
+        "category": "<a href=\"#\" class=\"back\">Herausgeberkreis</a>",
+        "content":  [
+            {
+                "pattername": "molecules-profilhead"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal"
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            }
+        ],
+        "marginal":  null
+    }
+}
