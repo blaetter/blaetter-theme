@@ -190,8 +190,7 @@ $navigation-primary-palm-namespace:              $namespace !default;
                     line-height:        1.2em;
                 }
                 .fa,
-                .fa-icon,
-                .bdeicon { 
+                .fa-icon { 
                     display:            block;
                     font-size:          2.3em;
                     margin-bottom:      1rem;
@@ -204,8 +203,7 @@ $navigation-primary-palm-namespace:              $namespace !default;
             }
             .swiper-slide-active {
                 .fa,
-                .fa-icon,
-                .bdeicon {
+                .fa-icon {
                     opacity:                1;
                     -webkit-transform:      scale(1.6);
                     -moz-transform:         scale(1.6);

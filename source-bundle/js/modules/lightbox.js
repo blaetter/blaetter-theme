@@ -3,7 +3,7 @@
  * http://dimsemenov.com/plugins/magnific-popup/documentation.html
  */
 
-import * as BO from 'bo';
+import * as BLAETTER from 'blaetter';
 import * as swiper from 'swiper-init';
 
 export function init(callback) {
@@ -11,7 +11,7 @@ export function init(callback) {
         return;
     }
 
-    BO.set_webpack_publicpath();
+    BLAETTER.set_webpack_publicpath();
     import('magnific-popup/dist/magnific-popup.css');
     import('magnific-popup')
         .then(

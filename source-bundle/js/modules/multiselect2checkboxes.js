@@ -2,7 +2,7 @@
  *  Build a list of checkboxes from a multiselect field (desktop device only)
  *  set attribute "data-selectfirst" if you want to autoselect the first option (only if nothing else is selected)
  */
-import * as BO from 'bo';
+import * as BLAETTER from 'blaetter';
 
 export default function () {
   $('.js-multiselect2checkboxes').each(function () {
@@ -11,7 +11,7 @@ export default function () {
     var $mySelectOptions = $('option', $mySelect);
     var selectName = $mySelect.attr('name');
     // Only desktop! On mobile devices we want to use the original multiselect!
-    if (! BO.is_palm()) {
+    if (! BLAETTER.is_palm()) {
       // Hide the original select
       $mySelect.hide();
       // Add a fake field for our selected display texts

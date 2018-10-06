@@ -12,12 +12,6 @@
                 "title": "Empfehlungen",
                 "blockClass": "ad float"
             },{
-                "pattername": "molecules-teaser",
-                "blockClass": "ad float",
-                "title": "Schiffstouren & Dampferfahrten",
-                "text": "Schiffstouren durch die Berliner Innenstadt auf Spree und Landwehrkanal.",
-                "hideTeaserImage": false
-            },{
                 "pattername": "molecules-rectangle-mobile"
             },{
                 "pattername": "molecules-teaser",

@@ -2,8 +2,8 @@
  * NAV MOBLIE (SWIPER):
  */
 
- import * as BO from 'bo';
- import * as boSwiper from 'swiper-init';
+ import * as BLAETTER from 'blaetter';
+ import * as blaetterSwiper from 'swiper-init';
 
 export default function nav_mobile() {
     var detectTap = false;
@@ -85,7 +85,7 @@ export default function nav_mobile() {
             return false;
         });
         
-        boSwiper.init(navSwiper);
+        blaetterSwiper.init(navSwiper);
 
 		// Toggle topic submenu on click (Mobile)
 		$(".primary-navigation-palm__tree .topic > li > .menu-item").bind("touchend click",function(e) {
@@ -121,7 +121,7 @@ export default function nav_mobile() {
 		else {
 			var lang = jQuery("html").attr('lang');
 			lang = typeof lang == "string" ? "."+lang.substring(0,2) : ''; 
-			$('#navigation-primary-palm .navigation-wrapper').load(BO.portal_url()+'/ml-top'+lang+'.inc?sub=mobileNav', function(responseText, textStatus, jqXHR) {
+			$('#navigation-primary-palm .navigation-wrapper').load(BLAETTER.portal_url()+'/ml-top'+lang+'.inc?sub=mobileNav', function(responseText, textStatus, jqXHR) {
 				initMenu();
 			});
 		}

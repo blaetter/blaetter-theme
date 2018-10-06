@@ -1,7 +1,7 @@
 /*
  * DATEPICKER (Flatpickr):
  */
-import * as BO from 'bo';
+import * as BLAETTER from 'blaetter';
 
 export function init(callback) {
 	var $el = $('.js-add-selectOptionDatepicker,.datepicker-input');
@@ -9,14 +9,14 @@ export function init(callback) {
 		return;
 	}
 
-	BO.set_webpack_publicpath();
+	BLAETTER.set_webpack_publicpath();
 	import('flatpickr/dist/flatpickr.css');
 	import('flatpickr')
 		.then(
 			function (Module) {
 				var flatpickr = Module.default;
 				window.flatpickr = flatpickr;
-				var languageCode = BO.languageCode()
+				var languageCode = BLAETTER.languageCode()
 				if (languageCode === 'en') {
 					(callback)(flatpickr);
 				}
@@ -47,7 +47,7 @@ export function initStdOptions() {
 		altInput: true,
 		altFormat: "d. M Y",
 		minDate: "today",
-		locale: BO.languageCode(),
+		locale: BLAETTER.languageCode(),
 		maxDate: new Date().fp_incr(365 * 3),
 		onReady: function (selectedDates, dateStr, instance) {
 			// do we have a data attribute to remote
@@ -109,7 +109,7 @@ export function apply_ems(flatpickr) {
 			{
 				dateFormat: "d. M Y",
 				clickOpens: false,
-				locale: BO.languageCode(),
+				locale: BLAETTER.languageCode(),
 				defaultDate: "today",
 				minDate: "today",
 				maxDate: new Date().fp_incr(365 * 3),

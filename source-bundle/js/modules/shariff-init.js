@@ -2,7 +2,7 @@
 // Init Heise shariff on articles
 //
 
-import * as BO from 'bo';
+import * as BLAETTER from 'blaetter';
 
 export function init(callback) {
 	var $shariff = $('.shariff-init');
@@ -10,7 +10,7 @@ export function init(callback) {
 		return;
 	}
 
-	BO.set_webpack_publicpath();
+	BLAETTER.set_webpack_publicpath();
 	import('shariff/dist/shariff.min.css');
 	import('shariff')
 		.then(

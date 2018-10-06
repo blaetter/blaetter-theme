@@ -1,4 +1,4 @@
-import * as BO from 'bo';
+import * as BLAETTER from 'blaetter';
 
 /*
  * INIT SWIPERS:
@@ -9,7 +9,7 @@ export function init(callback) {
 		return false;
 	}
 
-	BO.set_webpack_publicpath();
+	BLAETTER.set_webpack_publicpath();
 	import(/* webpackMode: "lazy" */'swiper/dist/css/swiper.css');
 	import(/* webpackMode: "lazy" */'swiper')
 		.then(

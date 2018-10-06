@@ -9,7 +9,7 @@
     "build": "make"
   },
   "keywords": [],
-  "author": "BerlinOnline GmbH & Co. KG",
+  "author": "Blaetter",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",

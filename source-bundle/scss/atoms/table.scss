@@ -6,7 +6,7 @@ table {
     border-spacing:             0;
 }
 
-// Rebrush base table rules
+// Base table rules
 #{$table-namespace}.table--base {
     @include getRem('margin-bottom', $blockBottomMarginPx);
     td,th {

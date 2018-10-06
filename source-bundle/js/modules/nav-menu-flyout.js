@@ -1,13 +1,13 @@
 /*
  * Mainmenu flyout content toggler:
  */
-import * as BO from 'bo';
+import * as BLAETTER from 'blaetter';
 
 export default function nav_menu_flyout() {
 	function loadImages() {
 		// lazy load teaser images
     	$('#navigation-primary-desk img[data-src]').each(function() {
-			this.src = BO.portal_url() + $(this).data('src');
+			this.src = BLAETTER.portal_url() + $(this).data('src');
 			$(this).removeAttr('data-src');
     	});		
 	}
@@ -101,7 +101,7 @@ export default function nav_menu_flyout() {
 	else {
 		var lang = jQuery("html").attr('lang');
 		lang = typeof lang == "string" ? "."+lang.substring(0,2) : ''; 
-		$('#navigation-primary-desk .primary-navigation-desk__tree').load(BO.portal_url()+'/ml-top'+lang+'.inc?sub=desc-flyout', 
+		$('#navigation-primary-desk .primary-navigation-desk__tree').load(BLAETTER.portal_url()+'/ml-top'+lang+'.inc?sub=desc-flyout', 
 				function(responseText, textStatus, jqXHR) {
 					handleMenu();
 				});

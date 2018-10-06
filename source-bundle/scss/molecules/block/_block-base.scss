@@ -6,7 +6,7 @@
     @include getRem('margin-bottom', $blockBottomMarginPx);
     @include clearfix();
     width:                      100%;
-    overflow:                   visible; // overwrite bde2010 style
+    overflow:                   visible; 
     position:                   relative;
     > *:last-child {
         margin-bottom:          0;
@@ -28,7 +28,7 @@
     word-wrap:              break-word;
     overflow-wrap:          break-word;
     a {
-        display:            inline; // overwrite bde2010 style and fix floating
+        display:            inline; 
     }
 }
 
