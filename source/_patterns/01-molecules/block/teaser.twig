@@ -4,14 +4,14 @@
     <div class="timestamp">{{ data.timestamp }}</div>
 {% endif %}
 {% if data.hideTeaserImage != 'true' %}
-    <figure class="image">
+    <div class="image">
         {#<a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}" title="Link zu: {{ data.title }}">#}
             {% include "atoms-teaser-image-16x9" with {data: data} %}
         {#</a>#}
         {% if data.source != 'false' %}
-        <figcaption class="source">© {{ data.source|default('picsum.photos') }}</figcaption>
+        <p class="source">© {{ data.source|default('picsum.photos') }}</p>
         {% endif %}
-    </figure>
+    </div>
 {% endif %}
     <div class="inner">
       <h3 class="heading">

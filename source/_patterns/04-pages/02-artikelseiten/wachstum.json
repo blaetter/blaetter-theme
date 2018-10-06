@@ -5,6 +5,18 @@
         "author": "Barbara Muraca",
         "content":  [
             {
+                "pattername": "atoms-articleinfo",
+                "key": "von",
+                "value": "<a href=\"#\">Albrecht von Lucke</a>"
+            },{
+                "pattername": "atoms-articleinfo",
+                "key": "Edition ",
+                "value": "<a href=\"#\">5/2018</a>"
+            },{
+                "pattername": "atoms-articleinfo",
+                "key": "Themen",
+                "value": "<a href=\"#\">Außenpolitik</a>, <a href=\"#\">Krieg und Frieden</a>, <a href=\"#\">Naher &amp; Mittlerer Osten</a>"
+            },{
                 "pattername": "atoms-articleimage",
                 "imageurl": "https://picsum.photos/700/331/?image=397"
             },{

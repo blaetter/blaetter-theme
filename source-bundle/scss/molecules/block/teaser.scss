@@ -3,14 +3,24 @@ $teaser-namespace:              $namespace !default;
 #{$teaser-namespace}.teaser {
     position:                   relative;
     background-color:           $white;
-    .heading {
+    .heading,
+    h2,h3 {
         @include block--base-headline();
+        a {
+            color:              $baseTextColor;
+        }
     }
     .inner {
         padding:                 $teaserInnerPadding;
     }
     *:hover {
         text-decoration:        none;
+    }
+    .image {
+        img {
+            width:      100%;
+            height:     auto;
+        }
     }
     .author {
         color:          $greyAuthor;
@@ -89,7 +99,7 @@ $teaser-namespace:              $namespace !default;
                 min-height:             225px; // 
             }
         }
-        .heading {
+        .heading, h2, h3 {
             color:                  $white;
             margin:                 0;
             font-size:              1.7em;
@@ -130,16 +140,17 @@ $teaser-namespace:              $namespace !default;
                 margin:                 0 auto;
             }
         }
-        .heading {
+        .heading, h2, h3 {
             font-size:                  1.2em;
         }
     }
 }
 
 .one-fourth .teaser--poster {
-    .heading {
+    .heading, h2, h3 {
         @include media-query('lap-and-up') {
             font-size:      1.3em;
         }
     }
 }
+
