@@ -6,6 +6,7 @@
         width:              30%;
         margin-left:        0;
         margin-right:       $largeGapPx;
+        border:             1px solid $grey;
         @include media-query('lap-and-up') {
             float:          right;
             width:          30%;

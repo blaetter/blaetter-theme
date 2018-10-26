@@ -12,6 +12,12 @@ $heading-namespace:       $namespace !default;
     &.heading--bluebox {
         @include heading--bluebox();
     }
+    /* hyphens */
+   -moz-hyphens: auto;
+   -o-hyphens: auto;
+   -webkit-hyphens: auto;
+   -ms-hyphens: auto;
+   hyphens: auto; 
 }
 
 #{$heading-namespace}h1 {
@@ -33,7 +39,7 @@ $heading-namespace:       $namespace !default;
 #{$heading-namespace}.heading--article {
     font-size:                      60px;
     line-height:                    75px;
-    margin-bottom:                  0.3em;
+    margin-bottom:                  36px;
     margin-top:                     0.3em;
     @include media-query('palm') {
         font-size:                  2em;
@@ -42,6 +48,7 @@ $heading-namespace:       $namespace !default;
 }
 
 // Headline for subsections on indexpages, grey border
+$sectiontitleMarginBottom: 2em !default;
 #{$heading-namespace}.heading--sectiontitle {
     font-size:                      18px;   
     font-family:                    'droid-sans', Arial, sans-serif;
@@ -49,10 +56,13 @@ $heading-namespace:       $namespace !default;
     display:                        flex;
     flex-wrap:                      wrap;
     text-transform:                 uppercase;
-    border-top:                     1px solid $greyBorder;
+    border-top:                     0px solid $greyBorder;
     border-bottom:                  4px solid $greyBorder;
     padding:                        0.8em 0 0.7em 0;
-    margin:                         3em 0 2em 0;
+    margin:                         3em 0 $sectiontitleMarginBottom 0;
+    + .spaceless {
+        margin-top:                 -$sectiontitleMarginBottom;
+    }
     &.red {
         color:                          $red;
     }

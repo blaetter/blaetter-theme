@@ -1,11 +1,17 @@
-<a href="#" class="homepage-heroimage">
-    <div class="image">
-        <!--<div class="image-placeholder" style="background-image:url({{ data.imageurl? data.imageurl : 'https://picsum.photos/1200/675/?image=836' }});"></div>-->
-        <img class="image-placeholder" src="{{ data.imageurl? data.imageurl : 'https://picsum.photos/1200/675/?image=836' }}" />
-        <p class="source">@ {{ data.title|default('picsum.photos') }}</p>
-    </div>
-    <div class="body">
-        <h2 class="heading">{{ data.title|default('Title') }}</h2>
-        <p class="author">von <span class="author-name">{{ data.author|default('Author') }}</span></p>
-    </div>
-</a>
+<article class="homepage-heroimage">
+        <div class="image">
+            <a href="#">
+                <img class="image-placeholder" src="{{ data.imageurl? data.imageurl : 'https://picsum.photos/1200/675/?image=836' }}" />
+            </a>
+            <p class="source">@ {{ data.title|default('picsum.photos') }}</p>
+        </div>
+        <div class="body">
+            <h2 class="heading">
+                <a href="#">
+                    {{ data.title|default('Title') }}
+                </a>
+            </h2>
+            <p class="author">von <a href="#" class="author-name">{{ data.author|default('Author') }}</a></p>
+        </div>
+    
+</article>

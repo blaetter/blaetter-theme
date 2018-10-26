@@ -5,7 +5,7 @@ $swiper-articleimage--minHeight-desktopPx:    700px * 9 / 16;
 
 #{$article-mainimage-namespace}.article-mainimage {
     position:               relative;
-    margin-bottom:          $gridGutter;
+    margin-bottom:          50px;
     margin-top:             35px;
     img {
         width:              100%;

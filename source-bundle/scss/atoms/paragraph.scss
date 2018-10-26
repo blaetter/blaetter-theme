@@ -19,7 +19,8 @@ $paragraph-namespace:                $namespace !default;
     margin-bottom:          1.5rem;
 }
 
-#{$paragraph-namespace}.quote {
+#{$paragraph-namespace}.quote,
+#{$paragraph-namespace}.content-wrapper-article blockquote {
     font-family:       'droid-serif', serif;
     font-size:          50px;
     font-weight:        400;
@@ -104,11 +105,11 @@ $paragraph-namespace:                $namespace !default;
     &::first-line {
     }
     &::first-letter {
-        font-size: 95px;
+        font-size: 5.2em;
         font-weight: 400;
         padding: 0 0 0 0;
         margin: 0 0.1em 0 0;
         float: left;
-        line-height: 0.92;
+        line-height: 0.95;
     }
 }

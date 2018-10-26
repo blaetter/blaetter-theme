@@ -1,13 +1,13 @@
 <article class="block teaser{{ data.class ? ' ' ~ data.class }}">
-  <a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage) }}">
+  
 {% if data.timestamp %}
     <div class="timestamp">{{ data.timestamp }}</div>
 {% endif %}
 {% if data.hideTeaserImage != 'true' %}
     <div class="image">
-        {#<a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}" title="Link zu: {{ data.title }}">#}
+        <a href="{{ (attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage))|default('#') }}">
             {% include "atoms-teaser-image-16x9" with {data: data} %}
-        {#</a>#}
+        </a>
         {% if data.source != 'false' %}
         <p class="source">© {{ data.source|default('picsum.photos') }}</p>
         {% endif %}
@@ -15,12 +15,12 @@
 {% endif %}
     <div class="inner">
       <h3 class="heading">
-        {#<a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage)|default('#') }}">#}
+        <a href="{{ attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage) }}">
         {{ data.title|default('Title') }}
-        {#</a>#}
+        </a>
       </h3>
       {% if data.hideAuthor != 'true' %}
-      <p class="author">von <span class="author-name">{{ data.author|default('Author') }}</span></p>
+      <p class="author">von <a href="#" class="author-name">{{ data.author|default('Author') }}</a></p>
       {% endif %}
       {% if data.text != 'false' %}
       <p class="text">
@@ -28,5 +28,4 @@
       </p>
       {% endif %}
     </div>
-  </a>
 </article>

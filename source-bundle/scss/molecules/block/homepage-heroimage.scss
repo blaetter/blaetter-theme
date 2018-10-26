@@ -83,6 +83,9 @@ $swiper-articleimage--minHeight-desktopPx:    $pageWidthDesk * 16 / 9;
             font-size:      90px;
             line-height:    110px;
             max-width:      1170px;
+            a {
+                color:      $white;
+            }
             @include media-query('palm') {
                 font-size:                  40px;
             }

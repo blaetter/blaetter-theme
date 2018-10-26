@@ -25,6 +25,7 @@
  
 @mixin block--base-headline() {            
     margin-top:             0;
+    margin-bottom:          0.4em;
     word-wrap:              break-word;
     overflow-wrap:          break-word;
     a {
@@ -147,7 +148,7 @@
     > .image {
         width:              100%;
         max-width:          none;
-        height:             100%; // IE fix
+        height:             auto;
         float:              none;
         margin-right:       0;
         @include getRem('margin-bottom', $blockImageMarginBottomPx);
@@ -225,7 +226,7 @@
     #{$namespace}.channelsection .grid__item {
         > article,
         > section {
-            @include block__clear_image_float();
+            //@include block__clear_image_float();
         }
     }
 }

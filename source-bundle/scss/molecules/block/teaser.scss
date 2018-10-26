@@ -2,7 +2,6 @@ $teaser-namespace:              $namespace !default;
 
 #{$teaser-namespace}.teaser {
     position:                   relative;
-    background-color:           $white;
     .heading,
     h2,h3 {
         @include block--base-headline();
@@ -11,12 +10,13 @@ $teaser-namespace:              $namespace !default;
         }
     }
     .inner {
-        padding:                 $teaserInnerPadding;
-    }
-    *:hover {
-        text-decoration:        none;
+       
     }
     .image {
+        width:                  30%;
+        float:                  left;
+        margin-right:           1em;
+        height:         auto;
         img {
             width:      100%;
             height:     auto;
@@ -34,7 +34,16 @@ $teaser-namespace:              $namespace !default;
     .author-name {
         color:          $linkColor;
     }
-    &.teaser--base {
+    &.teaser--vertical {
+        background-color:           $white;
+        .image {
+            height:                 auto;
+            float:                  none;
+            width:                  100%;
+        }
+        .inner {
+            padding:                $teaserInnerPadding;
+        }
         @include media-query('palm') {
             // make 16:9 image to 1:1
             .image {
@@ -60,6 +69,10 @@ $teaser-namespace:              $namespace !default;
         .inner {
             padding:                0;
         }
+        .image {
+            height:                 auto;
+            float:                  none;
+        }
         @include media-query('palm') {
             padding-left:           $pagePaddingPalmPx;
             padding-right:          $pagePaddingPalmPx;
@@ -74,6 +87,9 @@ $teaser-namespace:              $namespace !default;
             width:                  30%;
             float:                  left;
             margin-right:           1em;
+        }
+        .source {
+            display:                none;
         }
         @include media-query('palm') {
             //padding-left:           $pagePaddingPalmPx;
@@ -95,18 +111,24 @@ $teaser-namespace:              $namespace !default;
             background-image:       linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.2) 63%,rgba(0,0,0,.7));
         }
         .image {
+            margin-bottom:          0;
+            float:                  none;
+            width:                  100%;
             img {
                 min-height:             225px; // 
             }
         }
         .heading, h2, h3 {
             color:                  $white;
-            margin:                 0;
+            //margin:                 0;
             font-size:              1.7em;
+            a {
+                color:              inherit;
+            }
         }
         .inner {
             z-index:            2;
-            bottom:             10px;
+            bottom:             16px;
             top:                auto;
             left:               0;
             right:              0;
@@ -133,6 +155,8 @@ $teaser-namespace:              $namespace !default;
         text-align:                     center;
         .image {
             padding:                    30px 0 0em 0;
+            width:                      100%;
+            float:                      none;
             img {
                 @include border-radius(100%);
                 overflow:               hidden;
@@ -142,6 +166,9 @@ $teaser-namespace:              $namespace !default;
         }
         .heading, h2, h3 {
             font-size:                  1.2em;
+        }
+        .inner {
+            padding:                 $teaserInnerPadding;
         }
     }
 }
