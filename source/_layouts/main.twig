@@ -5,10 +5,9 @@
                     {% block global_header %}
                         {% include "organisms-header" %}
                     {% endblock %}
-                    {#% block navigation_primary %}
-                        {% include "molecules-navigation-primary-desk" %}
-                        {% include "molecules-navigation-primary-palm" %}
-                    {% endblock %#}
+                    {% block navigation_primary %}
+                        {% include "molecules-navigation-primary" %}
+                    {% endblock %}
                 </div>
             </header>
             

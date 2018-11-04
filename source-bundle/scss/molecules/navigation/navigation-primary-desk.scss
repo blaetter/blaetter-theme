@@ -1,226 +1,112 @@
 /* DESKTOP NAVIGATION */
-$navigation-primary-desk-namespace:              $namespace !default;
-$channelLevelWidth:         32.5%;
-$topicLevelWidth:           46.5%;
-$topicElementWidth:         49%;
-$asideElementWidth:         21.5%;
-$primaryNavigationElementDesktopPadingPx:  23px;    // h=68px Desktop Aufklappmenü
+$navigation-primary-desk-namespace:         $namespace !default;
+$navigationPrimaryBorderColor:              rgba(255,255,255,0.5);
+$navigationPrimaryBgColor:                  rgba(0,0,0,0.9);
+$navigationPrimaryFontColor:                $white;
 
+#{$navigation-primary-desk-namespace}#navigation-primary {
+    @include clearfix();
+    display:                        none;
+    padding:                        20px;
+    //@include box-shadow(0px, 4px, 3px, -1px, #eaeaea);
+    display:                        none;
+    background-color:               $navigationPrimaryBgColor;
+    position:                       absolute;
+    z-index:                        2;
+    right:                          0;
+    top:                            auto;
+    height:                         auto;
+    visibility:                     visible;
+    overflow:                       hidden;
+    min-width:                      300px;
+    font-family:                    droid-sans,Arial,sans-serif;
+    font-size:                      15px;
+    &.opened {
+        display:                    block;
+    }
 
-#{$navigation-primary-desk-namespace}#navigation-primary-desk {
-    display:                            none;
+    // Global Menulayout
+    .menu {
+        list-style:                     none;
+        padding:                        0;
+        margin:                         0;
+        .menu-item {
+            padding:                    0;
+            margin:                     0;
+            a{
+                padding:                10px;
+                font-size:              1em;
+                display:                block;
+                text-transform:         uppercase;
+                color:                  $navigationPrimaryFontColor;
+            }
+        }
+    }
+    // First Level menu
+    
+    ul.menu {
+        > li.menu-item {
+            > a {
+                border:                     1px solid $navigationPrimaryBorderColor;
+                border-width:               1px 0 1px 0;
+                padding-left:               0px;
+                &::after {
+                    display:                inline-block;
+                    font:                   normal normal normal 14px/1 FontAwesome;
+                    font-size:              inherit;
+                    text-rendering:         auto;
+                    content:                "\f078"; // down
+                    float:                  right;
+                }
+            }
+            + li.menu-item a {
+                border-top:                 0 none;
+            }
+            // Second Level menu
+            > ul.menu {
+                display:                    none;
+                > li.menu-item {
+                    a {
+                        border:             0 none;
+                        text-transform:     none;
+                        padding-left:       20px;
+                        &::after {
+                            display:        none;
+                        }
+                    }
+                }
+            }
+        }
+        li.menu-item.menu-item--expanded {
+            border-bottom:                  1px solid $navigationPrimaryBorderColor;
+            > a::after {
+                transform:              rotate(180deg);
+            }
+            > ul.menu {
+                display:                    block;
+                
+            }
+        }
+    }
+
+    .meta {
+        display:            flex;
+        justify-content:    space-evenly;
+        width:              100%;
+        margin-bottom:      1em;
+    }
+
     @media print {
         display:                        none !important;
     }
-}
+    @include media-query(lap-and-up) {
 
-@include media-query(lap-and-up) {
-
-    #{$navigation-primary-desk-namespace}#navigation-primary-desk {
-        @include clearfix();
-        @include box-shadow(0px, 4px, 3px, -1px, #eaeaea);
-        display:                        block;
-        background-color:               $white;
-        position:                       relative;
-        height:                         auto;
-        visibility:                     visible;
-        overflow:                       hidden;
-        &.opened {
-            .navigation-primary-desk__top .nav > li > .menu-item {
-                opacity:                0.5;
-            }
-            .primary-navigation-desk__tree {
-                height:                 auto;
-                visibility:             visible;
-                overflow:               visible;
-            }
-        }
     }
-    
-    #{$navigation-primary-desk-namespace}.navigation-primary-desk__top {
-        //@include getRem('padding-left', $pagePaddingPx);
-        width:                              100%;
-        background-color:                   $grey;
-        > ul {
-            display:                        flex;
-            justify-content:                space-between;
-            align-items:                    center;
-            margin:                         0;
-            > li {
-                flex-grow:                  1;
-                margin:                     0;
-                &.active a {
-                    font-weight:            bold;
-                }
-                &:first-child .menu-item {
-                    @include getRem('padding-left', $pagePaddingPx);
-                }
-            }
-        }
-        .menu-item {
-            white-space:            nowrap;
-            padding:                0.8em; 
-            display:                inline-block;
-            outline-offset:         -1px;
-            width:                  100%;
-            text-align:             center;
-        }
-        .hamburger-desk {
-            @include fontsize(25px);
-            padding: .7em 0 0.8em 0;
-            @include getRem('padding-right', $pagePaddingPx);
-            @include getRem('padding-left', $pagePaddingPx);
-            margin:                 0;
-            width:                  2.3em;
-            height:                 1em;
-            background-color:       transparent;
-            display:                block;
-            overflow:               hidden;
-            white-space:            normal;
-            color:                  $blue;
-            background-color:       transparent;
-            border:                 0 none;
-            outline-offset:         -1px;
-            float:                  right;
-            &:hover,
-            &:focus {
-                color:              $blue;
-                background-color:   transparent;
-            }
-            &:focus {
-                outline:            1px dotted;
-            }
-            &::before {
-                @include icon-hamburger();
-                position:           relative;
-                top:                -0.5em;
-                line-height:        1.1em;
-            }
-            &.opened::before {
-                 content:            "\f00d"; // fa-close
-            }
-        }
-    }
-    
-    #{$navigation-primary-desk-namespace}.primary-navigation-desk__tree {
-    
-        position:                       relative;
+    @include media-query(palm) {
         width:                          100%;
-        height:                         0;
-        visibility:                     hidden;
-        overflow:                       hidden;
-        ul {
-            //@include list--no-arrows();
-            list-style:                 none;
-            padding:                    0;
-            margin:                     0;
-        }
-        .fa,
-        .fa-icon {
-            margin-right:               0.8em;
-        }
-        
-        ul.channel {
-            width:                      $channelLevelWidth;
-            position:                   static;
-            background-color:           $grey;
-            min-height:                  33.5em; 
-            > li {
-                @include __mobile_navigation_list_li($primaryNavigationElementDesktopPadingPx, 16px);
-                > .menu-item {
-                    @include __addNavigationItemArrow();
-                }
-                &.active {
-                    > .menu-item {
-                        background-color:   $blue;
-                        color:              $white;
-                        &::after {
-                            // change active arrow
-                            display:            inline-block;
-                            content:            "";
-                            @include getRem('margin-right', -10px);
-                            @include getRem('margin-top', -$primaryNavigationElementDesktopPadingPx);
-                            border-bottom:      2.15rem solid transparent;
-                            border-right:       1.3rem solid $white;
-                            border-top:         2.15rem solid transparent;
-                            height:             0;
-                            width:              0;
-                        }
-                    }
-                    
-                }
-                .aside {
-                    position:       absolute;
-                    right:          0;
-                    top:            4em;
-                    width:          $asideElementWidth;
-                    @include getRem('padding-right', 16px); 
-                }
-            }
-            .aside,
-            ul.topic {
-                display:                    none;   
-            }
-            > li.active {
-                .aside,
-                .topic {
-                    display:                block;
-                }
-            }
-        }
-        
-        ul.topic {
-            left:                   $channelLevelWidth;
-            position:               absolute;
-            top:                    0;
-            width:                  $topicLevelWidth;
-            @include fontsize(14px);
-            @include getRem('padding-right', 16px);
-            > li {
-                width:              $topicElementWidth;
-                float:              none; // we dont want floating here
-                display:            inline-block;
-                margin-left:        -0.21em; // if we use inline-block to float, we have to fix the whitespace problem
-                vertical-align:     top;
-                @include getRem('margin-bottom', 16px); 
-                @include getRem('padding-left', 24px); 
-                &.header {
-                    width:          100%;
-                    float:          none;
-                }
-                > a {
-                    font-weight:    bold;
-                }
-            }
-            .header {
-                margin-bottom:          0;
-                .header-item {
-                    @include getRem('padding-top', $primaryNavigationElementDesktopPadingPx);
-                    @include getRem('padding-bottom', $primaryNavigationElementDesktopPadingPx);
-                    padding-left:       0;
-                    display:            block;
-                    // add arrow
-                    @include __addNavigationItemArrow();
-                    &::after {
-                        float:          none;
-                        margin-left:    1em;
-                        display:        inline-block;
-                    }
-                }
-            }
-        }
-        
-        ul.subtopic {
-            li {
-                margin:                 0;
-            }
-            .menu-item {
-                display:                block;
-                margin:                 0.3em 0;
-            }
-        }
-        
     }
 }
+
+
 
 

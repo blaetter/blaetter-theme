@@ -1,0 +1,36 @@
+$searchFieldHeight:         40px;
+$searchfieldBorderColor:    $blue;
+
+.form--navigationsearch {
+    position:               relative;
+    height:                 $searchFieldHeight;
+    .searchicon {
+        position:           absolute;
+        left:               10px;
+        font-size:          $searchFieldHeight / 2;
+        line-height:        $searchFieldHeight;
+        color:              rgba(100,100,100,0.3);
+    }
+    .searchtext {
+        position:           absolute;
+        width:              100%;
+        left:               0;
+        background:         transparent;
+        border:             2px solid $searchfieldBorderColor;
+        height:             $searchFieldHeight;
+        color:              $white;
+        font-family:        inherit;
+        min-height:         auto;
+    }
+    .submit{
+        position:           absolute;
+        right:              0;
+        height:             $searchFieldHeight;
+        background:         $searchfieldBorderColor;
+        color:              $black;
+        text-transform:     uppercase;
+        border:             1px solid $searchfieldBorderColor;
+        font-family:        inherit;
+        font-weight:        700;
+    }
+}

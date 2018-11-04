@@ -4,6 +4,7 @@ $portalSearchHeight:                1.875rem !default; // 30px_16px
 $portalSearchButtonWidth:           2.1875rem !default; //35px_16px
 
 #{$portal-search-namespace}.portal-search {
+    /*
     padding:                    0;
     margin:                     0;
     background:                 transparent;
@@ -61,10 +62,12 @@ $portalSearchButtonWidth:           2.1875rem !default; //35px_16px
             }
         }
     }
+    */
 } 
 
 
 @include media-query(palm) {
+    /*
     #{$portal-search-namespace}.portal-search {
         width:                  100%;
         display:                none !important;
@@ -72,4 +75,5 @@ $portalSearchButtonWidth:           2.1875rem !default; //35px_16px
             display:            block !important;
         }
     }
+    */
 }

@@ -34,7 +34,7 @@ $portal-head-namespace:              $namespace !default;
         }
         > * {
             padding:        0.5em;
-            margin-left:    1.3em;
+            margin-left:    15px;
         }
     }
 }
@@ -59,7 +59,21 @@ $portal-head-namespace:              $namespace !default;
    
 }
 .portal-head__hamburger {
-   
+    &:hover,
+    &:focus {
+        color:              $blue;
+        background-color:   transparent;
+        text-decoration:    none;
+    }
+    &.opened {
+        .hamburger__icon::before {
+            content:            "\f00d"; // fa-close
+        }
+    }
+    text-decoration:        none;
+    &:hover {
+        text-decoration:    none;
+    }
 }
 
 
@@ -67,23 +81,6 @@ $portal-head-namespace:              $namespace !default;
     #{$portal-head-namespace}.portal-head {
         @include getRem('padding', 12px);
         @include getRem('padding-bottom', 12px/2);
-        /*
-        .aside {
-            // right section: search, meta, languageselect,...
-            float:              none;
-            text-align:         left;
-            > * {
-                display:        none;
-            }
-            .portal-search {
-                display:        block;
-                margin-left:    0;
-                margin-right:   0;
-                @include getRem('margin-bottom', 5px);
-                @include getRem('margin-top', 5px);
-            }
-        }
-        */
         .portal-logo {
             @include getRem('width', 123px);
         }
