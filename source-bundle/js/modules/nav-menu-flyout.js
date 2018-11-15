@@ -29,16 +29,5 @@ export default function nav_menu_flyout() {
                 return false;
             });
 	}
-
-	if ($('#sg-pattern-data-footer').length) {
-		handleMenu();
-	}
-	else {
-		var lang = jQuery("html").attr('lang');
-		lang = typeof lang == "string" ? "."+lang.substring(0,2) : ''; 
-		$('#navigation-primary-desk .primary-navigation-desk__tree').load(BLAETTER.portal_url()+'/ml-top'+lang+'.inc?sub=desc-flyout', 
-				function(responseText, textStatus, jqXHR) {
-					handleMenu();
-				});
-	}
+    handleMenu();
 }
