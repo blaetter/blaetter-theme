@@ -50,25 +50,20 @@ $navigationPrimaryFontColor:                $white;
             border:                     1px solid $navigationPrimaryBorderColor;
             border-width:               1px 0 1px 0;
             position: relative;
-            &::after {
-                display:                inline-block;
-                font:                   normal normal normal 14px/1 FontAwesome;
-                font-size:              inherit;
-                text-rendering:         auto;
-                content:                "\f078"; // down
-                //float:                  right;
+            .arrow {
+                // via jQuery
                 float: none;
                 position: absolute;
-                top: 0.7em;
-                right: 0;
+                top:    0;
+                right:  0;
                 color: white;
                 cursor: pointer;
+                background: transparent;
+                border: 0 none;
+                padding: 0.9em;
             }
             > a {
-                
-                
-                padding-left:               0px;
-                
+                padding-left:               0px; 
             }
             + li.menu-item {
                 border-top:                 0 none;
@@ -79,25 +74,19 @@ $navigationPrimaryFontColor:                $white;
                 > li.menu-item {
                     border:             0 none;
                     padding-left:       20px;
-                    &::after {
-                        display:        none;
-                    }
                     a {
-                       
                         text-transform:     none;
-                       
                     }
                 }
             }
         }
         li.menu-item.menu-item--expanded {
             border-bottom:                  1px solid $navigationPrimaryBorderColor;
-            &::after {
+            .arrow .fa {
                 transform:              rotate(180deg);
             }
             > ul.menu {
                 display:                    block;
-                
             }
         }
     }

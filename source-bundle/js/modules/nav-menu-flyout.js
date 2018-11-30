@@ -25,14 +25,17 @@ export default function nav_menu_flyout() {
         );
 
         // toggle navigation sublist items
-        $("#navigation-primary ul.menu > li.menu-item--collapsed, #navigation-primary ul.menu > li.menu-item--expanded").click(
+        $("#navigation-primary ul.menu > li.menu-item--collapsed > a, #navigation-primary ul.menu > li.menu-item--expanded > a").each(function(){
+            $(this).after('<button class="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i></button>');
+        });
+        $("#navigation-primary ul.menu > li.menu-item--collapsed .arrow, #navigation-primary ul.menu > li.menu-item--expanded .arrow").click(
             function(event) {
                 event.preventDefault();
-                $('#navigation-primary ul.menu > li.menu-item--expanded').not(this).removeClass('menu-item--expanded').addClass('menu-item--collapsed');
-                if ( $(this).hasClass('menu-item--collapsed') ) {
-                    $(this).removeClass('menu-item--collapsed').addClass('menu-item--expanded');
+                $('#navigation-primary ul.menu > li.menu-item--expanded .arrow').not(this).parent().removeClass('menu-item--expanded').addClass('menu-item--collapsed');
+                if ( $(this).parent().hasClass('menu-item--collapsed') ) {
+                    $(this).parent().removeClass('menu-item--collapsed').addClass('menu-item--expanded');
                 } else {
-                    $(this).removeClass('menu-item--expanded').addClass('menu-item--collapsed');
+                    $(this).parent().removeClass('menu-item--expanded').addClass('menu-item--collapsed');
                 }
             }
         );
