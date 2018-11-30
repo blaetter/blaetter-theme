@@ -1,0 +1,30 @@
+    {% extends "main.twig" %}
+
+    {% block pagetitle %}{{ bestellprozess.title }}{% endblock %}
+    
+    {#% block breadcrumb %}{% endblock %#}
+    
+    {% block content %}
+    
+            <div class="grid content-wrapper-bestellprozess">
+                <div class="grid__item">
+                    
+                    <main class="content">
+                        {% if bestellprozess.title %}
+                        <h1 class="heading--bestellprozess">{{ bestellprozess.title }}</h1>
+                        {% endif %}
+                        <div class="content__inner">
+                        {% for block in bestellprozess.content %}
+                            {% include block.pattername with { "data": block } %}
+                        {% endfor %}
+                    </main>
+
+                </div><!-- /grid__item -->
+            </div><!-- /grid -->
+
+    
+
+
+
+    {% endblock %}
+

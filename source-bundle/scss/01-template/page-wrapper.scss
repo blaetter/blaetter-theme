@@ -17,7 +17,7 @@ $page-wrapper-namespace:           $namespace !default;
 
 // Our Wrapper around the main page sections to maximize withs
 .page-wrapper__inner {
-    background:         transparent;
+    background-color:         $page-background-color;
     position:           relative;
     @include media-query(palm) {
         width:          100%;
@@ -84,4 +84,21 @@ $content-wrapper-namespace:              $namespace !default;
         padding:  0 $pagePaddingPalmPx;
     }
    
+}
+
+
+#{$content-wrapper-namespace}.content-wrapper-bestellprozess {
+    background-color:       $white;
+    padding:                0 $pagePaddingPx;
+    @include media-query(palm) { 
+        padding:            0 $pagePaddingPalmPx;
+    }
+    .content {
+        
+    }
+    .content__inner {
+        padding:            $blockPaddingPx;
+        background-color:   $grey;
+        margin-bottom:      5em;
+    }
 }

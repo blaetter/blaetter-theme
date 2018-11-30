@@ -109,7 +109,7 @@ $sectiontitleMarginBottom: 2em !default;
     }
 }
 
-#{$heading-namespace}.heading--dossiercat {
+@mixin pagecategoryheadline() {
     font-family:                    'droid-sans', Arial, sans-serif;
     font-size:                      18px;          
     line-height:                    1em;    
@@ -122,15 +122,15 @@ $sectiontitleMarginBottom: 2em !default;
     width:                          100%; 
 }
 
+#{$heading-namespace}.heading--dossiercat {
+    @include pagecategoryheadline();
+}
+
 #{$heading-namespace}.heading--profilcat {
-    font-family:                    'droid-sans', Arial, sans-serif;
-    font-size:                      18px;          
-    line-height:                    1em;    
-    display:                        block;
-    //font-weight:                    700;
-    //text-transform:                 uppercase;
-    border-bottom:                  4px solid $greyBorder;
-    padding:                        0.8em 0 0.7em 0;
-    margin:                         1em 0 2em 0;
-    width:                          100%; 
+    @include pagecategoryheadline();
+}
+
+#{$heading-namespace}.heading--bestellprozess {
+    @include pagecategoryheadline();
+    margin-bottom:  0;
 }

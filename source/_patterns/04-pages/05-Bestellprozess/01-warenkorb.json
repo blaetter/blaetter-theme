@@ -1,0 +1,12 @@
+{
+    "pagetype": "pagetype-warenkorb",
+    "bestellprozess": {  
+        "title": "Warenkorb (3 Artikel)",
+        "content":  [
+            {
+                "pattername": "molecules-form-warenkorb"
+            }
+        ],
+        "marginal": null
+    }
+}

@@ -225,15 +225,24 @@ $form-namespace:            $namespace !default;
 #{$form-namespace}.form-actions { 
     @include clearfix();
     @include getRem('margin-top', $formgoupBottomMarginPx);
-    > button,
-    > .button {
-        width:                  100%;
-        margin-bottom:          1em;
-        @include media-query('lap-and-up') {  
+    @include media-query('lap-and-up') {  
+        display:                flex;
+        justify-content:        flex-end;
+        align-items:            center;
+        > *,
+        button,
+        .button {
             width:              auto;
-            float:              right;   
+            float:              none;   
             margin-bottom:      0em;     
             margin-left:        1em;
+        }
+    }
+    @include media-query('palm') {  
+        display:                    block;
+        > * {
+            width:                  100%;
+             margin-bottom:         1em; 
         }
     }
     .form-helptext {

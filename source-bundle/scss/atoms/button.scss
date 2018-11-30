@@ -6,7 +6,8 @@ $btn-font-color:                $white !default;
 $btn-border-color:              $blue !default;
 
 
-#{$button-namespace}button {
+#{$button-namespace}button,
+#{$button-namespace}.button, {
     font-family:            $base-font-family;
     cursor:                 pointer;
     &:focus {

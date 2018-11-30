@@ -12,7 +12,7 @@ $portal-head-namespace:              $namespace !default;
     justify-content:            space-between;
     position:                   relative;
     margin:                     0;
-    background-color:           transparent;
+    background-color:           $white;
     .portal-logo {
         flex-grow:              1;
         .logo {
@@ -48,8 +48,8 @@ $portal-head-namespace:              $namespace !default;
         top:            0;
         right:          0;
         border-radius:  50%;
-        min-width:      1.3em;
-        min-height:     1.3em;
+        min-width: 1.8em;
+        min-height: 1.5em;
         text-align:     center;
         vertical-align: middle;
         font-size:      0.7em;
