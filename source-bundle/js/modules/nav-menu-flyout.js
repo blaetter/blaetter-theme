@@ -7,8 +7,6 @@ export default function nav_menu_flyout() {
 	
 	var elHamburger = $(".js-hamburger");
     var elNavigatation = $("#navigation-primary");
-    var elMenuItemCollapsed = $("#navigation-primary ul.menu > li.menu-item--collapsed a");
-    var elMenuItemExpanded = $("#navigation-primary ul.menu > li.menu-item--expanded a");
 	
 	function handleMenu() {
         // Hamburger: Toggle Navigation and Page Background
@@ -27,14 +25,14 @@ export default function nav_menu_flyout() {
         );
 
         // toggle navigation sublist items
-        $("#navigation-primary ul.menu > li.menu-item--collapsed a, #navigation-primary ul.menu > li.menu-item--expanded a").click(
+        $("#navigation-primary ul.menu > li.menu-item--collapsed, #navigation-primary ul.menu > li.menu-item--expanded").click(
             function(event) {
                 event.preventDefault();
-                $('#navigation-primary ul.menu > li.menu-item--expanded a').not(this).parent().removeClass('menu-item--expanded').addClass('menu-item--collapsed');
-                if ( $(this).parent().hasClass('menu-item--collapsed') ) {
-                    $(this).parent().removeClass('menu-item--collapsed').addClass('menu-item--expanded');
+                $('#navigation-primary ul.menu > li.menu-item--expanded').not(this).removeClass('menu-item--expanded').addClass('menu-item--collapsed');
+                if ( $(this).hasClass('menu-item--collapsed') ) {
+                    $(this).removeClass('menu-item--collapsed').addClass('menu-item--expanded');
                 } else {
-                    $(this).parent().removeClass('menu-item--expanded').addClass('menu-item--collapsed');
+                    $(this).removeClass('menu-item--expanded').addClass('menu-item--collapsed');
                 }
             }
         );

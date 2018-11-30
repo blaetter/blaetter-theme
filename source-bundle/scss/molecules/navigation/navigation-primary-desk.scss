@@ -34,7 +34,8 @@ $navigationPrimaryFontColor:                $white;
             padding:                    0;
             margin:                     0;
             a{
-                padding:                10px;
+                padding:                0.7em 0.5em 0.7em 0.7em;
+                margin-right:           3em;
                 font-size:              1em;
                 display:                block;
                 text-transform:         uppercase;
@@ -46,40 +47,52 @@ $navigationPrimaryFontColor:                $white;
     
     ul.menu {
         > li.menu-item {
-            > a {
-                border:                     1px solid $navigationPrimaryBorderColor;
-                border-width:               1px 0 1px 0;
-                padding-left:               0px;
-                &::after {
-                    display:                inline-block;
-                    font:                   normal normal normal 14px/1 FontAwesome;
-                    font-size:              inherit;
-                    text-rendering:         auto;
-                    content:                "\f078"; // down
-                    float:                  right;
-                }
+            border:                     1px solid $navigationPrimaryBorderColor;
+            border-width:               1px 0 1px 0;
+            position: relative;
+            &::after {
+                display:                inline-block;
+                font:                   normal normal normal 14px/1 FontAwesome;
+                font-size:              inherit;
+                text-rendering:         auto;
+                content:                "\f078"; // down
+                //float:                  right;
+                float: none;
+                position: absolute;
+                top: 0.7em;
+                right: 0;
+                color: white;
+                cursor: pointer;
             }
-            + li.menu-item a {
+            > a {
+                
+                
+                padding-left:               0px;
+                
+            }
+            + li.menu-item {
                 border-top:                 0 none;
             }
             // Second Level menu
             > ul.menu {
                 display:                    none;
                 > li.menu-item {
+                    border:             0 none;
+                    padding-left:       20px;
+                    &::after {
+                        display:        none;
+                    }
                     a {
-                        border:             0 none;
+                       
                         text-transform:     none;
-                        padding-left:       20px;
-                        &::after {
-                            display:        none;
-                        }
+                       
                     }
                 }
             }
         }
         li.menu-item.menu-item--expanded {
             border-bottom:                  1px solid $navigationPrimaryBorderColor;
-            > a::after {
+            &::after {
                 transform:              rotate(180deg);
             }
             > ul.menu {
