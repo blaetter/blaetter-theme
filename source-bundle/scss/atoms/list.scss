@@ -174,3 +174,36 @@ $list-namespace:                $namespace !default;
 #{$list-namespace}ul.list--arrowlist {
     @include arrowlist--base(); 
 }
+
+nav.tabs {
+    margin-top:   60px;
+}
+ul.tabs {
+    //font-family: droid-sans, Arial,sans-serif;
+    .primary {
+    
+    }
+    li {
+        float: none;
+        display: block;
+    }
+    .is-active {
+        background: $white;
+        color: $black;
+        font-weight: normal;
+        
+        //border-bottom: 2px solid $greyBorder;
+        &:hover {
+            background: $white;
+        }
+      }
+    a {
+        padding-left: $blockPaddingPx*2;
+    }
+}
+ul.tabs {
+    //font-family: droid-sans, Arial,sans-serif;
+    .is-active {
+
+          }
+}

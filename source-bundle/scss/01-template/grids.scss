@@ -82,6 +82,10 @@ $grid-namespace:            $namespace !default;
             @include flexgrid-item--base();
             width:          50%; 
         }
+        > .grid__item.six-tenths { 
+            @include flexgrid-item--base();
+            width:          60%; 
+        }
         > .grid__item.eight-tenths { 
             @include flexgrid-item--base();
             width:          80%; 

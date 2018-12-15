@@ -5,14 +5,18 @@
     {#% block breadcrumb %}{% endblock %#}
     
     {% block content %}
-    
+{% if bestellprozess.title %}
+<div class="grid">
+    <div class="grid__item">
+    <h1 class="heading--bestellprozess">{{ bestellprozess.title }}</h1>
+</div>
+</div>
+{% endif %}
             <div class="grid content-wrapper-bestellprozess">
                 <div class="grid__item">
                     
                     <main class="content">
-                        {% if bestellprozess.title %}
-                        <h1 class="heading--bestellprozess">{{ bestellprozess.title }}</h1>
-                        {% endif %}
+                        
                         <div class="content__inner">
                         {% for block in bestellprozess.content %}
                             {% include block.pattername with { "data": block } %}

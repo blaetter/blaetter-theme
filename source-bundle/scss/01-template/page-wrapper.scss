@@ -2,6 +2,7 @@
 
 $page-wrapper-namespace:           $namespace !default;
 
+/*
 #page-wrapper {
     @include clearfix();
     border:             0px solid;
@@ -11,9 +12,14 @@ $page-wrapper-namespace:           $namespace !default;
          width:         auto;
          box-shadow:    none;
     }
+   
 }
-
-
+*/
+.page-wrapper {
+    .hero {
+       min-height:                   2.7em;
+    }
+}
 
 // Our Wrapper around the main page sections to maximize withs
 .page-wrapper__inner {
@@ -66,38 +72,38 @@ $content-wrapper-namespace:              $namespace !default;
             flex-shrink: 1;
             margin-left:        $pagePaddingPx;    
             .content-left__inner {
-                width:              100%;
-                max-width:          $contentWidthDeskArticlePx + ($pagePaddingPx*2);
-                margin:             0 0 0 auto;
+                //width:              100%;
+                //max-width:          $contentWidthDeskArticlePx + ($pagePaddingPx*2);
+                //margin:             0 0 0 auto;
             }
         }
         .content-spacer {
-            max-width:              180px;
+            //max-width:              180px;
         }
         .content-right {
             flex-grow:              0;
             flex-shrink:            0;
-            min-width:              300px;
+           // min-width:              300px;
         }
     }
     @include media-query(palm) { 
         padding:  0 $pagePaddingPalmPx;
     }
-   
+  
 }
 
 
 #{$content-wrapper-namespace}.content-wrapper-bestellprozess {
     background-color:       $white;
-    padding:                0 $pagePaddingPx;
+    //padding:                0 $pagePaddingPx;
     @include media-query(palm) { 
-        padding:            0 $pagePaddingPalmPx;
+        //padding:            0 $pagePaddingPalmPx;
     }
     .content {
         
     }
-    .content__inner {
-        padding:            $blockPaddingPx;
+    .content {
+        padding:            $blockPaddingPx $blockPaddingPx*2;
         background-color:   $grey;
         margin-bottom:      5em;
     }

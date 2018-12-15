@@ -12,6 +12,9 @@ $teaser-namespace:              $namespace !default;
     .inner {
        
     }
+    .source {
+        display:                none !important;
+    }
     .image {
         width:                  30%;
         float:                  left;
@@ -30,6 +33,7 @@ $teaser-namespace:              $namespace !default;
         font-size:      16px;
         line-height:    25px;
         max-width:      100%;
+        font-size:      1.2em;
     }
     .author-name {
         color:          $linkColor;
@@ -108,7 +112,7 @@ $teaser-namespace:              $namespace !default;
             top:                    0;
             left:                   0;
             background-color:       transparent;
-            background-image:       linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.2) 63%,rgba(0,0,0,.7));
+            background-image:       linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.2) 10%,rgba(0,0,0,.8));
         }
         .image {
             margin-bottom:          0;
@@ -121,7 +125,7 @@ $teaser-namespace:              $namespace !default;
         .heading, h2, h3 {
             color:                  $white;
             //margin:                 0;
-            font-size:              1.7em;
+            font-size:              1.5em;
             a {
                 color:              inherit;
             }
@@ -148,7 +152,12 @@ $teaser-namespace:              $namespace !default;
             align-items:        flex-start;
             flex-direction:     column;
         }
-        
+        .author {
+            
+            a {
+                color:          $blueAuthor;
+            }
+        }
     }
     &.teaser--profile {
         background-color:               $white;

@@ -5,35 +5,39 @@
     {#% block breadcrumb %}{% endblock %#}
     
     {% block content %}
-    
-      
+<div class="grid">
+<div class="grid__item">
+    <div class="heading--dossiercat">
+        <span class="text--red">Dossier</span>
+        {{ dossier.category|raw }}
+    </div>
+</div>
+</div>
 
-            <div class="grid content-wrapper-article">
+            <main class="grid content-wrapper-article">
+               
+                <div class="grid__item two-tenths content-spacer"></div>
+                <!-- /grid__item -->
                 <div class="grid__item six-tenths content-left">
-                    <div class="heading--dossiercat"><span class="text--red">Dossier</span> {{ dossier.category|raw }}</div>
-                    <main class="content-left__inner">
+                    
+                  
                         <h1 class="heading--article">{{ dossier.title }}</h1>
                         {% for block in dossier.content %}
                             {% include block.pattername with { "data": block } %}
                         {% endfor %}
-                    </main>
-                    <footer class="page-wrapper__inner" id="footer">
-                        {% block footer %}
-                            {% include "organisms-footer" %}
-                        {% endblock %}
-                    </footer>
+                   
+           
                 </div><!-- /grid__item -->
-                <div class="grid__item two-tenths content-spacer">
-                </div><!-- /grid__item -->
-                <aside class="marginal grid__item two-tenths content-right">
+                
+                <aside class="marginal_ grid__item two-tenths content-right">
 
                     {% for item in dossier.marginal %}
-                        {% include item.pattername with { "data": item } %}
+                        {#% include item.pattername with { "data": item } %#}
                     {% endfor %} 
 
                 </aside><!-- /grid__item -->
 
-            </div>
+            </main>
 
 
 

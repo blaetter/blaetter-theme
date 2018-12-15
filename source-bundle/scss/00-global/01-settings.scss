@@ -92,7 +92,8 @@ $imageframePaddingRem:          1.25rem;
 $tablecellPaddingEm:            0.3em 0.3em; // Table
 
 // Font
-$base-font-family:              'droid-serif', serif;
+$base-font-family:              'droid-sans', Arial, sans-serif; 
+$serif-font-family:             'droid-serif', serif;
 $baseTextColor:                 #000000;
 $fontInactiveColor:             #999999;
 $linkColor:                     $blue; 
@@ -105,7 +106,7 @@ $font-size-h1:                  60px;
 $line-height-h1:                75px;
 $font-size-h2:                  40px; 
 $line-height-h2:                1.5em;
-$font-size-h3:                  18px;
+$font-size-h3:                  1.2em;
 $line-height-h3:                1.4;
 $font-size-h4:                  0.875rem; // 14px;
 $line-height-h4:                1.500em; // 21px
