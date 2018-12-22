@@ -1,0 +1,28 @@
+    {% extends "main.twig" %}
+
+    {% block pagetitle %}{{ data.title }}{% endblock %}
+    
+    {#% block breadcrumb %}{% endblock %#}
+    
+    {% block content %}
+
+        
+
+        <main class="content-wrapper-full-width">
+
+            {% if data.title %}
+            <h1 class="{{ data.titleclass }}">{{ data.title }}</h1>
+            {% endif %}
+
+            {% for block in data.content %}
+                {% include block.pattername with { "data": block } %}
+            {% endfor %}
+
+        </main>
+
+    
+
+
+
+    {% endblock %}
+

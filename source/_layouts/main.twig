@@ -1,26 +1,22 @@
-    <div class="page-wrapper" class="{{ globalTempStylingClass }} {{ pagetype }}">   
+    <div class="page-wrapper">   
                     
-            <header id="header">
-                <div class="page-wrapper__inner">   
-                    {% block global_header %}
-                        {% include "organisms-header" %}
-                    {% endblock %}
-                    {% block navigation_primary %}
-                        {% include "molecules-navigation-primary" %}
-                    {% endblock %}
-                </div>
-            </header>
-            
-            <div class="page-wrapper__inner" id="main">   
-            {% block content %}
-                {#% block breadcrumb %}{% endblock %#}
+        <header id="header">
+            {% block global_header %}
+                {% include "organisms-header" %}
             {% endblock %}
-            </div>
+            {% block navigation_primary %}
+                {% include "molecules-navigation-primary" %}
+            {% endblock %}
+        </header>
             
-<footer class="page-wrapper__inner" id="footer">
-    {% block footer %}
-        {% include "organisms-footer" %}
-    {% endblock %}
-</footer>
+        {% block content %}
+            {#% block breadcrumb %}{% endblock %#}
+        {% endblock %}
+            
+        <footer id="footer">
+            {% block footer %}
+                {% include "organisms-footer" %}
+            {% endblock %}
+        </footer>
      
     </div><!--/page-wrapper-->

@@ -63,6 +63,8 @@ $contentWidthDeskPx:            940px; // max width for inner content units
 $contentWidthDeskArticlePx:     700px;
 $gridGutter:                    1.250rem; // 20px_16px;
 $blockPaddingPx:                $largeGapPx; // Grey Teaser...
+$pagePaddingPx:                 40px; 
+$pagePaddingPalmPx:             20px; 
 $teaserInnerPadding:            $largeGapPx;
 $blockBottomMarginPx:           30px; // Teaser...
 $teaserBorderedPaddingPx:       $mediumGapPx;
@@ -72,8 +74,6 @@ $breakointPalm:                 (720px / 16px) * 1rem;
 $breakointDesk:                 ($pageWidthDeskPx / 16px) * 1rem;
 $articleImageMaxHeightPx:       468px;
 $pageWidthDesk:                 $breakointDesk;
-$pagePaddingPx:                 $mediumGapPx; 
-$pagePaddingPalmPx:             $largeGapPx; 
 $formInputHeightPx:             40px; 
 $formInputHeightPalmPx:         50px; 
 $btn-heightPx:                  $formInputHeightPx;

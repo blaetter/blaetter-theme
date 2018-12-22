@@ -1,7 +1,8 @@
 {
-    "pagetype": "pagetype-warenkorb",
-    "bestellprozess": {  
+    "pagetype": "pagetype-full-width",
+    "data": {  
         "title": "Warenkorb (3 Artikel)",
+        "titleclass": "heading--pagecategory",
         "content":  [
             {
                 "pattername": "molecules-form-warenkorb"

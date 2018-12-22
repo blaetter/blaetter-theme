@@ -5,26 +5,39 @@ $portal-head-namespace:              $namespace !default;
     @include clearfix();
     @include getRem('padding-top', 10px);
     @include getRem('padding-bottom', 10px);
-    @include getRem('padding-left', $blockPaddingPx*2.5); 
-    @include getRem('padding-right', $blockPaddingPx*2.5);
+    @include getRem('padding-left', $pagePaddingPx); 
+    @include getRem('padding-right', $pagePaddingPx);
     display:                    flex;
     align-items:                center;
     justify-content:            space-between;
     position:                   relative;
     margin:                     0;
     background-color:           $white;
+    @include media-query(palm) {
+        @include getRem('padding', 12px);
+        @include getRem('padding-bottom', 12px/2);
+        @include getRem('padding-left', $pagePaddingPalmPx); 
+        @include getRem('padding-right', $pagePaddingPalmPx);
+        .portal-logo {
+            @include getRem('width', 123px);
+        }
+        .portal-claim {
+            display:        none;
+        }
+        .portal-meta {
+            display:        none;
+        }
+    }
     .portal-logo {
         flex-grow:              1;
-        .logo {
-        }
     }
     .meta {
         flex-grow:              0;
         display:                inline-block;
         position:               relative;
-        display:            flex;
-        align-items:        center;
-        float:              right;
+        display:                flex;
+        align-items:            center;
+        float:                  right;
         .fa {
             color:          $baseTextColor;
             font-size:      1.3em;
@@ -79,18 +92,3 @@ $portal-head-namespace:              $namespace !default;
 }
 
 
-@include media-query(palm) {
-    #{$portal-head-namespace}.portal-head {
-        @include getRem('padding', 12px);
-        @include getRem('padding-bottom', 12px/2);
-        .portal-logo {
-            @include getRem('width', 123px);
-        }
-        .portal-claim {
-            display:        none;
-        }
-        .portal-meta {
-            display:        none;
-        }
-    }
-}

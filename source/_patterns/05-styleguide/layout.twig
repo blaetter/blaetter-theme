@@ -12,74 +12,76 @@
 
 <h3>Grundlayout</h3>
 <pre><code class="sg-code-inline">
-<div class="page-wrapper">
+<div class="page-wrapper">     
+
   <header id="header">
-    <div class="page-wrapper__inner">   
-        <div class="portal-head" role="banner">
-         <!-- HEADER CONTENT HERE -->
-        </div>
+    <div class="portal-head" role="banner">
+      <!-- HEADER CONTENT HERE -->
     </div>
-  </header>
+    <nav id="navigation-primary">
+      <!-- NAVIGATION HERE -->
+    </nav>
+  </header>  
   
-  <div class="page-wrapper__inner" id="main">
-    <!-- PAGETYP MARKUP (siehe unten) -->
-  </div>
+  <!-- PAGETYP MARKUP HERE (siehe unten) -->
 
-</div>
-</code></pre>
-
-
-
-<h3>Typ Startseite</h3>
-<pre><code class="sg-code-inline">
-
-  <!-- HERO CONTENT HERE -->
-  <main class="content-wrapper">
-    <!-- MAIN CONTENT HERE -->
-  </main>
-
-  <footer class="page-wrapper__inner" id="footer">
-    <!-- FOOTER CONTENT HERE -->
+  <footer id="footer">
+      <!-- FOOTER CONTENT HERE -->
   </footer>
 
-</code></pre>
-
-
-<h3>Typ Artikelseite / Dossier</h3>
-<pre><code class="sg-code-inline">
-
-<div class="grid content-wrapper-article">
-  <div class="grid__item eight-tenths content-left">
-    <!-- DOSSIER HEADING: --><div class="heading--dossiercat"><span class="text--red">Dossier</span> Category</div>
-    <main class="content-left__inner">
-      <!-- MAIN CONTENT HERE -->
-    </main>
-    <footer class="page-wrapper__inner" id="footer">
-      <!-- FOOTER CONTENT HERE -->
-    </footer>
-  </div><!-- /grid__item -->
-  <div class="grid__item two-tenths content-spacer">
-    <!-- NO CONTENT HERE --> 
-  </div><!-- /grid__item -->
-  <aside class="marginal grid__item two-tenths content-right">
-    <!-- MARGINAL CONTENT HERE -->
-  </aside><!-- /grid__item -->
 </div>
 </code></pre>
 
-<h3>Typ Bestellprozess (Warenkorb,...)</h3>
+
+
+<h3>Typ: Startseite</h3>
 <pre><code class="sg-code-inline">
 
-<div class="grid content-wrapper-bestellprozess">
-  <div class="grid__item">
-    <main class="content">
-      <h1 class="heading--bestellprozess">Titel</h1>
-      <div class="content__inner">
-        <!-- MAIN CONTENT HERE -->
-      </div>
+<main class="content-wrapper-homepage">
+  <h1 class="aural">Pagetitle</h1>
+  <div class="hero">
+    <!-- HERO CONTENT HERE -->
+  </div>
+  <div class="grid">
+    <div class="grid__item one-sixth">
+    </div>
+    <div class="grid__item four-sixths">
+      <!-- HOMEPAGE CONTENT HERE -->
+    </div>
+    <div class="grid__item one-sixth">
+    </div>
+  </div>
+</main>
+</code></pre>
+
+
+<h3>Typ: Three Columns</h3>
+<pre><code class="sg-code-inline">
+
+<div class="content-wrapper-three-columns">
+  <div class="heading--pagecategory">
+      <!-- (OPTIONALE SEITENÜBERSCHRIFT/KATEGORIE) -->
+  </div>
+  <div class="grid">
+    <div class="grid__item two-tenths">
+    </div>
+    <main class="grid__item six-tenths">
+      <h1 class="heading--article">Pagetitle</h1>
+      <!-- PAGE CONTENT HERE -->
     </main>
-  </div><!-- /grid__item -->
-</div><!-- /grid -->
+    <div class="grid__item two-tenths">
+    </div>
+  </div>
+</div>
+</code></pre>
+
+<h3>Typ: Full Width</h3>
+<pre><code class="sg-code-inline">
+
+<main class="content-wrapper-full-width">
+  <h1 class="heading--pagecategory">Seitentitel</h1>
+  <!-- PAGE CONTENT HERE -->
+</main>
 </code></pre>
 
 

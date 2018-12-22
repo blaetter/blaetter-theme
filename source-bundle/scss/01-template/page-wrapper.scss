@@ -1,28 +1,10 @@
 // Our Wrapper around the whole site
 
 $page-wrapper-namespace:           $namespace !default;
+$content-wrapper-namespace:              $namespace !default;
 
-/*
-#page-wrapper {
-    @include clearfix();
-    border:             0px solid;
-    position:           relative;
-    width:              100%;
-    @media print {
-         width:         auto;
-         box-shadow:    none;
-    }
-   
-}
-*/
+
 .page-wrapper {
-    .hero {
-       min-height:                   2.7em;
-    }
-}
-
-// Our Wrapper around the main page sections to maximize withs
-.page-wrapper__inner {
     background-color:         $page-background-color;
     position:           relative;
     @include media-query(palm) {
@@ -34,18 +16,17 @@ $page-wrapper-namespace:           $namespace !default;
         max-width:          $pageWidthDesk;
         margin:             0 auto;
     }
-    
+    .hero {
+       min-height:                   2.7em;
+    }
 }
 
 
-
-
 // Our Wrapper around the main content area between header and footer
-$content-wrapper-namespace:              $namespace !default;
-
+/*
 #{$content-wrapper-namespace}.content-wrapper {
     @include clearfix();
-    padding:        0;
+    padding:            0;
     @include media-query(palm) {
         width:          100%;
         margin:         0;   
@@ -60,7 +41,47 @@ $content-wrapper-namespace:              $namespace !default;
 	}
    
 }
+*/
 
+#{$content-wrapper-namespace}.content-wrapper-homepage {
+    padding:            $blockPaddingPx $pagePaddingPx;
+    background-color:   $grey;
+    margin-bottom:      5em;
+    .hero {
+        margin-top:     -$blockPaddingPx;
+        margin-left:    -$pagePaddingPx;
+        margin-right:   -$pagePaddingPx;
+        margin-bottom:  $blockPaddingPx*2;
+    }
+    @include media-query(palm) { 
+        padding:        $blockPaddingPx $pagePaddingPalmPx;
+        .hero {
+            margin-left:    -$pagePaddingPalmPx;
+            margin-right:   -$pagePaddingPalmPx;
+        }
+    }
+}
+
+#{$content-wrapper-namespace}.content-wrapper-three-columns {
+    padding:            $blockPaddingPx $pagePaddingPx;
+    background-color:   $grey;
+    margin-bottom:      5em;
+    @include media-query(palm) { 
+        padding:        $blockPaddingPx $pagePaddingPalmPx;
+    }
+}
+
+#{$content-wrapper-namespace}.content-wrapper-full-width {
+    padding:            $blockPaddingPx $pagePaddingPx;
+    background-color:   $grey;
+    margin-bottom:      5em;
+    @include media-query(palm) { 
+        padding:        $blockPaddingPx $pagePaddingPalmPx;
+    }
+}
+
+
+// OLD:
 #{$content-wrapper-namespace}.content-wrapper-article,
 #{$content-wrapper-namespace}.content-wrapper-profil,
 #{$content-wrapper-namespace}.content-wrapper-dossier  {
@@ -71,19 +92,10 @@ $content-wrapper-namespace:              $namespace !default;
             flex-grow: 1;
             flex-shrink: 1;
             margin-left:        $pagePaddingPx;    
-            .content-left__inner {
-                //width:              100%;
-                //max-width:          $contentWidthDeskArticlePx + ($pagePaddingPx*2);
-                //margin:             0 0 0 auto;
-            }
-        }
-        .content-spacer {
-            //max-width:              180px;
         }
         .content-right {
             flex-grow:              0;
             flex-shrink:            0;
-           // min-width:              300px;
         }
     }
     @include media-query(palm) { 
@@ -93,17 +105,14 @@ $content-wrapper-namespace:              $namespace !default;
 }
 
 
+// OLD:
 #{$content-wrapper-namespace}.content-wrapper-bestellprozess {
     background-color:       $white;
-    //padding:                0 $pagePaddingPx;
     @include media-query(palm) { 
         //padding:            0 $pagePaddingPalmPx;
     }
     .content {
-        
-    }
-    .content {
-        padding:            $blockPaddingPx $blockPaddingPx*2;
+        padding:            $blockPaddingPx $pagePaddingPx;
         background-color:   $grey;
         margin-bottom:      5em;
     }

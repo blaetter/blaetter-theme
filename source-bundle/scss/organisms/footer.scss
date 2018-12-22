@@ -1,7 +1,7 @@
 // Our global page footer
 $footer-namespace:              $namespace !default;
 $footerFontColor:               $baseTextColor !default;
-$footerBGColor:                 transparent !default;
+$footerBGColor:                 $white !default;
 
 #footer {
     padding:                $gridGutter $pagePaddingPx;
@@ -11,6 +11,9 @@ $footerBGColor:                 transparent !default;
     color:                  $footerFontColor;
     text-align:             center;
     margin-top:             40px;
+    .logo {
+        width:              70px;
+    }
     .heading {
         font-size:          1.2em;
         font-weight:        700;

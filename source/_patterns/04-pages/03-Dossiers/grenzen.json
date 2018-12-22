@@ -1,8 +1,9 @@
 {
-    "pagetype": "pagetype-dossier",
-    "dossier": {  
-        "category": "Politik",
+    "pagetype": "pagetype-three-columns",
+    "data": {  
+        "category": "<span class=\"text--red\">Dossier</span> Politik",
         "title": "Trump und die Folgen: Demokratie am Scheideweg",
+        "titleclass": "heading--article",
         "author": "Albrecht von Lucke",
         "content":  [
             {

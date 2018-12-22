@@ -118,19 +118,24 @@ $sectiontitleMarginBottom: 2em !default;
     text-transform:                 uppercase;
     border-bottom:                  4px solid $greyBorder;
     padding:                        0.8em 0 0.7em 0;
-    margin:                         1em $pagePaddingPalmPx*2 0em $pagePaddingPalmPx*2;
+    //margin:                         1em $pagePaddingPalmPx*2 0em $pagePaddingPalmPx*2;
     width:                          auto; 
 }
 
-#{$heading-namespace}.heading--dossiercat {
+
+#{$heading-namespace}.heading--pagecategory {
     @include pagecategoryheadline();
+}
+
+#{$heading-namespace}.heading--dossiercat {
+    @include pagecategoryheadline(); // OLD
 }
 
 #{$heading-namespace}.heading--profilcat {
-    @include pagecategoryheadline();
+    @include pagecategoryheadline(); // OLD
 }
 
 #{$heading-namespace}.heading--bestellprozess {
-    @include pagecategoryheadline();
+    @include pagecategoryheadline(); // OLD
     margin-bottom:  0;
 }

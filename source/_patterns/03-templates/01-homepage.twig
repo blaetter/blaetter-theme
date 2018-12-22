@@ -1,26 +1,37 @@
-{% extends "main.twig" %}
+    {% extends "main.twig" %}
 
+    {% block pagetitle %}{{ data.title }}{% endblock %}
     
-        {% block pagetitle %}{{ homepage.title }}{% endblock %}
-        
-        {#% block breadcrumb %}{% endblock %#}
-        
-        {% block content %}
+    {% block content %}
     
-            <h1 class="aural">{{ homepage.title }}</h1>
-            
-            {% for block in homepage.hero %}
-                {% include block.pattername with { "data": block } %}
+    <main class="content-wrapper-homepage">
+        {% if data.title %}
+        <h1 class="{{ data.titleclass }}">{{ data.title }}</h1>
+        {% endif %}
+        {% if data.hero %}
+        <div class="hero">
+            {% for block in data.hero %}
+            {% include block.pattername with { "data": block } %}
             {% endfor %}
+        </div>
+        {% endif %}
+        <div class="grid">
+            <div class="grid__item one-sixth">
+            </div><!-- /grid__item -->
 
-            <main class="content-wrapper">
-                {% for block in homepage.content %}
+            <div class="grid__item four-sixths">
+                {% for block in data.content %}
                     {% include block.pattername with { "data": block } %}
                 {% endfor %}
-            </main>
+            </div><!-- /grid__item -->
+
+            <div class="grid__item one-sixth">
+            </div><!-- /grid__item -->
+        </div>
+    </main>
+    
 
 
 
+    {% endblock %}
 
-        {% endblock %}
-   

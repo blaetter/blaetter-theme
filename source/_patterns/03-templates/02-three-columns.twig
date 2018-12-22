@@ -1,0 +1,52 @@
+    {% extends "main.twig" %}
+
+    {% block pagetitle %}{{ data.title }}{% endblock %}
+    
+    {#% block breadcrumb %}{% endblock %#}
+    
+    {% block content %}
+    
+    {% if data.hero %}
+        {% for block in data.hero %}
+        {% include block.pattername with { "data": block } %}
+        {% endfor %}
+    {% endif %}
+
+    <div class="content-wrapper-three-columns">
+
+        {% if data.category %}
+        <div class="heading--pagecategory">
+            {{ data.category|raw }}
+        </div>
+        {% endif %}
+
+        
+
+        <div class="grid">
+
+            <div class="grid__item two-tenths">
+            </div><!-- /grid__item -->
+
+            <main class="grid__item six-tenths">
+                {% if data.title %}
+                <h1 class="{{ data.titleclass }}">{{ data.title }}</h1>
+                {% endif %}
+                {% for block in data.content %}
+                    {% include block.pattername with { "data": block } %}
+                {% endfor %}
+            </main><!-- /grid__item -->
+
+            <div class="grid__item two-tenths">
+                {#% for item in data.marginal %}
+                    {% include item.pattername with { "data": item } %}
+                {% endfor %#} 
+            </div><!-- /grid__item -->
+
+        </div>
+    </div>
+    
+
+
+
+    {% endblock %}
+

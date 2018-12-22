@@ -1,7 +1,8 @@
 {
     "pagetype": "pagetype-homepage",
-    "homepage": {  
-        "title": "Startseite",
+    "data": {  
+        "title": "Blätter",
+        "titleclass": "aural",
         "hero": [
             {
                 "pattername": "molecules-homepage-heroimage",

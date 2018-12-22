@@ -1,7 +1,8 @@
 {
-    "pagetype": "pagetype-article",
-    "article": {  
+    "pagetype": "pagetype-three-columns",
+    "data": {  
         "title": "Wider den Wachstumswahn: Degrowth als konkrete Utopie",
+        "titleclass": "heading--article",
         "author": "Barbara Muraca",
         "content":  [
             {
