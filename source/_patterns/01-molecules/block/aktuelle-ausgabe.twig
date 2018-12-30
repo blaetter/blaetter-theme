@@ -1,0 +1,22 @@
+<article class="block teaser teaser--aktuelle-ausgabe">
+
+    <div class="image">
+        <img src="{{ data.imgsrc|default('../../images/sample/ausgabe.png') }}"/>
+    </div>
+
+    <div class="inner">
+      <p class="text field--name-body">
+        {{ data.text|default('Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.') }}
+      </p>
+      {% include "atoms-button-buy" with {data: {
+                "text": "Printausgabe kaufen", 
+                "text_right": "(10,00 €)"
+        }}
+      %}
+      {% include "atoms-button-buy" with {data: {
+                "text": "Digitalausgabe kaufen", 
+                "text_right": "(10,00 €)"
+        }}
+      %}
+    </div>
+</article>

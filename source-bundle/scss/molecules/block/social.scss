@@ -1,0 +1,33 @@
+.social {
+    display:        flex;
+    align-items:    center;
+    list-style:     none;
+    color:          $white;
+    padding:        0;
+    margin:         $blockPaddingPx*2 0 $blockPaddingPx 0;
+    a {
+        color:      $white;
+    }
+    .ic {
+        padding:        0.5em;
+        border-radius:  50%;
+        width:          2.5em;
+        height:         2.5em;
+        line-height:    1.5;
+        text-align:     center;
+        margin-right:   0.5em;
+        display:        inline-block;
+    }
+    .facebook {
+        background: #3B5998;
+    }
+    .twitter {
+        background: #1DA1F2;
+    }
+    .email {
+        background: $red;
+    }
+    .download {
+        background: $blue;
+    }
+}

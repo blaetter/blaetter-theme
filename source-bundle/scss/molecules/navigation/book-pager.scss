@@ -1,0 +1,31 @@
+.book-pager {
+    display:                flex;
+    justify-content:        space-between;
+    align-items:            flex-start;
+    padding:                $blockPaddingPx 0 0 0;
+    margin:                 ($blockPaddingPx) 0 $blockPaddingPx 0;
+    border-top:             1px solid $greyBorder;
+    .book-pager__item {
+        display:        inline-block;
+        list-style-type:none;
+        vertical-align: top;
+        float:          none;
+    }
+    .book-pager__item--previous,
+    .book-pager__item--next {
+        width:          auto;
+    }
+    .book-pager__item--previous {
+        text-align:     left;
+    }
+    .book-pager__item--center {
+        text-align:     center;
+        margin:         0 2em;
+        //white-space:    nowrap;
+    }
+    .book-pager__item--next {
+        
+        text-align:     right;
+        
+    }
+}

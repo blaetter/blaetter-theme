@@ -18,6 +18,10 @@
         <div class="heading--pagecategory">
             {{ data.category|raw }}
         </div>
+        {% elseif data.title2category == true %}
+        <h1 class="heading--pagecategory">
+            {{ data.title|raw }}
+        </h1>
         {% endif %}
 
         
@@ -28,7 +32,7 @@
             </div><!-- /grid__item -->
 
             <main class="grid__item six-tenths">
-                {% if data.title %}
+                {% if data.title and data.title2category != true %}
                 <h1 class="{{ data.titleclass }}">{{ data.title }}</h1>
                 {% endif %}
                 {% for block in data.content %}

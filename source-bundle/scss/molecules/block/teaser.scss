@@ -191,7 +191,15 @@ $teaser-namespace:              $namespace !default;
             padding:                 $teaserInnerPadding;
         }
     }
+    &.teaser--aktuelle-ausgabe {
+        .image {
+        }
+        .inner {
+        }
+    }
 }
+
+
 
 @include media-query('lap-and-up') {
     .one-fourth .teaser--poster {

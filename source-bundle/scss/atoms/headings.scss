@@ -40,7 +40,7 @@ $heading-namespace:       $namespace !default;
     font-size:                      60px;
     line-height:                    1.3em;
     margin-bottom:                  0.2em;
-    margin-top:                     0.75em;
+    margin-top:                     0.4em;
     @include media-query('palm') {
         font-size:                  2em;
         margin-bottom:              0.5em;
@@ -125,6 +125,7 @@ $sectiontitleMarginBottom: 2em !default;
 
 #{$heading-namespace}.heading--pagecategory {
     @include pagecategoryheadline();
+    margin-bottom:                  1.5em;
 }
 
 #{$heading-namespace}.heading--dossiercat {
