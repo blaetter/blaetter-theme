@@ -1,0 +1,18 @@
+{
+    "data": {  
+        "title": "Max Mustermann",
+        "titleclass": "heading--pagecategory",
+        "title2category": true,
+        "content_left":  [
+            {
+                "pattername": "molecules-navigation-user"
+            }
+        ],
+        "content":  [
+            {
+                "pattername": "molecules-form-edituser"
+            }
+        ],
+        "marginal": null
+    }
+}

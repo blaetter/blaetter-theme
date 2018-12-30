@@ -215,9 +215,25 @@ $form-namespace:            $namespace !default;
     }
 
     // Drupal overwrite
+    label.option {
+        display: inline;
+        font-weight: normal;
+    }
     details {
-        border:             0 none;
+        border: 1px solid #ccc;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        > .details-wrapper {
+            padding: 0.5em 1.5em;
+        }
         summary {
+            cursor: pointer;
+            padding: 0.2em 0.5em;
+        }
+    }
+    > details {
+        border:             0 none;
+        > summary {
             font-size:      1.5em;
         }
         > .details-wrapper {
@@ -234,6 +250,18 @@ $form-namespace:            $namespace !default;
         max-width: none;
         overflow: visible;
         width:  100%;
+    }
+    .form-required:after {
+        content: '';
+        vertical-align: super;
+        display: inline-block;
+        background-image: url(../../images/required.svg);
+        background-repeat: no-repeat;
+        background-size: 6px 6px;
+        width: 6px;
+        height: 6px;
+        margin: 0 0.3em;
+        color: red;
     }
 }
 
