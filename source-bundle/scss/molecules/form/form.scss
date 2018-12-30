@@ -214,7 +214,27 @@ $form-namespace:            $namespace !default;
         color:              $red;
     }
 
- 
+    // Drupal overwrite
+    details {
+        border:             0 none;
+        summary {
+            font-size:      1.5em;
+        }
+        > .details-wrapper {
+            padding:        0;
+        }
+    }
+    .form-item, .form-actions {
+        margin-top:         1em;
+        margin-bottom:      1em;
+    }
+    .confirm-parent, .password-parent {
+        clear: left;
+        margin: 0;
+        max-width: none;
+        overflow: visible;
+        width:  100%;
+    }
 }
 
 // display the label beside the input, using css table classes 
@@ -285,10 +305,7 @@ $form-namespace:            $namespace !default;
     overflow:               auto;
     line-height:            $base-line-height; 
 }
-
-#{$form-namespace}select[multiple] {
-    padding:                0;
-}
+/*
 #{$form-namespace}select:not([multiple]) {
     padding:                0 0px 0 2px;
     min-height:             2.1em; // ie fix
@@ -297,6 +314,7 @@ $form-namespace:            $namespace !default;
         @include getRem('height', $formInputHeightPalmPx);
     }
 }
+*/
 #{$form-namespace}select > option {
     padding:                $formItemPaddingPx;
 }

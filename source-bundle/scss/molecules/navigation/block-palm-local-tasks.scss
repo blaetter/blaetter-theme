@@ -2,7 +2,7 @@
     .tabs {
         margin-top:             0;
         @include media-query('lap-and-up') {
-            margin-top:         2em;
+            margin-top:         0.75em;
         }
         &.primary {
             padding:            0;

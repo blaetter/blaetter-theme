@@ -10,7 +10,7 @@
         ],
         "content":  [
             {
-                "pattername": "molecules-form-login"
+                "pattername": "molecules-form-newuser"
             }
         ],
         "marginal": null
