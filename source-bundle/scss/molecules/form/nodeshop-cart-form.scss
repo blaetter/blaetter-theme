@@ -47,6 +47,9 @@
                     padding-bottom: 0;
                     display:    block;
                 }
+                &:nth-child(2) {
+                    width: 100%;
+                }
             }
             h2 {
                 font-size:  18px;
