@@ -29,6 +29,9 @@
         <div class="grid">
 
             <div class="grid__item two-tenths">
+            {% for block in data.content_left %}
+                {% include block.pattername with { "data": block } %}
+            {% endfor %}
             </div><!-- /grid__item -->
 
             <main class="grid__item six-tenths">
@@ -41,9 +44,9 @@
             </main><!-- /grid__item -->
 
             <div class="grid__item two-tenths">
-                {#% for item in data.marginal %}
-                    {% include item.pattername with { "data": item } %}
-                {% endfor %#} 
+                {% for block in data.content_right %}
+                    {% include block.pattername with { "data": block } %}
+                {% endfor %}
             </div><!-- /grid__item -->
 
         </div>

@@ -1,0 +1,19 @@
+{
+    "pagetype": "pagetype-full-width",
+    "data": {  
+        "title": "Anmelden / Registrieren",
+        "titleclass": "heading--pagecategory",
+        "title2category": true,
+        "content_left":  [
+            {
+                "pattername": "molecules-navigation-login"
+            }
+        ],
+        "content":  [
+            {
+                "pattername": "molecules-form-login"
+            }
+        ],
+        "marginal": null
+    }
+}
