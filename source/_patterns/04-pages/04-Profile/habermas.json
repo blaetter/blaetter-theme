@@ -8,14 +8,11 @@
             {
                 "pattername": "molecules-profilhead"
             },{
-                "pattername": "molecules-teaser",
-                "class": "teaser--marginal"
+                "pattername": "molecules-teaser"
             },{
-                "pattername": "molecules-teaser",
-                "class": "teaser--marginal"
+                "pattername": "molecules-teaser"
             },{
-                "pattername": "molecules-teaser",
-                "class": "teaser--marginal"
+                "pattername": "molecules-teaser"
             },{
                 "pattername": null
             },{

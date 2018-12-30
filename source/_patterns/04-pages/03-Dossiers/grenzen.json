@@ -16,7 +16,18 @@
                 "pattername": "atoms-paragraph",
                 "text": "Dieser Zyklus begann vor fast einem Vierteljahrhundert, nämlich kurz nach der Zeitenwende von 1989/1990 und unmittelbar nach der epochalen Weltklimakonferenz von Rio – und zwar mit dem Sieg Bill Clintons bei der Präsidentschaftswahl am 3. November 1992. Er setzte sich fort mit der Regentschaft Tony Blairs, von 1997 bis 2007, und der Amtszeit Gerhard Schröders, von 1998 bis 2005. Und er umfasst, gewissermaßen als einen späten Ausläufer, schließlich auch die Amtszeit von François Hollande, die offenbar bereits heute gescheitert ist. Alle diese Politiker stehen für den Versuch einer doppelten Liberalisierung – in kultureller wie in ökonomischer Hinsicht, der Gesellschaft wie der Wirtschaft, insbesondere der Finanzmärkte. Doch während die gesellschaftliche Liberalisierung, etwa in Form umfangreicher Minderheitenrechte, weit gediehen ist, ist die ökonomische Liberalisierung fundamental gescheitert. Ob Clintons Bankengesetz, das die Geldhäuser von lästigen Regulierungsfesseln befreite, Blairs New-Labour-Politik oder Schröders und Steinmeiers Agenda 2010, inklusive Hartz IV: Am Ende stand stets die Expansion des Finanzsektors und die Deregulierung der Arbeitsmärkte, samt eines gewaltigen Niedriglohnsektors. Das Modell eines gehegten Kapitalismus, in Europa der sozialen Markwirtschaft oder des Rheinischen Kapitalismus, gehört damit für zunehmende Teile der Gesellschaft der Vergangenheit an. Aus der einstigen Aufstiegsgesellschaft der Nachkriegsära ist in der Ära der „Marktsozialdemokratie“ eine „Abstiegsgesellschaft“ geworden.[1] Die Folge ist eine zunehmende Spaltung der Gesellschaft: in eine liberal-offene metropolitane Elite und eine zunehmend deklassierte Unterschicht, deren Abstiegsängste immer stärker nach oben ausstrahlen und dort für zunehmende „Panik im Mittelstand“ (Theodor Geiger) sorgen."
             },{
-                "pattername": null
+                "pattername": "atoms-button-buy",
+                "text": "14 Beiträge kaufen", 
+                "text_right": "(7,00 €)"
+            },{
+                "pattername": "atoms-heading--sectiontitle",
+                "text": "14 Beiträge zum Thema"
+            },{
+                "pattername": "molecules-teaser"
+            },{
+                "pattername": "molecules-teaser"
+            },{
+                "pattername": "molecules-teaser"
             }
         ],
         "marginal":  [

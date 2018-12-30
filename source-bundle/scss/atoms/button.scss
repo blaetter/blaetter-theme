@@ -142,7 +142,7 @@ $btn-border-color:              $blue !default;
 }
 
 
-#{$button-namespace}button.button {
+#{$button-namespace}.button {
     @extend .btn;
     background-color:   $btn-background;
     color:              $btn-font-color;
@@ -229,7 +229,17 @@ $btn-border-color:              $blue !default;
     @include button--white();
 }
 
-
+#{$button-namespace}.button--buy {
+    @extend .btn;
+    text-align:         left;
+    .fa {
+        margin-left:    0.5em;
+    }
+    .right {
+        float:          right;
+        margin-left:    0.75em;
+    }
+}
 
 // Button as Link (form reset button, ...)
 #{$button-namespace}button.link,

@@ -26,40 +26,18 @@ $swiper-articleimage--minHeight-desktopPx:    $pageWidthDesk * 16 / 9;
         display:            block;
         margin:             0 auto; // center portait images
         overflow:           hidden;
-        //max-height:         45rem;
-        //max-height:         80vh;
         .image-placeholder {
             width: 100%;
             display: block;
             width: 100%;
-            /* inline css background image: */
-            // height: 80vh;
-            //max-height: 50vw;
-            //min-height: 23.75em;
-            //background-repeat: no-repeat;
-            //background-position: center center;
-            //-webkit-background-size: cover;
-            //-moz-background-size: cover;
-            //-o-background-size: cover;
-            //background-size: cover;
         }
         img {
             display:        block;
+            height:         auto;
         }
     }
     .source {
         display: none;
-        /*
-        @include source-style(); 
-        //color:          $greySource;
-        //display: inline-block;
-        position: absolute;
-        z-index:            1;
-        right: 0;
-        bottom: 0;
-        padding: 0.5em;
-        margin: 0;
-        */
     }
     .body {
         bottom:             0;
@@ -85,24 +63,18 @@ $swiper-articleimage--minHeight-desktopPx:    $pageWidthDesk * 16 / 9;
         .heading {
             color:          $white;
             margin:         0;
-            font-size:      90px;
-            line-height:    110px;
+            font-size:      6vw;
+            line-height:    1.2;
             max-width:      1170px;
             a {
                 color:      $white;
             }
-            @include media-query('palm') {
-                font-size:                  40px;
-            }
         }
         .author {
             color:          $greyAuthor;
-            font-size:      50px;
+            font-size:      3vw;
+            line-height:    1.2;
             font-family:    'droid-sans', sans-serif, Arial;
-            @include media-query('palm') {
-                font-size:                  20px;
-            }
-
         }
         .author a {
             color:          $blueAuthor;

@@ -78,8 +78,8 @@ $sectiontitleMarginBottom: 2em !default;
         }
     }
     @include media-query('palm') {
-        padding-left:               $pagePaddingPalmPx;
-        padding-right:              $pagePaddingPalmPx;
+        //padding-left:               $pagePaddingPalmPx;
+       // padding-right:              $pagePaddingPalmPx;
     }
 }
 

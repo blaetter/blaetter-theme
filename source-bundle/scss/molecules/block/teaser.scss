@@ -2,15 +2,15 @@ $teaser-namespace:              $namespace !default;
 
 #{$teaser-namespace}.teaser {
     position:                   relative;
-    .heading,
-    h2,h3 {
+    .heading, h2, h3 {
         @include block--base-headline();
+        font-size:              1.4em;
         a {
             color:              $baseTextColor;
         }
-    }
-    .inner {
-       
+        @include media-query('palm') {
+            font-size:              1.2em;
+        }
     }
     .source {
         display:                none !important;
@@ -25,7 +25,8 @@ $teaser-namespace:              $namespace !default;
             height:     auto;
         }
     }
-    .author {
+    .author,
+    .author--article {
         color:          $greyAuthor;
         white-space:    nowrap;
         overflow:       hidden;
@@ -77,9 +78,15 @@ $teaser-namespace:              $namespace !default;
             height:                 auto;
             float:                  none;
         }
+        .heading {
+            font-size:              1.2em;
+        }
+        .author {
+            font-size:              1.0em;
+        }
         @include media-query('palm') {
-            padding-left:           $pagePaddingPalmPx;
-            padding-right:          $pagePaddingPalmPx;
+            //padding-left:           $pagePaddingPalmPx;
+            //padding-right:          $pagePaddingPalmPx;
         }
     }
     &.teaser--marginal {
@@ -102,6 +109,7 @@ $teaser-namespace:              $namespace !default;
     }
     &.teaser--poster {
         z-index:                    0;
+        overflow:                   hidden;
         &:before {
             display:                block;
             content:                " ";
@@ -124,8 +132,11 @@ $teaser-namespace:              $namespace !default;
         }
         .heading, h2, h3 {
             color:                  $white;
-            //margin:                 0;
             font-size:              1.5em;
+            line-height:            1.2;
+            @include media-query('palm') {
+                font-size:          8vw;
+            }
             a {
                 color:              inherit;
             }
@@ -182,10 +193,13 @@ $teaser-namespace:              $namespace !default;
     }
 }
 
-.one-fourth .teaser--poster {
-    .heading, h2, h3 {
-        @include media-query('lap-and-up') {
+@include media-query('lap-and-up') {
+    .one-fourth .teaser--poster {
+        .heading, h2, h3 {
             font-size:      1.3em;
+        }
+        .author {
+            font-size:      1.1em;
         }
     }
 }
