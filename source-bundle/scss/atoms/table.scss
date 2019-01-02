@@ -4,10 +4,18 @@ $table-namespace:           $namespace !default;
 table {
     border-collapse:            collapse;
     border-spacing:             0;
-}
-
-// Base table rules
-#{$table-namespace}.table--base {
+    td.is-active {
+        // Drupal overwrite
+        background-color:   transparent;
+    }
+    th {
+        font-weight:        bold;
+        color:              $lightestTextGrey;
+        a {
+            font-weight:    bold;
+            color:          $lightestTextGrey;
+        }
+    }
     @include getRem('margin-bottom', $blockBottomMarginPx);
     td,th {
         text-align:             left;
@@ -34,6 +42,11 @@ table {
     }
 }
 
+// Base table rules
+#{$table-namespace}.table--base {
+    display:            table;
+}
+
 
 
 
@@ -50,6 +63,8 @@ table {
         margin-bottom:          0;
     }
 }
+
+/*
 #{$table-namespace}.table--bordered {
     @extend .table--base;
     th, td {
@@ -151,3 +166,4 @@ table {
         }
     }
 }
+*/
