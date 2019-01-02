@@ -20,6 +20,7 @@ $btn-border-color:              $blue !default;
     @include media-query('palm') {
         height:             2.5em;
     }
+    margin:                 0;
     @include getRem('margin-bottom', $blockBottomMarginPx/2);
     @include media-query('palm') {
         line-height:        2em;
