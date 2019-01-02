@@ -24,7 +24,9 @@ $navigationPrimaryFontColor:                $white;
     &.opened {
         display:                    block;
     }
-
+    .block.navigation {
+        margin-bottom:              0;
+    }
     // Global Menulayout
     .menu {
         list-style:                     none;
