@@ -11,7 +11,7 @@
         <main class="content-wrapper-full-width">
 
             {% if data.title %}
-            <h1 class="{{ data.titleclass }}">{{ data.title }}</h1>
+            <h1 class="{{ data.titleclass }}">{{ data.title|raw }}</h1>
             {% endif %}
 
             {% for block in data.content %}

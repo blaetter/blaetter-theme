@@ -1,0 +1,51 @@
+@mixin nodeshop_white_box() {
+    background:             $white;
+    padding:                $largeGapPx;
+    margin:                 $blockPaddingPx 0;
+}
+
+.nodeshop-order-payment-form {
+    h2 {
+        font-size:              1em;
+        margin-top:             0;
+        a {
+            color:              $linkColor;
+            font-weight:        normal;
+            margin-left:        0.5em;
+            &::before {
+                content:        "\f040";
+                font-family:    "FontAwesome";
+                display:        inline-block;
+                font-size:      0.9em;
+                margin-right:    0.2em;
+            }
+        }
+    }
+    p + h2,
+    div + h2 {
+        margin-top:         $mediumGapPx;
+    }
+    .field {
+        @include clearfix();
+    }
+    .field__item {
+        display:            inline;
+    }
+    .field__label {
+        display:            inline-block;
+    }
+    .field--name-order-total {
+        .nodeshop_price {
+            font-weight:    bold;
+        }
+    }
+    .nodeshop_order_items {
+        @include nodeshop_white_box();
+        .nodeshop_price {
+            float:          right;
+        }
+    }
+    .nodeshop_order_address { 
+        @include nodeshop_white_box();
+    }
+}

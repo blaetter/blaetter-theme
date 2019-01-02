@@ -1,0 +1,14 @@
+{
+    "data": {  
+        "title": " <span class=\"text--red\">Order</span> summary",
+        "titleclass": "heading--pagecategory",
+        "title2category": true,
+        "content_left":  null,
+        "content":  [
+            {
+                "pattername": "molecules-form-order-summary"
+            }
+        ],
+        "marginal": null
+    }
+}
