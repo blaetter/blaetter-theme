@@ -1,5 +1,4 @@
 <article class="block teaser{{ data.class ? ' ' ~ data.class }}">
-  
 {% if data.timestamp %}
     <div class="timestamp">{{ data.timestamp }}</div>
 {% endif %}
@@ -8,9 +7,9 @@
         <a href="{{ (attribute(link, page_prefix|default('pages') ~ '-' ~ data.targetPage))|default('#') }}">
             {% include "atoms-teaser-image-16x9" with {data: data} %}
         </a>
-        {% if data.source != 'false' %}
+{% if data.source != 'false' %}
         <p class="source">© {{ data.source|default('picsum.photos') }}</p>
-        {% endif %}
+{% endif %}
     </div>
 {% endif %}
     <div class="inner">
@@ -19,13 +18,13 @@
         {{ data.title|default('Title') }}
         </a>
       </h3>
-      {% if data.hideAuthor != 'true' %}
+{% if data.hideAuthor != 'true' %}
       <p class="author">von <a href="#" class="author-name">{{ data.author|default('Author') }}</a></p>
-      {% endif %}
-      {% if data.text != 'false' %}
+{% endif %}
+{% if data.text != 'false' %}
       <p class="text field--name-body">
         {{ data.text|default('Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.') }}
       </p>
-      {% endif %}
+{% endif %}
     </div>
 </article>

@@ -69,6 +69,31 @@ $teaser-namespace:              $namespace !default;
             }
         }
     }
+    &.teaser--archive {
+        background-color:           transparent;
+        margin-bottom:              50px;
+        .image {
+            width:                      100%;
+            float:                      none;
+            margin-right:               0;
+            height:                     auto;
+            margin-bottom:              0.3em;
+            border:                     1px solid $greyBorder;
+        }
+        .heading {
+            font-size:              1em;
+            font-weight:            bold;
+        }
+        @include media-query('palm') {
+            .image { 
+                width:          30vw;
+                height:         30vw;
+                float:          left;
+                margin-right:   20px;
+                overflow:       hidden;
+            }
+        }
+    }
     &.teaser--text {
         background:                 transparent;
         .inner {

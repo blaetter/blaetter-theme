@@ -21,6 +21,27 @@
         "class": "teaser--vertical"
     }} %}</code></pre>
 
+    {% include "organisms-teasergrid" with {data: {
+                "gridItenClass": "one-fourth",
+                "gridClass": "grid--stretch",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--archive",
+                        "title": "Teaser Archive",
+                        "imageurl": "../../images/sample/archiv1.jpg",
+                        "hideAuthor": true,
+                        "text": "false"
+                    }
+                ]
+    }} %}   
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "molecules-teaser" with {data: {
+        "class": "teaser--archive",
+        "title": "Teaser Archive",
+        "imageurl": "../../images/sample/archiv1.jpg",
+        "hideAuthor": true,
+        "text": "false"
+    }} %}</code></pre>
 
      
     {% include "organisms-teasergrid" with {data: {

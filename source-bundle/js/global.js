@@ -6,7 +6,7 @@
 //import accordion from 'accordion';
 //import articleimage_add_blur from 'articleimage-add-blur.js';
 //import block_limit_height from 'block-limit-height.js';
-//import collapse from 'collapse';
+import collapse from 'collapse';
 import nav_menu_flyout from 'nav-menu-flyout';
 
 window._paq = typeof window._paq === "object" ? window._paq : [];
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	//accordion();
 	//articleimage_add_blur();
 	//block_limit_height();
-	//collapse();
+	collapse();
 	//datepicker.init(datepicker.apply_standard);
 	//lightbox.init(lightbox.apply);
 	//shariff.init(shariff.apply);

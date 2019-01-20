@@ -1,0 +1,16 @@
+{
+    "pagetype": "pagetype-full-width",
+    "data": {  
+        "title": "<span class=\"text--red\">Archiv</span> Blätter-Ausgaben 2018",
+        "titleclass": "heading--pagecategory",
+        "author": null,
+        "title2category": true,
+        "content":  [
+            {
+                "pattername": "molecules-archivepager"
+            },{
+                "pattername": "organisms-archivegrid"
+            }
+        ]
+    }
+}

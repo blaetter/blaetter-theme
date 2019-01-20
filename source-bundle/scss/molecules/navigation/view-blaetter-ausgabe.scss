@@ -1,0 +1,15 @@
+.view-blaetter-ausgabe {
+    margin-bottom:                  $blockBottomMarginPx;
+    overflow-x:                     scroll;
+    white-space:                    nowrap;
+    a {
+        margin-right:               1em;
+        &.is-active {
+            color:      $lightestTextGrey;
+            &:hover {
+                text-decoration:    none;
+                cursor:             default;
+            }
+        }
+    }
+}
