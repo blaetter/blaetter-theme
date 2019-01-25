@@ -220,6 +220,7 @@ $teaser-namespace:              $namespace !default;
         .image {
         }
         .inner {
+            display:                    table; // buttons in der flucht
         }
     }
 }

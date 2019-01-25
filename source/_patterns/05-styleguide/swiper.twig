@@ -3,10 +3,8 @@
 {% block content %}
  
     <h2>Swiper</h2>
-    
+    {#
     <h3>Bühne</h3>
- 
-    
     <style>
         .echo .mfp-content .swiper-articleimage  {margin: 0 auto;}
         .echo .mfp-content .swiper-container .text {color: #ffffff;}
@@ -34,16 +32,23 @@
     </div>
 
     <br /><br />
+#}
+    <h3>Archive Index</h3>
+    {% include 'molecules-archivepager' %} 
+
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-archivepager' %}</code></pre>  
+
+    {#
 
     <h3>Galleryselect</h3>
     {% include 'molecules-swiper-galleryselect' with {data: dummygalleryselect} %} 
-    
+
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-swiper-galleryselect' with {data: homepage.heroswiper_empty} %}</code></pre>  
     
     <h3>Mobile Navigation</h3>
     {% include 'molecules-navigation-primary-palm' %} 
     
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include 'molecules-navigation-primary-palm' %}</code></pre>  
-    
+    #}
     
 {% endblock %}

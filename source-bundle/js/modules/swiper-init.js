@@ -39,8 +39,44 @@ export function slidesperview(el, options) {
 
 export function apply(Swiper) {
 
-	
 	// SWIPER: galleryselect
+	
+	var archiveindexSelector = '.archive-index.swiper';
+	var archiveindexOptions = {
+		grabCursor: true,
+		slideToClickedSlide: true,
+		direction: 'horizontal',
+		slidesPerView: 12,
+		slidesPerGroup: 12,
+		spaceBetween: 24,
+		loop: false,
+		preloadImages: false,
+		touchReleaseOnEdges: true, 
+		autoHeight: true,
+		touchEventsTarget: 'swiper-wrapper',  // do not touch our navigation buttons
+		watchOverflow: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			1000: {
+				// palm
+				slidesPerView: 6,
+				slidesPerGroup: 6,
+			},
+			420: {
+				// smallest
+				slidesPerView: 4,
+				slidesPerGroup: 4,
+			},
+		}
+	};
+	new Swiper(archiveindexSelector, archiveindexOptions);
+	
+
+	// SWIPER: galleryselect
+	/*
 	var galleryselectSelector = '.swiper-galleryselect .swiper';
 	var galleryselectOptions = {
 		grabCursor: true,
@@ -79,8 +115,10 @@ export function apply(Swiper) {
 		}
 	};
 	new Swiper(galleryselectSelector, galleryselectOptions);
+	*/
 
 	// SWIPER: Article Mainimage
+	/*
 	var galleryArticleimageSelector = '.swiper-articleimage .swiper';
 	var galleryArticleimageOptions = {
 		grabCursor: true,
@@ -149,6 +187,6 @@ export function apply(Swiper) {
 		}
 	};
 	new Swiper(galleryArticleimageSelector, galleryArticleimageOptions);
-
+	*/
 	
 }

@@ -1,0 +1,31 @@
+/* Slider Archive Index*/
+
+.archive-index {
+    margin-bottom:                  $blockBottomMarginPx;
+    overflow:                       hidden; //scroll;
+    white-space:                    nowrap;
+    position:                       relative;
+    a {
+        margin-right:               1em;
+        &.is-active {
+            color:      $lightestTextGrey;
+            &:hover {
+                text-decoration:    none;
+                cursor:             default;
+            }
+        }
+    }
+    .swiper-button-next {
+        position:                   absolute;
+        right:                      0;
+        background: rgba(240,240,240,0.9);
+    }
+    .swiper-button-prev {
+        position:                   absolute;
+        left:                       0;
+        background: rgba(240,240,240,0.9);
+    }
+    .swiper-button-disabled {
+        display:                    none !important;
+    }
+}

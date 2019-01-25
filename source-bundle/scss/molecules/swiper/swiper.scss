@@ -68,18 +68,18 @@ $swiper-namespace:       $namespace !default;
         display:                inline;
         position:               absolute;
         z-index:                2;
-        background-color:       rgba(0, 0, 0, 0.5);
-        color:                  $blue;
-        height:                 2.5em;
-        width:                  1.7em;
-        border:                 0 none;
-        font-size:              1.5em;
-        line-height:            0;
-        padding:                0;
+        //background-color:       rgba(0, 0, 0, 0.5);
+        //color:                  $blue;
+       // height:                 2.5em;
+       // width:                  1.7em;
+       border:                 0 none;
+      //  font-size:              1.5em;
+       // line-height:            0;
+       // padding:                0;
         background-image:       none;
         .fa {
-            color:              $white;
-            margin:             0;
+            //color:              $white;
+           // margin:             0;
         }
     }
     .swiper-button-prev {
