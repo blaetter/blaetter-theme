@@ -25,7 +25,7 @@
                         "imageurl": "https://picsum.photos/300/169/?image=883"
                     },{
                         "pattername": "molecules-teaser",
-                        "class": "teaser--vertical",
+                        "class": "teaser--vertical nodeshop-closed",
                         "title": "Das Versagen der politischen Mitte",
                         "text": "Überall in Europa – von Finnland bis Griechenland – sprießen dieser Tage rechtspopulistische Parteien wie Pilze aus dem Boden. ",
                         "author": "Ulrike Guérot",
@@ -62,7 +62,7 @@
                         "source": "picsum.photos"
                     },{
                         "pattername": "molecules-teaser",
-                        "class": "teaser--poster",
+                        "class": "teaser--poster nodeshop-closed",
                         "text": "false",
                         "title": "Der graue Markt der Schattenbanken",
                         "author": "Axel Troost, Nicola Liebert und Rainald Ötsch",
@@ -96,7 +96,7 @@
                     {
                         "pattername": "molecules-teaser",
                         "hideTeaserImage": true,
-                        "class": "teaser--text",
+                        "class": "teaser--text nodeshop-closed",
                         "text": "false",
                         "title": "Freier Handel vs. freie Bürger",
                         "author": "Steffen Vogel"
@@ -137,7 +137,7 @@
                     },{
                         "pattername": "molecules-teaser",
                         "hideTeaserImage": true,
-                        "class": "teaser--text",
+                        "class": "teaser--text nodeshop-closed",
                         "text": "false",
                         "title": "»Von diesem Moment an heißt es: Amerika zuerst«",
                         "author": "Paul Mason"
@@ -179,7 +179,7 @@
                         "author": "Paul Mason"
                     },{
                         "pattername": "molecules-teaser",
-                        "class": "teaser--poster",
+                        "class": "teaser--poster nodeshop-closed",
                         "text": "false",
                         "imageurl": "https://picsum.photos/220/295/?image=580",
                         "source": "picsum.photos",
@@ -212,7 +212,7 @@
                     },{
                         "pattername": "molecules-teaser",
                         "hideTeaserImage": true,
-                        "class": "teaser--text",
+                        "class": "teaser--text nodeshop-closed",
                         "hideAuthor": "true",
                         "title": "Die Politisierung Europas",
                         "text": "Sondervotum des Wirtschaftsweisen Peter Bofinger zum Jahresgutachten 2017, 8.11.2017"
@@ -269,7 +269,7 @@
                     },{
                         "pattername": "molecules-teaser",
                         "hideTeaserImage": true,
-                        "class": "teaser--text",
+                        "class": "teaser--text nodeshop-closed",
                         "hideAuthor": "true",
                         "title": "Peter Bofinger glaubt nicht an die D-MArk",
                         "text": "Die  nun  schon  seit  Jahren  ungewöhnlich gute  wirtschaftliche  Entwicklung  in  Deutschland, die aller Voraussicht nach noch mindestens bis zum Jahr 2019 anhalten  wird,  spricht  jedenfalls  nicht  für  einen  wirtschaftspolitischen  Kurswechsel."

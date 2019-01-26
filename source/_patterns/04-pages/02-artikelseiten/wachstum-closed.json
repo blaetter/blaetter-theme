@@ -6,6 +6,9 @@
         "author": "Barbara Muraca",
         "content":  [
             {
+                "pattername": "atoms-html",
+                "html": "<div class=\"nodeshop-closed\">"
+            },{
                 "pattername": "atoms-articleinfo",
                 "key": "von",
                 "value": "<a href=\"#\">Albrecht von Lucke</a>"
@@ -21,36 +24,21 @@
                 "pattername": "atoms-articleimage",
                 "imageurl": "https://picsum.photos/700/331/?image=397"
             },{
+                "pattername": "atoms-html",
+                "html": "<div class=\"field field--name-body\">"
+            },{
                 "pattername": "atoms-paragraph",
                 "class": "initiale",
                 "text": "Wieder einmal war die Enttäuschung groß: Trotz zweitägiger Verlängerung verfehlte die letzte große Klimakonferenz in Lima im vergangenen Dezember ihr Ziel, präzise Vorgaben für einen Weltklimavertrag zu verabschieden. Stattdessen definiert der Beschluss nur äußerst vage Kriterien für die Ziele zur Reduzierung des klimaschädlichen CO2-Ausstoßes. Damit aber droht auch die entscheidende Klimakonferenz in Paris am Ende dieses Jahres zum Fiasko zu werden: Derzeit sieht es nicht danach aus, als ob auf dieser eine konsequente Minderung der CO2-Emissionen beschlossen wird. Wieder einmal war die Enttäuschung groß: Trotz zweitägiger Verlängerung verfehlte die letzte große Klimakonferenz in Lima im vergangenen Dezember ihr Ziel, präzise Vorgaben für einen Weltklimavertrag zu verabschieden. Stattdessen definiert der Beschluss nur äußerst vage Kriterien für die Ziele zur Reduzierung des klimaschädlichen CO2-Ausstoßes. Damit aber droht auch die entscheidende Klimakonferenz in Paris am Ende dieses Jahres zum Fiasko zu werden: Derzeit sieht es nicht danach aus, als ob auf dieser eine konsequente Minderung der CO2-Emissionen beschlossen wird."
             },{
-                "pattername": "atoms-paragraph",
-                "class": "",
-                "text": "Wieder einmal war die Enttäuschung groß: Trotz zweitägiger Verlängerung verfehlte die letzte große Klimakonferenz in Lima im vergangenen Dezember ihr Ziel, präzise Vorgaben für einen Weltklimavertrag zu verabschieden. Stattdessen definiert der Beschluss nur äußerst vage Kriterien für die Ziele zur Reduzierung des klimaschädlichen CO2-Ausstoßes. Damit aber droht auch die entscheidende Klimakonferenz in Paris am Ende dieses Jahres zum Fiasko zu werden: Derzeit sieht es nicht danach aus, als ob auf dieser eine konsequente Minderung der CO2-Emissionen beschlossen wird. Wieder einmal war die Enttäuschung groß: Trotz zweitägiger Verlängerung verfehlte die letzte große Klimakonferenz in Lima im vergangenen Dezember ihr Ziel, präzise Vorgaben für einen Weltklimavertrag zu verabschieden. Stattdessen definiert der Beschluss nur äußerst vage Kriterien für die Ziele zur Reduzierung des klimaschädlichen CO2-Ausstoßes. Damit aber droht auch die entscheidende Klimakonferenz in Paris am Ende dieses Jahres zum Fiasko zu werden: Derzeit sieht es nicht danach aus, als ob auf dieser eine konsequente Minderung der CO2-Emissionen beschlossen wird."
+                "pattername": "atoms-html",
+                "html": "</div><!--/field-name-body-->"
             },{
-                "pattername": "atoms-paragraph",
-                "class": "",
-                "text": "Überall dieselbe alte Leier. Das Layout ist fertig, der Text lässt auf sich warten. Damit das Layout nun nicht nackt im Raume steht und sich klein und leer vorkommt, springe ich ein: der Blindtext. Genau zu diesem Zwecke erschaffen, immer im Schatten meines großen Bruders »Lorem Ipsum«, freue ich mich jedes Mal, wenn Sie ein paar Zeilen lesen. Denn esse est percipi - Sein ist wahrgenommen werden. Und weil Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich. Sehen Sie, Webstandards sind das Regelwerk, auf dem Webseiten aufbauen. So gibt es Regeln für HTML, CSS, JavaScript oder auch XML; Worte, die Sie vielleicht schon einmal von Ihrem Entwickler gehört haben. Diese Standards sorgen dafür, dass alle Beteiligten aus einer Webseite den größten Nutzen ziehen. Im Gegensatz zu früheren Webseiten müssen wir zum Beispiel nicht mehr zwei verschiedene Webseiten für den Internet Explorer und einen anderen Browser programmieren."
+                "pattername": "atoms-html",
+                "html": "</div><!--/nodeshop-closed-->"
             },{
-                "pattername": "molecules-social"
-            },{
-                "pattername": "atoms-heading--sectiontitle",
-                "text": "3 Kommentare"
-            },{
-                "pattername": "molecules-article-comments",
-                "comments": [
-                    {
-                        "text": "Zwei flinke Boxer jagen die quirlige Eva und ihren Mops durch Sylt. Franz jagt im komplett verwahrlosten Taxi quer durch Bayern.",
-                        "meta": "Max Mustermann / 2.8.2018 / 11:48 Uhr"
-                    },{
-                        "text": "Zwölf Boxkämpfer jagen Viktor quer über den großen Sylter Deich. Vogel Quax zwickt Johnys Pferd Bim.",
-                        "meta": "Max Mustermann / 20.7.2018 / 15:12 Uhr"
-                    },{
-                        "text": "Sylvia wagt quick den Jux bei Pforzheim. Polyfon zwitschernd aßen Mäxchens Vögel Rüben, Joghurt und Quark.",
-                        "meta": "Max Mustermann / 18.6.2018 / 9:56 Uhr"
-                    }
-                ]
+                "pattername": "molecules-aktuelle-ausgabe",
+                "text": "Um die restlichen <strong>91%</strong> zu lesen, melden Sie sich an oder kaufen Sie den kompletten Artikel."
             },{
                 "pattername": "atoms-heading--sectiontitle",
                 "text": "Weitere Beiträge zum Thema Postwachstum"

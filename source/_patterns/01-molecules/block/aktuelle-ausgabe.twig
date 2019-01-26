@@ -5,17 +5,25 @@
     </div>
 
     <div class="inner">
-      <p class="text field--name-body">
-        {{ data.text|default('Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.') }}
-      </p>
+      <div class="field--name-body">
+        <p>
+          {{ data.text|default('Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.')|raw }}
+        </p>
+      </div>
       {% include "atoms-button-buy" with {data: {
                 "text": "Printausgabe kaufen", 
                 "text_right": "(10,00 €)"
         }}
       %}
+      <br>
       {% include "atoms-button-buy" with {data: {
                 "text": "Digitalausgabe kaufen", 
                 "text_right": "(10,00 €)"
+        }}
+      %}
+      <br>
+      {% include "atoms-button-login" with {data: {
+                "text": "Anmelden"
         }}
       %}
     </div>

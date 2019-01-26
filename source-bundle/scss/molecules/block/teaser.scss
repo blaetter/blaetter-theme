@@ -223,6 +223,9 @@ $teaser-namespace:              $namespace !default;
             display:                    table; // buttons in der flucht
         }
     }
+    .field--name-body {
+        margin-bottom:                  0;
+    }
 }
 
 
@@ -233,7 +236,7 @@ $teaser-namespace:              $namespace !default;
             font-size:      1.3em;
         }
         .author {
-            font-size:      1.1em;
+            font-size:      1.1em; 
         }
     }
 }
