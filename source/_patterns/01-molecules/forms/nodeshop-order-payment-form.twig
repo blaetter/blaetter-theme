@@ -1,0 +1,38 @@
+<div class="grid grid--bordered grid--stretch">
+    <div class="grid__item one-half">
+
+        <form class="nodeshop-order-payment-form content__inner" data-drupal-selector="nodeshop-order-payment-form" action="#" method="post" id="nodeshop-order-payment-form" accept-charset="UTF-8">
+            <fieldset data-drupal-selector="edit-payment-method" aria-describedby="edit-payment-method--wrapper--description" id="edit-payment-method--wrapper" class="fieldgroup form-composite required js-form-item form-item js-form-wrapper form-wrapper" required="required" aria-required="true">
+                <legend>
+                <span class="fieldset-legend js-form-required form-required">Bezahlmethode</span>
+            </legend>
+            <div class="fieldset-wrapper">
+                        <div id="edit-payment-method" class="form-radios"><div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-payment-method form-item-payment-method">
+                    <input data-drupal-selector="edit-payment-method-invoice" aria-describedby="edit-payment-method--description" type="radio" id="edit-payment-method-invoice" name="payment_method" value="invoice" class="form-radio">
+
+                    <label for="edit-payment-method-invoice" class="option">Pay per invoice</label>
+                </div>
+            <div class="js-form-item form-item js-form-type-radio form-type-radio js-form-item-payment-method form-item-payment-method">
+                    <input data-drupal-selector="edit-payment-method-paypal" aria-describedby="edit-payment-method--description" type="radio" id="edit-payment-method-paypal" name="payment_method" value="paypal" class="form-radio">
+
+                    <label for="edit-payment-method-paypal" class="option">Paypal</label>
+                </div>
+            </div>
+
+                        <div id="edit-payment-method--wrapper--description" class="description">Please choose a payment method.</div>
+                </div>
+            </fieldset>
+            <input autocomplete="off" data-drupal-selector="form-3vbkmmctfswmfxwqasch9zj-jsaha51mo8xh8opnbym" type="hidden" name="form_build_id" value="form-3vbKmmCtfSWMFxWqAscH9zJ_jSAha51mo8xH8oPNbYM">
+            <input data-drupal-selector="edit-nodeshop-order-payment-form-form-token" type="hidden" name="form_token" value="1NWaAvWhCta-jNCOe-xoXQx8X2UFhPnjRDakNSvHPwg">
+            <input data-drupal-selector="edit-nodeshop-order-payment-form" type="hidden" name="form_id" value="nodeshop_order_payment_form">
+            <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input class="button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="proceed" value="proceed to checkout">
+            </div>
+        </form>
+
+    </div>
+    <div class="grid__item one-half">
+
+        {% include 'atoms-paragraph' %}
+
+    </div>
+</div>

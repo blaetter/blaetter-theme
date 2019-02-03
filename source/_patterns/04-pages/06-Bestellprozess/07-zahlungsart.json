@@ -1,0 +1,14 @@
+{
+    "data": {  
+        "title": " <span class=\"text--red\">Order</span> payment",
+        "titleclass": "heading--pagecategory",
+        "title2category": true,
+        "content_left": null,
+        "content":  [
+            {
+                "pattername": "molecules-nodeshop-order-payment-form"
+            }
+        ],
+        "content_right": null
+    }
+}

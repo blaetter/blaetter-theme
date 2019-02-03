@@ -119,6 +119,7 @@ $grid-namespace:            $namespace !default;
             }
         }
     }
+    
 }
 
 
@@ -145,3 +146,11 @@ $grid-namespace:            $namespace !default;
     }
 }
 
+.grid.grid--bordered {
+    > .grid__item {
+        border-right:               1px solid $greyBorder;
+        &:last-child {
+            border-right:           0 none;
+        }
+    }
+}
