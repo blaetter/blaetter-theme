@@ -1,5 +1,10 @@
 <div class="{{ data.class|default('message') }}">
-    <h4>Nullam dictum felis eu pede</h4>
+    {% if data.title != "false" %}
+    <h4>{{ data.title|default('Nullam dictum felis eu pede') }}</h4>
+    {% endif %}
+    {% if data.text %}
+    {{ data.text|raw }}
+    {% else %}
     <p>
         Lorem ipsum dolor sit amet, consectetuer elit. Aenean commodo ligula eget dolor.
     </p>
@@ -8,4 +13,5 @@
         <li>Donec quam felis</li>
         <li>Nulla consequat massa</li>
     </ul>
+    {% endif %}
 </div>

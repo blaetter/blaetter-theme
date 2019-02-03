@@ -390,6 +390,33 @@
 }
 
 
+// simple white box with padding
+@mixin nodeshop_white_box() {
+    background:             $white;
+    padding:                $largeGapPx;
+    margin:                 0 0 $blockPaddingPx 0;
+    > *:first-child {
+        margin-top:         0;
+    }
+    > *:last-child {
+        margin-bottom:         0;
+    }
+}
+@mixin nodeshop-heading-with-edit-link() {
+    a {
+        color:              $linkColor;
+        font-weight:        normal;
+        margin-left:        0.5em;
+        &::before {
+            content:        "\f040";
+            font-family:    "FontAwesome";
+            display:        inline-block;
+            font-size:      0.9em;
+            margin-right:    0.2em;
+        }
+    }
+}
+
 /***************************************************
  * A simple mixin to quickly generate whole media queries from the aliases and
  * conditions defined in `_settings.responsive.scss`.

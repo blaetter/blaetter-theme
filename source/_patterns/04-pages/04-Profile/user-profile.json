@@ -1,0 +1,30 @@
+{
+    "pagetype": "pagetype-three-columns",
+    "data": {  
+        "title": "<span class=\"text--red\">Benutzerkonto</span> Max Mustermann",
+        "titleclass": "heading--article",
+        "category": null,
+        "title2category": true,
+        "content_left":  [
+            {
+                "pattername": "molecules-navigation-user"
+            }
+        ],
+        "content":  [
+            {
+                "pattername": "molecules-user-profile"
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            },{
+                "pattername": null
+            }
+        ],
+        "marginal":  null
+    }
+}

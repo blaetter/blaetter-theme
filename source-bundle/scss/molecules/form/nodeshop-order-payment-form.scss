@@ -1,25 +1,8 @@
-@mixin nodeshop_white_box() {
-    background:             $white;
-    padding:                $largeGapPx;
-    margin:                 $blockPaddingPx 0;
-}
-
 .nodeshop-order-payment-form {
     h2 {
+        @include nodeshop-heading-with-edit-link();
         font-size:              1em;
         margin-top:             0;
-        a {
-            color:              $linkColor;
-            font-weight:        normal;
-            margin-left:        0.5em;
-            &::before {
-                content:        "\f040";
-                font-family:    "FontAwesome";
-                display:        inline-block;
-                font-size:      0.9em;
-                margin-right:    0.2em;
-            }
-        }
     }
     p + h2,
     div + h2 {

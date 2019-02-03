@@ -23,5 +23,9 @@ $block-namespace:              $namespace !default;
     }
 }
 
+#{$block-namespace}.block--white {
+    @include nodeshop_white_box();
+}
+
 
 

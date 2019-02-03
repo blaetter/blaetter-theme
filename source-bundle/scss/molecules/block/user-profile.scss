@@ -1,0 +1,24 @@
+#{$namespace}.palm_user_profile,
+#{$namespace}.user-profile, { 
+    h2 {
+        @include nodeshop-heading-with-edit-link();
+        font-size:              1em;
+        margin-top:             20px;
+    }
+}
+
+
+#{$namespace}.palm_user_profile_block,
+#{$namespace}.user-profile-block, { 
+    @include nodeshop_white_box();
+    margin-top:                 0px;
+    margin-bottom:              30px;
+    h3 {
+        font-size:              0.9em;
+        color:                  $lightestTextGrey;
+        font-weight:            normal;
+        + p {
+            border-bottom:      1px solid $greyBorder;
+        }
+    }
+}
