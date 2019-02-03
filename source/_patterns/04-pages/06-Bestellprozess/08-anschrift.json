@@ -1,0 +1,14 @@
+{
+    "data": {  
+        "title": " <span class=\"text--red\">Order</span> Anschrift",
+        "titleclass": "heading--pagecategory",
+        "title2category": true,
+        "content_left": null,
+        "content":  [
+            {
+                "pattername": "molecules-nodeshop-order-address-form"
+            }
+        ],
+        "content_right": null
+    }
+}

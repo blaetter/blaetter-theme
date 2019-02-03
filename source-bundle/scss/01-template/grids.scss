@@ -142,15 +142,21 @@ $grid-namespace:            $namespace !default;
 .grid.grid--stretch {
     align-items:            stretch;
     > .grid__item {
-        display: flex;
+        //display: flex; // not flex!
     }
 }
 
 .grid.grid--bordered {
     > .grid__item {
         border-right:               1px solid $greyBorder;
+        padding-right:              2em;
+        padding-left:               2em;
         &:last-child {
             border-right:           0 none;
+            padding-right:          0;
+        }
+        &:first-child {
+            padding-left:          $gridGutter;
         }
     }
 }
