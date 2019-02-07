@@ -1,4 +1,4 @@
-.nodeshop-order-payment-form {
+.nodeshop__form {
     h2 {
         @include nodeshop-heading-with-edit-link();
         font-size:              1em;
@@ -28,7 +28,7 @@
             float:          right;
         }
     }
-    .nodeshop_order_address { 
+    .nodeshop_order_address {
         @include nodeshop_white_box();
     }
 }
