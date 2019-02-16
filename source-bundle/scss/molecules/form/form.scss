@@ -1,6 +1,6 @@
 $form-namespace:            $namespace !default;
 
-// form--base is used to give fieldsets the grey background and padding instead of the form 
+// form--base is used to give fieldsets the grey background and padding instead of the form
 #{$form-namespace}form.form--base {
     background-color:                   transparent;
     border:                             0 none;
@@ -37,7 +37,7 @@ $form-namespace:            $namespace !default;
         color:                      $lightestTextGrey;
         margin-bottom:              0;
     }
-    label, 
+    label,
     .legend,
     .fieldset-legend {
         display:        block;
@@ -45,9 +45,9 @@ $form-namespace:            $namespace !default;
         margin-bottom:  0.4em;
         margin-top:     0;
         //@include getRem('margin-top', 8px); // inkl. Fontspace = 12px
-        
+
     }
-        
+
     .form-check-label {
         font-weight:    normal;
         display:        flex;
@@ -57,12 +57,12 @@ $form-namespace:            $namespace !default;
             @include getRem('min-height', $formInputHeightPalmPx);
         }
     }
-    
-    
+
+
     input[type="checkbox"],
     input[type="radio"] {
         margin:                 0px 0.3em 0;
-        padding:                0; 
+        padding:                0;
         line-height:            normal;
         width:                  auto;
         height:                 auto;
@@ -72,24 +72,24 @@ $form-namespace:            $namespace !default;
             outline-offset:     -2px;
         }
     }
-    
-    input[disabled], 
-    input[disabled="disabled"], 
-    select[disabled], 
-    select[disabled="disabled"], 
-    textarea[disabled], 
+
+    input[disabled],
+    input[disabled="disabled"],
+    select[disabled],
+    select[disabled="disabled"],
+    textarea[disabled],
     textarea[disabled="disabled"] {
         cursor:                 not-allowed;
         background-color:       $grey;
         opacity:                1;
         color:                  $lightestTextGrey;
     }
-    
-    input[readonly], 
-    input[readonly="readonly"], 
-    select[readonly], 
-    select[readonly="readonly"], 
-    textarea[readonly], 
+
+    input[readonly],
+    input[readonly="readonly"],
+    select[readonly],
+    select[readonly="readonly"],
+    textarea[readonly],
     textarea[readonly="readonly"] {
         cursor:                 default ;
         background-color:       $grey;
@@ -104,8 +104,8 @@ $form-namespace:            $namespace !default;
             box-shadow:         none;
         }
     }
-     
-    
+
+
 
     // Formgroups with success or error status
     .has-success {
@@ -114,17 +114,17 @@ $form-namespace:            $namespace !default;
     .has-error {
         @include color-inputelement($textErrorColor, #FFF8F7);
     }
-    .validation-feedback { 
+    .validation-feedback {
         @include fontsize($smallest-font-size);
     }
-    
+
     .form-group {
         @include getRem('margin-bottom', $formgoupBottomMarginPx);
         max-width:              $formfieldMaxWidth;
         display:                block;
         &:first-child {
-            label, 
-            .label, 
+            label,
+            .label,
             .legend {
                 margin-top:     0;
             }
@@ -151,19 +151,19 @@ $form-namespace:            $namespace !default;
             }
         }
     }
-    
+
     .datepicker-icon-wrapper {
         background-color:       white;
         $icon-width:            2em;
-        position:               relative; 
+        position:               relative;
         display:                inline-block;
         width:                  100%;
         max-width:              $formfieldMaxWidth;
         input,
         input[type="date"],
         .datepicker-input {
-            padding-right:      $icon-width;    
-            background-color:   $white;    
+            padding-right:      $icon-width;
+            background-color:   $white;
             cursor:             pointer;
             background-color:   transparent;
             position:           relative;
@@ -210,7 +210,7 @@ $form-namespace:            $namespace !default;
         margin:             0;
         text-align:         right;
     }
-    
+
     .required-symbol {
         color:              $red;
     }
@@ -241,7 +241,7 @@ $form-namespace:            $namespace !default;
             padding:        0;
         }
     }
-    .form-item, 
+    .form-item,
     .form-actions {
         margin-top:         1em;
         margin-bottom:      1em;
@@ -260,7 +260,7 @@ $form-namespace:            $namespace !default;
         content: '';
         vertical-align: super;
         display: inline-block;
-        background-image: url(../../images/required.svg);
+        background-image: url(../source/images/required.svg);
         background-repeat: no-repeat;
         background-size: 6px 6px;
         width: 6px;
@@ -270,15 +270,15 @@ $form-namespace:            $namespace !default;
     }
 }
 
-// display the label beside the input, using css table classes 
+// display the label beside the input, using css table classes
 .form--prependlabel {
     @include form--prependlabel();
 }
 
-#{$form-namespace}.form-actions { 
+#{$form-namespace}.form-actions {
     @include clearfix();
     @include getRem('margin-top', $formgoupBottomMarginPx);
-    @include media-query('lap-and-up') {  
+    @include media-query('lap-and-up') {
         display:                flex;
         justify-content:        flex-end;
         align-items:            center;
@@ -286,16 +286,16 @@ $form-namespace:            $namespace !default;
         button,
         .button {
             width:              auto;
-            float:              none;   
-            margin-bottom:      0em;     
+            float:              none;
+            margin-bottom:      0em;
             margin-left:        1em;
         }
     }
-    @include media-query('palm') {  
+    @include media-query('palm') {
         display:                    block;
         > * {
             width:                  100%;
-             margin-bottom:         1em; 
+             margin-bottom:         1em;
         }
     }
     .form-helptext {
@@ -312,7 +312,7 @@ $form-namespace:            $namespace !default;
     }
 }
 @include media-query('lap-and-up') {
-    #{$form-namespace}form .grid + .form-actions { 
+    #{$form-namespace}form .grid + .form-actions {
         margin-top:                 0;
     }
 }
@@ -336,7 +336,7 @@ $form-namespace:            $namespace !default;
 
 #{$form-namespace}textarea {
     overflow:               auto;
-    line-height:            $base-line-height; 
+    line-height:            $base-line-height;
 }
 /*
 #{$form-namespace}select:not([multiple]) {
@@ -373,7 +373,7 @@ $form-namespace:            $namespace !default;
             top:                            18%;
         }
         padding-left:                       9em !important;
-        padding-top:                        1.5em !important;                
+        padding-top:                        1.5em !important;
         .inner {
             display:                        block;
         }
