@@ -27,6 +27,10 @@
         .nodeshop_price {
             float:          right;
         }
+        &.form-item {
+            margin-top: $mediumGapPx;
+            margin-bottom: 0;
+        }
     }
     .nodeshop_order_address {
         @include nodeshop_white_box();
