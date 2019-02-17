@@ -144,6 +144,9 @@ $grid-namespace:            $namespace !default;
     > .grid__item {
         //display: flex; // not flex!
     }
+    .teaser {
+        height:             100%;
+    }
 }
 
 .grid.grid--bordered {

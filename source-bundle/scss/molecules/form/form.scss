@@ -31,7 +31,8 @@ $form-namespace:            $namespace !default;
             margin-bottom:          0em;
         }
     }
-    .description {
+    .description,
+    .form-item .description {
         @include fontsize($smallest-font-size);
         display:                    block;
         color:                      $lightestTextGrey;
