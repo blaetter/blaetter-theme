@@ -64,6 +64,9 @@ $swiper-articleimage--minHeight-desktopPx:    $pageWidthDesk * 16 / 9;
             color:          $white;
             margin:         0;
             font-size:      6vw;
+            @include media-query('desk'){
+                font-size:  80px;
+            }
             line-height:    1.2;
             max-width:      1170px;
             a {
@@ -73,6 +76,9 @@ $swiper-articleimage--minHeight-desktopPx:    $pageWidthDesk * 16 / 9;
         .author {
             color:          $greyAuthor;
             font-size:      3vw;
+            @include media-query('desk'){
+                font-size:  40px;
+            }
             line-height:    1.2;
             font-family:    'droid-sans', sans-serif, Arial;
         }
