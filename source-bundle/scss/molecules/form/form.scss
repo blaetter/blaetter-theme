@@ -244,8 +244,8 @@ $form-namespace:            $namespace !default;
     }
     .form-item,
     .form-actions {
-        margin-top:         1em;
-        margin-bottom:      1em;
+        margin-top:         $mediumGapPx;
+        margin-bottom:      $mediumGapPx;
         &:first-child {
             margin-top:    0;
         }
