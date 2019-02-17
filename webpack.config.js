@@ -61,7 +61,7 @@ module.exports = {
 	],
 	module: {
 		// @see https://github.com/mapbox/mapbox-gl-js/issues/4359#issuecomment-303880888
-		noParse: /(mapbox-gl)\.js$/,
+		//noParse: /(mapbox-gl)\.js$/,
 		rules: [
 			{
 				test: /\.s?css$/,
@@ -72,13 +72,16 @@ module.exports = {
 					{
 						loader: "css-loader",
 						options: {
-							minimize: true,
 							sourceMap: true
 						}
 					},
-					{
-						loader: "resolve-url-loader"
-					},
+					// {
+					// 	loader: "resolve-url-loader",
+					// 	options: {
+					// 		engine: 'rework',
+					// 		debug: true
+					// 	}
+					// },
 					{
 						loader: "sass-loader",
 						options: {
@@ -87,6 +90,30 @@ module.exports = {
 					}
 				]
 			},
+            {
+                test: /\.js$/,
+                exclude: [
+                    /node_modules/,
+                    /source/
+                ],
+                loader: 'eslint-loader',
+                options: {
+                    // eslint options (if necessary)
+                }
+            },
+            {
+                test: /\.js$/, // Check for all js files
+                exclude: [
+                    /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
+                    /source-bundle/
+                ],
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['babel-preset-env']
+                    }
+                }
+            },
 			{
 				test: /\.(woff2?|ttf|eot|svg|png|gif|jpg)$/,
 				use: [
