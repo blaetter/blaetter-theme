@@ -143,6 +143,7 @@ $grid-namespace:            $namespace !default;
     align-items:            stretch;
     > .grid__item {
         //display: flex; // not flex!
+        margin-bottom:      $gridGutter;
     }
     .teaser {
         height:             100%;
