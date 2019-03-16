@@ -1,9 +1,9 @@
 /***************************************************
- * OUR PAGE SETTINGS 
+ * OUR PAGE SETTINGS
  */
 
 
-/* We can use a wrapperclass to make unique rules and 
+/* We can use a wrapperclass to make unique rules and
  * avoid conflicts with existing older css classes.
  *
  *   <div class="our-namespace-to-isolate-the-rules">
@@ -20,27 +20,27 @@ $namespace:                       null; //".mynamespace "; // to use as a wrappe
 //$header-namespace:              null;
 // [...]
 
-// Base Colors  
-$white:                         #FFFFFF; 
-$black:                         #000000; 
+// Base Colors
+$white:                         #FFFFFF;
+$black:                         #000000;
 $red:                           #E71835;
 $blue:                          #086D9A;
 $bluelight:                     $blue;
-$grey:                          #f2f2f2;  
-$greyDark:                      #e3e3e3; 
-$greyDisabled:                  #D5D5D5;  
+$grey:                          #f2f2f2;
+$greyDark:                      #e3e3e3;
+$greyDisabled:                  #D5D5D5;
 $greyBgMarginal:                $greyDark; // Marginal Background Color
-// Special Colors 
+// Special Colors
 $lightestTextGrey:              #777777; // quote
 $greyBorder:                    #CCCCCC;
-$greyInputBorder:               $greyBorder; 
+$greyInputBorder:               $greyBorder;
 $greySource:                    $lightestTextGrey;
-$greySourceDesk:                darken($white, 12%); 
+$greySourceDesk:                darken($white, 12%);
 $greyAuthor:                    #aaaaaa;
 $blueAuthor:                    #4ac6ff;
 $greyAnzeige:                   $lightestTextGrey;
 $page-background-color:         $grey;
-$labelColorLight:               $lightestTextGrey; 
+$labelColorLight:               $lightestTextGrey;
 // form validation colors:
 $formElementBorderColor:        $greyInputBorder;
 $formgoupBottomMarginPx:        14px;
@@ -63,8 +63,8 @@ $contentWidthDeskPx:            940px; // max width for inner content units
 $contentWidthDeskArticlePx:     700px;
 $gridGutter:                    1.250rem; // 20px_16px;
 $blockPaddingPx:                $largeGapPx; // Grey Teaser...
-$pagePaddingPx:                 40px; 
-$pagePaddingPalmPx:             20px; 
+$pagePaddingPx:                 40px;
+$pagePaddingPalmPx:             20px;
 $teaserInnerPadding:            $largeGapPx;
 $blockBottomMarginPx:           30px; // Teaser...
 $teaserBorderedPaddingPx:       $mediumGapPx;
@@ -74,8 +74,8 @@ $breakointPalm:                 (720px / 16px) * 1rem;
 $breakointDesk:                 ($pageWidthDeskPx / 16px) * 1rem;
 $articleImageMaxHeightPx:       468px;
 $pageWidthDesk:                 $breakointDesk;
-$formInputHeightPx:             40px; 
-$formInputHeightPalmPx:         50px; 
+$formInputHeightPx:             40px;
+$formInputHeightPalmPx:         50px;
 $btn-heightPx:                  $formInputHeightPx;
 $btn-heightPalmPx:              $formInputHeightPalmPx;
 $formItemPaddingPx:             6px;
@@ -85,26 +85,27 @@ $easyPopupPaddingPx:            $smallGapPx;
 $formPaddingPx:                 $smallGapPx;
 $formfieldMaxWidth:             none;
 $blockImageMarginBottomPx:      $smallGapPx;
-$channelNavigationElementPadingPx:   10px; // h=42px 
+$channelNavigationElementPadingPx:   10px; // h=42px
 $accordionTitleElementPaddingPx: $channelNavigationElementPadingPx;
 $heroSwiperHeightPx:            215px; //235px;
 $imageframePaddingRem:          1.25rem;
 $tablecellPaddingEm:            0.5em; // Table
+$borderRadius:                  4px; // border radius for buttons etc.
 
 // Font
-$base-font-family:              'droid-sans', Arial, sans-serif; 
+$base-font-family:              'droid-sans', Arial, sans-serif;
 $serif-font-family:             'droid-serif', serif;
 $baseTextColor:                 #000000;
 $fontInactiveColor:             #999999;
-$linkColor:                     $blue; 
+$linkColor:                     $blue;
 $inlineBottomGutter:            0.7em; // Margin bottom for paragraphs, lists, ...
 $base-font-size:                18px;
 $smallest-font-size:            12px;
 $bigFontSizePx:                 20px; // some big text blocks
-$base-line-height:              30px; 
+$base-line-height:              30px;
 $font-size-h1:                  60px;
 $line-height-h1:                75px;
-$font-size-h2:                  40px; 
+$font-size-h2:                  40px;
 $line-height-h2:                1.5em;
 $font-size-h3:                  1.2em;
 $line-height-h3:                1.4;
