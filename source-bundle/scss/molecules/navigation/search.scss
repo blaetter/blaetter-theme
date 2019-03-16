@@ -7,7 +7,7 @@ $pageSearchFontColor:                $white;
 #{$page-search-namespace}#page-search {
     @include clearfix();
     display:                        none;
-    padding:                        $gridGutter;
+    padding:                        $pagePaddingPx;
     //@include box-shadow(0px, 4px, 3px, -1px, #eaeaea);
     display:                        none;
     background-color:               $pageSearchBgColor;
