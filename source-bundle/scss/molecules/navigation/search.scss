@@ -1,0 +1,40 @@
+/* DESKTOP NAVIGATION */
+$page-search-namespace:         $namespace !default;
+$pageSearchBorderColor:              rgba(255,255,255,0.5);
+$pageSearchBgColor:                  $grey;
+$pageSearchFontColor:                $white;
+
+#{$page-search-namespace}#page-search {
+    @include clearfix();
+    display:                        none;
+    padding:                        $gridGutter;
+    //@include box-shadow(0px, 4px, 3px, -1px, #eaeaea);
+    display:                        none;
+    background-color:               $pageSearchBgColor;
+    position:                       relative;
+    z-index:                        2;
+    left:                           0;
+    top:                            auto;
+    height:                         auto;
+    visibility:                     visible;
+    overflow:                       hidden;
+    width:                          100%;
+    font-family:                    droid-sans,Arial,sans-serif;
+    font-size:                      15px;
+    &.opened {
+        display:                    block;
+    }
+    @media print {
+        display:                        none !important;
+    }
+    @include media-query(lap-and-up) {
+
+    }
+    @include media-query(palm) {
+
+    }
+}
+
+
+
+
