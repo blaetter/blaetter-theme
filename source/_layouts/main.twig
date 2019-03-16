@@ -1,22 +1,25 @@
-    <div class="page-wrapper">   
-                    
+    <div class="page-wrapper">
+
         <header id="header">
             {% block global_header %}
                 {% include "organisms-header" %}
+            {% endblock %}
+            {% block search %}
+                {% include "molecules-search" %}
             {% endblock %}
             {% block navigation_primary %}
                 {% include "molecules-navigation-primary" %}
             {% endblock %}
         </header>
-            
+
         {% block content %}
             {#% block breadcrumb %}{% endblock %#}
         {% endblock %}
-            
+
         <footer id="footer">
             {% block footer %}
                 {% include "organisms-footer" %}
             {% endblock %}
         </footer>
-     
+
     </div><!--/page-wrapper-->
