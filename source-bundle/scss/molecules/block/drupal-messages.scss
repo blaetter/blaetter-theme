@@ -4,7 +4,20 @@ $drupal-messages-namespace:               $namespace !default;
 
 #{$drupal-messages-namespace}.system-messages {
     position:           relative;
-    padding:             $pagePaddingPx/2 0;
     width:              100%;
     height:             auto;
+    .messages:first-child {
+        margin-top:    $pagePaddingPx/2;
+    }
+    .messages:last-child {
+        margin-bottom: $pagePaddingPx/2;
+    }
+}
+
+.content-wrapper-homepage {
+    #{$drupal-messages-namespace}.system-messages {
+        .messages:last-child {
+            margin-bottom: $pagePaddingPx*1.5;
+        }
+    }
 }
