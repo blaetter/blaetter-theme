@@ -1,11 +1,11 @@
     {% extends "main.twig" %}
 
     {% block pagetitle %}{{ data.title }}{% endblock %}
-    
+
     {#% block breadcrumb %}{% endblock %#}
-    
+
     {% block content %}
-    
+
     {% if data.hero %}
         {% for block in data.hero %}
         {% include block.pattername with { "data": block } %}
@@ -24,7 +24,7 @@
         </h1>
         {% endif %}
 
-        
+
 
         <div class="grid">
 
@@ -51,7 +51,7 @@
 
         </div>
     </div>
-    
+
 
 
 
