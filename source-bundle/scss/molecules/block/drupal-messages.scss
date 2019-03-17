@@ -1,0 +1,10 @@
+$drupal-messages-namespace:               $namespace !default;
+
+/* drupal messages container */
+
+#{$drupal-messages-namespace}.system-messages {
+    position:           relative;
+    padding:             $pagePaddingPx/2 0;
+    width:              100%;
+    height:             auto;
+}
