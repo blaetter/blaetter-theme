@@ -1,0 +1,37 @@
+$bonus-namespace:              $namespace !default;
+
+// The base bonus element
+#{$bonus-namespace}.nodeshop-bonus {
+    .nodeshop-bonus-node {
+        @include clearfix();
+        margin:     $gridGutter 0;
+        article {
+            h2 {
+                margin-top: 0;
+            }
+            div {
+                display: flex;
+            }
+            .field--name-field-primary-picture {
+                max-width:  200px;
+                margin-right: $gridGutter;
+            }
+            margin-bottom: $gridGutter;
+        }
+    }
+    .btn {
+        width:      100%;
+        height:     auto;
+    }
+    .nodeshop-bonus-footer {
+        .btn {
+            @include media-query(lap-and-up) {
+                width:  auto;
+            }
+        }
+    }
+}
+
+
+
+
