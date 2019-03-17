@@ -32,7 +32,7 @@
                     padding-bottom: $blockBottomMarginPx;
                     margin-bottom: $blockBottomMarginPx;
                 }
-            }       
+            }
             td {
                 @include media-query('lap-and-up') {
                     padding-right:  30px;
@@ -40,7 +40,7 @@
                     padding-bottom: 12px;
                     &:last-child {
                         padding-right:  0px;
-                    } 
+                    }
                 }
                 @include media-query('palm') {
                     padding-top:    0;
@@ -49,6 +49,9 @@
                 }
                 &:nth-child(2) {
                     width: 100%;
+                }
+                &:nth-child(4) {
+                    position: relative;
                 }
             }
             h2 {
@@ -64,7 +67,7 @@
             }
         }
         .form-number {
-            max-width: 4em;
+            width: 4em;
         }
         .price,
         .total-title {
@@ -80,6 +83,31 @@
         @include media-query('palm') {
             margin-top: 1em;
             text-align: center;
+        }
+    }
+    .form-item-cart-fields-0-quantity {
+        padding-right:  40px;
+    }
+    .nodeshop_cart_remove_item {
+        background:     $greyBorder;
+        color:          $white;
+        border:         1px solid $greyBorder;
+        border-radius:  24px;
+        width:          24px;
+        height:         24px;
+        font-size:      24px;
+        font-weight:    bold;
+        display:        block;
+        line-height:    23px;
+        text-align:     center;
+        text-transform: uppercase;
+        position:       absolute;
+        top:            20px;
+        left:           4em;
+        &:hover {
+            text-decoration:    none;
+            background:         $greyDark;
+            border-color:       $greyDark;
         }
     }
 }
