@@ -5,15 +5,46 @@ $header-namespace:              $namespace !default;
 #header#{$header-namespace} {
     position:                   relative;
     background-color:           $white;
-    @include media-query(palm) {
-        &.fixed {
-            position:           absolute;
-            top:                0;
-            left:               0;
-            z-index:            1000;
-            width:              100vw;
-            height:             105vh;
-            overflow-y:         scroll;
+    .logo {
+        display:                flex;
+        .palm {
+            width:              40px;
+        }
+        .claim {
+            margin-left:        $pagePaddingPx/3;
+            width:              120px;
+            @include media-query('palm') {
+                display:        none;
+            }
+        }
+        .tongue {
+            display:            none;
+        }
+    }
+    &.fixed {
+        height:             60px;
+        @include fontsize($base-font-size*0.8);
+        line-height:        $base-line-height / $base-font-size * 0.8;
+        transition:         height 0.5s ease-out;
+        transition:         line-height 0.5s ease-out;
+        transition:         font-size 0.5s ease-out;
+        position:           fixed;
+        top:                0;
+        z-index:            1000;
+        width:              100%;
+        max-width:          $pageWidthDesk;
+        margin:             0 auto;
+        .logo {
+            .palm {
+                transition: width 0.5s ease-out;
+                width:              30px;
+            }
+            .claim {
+                display:              none;
+            }
+            .tongue {
+                display:            none;
+            }
         }
     }
 }

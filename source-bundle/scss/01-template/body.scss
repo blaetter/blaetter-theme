@@ -7,6 +7,9 @@ body#{$body-namespace} {
     background-color:           $white;
     @include fontsize($base-font-size);
     line-height:        $base-line-height / $base-font-size; // 1.429; // 20px_16px
+    &.fixed {
+        padding-top:60px;
+    }
 }
 
 
