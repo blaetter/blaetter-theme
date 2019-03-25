@@ -1,5 +1,6 @@
 // Our global page header
 $header-namespace:              $namespace !default;
+$headerTransitionTimespan:      0.25s;
 
 #{$header-namespace}#header,
 #header#{$header-namespace} {
@@ -25,25 +26,61 @@ $header-namespace:              $namespace !default;
         height:             60px;
         @include fontsize($base-font-size*0.8);
         line-height:        $base-line-height / $base-font-size * 0.8;
-        transition:         height 0.5s ease-out;
-        transition:         line-height 0.5s ease-out;
-        transition:         font-size 0.5s ease-out;
+        transition:         height $headerTransitionTimespan ease-out;
+        transition:         line-height 0$headerTransitionTimespan ease-out;
+        transition:         font-size $headerTransitionTimespan ease-out;
         position:           fixed;
-        top:                0;
         z-index:            1000;
         width:              100%;
         max-width:          $pageWidthDesk;
         margin:             0 auto;
         .logo {
             .palm {
-                transition: width 0.5s ease-out;
-                width:              30px;
+                transition: width $headerTransitionTimespan ease-out;
+                display:    block;
+                width:      30px;
             }
             .claim {
-                display:              none;
+                display:    none;
             }
             .tongue {
-                display:            none;
+                height:     0;
+                transition: visibility $headerTransitionTimespan ease-out;
+            }
+        }
+    }
+}
+
+.path-frontpage {
+    #{$header-namespace}#header,
+    #header#{$header-namespace} {
+        .logo {
+            @include media-query('lap-and-up') {
+                .palm {
+                    display:        none;
+                }
+                .claim {
+                    display:        none;
+                }
+                .tongue {
+                    display:        block;
+                    position:       absolute;
+                    top:            0;
+                    height:         180px;
+                    max-height:     180px;
+                    z-index:        1001;
+                }
+            }
+        }
+        &.fixed {
+            .logo {
+                .palm {
+                    display:    block;
+                }
+                .tongue {
+                    top:     -250px;
+                    transition: top $headerTransitionTimespan*2 linear;
+                }
             }
         }
     }
