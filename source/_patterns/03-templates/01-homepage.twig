@@ -1,9 +1,11 @@
     {% extends "main.twig" %}
 
+    {% set body_class = 'path-frontpage' %}
+
     {% block pagetitle %}{{ data.title }}{% endblock %}
-    
+
     {% block content %}
-    
+
     <main class="content-wrapper-homepage">
         {% if data.title %}
         <h1 class="{{ data.titleclass }}">{{ data.title }}</h1>
@@ -29,9 +31,4 @@
             </div><!-- /grid__item -->
         </div>
     </main>
-    
-
-
-
     {% endblock %}
-
