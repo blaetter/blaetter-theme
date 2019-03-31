@@ -1,10 +1,15 @@
 {
     "pagetype": "pagetype-three-columns",
-    "data": {  
+    "data": {
         "title": "<span class=\"text--red\">Ausgabe</span> Oktober 2018",
         "titleclass": "heading--pagecategory",
         "title2category": true,
         "author": null,
+        "content_left": [
+            {
+                "pattername": "molecules-block-palm-local-tasks"
+            }
+        ],
         "content":  [
             {
                 "pattername": "molecules-aktuelle-ausgabe",

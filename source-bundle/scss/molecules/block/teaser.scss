@@ -85,7 +85,7 @@ $teaser-namespace:              $namespace !default;
             font-weight:            bold;
         }
         @include media-query('palm') {
-            .image { 
+            .image {
                 width:          30vw;
                 height:         30vw;
                 float:          left;
@@ -152,7 +152,7 @@ $teaser-namespace:              $namespace !default;
             float:                  none;
             width:                  100%;
             img {
-                min-height:             225px; // 
+                min-height:             225px; //
             }
         }
         .heading, h2, h3 {
@@ -189,7 +189,7 @@ $teaser-namespace:              $namespace !default;
             flex-direction:     column;
         }
         .author {
-            
+
             a {
                 color:          $blueAuthor;
             }
@@ -236,7 +236,7 @@ $teaser-namespace:              $namespace !default;
             font-size:      1.3em;
         }
         .author {
-            font-size:      1.1em; 
+            font-size:      1.1em;
         }
     }
 }

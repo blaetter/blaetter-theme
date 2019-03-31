@@ -4,6 +4,7 @@
         "title": "Wider den Wachstumswahn: Degrowth als konkrete Utopie",
         "titleclass": "heading--article",
         "author": "Barbara Muraca",
+        "category": "<span class=\"text--red\">Ausgabe</span> Dezember 2019",
         "content":  [
             {
                 "pattername": "atoms-articleinfo",
@@ -86,6 +87,11 @@
                         "imageurl": "https://picsum.photos/300/169/?image=448"
                     }
                 ]
+            }
+        ],
+        "content_left": [
+            {
+                "pattername": "molecules-block-palm-local-tasks"
             }
         ],
         "marginal":  [
