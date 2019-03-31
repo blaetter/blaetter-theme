@@ -38,3 +38,37 @@ $searchfieldBorderColor:    $blue;
         padding:            16px;
     }
 }
+
+.search-form {
+    .form-wrapper {
+        display:            flex;
+        label {
+            display:            none;
+        }
+        .form-item {
+            display:            block;
+            width:              100%;
+            background:         $white;
+            border:             2px solid $searchfieldBorderColor;
+            height:             $searchFieldHeight;
+            color:              $black;
+            min-height:         auto;
+            overflow:           hidden;
+            input {
+                padding:        8px 16px;
+                border:         none;
+            }
+        }
+        .form-submit{
+            height:             $searchFieldHeight;
+            background:         $searchfieldBorderColor;
+            color:              $white;
+            text-transform:     uppercase;
+            border:             1px solid $searchfieldBorderColor;
+            font-weight:        700;
+            font-size:          $base-font-size;
+            padding:            8px 16px;
+            border-radius:      0;
+        }
+    }
+}
