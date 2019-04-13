@@ -3,20 +3,18 @@
 // associated portal base url
 //
 export function portal_url() {
-	return document.getElementById('echo-behavior-js').src.replace(
-		/\/css\/.*/, '');
+	return '/themes/contrib/palm/bundle/';
 }
 
 //
 // base URL of this patternlab instance
 //
 export function jsbase() {
-	return document.getElementById('echo-behavior-js').src.replace(
-		/js\/[^\/]+$/, '');
+	return '/themes/contrib/palm/bundle/'
 }
 
 export function set_webpack_publicpath() {
-	window.__webpack_public_path__ = jsbase() + "/";
+	window.__webpack_public_path__ = '/themes/contrib/palm/bundle/';
 }
 
 //
@@ -29,7 +27,7 @@ export function is_palm() {
 
 //
 // get page two-char language code
-// 
+//
 export function languageCode() {
 	var languageCode = document.documentElement.lang || 'de';
 	var languageCodeShort = languageCode.substring(0, 2);
@@ -111,10 +109,10 @@ export function isElementVisible(el) {
 	var rect     = el.getBoundingClientRect(),
     vWidth   = window.innerWidth || doc.documentElement.clientWidth,
     vHeight  = window.innerHeight || doc.documentElement.clientHeight,
-    efp      = function (x, y) { return document.elementFromPoint(x, y) };     
+    efp      = function (x, y) { return document.elementFromPoint(x, y) };
 
     // Return false if it's not in the viewport
-    if (rect.right < 0 || rect.bottom < 0 
+    if (rect.right < 0 || rect.bottom < 0
         || rect.left > vWidth || rect.top > vHeight)
     	return false;
 
