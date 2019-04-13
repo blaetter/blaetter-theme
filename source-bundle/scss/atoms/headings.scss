@@ -24,7 +24,11 @@ $heading-namespace:       $namespace !default;
     @include headline1();
 }
 #{$heading-namespace}h2 {
-   @include headline2();
+    @include headline2();
+    &.subtitle {
+       font-weight:     normal;
+       margin-top:      0.5em;
+    }
 }
 
 #{$heading-namespace}h3 {
