@@ -1,4 +1,7 @@
 .field--name-body {
     font-family:    $serif-font-family;
     margin-bottom:  40px;
+    h2 {
+        font-size: $font-size-h2 * 0.65;
+    }
 }
