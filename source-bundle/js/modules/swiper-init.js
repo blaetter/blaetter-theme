@@ -5,7 +5,7 @@ import * as BLAETTER from 'blaetter';
  */
 export function init(callback) {
 
-	if (!$('.swiper,.swiper-wrapper').length) {
+	if (!$('.swiper').length) {
 		return false;
 	}
 
@@ -40,21 +40,25 @@ export function slidesperview(el, options) {
 export function apply(Swiper) {
 
 	// SWIPER: galleryselect
-	
-	var archiveindexSelector = '.archive-index.swiper';
+
+	var archiveindexSelector = '.swiper.archive-index';
 	var archiveindexOptions = {
 		grabCursor: true,
 		slideToClickedSlide: true,
 		direction: 'horizontal',
-		slidesPerView: 12,
-		slidesPerGroup: 12,
+		slidesPerView: 6,
+		slidesPerGroup: 5,
 		spaceBetween: 24,
+		slidesOffsetBefore: 12,
+		slidesOffsetAfter: 12,
 		loop: false,
 		preloadImages: false,
-		touchReleaseOnEdges: true, 
+		touchReleaseOnEdges: true,
 		autoHeight: true,
-		touchEventsTarget: 'swiper-wrapper',  // do not touch our navigation buttons
+		touchEventsTarget: 'wrapper',  // do not touch our navigation buttons
 		watchOverflow: true,
+		wrapperClass: 'view-content',
+		freeMode: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -62,18 +66,18 @@ export function apply(Swiper) {
 		breakpoints: {
 			1000: {
 				// palm
-				slidesPerView: 6,
-				slidesPerGroup: 6,
+				slidesPerView: 3,
+				slidesPerGroup: 3,
 			},
 			420: {
 				// smallest
-				slidesPerView: 4,
-				slidesPerGroup: 4,
+				slidesPerView: 2,
+				slidesPerGroup: 2,
 			},
 		}
 	};
 	new Swiper(archiveindexSelector, archiveindexOptions);
-	
+
 
 	// SWIPER: galleryselect
 	/*
@@ -87,7 +91,7 @@ export function apply(Swiper) {
 		spaceBetween: 24,
 		loop: true,
 		preloadImages: false,
-		touchReleaseOnEdges: true, 
+		touchReleaseOnEdges: true,
 		touchEventsTarget: 'wrapper',  // do not touch our navigation buttons
 		watchOverflow: true,
 		lazy: {
@@ -132,7 +136,7 @@ export function apply(Swiper) {
 		slidesPerGroup: 1,
 		autoHeight: true,
 		spaceBetween: 24,
-		touchReleaseOnEdges: true, 
+		touchReleaseOnEdges: true,
 		touchEventsTarget: 'wrapper', // do not touch our navigation buttons
 		hashNavigation: {
 			watchState: false,
@@ -188,5 +192,5 @@ export function apply(Swiper) {
 	};
 	new Swiper(galleryArticleimageSelector, galleryArticleimageOptions);
 	*/
-	
+
 }
