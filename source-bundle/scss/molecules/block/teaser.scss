@@ -217,7 +217,8 @@ $teaser-namespace:              $namespace !default;
         }
     }
     &.teaser--aktuelle-ausgabe {
-        .image {
+        img {
+            border:                     1px solid $greyBorder;
         }
         .inner {
             display:                    table; // buttons in der flucht
