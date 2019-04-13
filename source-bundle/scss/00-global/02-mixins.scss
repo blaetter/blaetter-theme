@@ -3,7 +3,7 @@
  *  some little präfix mixins
  *
  */
- 
+
 @mixin box-sizing($box-model) {
           box-sizing: $box-model;
 }
@@ -29,7 +29,7 @@
  *  px to rem functions
  *
  */
- 
+
 @mixin fontsize($fontSizePx: 14px, $base: 16px) {
     font-size:          ($fontSizePx / $base) * 1rem;
 }
@@ -68,7 +68,7 @@
  *  Headings
  *
  */
- 
+
 @mixin heading--reset() {
     font-weight:            bold;
     color:                  $baseTextColor;
@@ -150,7 +150,7 @@
 
 @mixin fontImageCaption() {
     font-size:              $smallest-font-size;
-    font-weight:            bold; 
+    font-weight:            bold;
     line-height:            1.4em;
     margin-bottom:          1.2em;
 }
@@ -180,9 +180,9 @@
 }
 
 /***************************************************
- * 
+ *
  *  Source / Copyright
- * 
+ *
  */
 @mixin source--base() {
     color:              $greySource;
@@ -195,14 +195,14 @@
 
 
 /***************************************************
- * 
+ *
  *  List mixins
- * 
+ *
  */
 
 
 @mixin list--bullet-item() {
-    // i am a li 
+    // i am a li
     line-height:            1.3em;
     margin-bottom:          0.5em;
     margin-left:            0;
@@ -215,14 +215,14 @@
         color:              $black;
         margin-left:        -1.3em;
         display:            inline-block;
-        float:              none; 
+        float:              none;
         height:             1em;
         line-height:        1em;
         font-family:        FontAwesome;
         height:             1em;
         width:              1.3em;
     }
- 
+
 }
 
 // Basic horizontal lists
@@ -266,7 +266,7 @@
         &:nth-child(odd) {
             background-color:   $grey;
         }
-    } 
+    }
 }
 
 @mixin list--bordered() {
@@ -277,7 +277,7 @@
         &:last-child {
             border-bottom:      0 none;
         }
-    } 
+    }
 }
 
 @mixin list--add-disc() {
@@ -294,7 +294,7 @@
     margin-left:  0;
     padding: 0;
     list-style: none;
-    > li {    
+    > li {
         margin-left:            0;
         padding-left:           1em;
         &::before {
@@ -312,7 +312,7 @@
             width:              1.3em;
             text-indent:        0;
         }
-    } 
+    }
 }
 
 @mixin list--zebra() {
@@ -321,7 +321,7 @@
         &:nth-child(odd) {
             background-color:   $grey;
         }
-    } 
+    }
 }
 
 @mixin list--no-arrows() {
@@ -442,9 +442,9 @@
         $condition: nth($breakpoint, 2);
         // If the media query we’ve specified has an alias and a condition...
         @if $mq == $alias and $condition {
-            $breakpoint-found: true; 
-            
-            // note: 
+            $breakpoint-found: true;
+
+            // note:
             // Opera Browser seems to have 530px width in print layout (so it turns tomobile layout)
             // so we have to add screen and print mediatype
             @if $alias == "palm" {
@@ -472,7 +472,7 @@
 /***************************************************
  *
  *   FORM
- *   
+ *
  */
 
 @mixin formgroup--prepend-label() {
@@ -487,7 +487,7 @@
         border:                     1px solid $formElementBorderColor;
         border-right:               0 none;
         margin-top:                 0;
-        line-height:                1rem; 
+        line-height:                1rem;
         @include getRem('min-height', $btn-heightPx);
         @include media-query('palm') {
             @include getRem('min-height', $btn-heightPalmPx);
@@ -505,7 +505,7 @@
     @include getRem('padding', $formPaddingPx);
     padding-bottom:                 1.1rem;
     background-color:               $grey;
-    border:                         1px solid $grey; // Barrierefreiheit 
+    border:                         1px solid $grey; // Barrierefreiheit
 }
 
 
@@ -513,12 +513,12 @@
 /***************************************************
  *
  *   BUTTON
- *   
+ *
  */
 
 /*
  * Twitter Follow Button
- * 
+ *
  **/
 @mixin button--twitter-follow() {
     background-color:       #f5f8fa;
@@ -530,8 +530,8 @@
     font-weight:            700;
     line-height:            1;
     padding:                0.5em 0.9em 0.5em 0.8em;
-    &:active, 
-    &:focus, 
+    &:active,
+    &:focus,
     &:hover {
         background-color:   #e1e8ed;
         background-image:   linear-gradient(#fff, #e1e8ed);
@@ -553,12 +553,12 @@
 /***************************************************
  *
  *   Links
- *   
+ *
  */
 @mixin link-readmore() {
     color:                  $linkColor;
     display:                inline;
-    white-space:            nowrap; 
+    white-space:            nowrap;
     &::after {
         content:            "\f061";
         font-family:        "FontAwesome";
@@ -577,9 +577,9 @@
 /***************************************************
  *
  *   Icons
- *   
+ *
  */
-@mixin icon-base() {    
+@mixin icon-base() {
     display:                inline-block;
     font-family:            FontAwesome;
     line-height:            1;
@@ -587,7 +587,7 @@
 }
 
 
-%icon-base {    
+%icon-base {
     @include icon-base();
 }
 
@@ -620,13 +620,13 @@
     width:              0;
     min-height:         0;
     overflow:           hidden;
-    padding-right:      1em;   
+    padding-right:      1em;
 }
 
 /***************************************************
  *
  *   Widget
- *   
+ *
  */
 @mixin widgetform_add_background_image($imageurl, $bgposition: 5% center, $bgsize: 25% 80%) {
     background-position:        $bgposition;
