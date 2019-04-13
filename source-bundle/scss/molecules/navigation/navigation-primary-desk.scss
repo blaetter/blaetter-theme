@@ -76,8 +76,8 @@ $navigationPrimaryFontColor:                $white;
             > ul.menu {
                 display:                    none;
                 > li.menu-item {
-                    border:             0 none;
-                    padding-left:       20px;
+                    border:                 0 none;
+                    padding-left:           20px;
                     a {
                         text-transform:     none;
                     }
@@ -100,6 +100,9 @@ $navigationPrimaryFontColor:                $white;
         justify-content:    space-evenly;
         width:              100%;
         margin-bottom:      1em;
+        a {
+            color:          $blueAuthor;
+        }
     }
 
     @media print {
