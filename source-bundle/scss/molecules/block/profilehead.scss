@@ -2,7 +2,6 @@ $namespace:              $namespace !default;
 
 #{$namespace}.profilehead {
     @include clearfix();
-    margin-top:                     40px;
     margin-bottom:                  50px;
     .image {
         padding:                    0;
@@ -17,6 +16,9 @@ $namespace:              $namespace !default;
             overflow:               hidden;
             margin:                 0 auto;
         }
+        .source {
+            display:                none !important;
+        }
         .heading {
             font-size:              18px;
             line-height:            1.4;
@@ -24,7 +26,7 @@ $namespace:              $namespace !default;
             margin:                 20px 6px 14px 6px;
         }
     }
-    
+
     .text {
         @include media-query('palm') {
             text-align:                 center;
