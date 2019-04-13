@@ -5,6 +5,7 @@
     overflow:                       hidden; //scroll;
     white-space:                    nowrap;
     position:                       relative;
+    padding:                        12px;
     a {
         margin-right:               1em;
         &.is-active {
@@ -19,11 +20,13 @@
         position:                   absolute;
         right:                      0;
         background: rgba(240,240,240,0.9);
+        padding:                    12px;
     }
     .swiper-button-prev {
         position:                   absolute;
         left:                       0;
         background: rgba(240,240,240,0.9);
+        padding:                    12px;
     }
     .swiper-button-disabled {
         display:                    none !important;
