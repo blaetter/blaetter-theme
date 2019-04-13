@@ -4,12 +4,12 @@
 {% block head %}
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
-        <title>{% block pagetitle %}{% endblock %}</title>  
+        <title>{% block pagetitle %}{% endblock %}</title>
         <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
         {{ patternLabHead | raw }}
-        <link rel="stylesheet" href="../../bundle/styleguide.css?{{ cacheBuster }}" media="all" />
+        <link rel="stylesheet" href="../../themes/contrib/palm/bundle/styleguide.css?{{ cacheBuster }}" media="all" />
         <!-- End Pattern Lab -->
-        
+
         <!-- Fonts -->
         <link rel="stylesheet" href="https://use.typekit.net/ulf4ijs.css" />
 
@@ -19,14 +19,14 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg?v=e" color="#253276">
         <link rel="shortcut icon" href="/favicon.ico?v=e">
         <meta name="theme-color" content="#253276">
-        
-        <link rel="stylesheet" href="../../bundle/portal.css?{{ cacheBuster }}" media="all" />
+
+        <link href="../../themes/contrib/palm/bundle/palm.css?{{ cacheBuster }}" media="all" rel="stylesheet" />
         <script
 			  src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
-        <script src="../../bundle/portal.js?{{ cacheBuster }} " id="echo-behavior-js"></script>
+        <script id="echo-behavior-js" src="../../themes/contrib/palm/bundle/palm.js?{{ cacheBuster }} "></script>
 {% endblock %}
     </head>
     <body>
-        
+
