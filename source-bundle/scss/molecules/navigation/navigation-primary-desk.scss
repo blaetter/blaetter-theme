@@ -17,12 +17,13 @@ $navigationPrimaryFontColor:                $white;
     top:                            auto;
     height:                         auto;
     visibility:                     visible;
-    overflow:                       hidden;
+    overflow:                       scroll;
     min-width:                      300px;
     font-family:                    droid-sans,Arial,sans-serif;
     font-size:                      15px;
     &.opened {
         display:                    block;
+
     }
     .block.navigation {
         margin-bottom:              0;
@@ -47,7 +48,7 @@ $navigationPrimaryFontColor:                $white;
         }
     }
     // First Level menu
-    
+
     ul.menu {
         > li.menu-item {
             border:                     1px solid $navigationPrimaryBorderColor;
@@ -66,7 +67,7 @@ $navigationPrimaryFontColor:                $white;
                 padding: 0.9em;
             }
             > a {
-                padding-left:               0px; 
+                padding-left:               0px;
             }
             + li.menu-item {
                 border-top:                 0 none;

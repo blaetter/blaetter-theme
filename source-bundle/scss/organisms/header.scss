@@ -6,6 +6,7 @@ $headerTransitionTimespan:      0.4s;
 #header#{$header-namespace} {
     position:                   relative;
     background-color:           $white;
+    z-index:                    1000;
     .logo {
         display:                flex;
         align-items:            center;

@@ -7,11 +7,10 @@
             {% block search %}
                 {% include "molecules-search" %}
             {% endblock %}
-            {% block navigation_primary %}
-                {% include "molecules-navigation-primary" %}
-            {% endblock %}
         </header>
-
+        {% block navigation_primary %}
+            {% include "molecules-navigation-primary" %}
+        {% endblock %}
         {% block content %}
             {#% block breadcrumb %}{% endblock %#}
         {% endblock %}
