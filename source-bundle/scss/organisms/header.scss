@@ -1,6 +1,6 @@
 // Our global page header
 $header-namespace:              $namespace !default;
-$headerTransitionTimespan:      0.25s;
+$headerTransitionTimespan:      0.4s;
 
 #{$header-namespace}#header,
 #header#{$header-namespace} {
@@ -8,8 +8,10 @@ $headerTransitionTimespan:      0.25s;
     background-color:           $white;
     .logo {
         display:                flex;
+        align-items:            center;
         .palm {
             width:              40px;
+            height:             40px;
         }
         .claim {
             margin-left:        $pagePaddingPx/3;
@@ -39,9 +41,11 @@ $headerTransitionTimespan:      0.25s;
                 transition: width $headerTransitionTimespan ease-out;
                 display:    block;
                 width:      30px;
+                height:     30px;
             }
             .claim {
-                display:    none;
+                width:      100px;
+                transition: width $headerTransitionTimespan ease-out;
             }
             .tongue {
                 height:     0;
@@ -77,8 +81,13 @@ $headerTransitionTimespan:      0.25s;
                 .palm {
                     display:    block;
                 }
+                .claim {
+                    display:    block;
+                    width:      100px;
+                    transition: width $headerTransitionTimespan ease-out;
+                }
                 .tongue {
-                    top:     -250px;
+                    top:     -400px;
                     transition: top $headerTransitionTimespan*2 linear;
                 }
             }
