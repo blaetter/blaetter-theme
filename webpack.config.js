@@ -6,10 +6,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	devtool: 'source-map',
 	entry: {
-		"portal": [
+		"palm": [
 			path.resolve(__dirname, 'source-bundle/js/global.js'),
 			path.resolve(__dirname, 'source-bundle/style.scss')
 		],
@@ -18,8 +18,8 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		chunkFilename: '[name]-[chunkhash].js',
-		path: path.resolve(__dirname, 'public/bundle'),
-		publicPath: '/bundle/',
+		path: path.resolve(__dirname, 'public/themes/contrib/palm/bundle/'),
+		publicPath: '/themes/contrib/palm/bundle/',
 		sourceMapFilename: '[file]-[chunkhash].map'
 	},
 	externals: {
@@ -45,7 +45,7 @@ module.exports = {
 		}
 	},
 	plugins: [
-		new CleanWebpackPlugin(['export/bundle', 'public/bundle']),
+		new CleanWebpackPlugin(['export/bundle', 'public/themes/contrib/palm/bundle']),
 		new MiniCssExtractPlugin({
 			// Options similar to the same options in webpackOptions.output
 			// both options are optional
