@@ -3,6 +3,7 @@ $breadcrumb-namespace:              $namespace !default;
 #{$breadcrumb-namespace}.breadcrumb {
     margin-bottom:              2em;
     margin-top:                 -1.5em;
+    font-size:                  $medium-font-size;
     ol {
         display:                flex;
         flex-wrap:              wrap;

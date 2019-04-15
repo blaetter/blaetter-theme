@@ -6,7 +6,7 @@
     @include getRem('margin-bottom', $blockBottomMarginPx);
     @include clearfix();
     width:                      100%;
-    overflow:                   visible; 
+    overflow:                   visible;
     position:                   relative;
     > *:last-child {
         margin-bottom:          0;
@@ -22,15 +22,15 @@
 /*
  *      HEADLINE
  */
- 
-@mixin block--base-headline() {            
+
+@mixin block--base-headline() {
     margin-top:             0;
     margin-bottom:          0.4em;
     word-wrap:              break-word;
     overflow-wrap:          break-word;
     max-width:              100%;
     a {
-        display:            inline; 
+        display:            inline;
     }
 }
 
@@ -40,10 +40,10 @@
 /*
  *      SOURCE
  */
- 
+
 // put source under the image (palm)
 @mixin block-source--base() {
-    font-size:          14px;
+    font-size:          $medium-font-size;
     font-family:        'drois-sans', sans-serif, Arial;
     color:              $greySource;
     display:            block;
@@ -59,8 +59,8 @@
 @mixin block-source--overlay() {
     position:               relative;
     //figcaption,
-    .source { 
-        @include source-style(); 
+    .source {
+        @include source-style();
         position:           absolute;
         bottom:             0;
         right:              0;
@@ -94,9 +94,9 @@
     word-wrap:          break-word;
 }
 /*
- *      IMAGE 
+ *      IMAGE
  */
- 
+
 @mixin block--base-image() {
     margin-bottom:          0; // mobile first
     display:                block;
@@ -119,7 +119,7 @@
 /*
  *      Our Teaser Images are floating (can be cleared by clearimagefloat)
  */
- 
+
 @mixin block__image_float() {
     @include clearfix();
     //figure,
@@ -131,7 +131,7 @@
     }
     ul {
         display: table;
-    } 
+    }
 }
 
 
@@ -183,7 +183,7 @@
 
 
 /*
- *     STYLE: SPECIAL / HERVORGEHOBEN 
+ *     STYLE: SPECIAL / HERVORGEHOBEN
  */
 
 @mixin block--base-special() {
@@ -216,11 +216,11 @@
 
 
 /*  VERTICAL FLOATING RULES
- *  Normally teaser image and text are floating horizontal. 
+ *  Normally teaser image and text are floating horizontal.
  *  But not in: DESKTOP view in a TWO or THREE COLUMNED layout!
  *  Here we can set our exceptions
  */
-@include media-query(lap-and-up) {  
+@include media-query(lap-and-up) {
     #{$namespace}.clearimagefloat,
     #{$namespace}.one-half:not(.marginal),
     #{$namespace}.one-third:not(.marginal),
