@@ -10,6 +10,7 @@ export/*
 node_modules
 public/*
 source/styleguide
+source-bundle/style.scss
 vendor
 .yarnrc
 yarn-error.log
