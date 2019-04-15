@@ -104,16 +104,16 @@ $btn-border-color:              $blue !default;
 @mixin button--reversed() {
     @extend .btn;
     background-color:       $white !important;
-    border:                 1px solid #999999 !important;
+    border:                 1px solid $greyBorder !important;
     color:                  $linkColor !important;
     font-weight:            normal !important;
     opacity:                1 !important;
     &:hover,
     &:focus {
-        background-color:       $white !important;
+        background-color:   $white !important;
         color:              $linkColor !important;
         text-decoration:    none !important;
-        border-color:       #666666 !important;
+        border-color:       $greyDark !important;
     }
 }
 
