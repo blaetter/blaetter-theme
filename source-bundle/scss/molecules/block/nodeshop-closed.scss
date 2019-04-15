@@ -18,15 +18,15 @@
     &.teaser {
         .heading {
             &:after {
-                content: "\f023";
-                font-family:        "FontAwesome";
-                display:            inline-block;
-                color:              #aaaaaa;
-                font-size:          1rem;
+                content:        "\f023";
+                font-family:    "FontAwesome";
+                display:        inline-block;
+                color:          $lightestTextGrey;
+                font-size:      1rem;
             }
         }
         .field--name-body:before {
-            background:      transparent;
+            background:         transparent;
         }
     }
 }

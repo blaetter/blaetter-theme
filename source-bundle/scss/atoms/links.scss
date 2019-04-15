@@ -46,7 +46,7 @@ $link-namespace:           $namespace !default;
     display:                    inline-block;
     margin-right:               0.5em;
     &::before {
-        color:                  #777777;
+        color:                  $lightestTextGrey;
         content:                "\f016";
         display:                inline-block;
         font-family:            FontAwesome;

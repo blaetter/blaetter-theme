@@ -2,7 +2,7 @@ $breadcrumb-namespace:              $namespace !default;
 
 #{$breadcrumb-namespace}.breadcrumb {
     margin-bottom:              2em;
-    margin-top:                 -1em;
+    margin-top:                 -1.5em;
     ol {
         display:                flex;
         flex-wrap:              wrap;
@@ -12,13 +12,19 @@ $breadcrumb-namespace:              $namespace !default;
         > li {
             margin:             0 0.7em 0 0;
             padding:            0;
+            a {
+                color:          $lightestTextGrey;
+                &:hover {
+                    color:      $blue;
+                }
+            }
             &:before {
-                color: $blue;
-                content: "\f054";
-                font-family: FontAwesome;
-                font-size: 0.625rem;
-                margin: 0 0.5em 0 0;
-                width: 1em;
+                color:          $lightestTextGrey;
+                content:        "\f054";
+                font-family:    FontAwesome;
+                font-size:      0.625rem;
+                margin:         0 0.5em 0 0;
+                width:          1em;
                 vertical-align: 0.1em;
             }
             &:first-child::before {
