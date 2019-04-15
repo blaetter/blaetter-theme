@@ -11,6 +11,7 @@
                 "html": "<div class=\"nodeshop-closed\">"
             },{
                 "pattername": "atoms-articleinfo",
+                "class": "author--article",
                 "key": "von",
                 "value": "<a href=\"#\">Albrecht von Lucke</a>"
             },{
