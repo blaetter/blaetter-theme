@@ -1,32 +1,46 @@
-        <div class="page-wrapper" class="{{ globalTempStylingClass }} {{ pagetype }}">   
-                    
+        <div class="page-wrapper" class="{{ globalTempStylingClass }} {{ pagetype }}">
+
             <header id="header">
-                <div class="page-wrapper__inner">   
+                <div class="page-wrapper__inner">
                     {% block global_header %}
                         {% include "organisms-header" %}
                     {% endblock %}
                 </div>
             </header>
-            
+
             <main  class="page-wrapper__inner">
-                <div class="content-wrapper">
-                    
-                    <h1>Styleguide</h1>
+                <div class="content-wrapper-three-columns">
+                    <div class="hero">
+                        <h1 class="heading--pagecategory">Styleguide</h1>
+                    </div>
+
+                    {% include 'molecules-breadcrumb' with {"breadcrumb": [
+                            {"title": "Ebene 2"},
+                            {"title": "Ebene 3"}
+                        ]} %}
+
                     <div class="grid">
-                        <div class="grid__item one-third">
-                            
+
+                        <div class="grid__item two-tenths">
                             {% include "styleguide-tableofcontent" %}
                         </div>
-                        <div class="grid__item  two-thirds">
+                        <!-- /grid__item -->
+
+                        <main class="grid__item six-tenths">
                             {% block content %}
-                                {% block breadcrumb %}
-                                {% endblock %}
+                                {% block breadcrumb %}{% endblock %}
                             {% endblock %}
+                        </main>
+                        <!-- /grid__item -->
+
+                        <div class="grid__item two-tenths">
                         </div>
-                    </div> 
-                </div> 
+                        <!-- /grid__item -->
+
+                    </div>
+                </div>
             </main>
-     
+
         </div><!--/page-wrapper-->
 
 
@@ -37,4 +51,4 @@
                 $(this).html(escaped);
             });
         </script>
-        
+
