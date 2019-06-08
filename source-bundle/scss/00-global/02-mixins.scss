@@ -559,19 +559,6 @@
     color:                  $linkColor;
     display:                inline;
     white-space:            nowrap;
-    &::after {
-        content:            "\f061";
-        font-family:        "FontAwesome";
-        display:            inline-block;
-        margin-left:        0.2em;
-        //line-height:        0.8em;
-        //ext-align:         center;
-        text-decoration:    underline; // IE10 fix
-    }
-    &:after,
-    &:hover:after {
-        text-decoration:    none; // IE10 fix
-    }
 }
 
 /***************************************************
