@@ -307,10 +307,10 @@ $form-namespace:            $namespace !default;
     .quicklinks {
         display:                inline-block;
     }
-    > button:last-child,
-    > .button:last-child {
-        margin-left:            0;
-    }
+    // > button:last-child,
+    // > .button:last-child {
+    //     margin-left:            0;
+    // }
 }
 @include media-query('lap-and-up') {
     #{$form-namespace}form .grid + .form-actions {
