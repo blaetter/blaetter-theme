@@ -25,6 +25,9 @@ $headerTransitionTimespan:      0.4s;
             display:            none;
         }
     }
+    .scroll-indicator {
+        display:            none;
+    }
     &.fixed {
         height:             60px;
         @include fontsize($base-font-size*0.8);
@@ -52,6 +55,15 @@ $headerTransitionTimespan:      0.4s;
                 height:     0;
                 transition: visibility $headerTransitionTimespan ease-out;
             }
+        }
+        .scroll-indicator {
+            display:        block;
+            height:         2px;
+            background-color: $red;
+            position:       absolute;
+            bottom:         0;
+            left:           0;
+            width:          1%;
         }
     }
 }
