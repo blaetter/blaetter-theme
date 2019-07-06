@@ -34,7 +34,15 @@ export default function header_fix() {
         var scrolled = (winScroll / height) * 100;
         document.getElementById("scrollbar").style.width = scrolled + "%";
     }
+    // only do check for scrolling if we have a scrollbar
     if (null !== document.getElementById("scrollbar")) {
-        window.onscroll = function () { scrollbar() };
+        // check for articles (node-type--story) to indicate scrolldepth (only on not closed articles as those are short)
+        // this might be the point to add other content types as well
+        if (1 <= document.getElementsByClassName("node-type--story").length
+            && 0 == document.getElementsByClassName("nodeshop-closed").length
+        ) {
+            document.getElementById("scrollbar").classList.add("scroll-indicator");
+            window.onscroll = function () { scrollbar() };
+        }
     }
 }

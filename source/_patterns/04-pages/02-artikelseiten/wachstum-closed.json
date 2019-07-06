@@ -8,7 +8,7 @@
         "content":  [
             {
                 "pattername": "atoms-html",
-                "html": "<div class=\"nodeshop-closed\">"
+                "html": "<article class=\"nodeshop-closed node-type--story\">"
             },{
                 "pattername": "atoms-articleinfo",
                 "class": "author--article",
@@ -37,7 +37,7 @@
                 "html": "</div><!--/field-name-body-->"
             },{
                 "pattername": "atoms-html",
-                "html": "</div><!--/nodeshop-closed-->"
+                "html": "</article><!--/nodeshop-closed-->"
             },{
                 "pattername": "molecules-aktuelle-ausgabe",
                 "text": "Um die restlichen <strong>91%</strong> zu lesen, melden Sie sich an oder kaufen Sie den kompletten Artikel."

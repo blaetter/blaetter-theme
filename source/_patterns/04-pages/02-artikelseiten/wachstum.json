@@ -7,6 +7,10 @@
         "category": "<span class=\"text--red\">Ausgabe</span> Dezember 2019",
         "content":  [
             {
+                "pattername": "atoms-html",
+                "html": "<article class=\"node-type--story\">"
+            },
+            {
                 "pattername": "atoms-heading2",
                 "class": "subtitle",
                 "text": "Ich bin ein Subtitel."
@@ -49,6 +53,9 @@
                 "pattername": "molecules-book-pager"
             },{
                 "pattername": "molecules-social"
+            },{
+                "pattername": "atoms-html",
+                "html": "</article>"
             },{
                 "pattername": "atoms-heading--sectiontitle",
                 "text": "3 Kommentare"
