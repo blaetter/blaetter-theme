@@ -22,6 +22,11 @@ $content-wrapper-namespace:              $namespace !default;
     &.fixed > main {
         padding-top:        90px;
     }
+    &.fixed > #navigation-primary {
+        .navigation-wrapper {
+            padding-top:    80px;
+        }
+    }
 }
 
 

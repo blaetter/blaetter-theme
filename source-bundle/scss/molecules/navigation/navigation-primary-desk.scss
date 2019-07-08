@@ -7,102 +7,110 @@ $navigationPrimaryFontColor:                $white;
 #{$navigation-primary-desk-namespace}#navigation-primary {
     @include clearfix();
     display:                        none;
-    padding:                        20px;
-    //@include box-shadow(0px, 4px, 3px, -1px, #eaeaea);
-    display:                        none;
-    background-color:               $navigationPrimaryBgColor;
     position:                       absolute;
     z-index:                        2;
     right:                          0;
-    top:                            auto;
-    height:                         auto;
-    visibility:                     visible;
+    top:                            0;
+    height:                         100%;
+    width:                          300px;
     overflow:                       scroll;
-    min-width:                      300px;
-    font-family:                    droid-sans,Arial,sans-serif;
-    font-size:                      15px;
     &.opened {
         display:                    block;
 
     }
-    .block.navigation {
-        margin-bottom:              0;
-    }
-    // Global Menulayout
-    .menu {
-        list-style:                     none;
-        padding:                        0;
-        margin:                         0;
-        .menu-item {
-            padding:                    0;
-            margin:                     0;
-            list-style:                 none;
-            a{
-                padding:                0.7em 0.5em 0.7em 0.7em;
-                margin-right:           3em;
-                font-size:              1em;
-                display:                block;
-                text-transform:         uppercase;
-                color:                  $navigationPrimaryFontColor;
-            }
+    .navigation-wrapper {
+        padding:                        20px;
+        padding-top:                    90px;
+        //@include box-shadow(0px, 4px, 3px, -1px, #eaeaea);
+        background-color:               $navigationPrimaryBgColor;
+        position:                       fixed;
+        top:                            auto;
+        height:                         100%;
+        overflow:                       scroll;
+        visibility:                     visible;
+        width:                          300px;
+        font-family:                    droid-sans,Arial,sans-serif;
+        font-size:                      15px;
+        .block.navigation {
+            margin-bottom:              0;
         }
-    }
-    // First Level menu
-
-    ul.menu {
-        > li.menu-item {
-            border:                     1px solid $navigationPrimaryBorderColor;
-            border-width:               1px 0 1px 0;
-            position: relative;
-            .arrow {
-                // via jQuery
-                float: none;
-                position: absolute;
-                top:    0;
-                right:  0;
-                color: white;
-                cursor: pointer;
-                background: transparent;
-                border: 0 none;
-                padding: 0.9em;
-            }
-            > a {
-                padding-left:               0px;
-            }
-            + li.menu-item {
-                border-top:                 0 none;
-            }
-            // Second Level menu
-            > ul.menu {
-                display:                    none;
-                > li.menu-item {
-                    border:                 0 none;
-                    padding-left:           20px;
-                    a {
-                        text-transform:     none;
-                    }
+        // Global Menulayout
+        .menu {
+            list-style:                     none;
+            padding:                        0;
+            margin:                         0;
+            .menu-item {
+                padding:                    0;
+                margin:                     0;
+                list-style:                 none;
+                a{
+                    padding:                0.7em 0.5em 0.7em 0.7em;
+                    margin-right:           3em;
+                    font-size:              1em;
+                    display:                block;
+                    text-transform:         uppercase;
+                    color:                  $navigationPrimaryFontColor;
                 }
             }
         }
-        li.menu-item.menu-item--expanded {
-            border-bottom:                  1px solid $navigationPrimaryBorderColor;
-            .arrow .fa {
-                transform:              rotate(180deg);
-            }
-            > ul.menu {
-                display:                    block;
-            }
-        }
-    }
+        // First Level menu
 
-    .meta {
-        display:            flex;
-        justify-content:    space-evenly;
-        width:              100%;
-        margin-bottom:      1em;
-        a {
-            color:          $blueAuthor;
+        ul.menu {
+            > li.menu-item {
+                border:                     1px solid $navigationPrimaryBorderColor;
+                border-width:               1px 0 1px 0;
+                position: relative;
+                .arrow {
+                    // via jQuery
+                    float: none;
+                    position: absolute;
+                    top:    0;
+                    right:  0;
+                    color: white;
+                    cursor: pointer;
+                    background: transparent;
+                    border: 0 none;
+                    padding: 0.9em;
+                }
+                > a {
+                    padding-left:               0px;
+                }
+                + li.menu-item {
+                    border-top:                 0 none;
+                }
+                // Second Level menu
+                > ul.menu {
+                    display:                    none;
+                    > li.menu-item {
+                        border:                 0 none;
+                        padding-left:           20px;
+                        a {
+                            text-transform:     none;
+                        }
+                    }
+                }
+            }
+            li.menu-item.menu-item--expanded {
+                border-bottom:                  1px solid $navigationPrimaryBorderColor;
+                .arrow .fa {
+                    transform:              rotate(180deg);
+                }
+                > ul.menu {
+                    display:                    block;
+                }
+            }
         }
+
+        .meta {
+            display:            flex;
+            justify-content:    space-evenly;
+            width:              100%;
+            margin-bottom:      1em;
+            a {
+                color:          $blueAuthor;
+            }
+        }
+
     }
 
     @media print {
@@ -112,7 +120,13 @@ $navigationPrimaryFontColor:                $white;
 
     }
     @include media-query(palm) {
+        background-color:               $navigationPrimaryBgColor;
         width:                          100%;
+        position:                       fixed;
+        .navigation-wrapper {
+            position:                   relative;
+            width:                      100%;
+        }
     }
 }
 
