@@ -122,9 +122,7 @@ $navigationPrimaryFontColor:                $white;
     @include media-query(palm) {
         background-color:               $navigationPrimaryBgColor;
         width:                          100%;
-        position:                       fixed;
         .navigation-wrapper {
-            position:                   relative;
             width:                      100%;
         }
     }
