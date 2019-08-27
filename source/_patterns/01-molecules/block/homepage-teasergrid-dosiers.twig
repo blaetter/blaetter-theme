@@ -1,38 +1,10 @@
 <div class="block homepage-dosierteaser spaceless">
-    <div class="grid">
-        <div class="grid__item two-thirds">
-            {% include "molecules-teaser" with {data: {
-                        "class": "teaser--poster",
-                        "text": "false",
-                        "imageurl": "https://picsum.photos/620/465/?image=71",
-                        "source": "picsum.photos",
-                        "title": "Der globale Pflegenotstand",
-                        "author": "Heino Güllemann"
-            }} %}
-        </div>
-        <div class="grid__item one-third">
-            {% include "molecules-teaser" with {data: {
-                         "hideTeaserImage": true,
-                        "class": "teaser--text",
-                        "text": "false",
-                        "title": "Die Geschichte kehrt zurück: Deutschlands fatale Rolle in Europa",
-                        "author": "Hans Kundnani"
-            }} %}
-            {% include "molecules-teaser" with {data: {
-                         "hideTeaserImage": true,
-                        "class": "teaser--text",
-                        "text": "false",
-                        "title": "In geschlossener Gesellschaft",
-                        "author": "Helmut Fehr"
-            }} %}
-            {% include "molecules-teaser" with {data: {
-                         "hideTeaserImage": true,
-                        "class": "teaser--text",
-                        "text": "false",
-                        "title": "Aus der Krise nichts gelernt",
-                        "author": "Ulrike Herrmann"
-            }} %}
-           
-        </div>
-    </div>
+    {% include "molecules-teaser" with {data: {
+                "class": "teaser--poster",
+                "text": "false",
+                "imageurl": "https://picsum.photos/700/395/?image=71",
+                "source": "picsum.photos",
+                "title": "Der globale Pflegenotstand",
+                "author": "Heino Güllemann"
+    }} %}
 </div>
