@@ -16,9 +16,8 @@ $btn-border-color:              $blue !default;
 }
 
 #{$button-namespace}.btn {
-    @include getRem('height', $btn-heightPx);
     @include media-query('palm') {
-        height:             2.5em;
+        width:              100%;
     }
     margin:                 0;
     @include getRem('margin-bottom', $blockBottomMarginPx/2);
@@ -41,6 +40,7 @@ $btn-border-color:              $blue !default;
     border: 1px solid       $btn-border-color;
     border-radius:          $borderRadius;
     width:                  auto;
+    min-height:             2.5em;
     &:hover,
     &:active,
     &:focus {
