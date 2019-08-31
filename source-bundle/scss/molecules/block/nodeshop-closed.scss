@@ -15,14 +15,15 @@
           }
     }
     // Teaser Add Lock:
-    &.teaser {
+    &.teaser,
+    &.homepage-heroimage {
         .heading {
             &:after {
                 content:        "\f023";
                 font-family:    "FontAwesome";
                 display:        inline-block;
                 color:          $lightestTextGrey;
-                font-size:      1rem;
+                font-size:      70%;
             }
         }
         .field--name-body:before {
