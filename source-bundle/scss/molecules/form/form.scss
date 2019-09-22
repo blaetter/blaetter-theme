@@ -49,6 +49,13 @@ $form-namespace:            $namespace !default;
 
     }
 
+    .password-confirm,
+    .password-field,
+    .password-strength,
+    .password-confirm-match {
+        width: 100%;
+    }
+
     .form-check-label {
         font-weight:    normal;
         display:        flex;
