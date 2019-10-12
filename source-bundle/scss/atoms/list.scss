@@ -16,7 +16,7 @@ $list-namespace:                $namespace !default;
         margin-bottom:          0.5em;
     }
     > li.grid__item {
-        padding-left:           $gridGutter;   
+        padding-left:           $gridGutter;
         &::before {
             display:            none;
         }
@@ -24,6 +24,9 @@ $list-namespace:                $namespace !default;
     &.nav {
         list-style:             none;
         padding-left:           0;
+    }
+    .button {
+        line-height:            1.66667em;
     }
 }
 
@@ -72,12 +75,12 @@ $list-namespace:                $namespace !default;
     #{$list-namespace}.list-footer-portallinks {
         margin-left:            0;
         li {
-            margin-bottom:      2em; 
-            display:            inline-block;     
+            margin-bottom:      2em;
+            display:            inline-block;
         }
     }
 }
- 
+
 // Listitems(!) have half width
 #{$list-namespace}ul.list--double {
     @include media-query('lap-and-up') {
@@ -172,7 +175,7 @@ $list-namespace:                $namespace !default;
 }
 
 #{$list-namespace}ul.list--arrowlist {
-    @include arrowlist--base(); 
+    @include arrowlist--base();
 }
 
 nav.tabs {
@@ -181,7 +184,7 @@ nav.tabs {
 ul.tabs {
     //font-family: droid-sans, Arial,sans-serif;
     .primary {
-    
+
     }
     li {
         float: none;
@@ -191,7 +194,7 @@ ul.tabs {
         background: $white;
         color: $black;
         font-weight: normal;
-        
+
         //border-bottom: 2px solid $greyBorder;
         &:hover {
             background: $white;

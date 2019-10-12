@@ -1,0 +1,16 @@
+$issue-container-width:              400px;
+
+article.node-type--story {
+    .teaser--aktuelle-ausgabe {
+        margin:     $largeGapPx $largeGapPx $largeGapPx (-$issue-container-width/2);
+        width:      $issue-container-width;
+        border:     1px solid $greyBorder;
+        padding:    $largeGapPx;
+        float:      left;
+        background: $white;
+        @include media-query(palm) {
+            width:  100%;
+            margin: $largeGapPx 0;
+        }
+    }
+}
