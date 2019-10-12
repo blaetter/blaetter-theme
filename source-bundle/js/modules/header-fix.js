@@ -38,11 +38,13 @@ export default function header_fix() {
     if (null !== document.getElementById("scrollbar")) {
         // check for articles (node-type--story) to indicate scrolldepth (only on not closed articles as those are short)
         // this might be the point to add other content types as well
-        if (1 <= document.getElementsByClassName("node-type--story").length
-            && 0 == document.getElementsByClassName("nodeshop-closed").length
-        ) {
-            document.getElementById("scrollbar").classList.add("scroll-indicator");
-            window.onscroll = function () { scrollbar() };
+        if (1 <= document.getElementsByClassName("node-type--story").length) {
+            // the first element with the "node-type-story" class is the main page content, so
+            // lets check here if this is a closed article or not
+            if (!document.getElementsByClassName("node-type--story").item(0).classList.contains('nodeshop-closed')) {
+                document.getElementById("scrollbar").classList.add("scroll-indicator");
+                window.onscroll = function () { scrollbar() };
+            }
         }
     }
 }
