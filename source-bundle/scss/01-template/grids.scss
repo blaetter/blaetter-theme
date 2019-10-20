@@ -142,7 +142,9 @@ $grid-namespace:            $namespace !default;
 
 // make grid content container 100% height
 .grid.grid--stretch {
-    align-items:            stretch;
+    @include media-query('lap-and-up') {
+        align-items:            stretch;
+    }
     > .grid__item {
         //display: flex; // not flex!
         margin-bottom:      $gridGutter;
