@@ -54,29 +54,30 @@ $teaser-namespace:              $namespace !default;
             // make 16:9 image to 1:1
             .image {
                 width:          30vw;
-                height:         30vw;
+                height:         17vw;
                 float:          left;
                 margin:         20px;
                 overflow:       hidden;
                 position:       relative;
                 img {
                     position:   absolute;
-                    left:       -30%;
                     top:        0;
-                    height:     100%;
                     width:      auto;
-                    max-width:  none;
+                    margin:     auto;
                 }
             }
         }
         @include media-query('smallest') {
             .image {
-                width:      100%;
-                height:     auto;
+                width:          100%;
+                height:         auto;
+                margin:         0;
+                padding:        $largeGapPx 0 $largeGapPx 0;
+                border-right:   solid $largeGapPx $white; // as a workaround for overflow:hidden and padding-right not working as expected.
+                border-left:    solid $largeGapPx $white;
                 img {
                     position:   relative;
-                    left:       0;
-                    min-height: 180px;
+                    width:      100%;
                 }
             }
         }
