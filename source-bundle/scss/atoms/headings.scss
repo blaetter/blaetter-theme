@@ -71,6 +71,9 @@ $sectiontitleMarginBottom: 2em !default;
     }
     &.red {
         color:                          $red;
+        a {
+            color:                      $red;
+        }
     }
     .text {
         flex-grow:                  1;
