@@ -19,6 +19,7 @@ $teaser-namespace:              $namespace !default;
         width:                  30%;
         float:                  left;
         margin-right:           1em;
+        margin-bottom:           1em;
         height:         auto;
         img {
             width:      100%;
@@ -221,7 +222,10 @@ $teaser-namespace:              $namespace !default;
             border:                     1px solid $greyBorder;
         }
         .inner {
-            display:                    table; // buttons in der flucht
+            display:                    block;
+            @include media-query('lap-and-up') {
+                display:                table; // display buttons in line with text on large screens
+            }
         }
     }
     .field--name-body {

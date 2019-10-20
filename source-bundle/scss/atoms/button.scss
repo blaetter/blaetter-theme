@@ -7,7 +7,7 @@ $btn-border-color:              $blue !default;
 
 
 #{$button-namespace}button,
-#{$button-namespace}.button, {
+#{$button-namespace}.button {
     font-family:            $base-font-family;
     cursor:                 pointer;
     &:focus {
@@ -18,14 +18,11 @@ $btn-border-color:              $blue !default;
 #{$button-namespace}.btn {
     @include media-query('palm') {
         width:              100%;
+        line-height:        2em;
     }
     margin:                 0;
     @include getRem('margin-bottom', $blockBottomMarginPx/2);
-    @include media-query('palm') {
-        line-height:        2em;
-    }
     box-shadow:             none;
-    /* margin:                 $buttonMargin; // not here */
     text-decoration:        none;
     padding:                0.3em 1em; // 4px / 9px
     font-size:              $base-font-size;
@@ -41,12 +38,6 @@ $btn-border-color:              $blue !default;
     border-radius:          $borderRadius;
     width:                  auto;
     min-height:             2.5em;
-    &:hover,
-    &:active,
-    &:focus {
-        /* color:              $btn-font-color; // not here */
-        /* background-color:   $btn-background-hover; // not here */
-    }
     &:focus {
         outline:            1px dotted black;
         outline-offset:     0;
