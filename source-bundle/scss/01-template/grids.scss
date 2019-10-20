@@ -8,21 +8,21 @@ $grid-namespace:            $namespace !default;
  */
 
 @mixin flexgrid--base() {
-    list-style:             none;               
-    padding:                0;        
-    margin-left:            -$gridGutter; 
+    list-style:             none;
+    padding:                0;
+    margin-left:            -$gridGutter;
     display:                flex;
     //display:              -webkit-box; //breaks in chrome! webkit 2009 Syntax
     display:                -ms-flexbox; // IE10 2009 Syntax
     flex-wrap:              wrap;
     //-ms-flex-flow:        wrap; // do not use, breaks in ie!
     align-items:            flex-start;
-    
+
 }
 
 @mixin flexgrid-item--base() {
-    padding-left:           $gridGutter;      
-    width:                  100%;  
+    padding-left:           $gridGutter;
+    width:                  100%;
 }
 
 #{$grid-namespace}.flex-column--reversed {
@@ -37,11 +37,7 @@ $grid-namespace:            $namespace !default;
 
 #{$grid-namespace}.grid {
     @include flexgrid--base();
-    @include media-query(lap-and-up) {
-        > .auto {
-            -webkit-flex:   1;
-                    flex:   1;
-        }
+    @include media-query('lap-and-up') {
         > .grid__item.one-half {
             @include flexgrid-item--base();
             width:          50%;
@@ -50,11 +46,7 @@ $grid-namespace:            $namespace !default;
             @include flexgrid-item--base();
             width:          33.333%;
         }
-        > .grid__item.one-fourth { 
-            @include flexgrid-item--base();
-            width:          25%;
-        }
-        > .grid__item.three-fourths { 
+        > .grid__item.three-fourths {
             @include flexgrid-item--base();
             width:          75%;
         }
@@ -62,37 +54,47 @@ $grid-namespace:            $namespace !default;
             @include flexgrid-item--base();
             width:          66.666%;
         }
+        > .grid__item.one-fourth {
+            @include flexgrid-item--base();
+            width:          25%;
+        }
+    }
+    @include media-query('bigger-screen') {
+        > .auto {
+            -webkit-flex:   1;
+                    flex:   1;
+        }
         > .grid__item.one-sixth { @include flexgrid-item--base();
             @include flexgrid-item--base();
-            width:          16.666%; 
+            width:          16.666%;
         }
-        > .grid__item.four-sixths { 
+        > .grid__item.one-tenth {
             @include flexgrid-item--base();
-            width:          66.666%; 
+            width:          10%;
         }
-        > .grid__item.five-sixths { 
+        > .grid__item.two-tenths {
             @include flexgrid-item--base();
-            width:          83.333%; 
+            width:          20%;
         }
-        > .grid__item.one-tenth { 
+        > .grid__item.four-sixths {
             @include flexgrid-item--base();
-            width:          10%; 
+            width:          66.666%;
         }
-        > .grid__item.two-tenths { 
+        > .grid__item.five-sixths {
             @include flexgrid-item--base();
-            width:          20%; 
+            width:          83.333%;
         }
-        > .grid__item.five-tenths { 
+        > .grid__item.five-tenths {
             @include flexgrid-item--base();
-            width:          50%; 
+            width:          50%;
         }
-        > .grid__item.six-tenths { 
+        > .grid__item.six-tenths {
             @include flexgrid-item--base();
-            width:          60%; 
+            width:          60%;
         }
-        > .grid__item.eight-tenths { 
+        > .grid__item.eight-tenths {
             @include flexgrid-item--base();
-            width:          80%; 
+            width:          80%;
         }
     }
 }
@@ -119,7 +121,7 @@ $grid-namespace:            $namespace !default;
             }
         }
     }
-    
+
 }
 
 

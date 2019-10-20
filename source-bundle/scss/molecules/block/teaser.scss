@@ -69,6 +69,17 @@ $teaser-namespace:              $namespace !default;
                 }
             }
         }
+        @include media-query('smallest') {
+            .image {
+                width:      100%;
+                height:     auto;
+                img {
+                    position:   relative;
+                    left:       0;
+                    min-height: 180px;
+                }
+            }
+        }
     }
     &.teaser--archive {
         background-color:           transparent;
