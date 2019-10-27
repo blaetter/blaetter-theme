@@ -1,15 +1,13 @@
 #block-palm-local-tasks {
     .tabs {
         margin-top:             0;
-        @include media-query('lap-and-up') {
-        }
         &.primary {
             padding:            0;
-            @include media-query('lap-and-up') {
+            @include media-query('bigger-screen') {
                 margin-left:        -$pagePaddingPx;
             }
             a {
-                @include media-query('lap-and-up') {
+                @include media-query('bigger-screen') {
                     padding:        0.5em 1em 0.5em $pagePaddingPx;
                 }
                 padding:        0.5em 1em;
