@@ -1,6 +1,6 @@
 {
     "pagetype": "pagetype-homepage",
-    "data": {  
+    "data": {
         "title": "Blätter",
         "titleclass": "aural",
         "hero": [
@@ -12,6 +12,13 @@
         ],
         "content":  [
             {
+                "pattername": "molecules-teaser",
+                "class": "teaser--standard block--white",
+                "title": "Trump der Dumme",
+                "text": "Es sind keineswegs nur rechte Bewegungen, die heute eine Rückkehr zum klassischen Nationalstaat betreiben. Auch in der Linken ...",
+                "author": "Bernd das Brot",
+                "imageurl": "https://picsum.photos/id/845/300/169"
+            },{
                 "pattername": "organisms-teasergrid",
                 "gridItenClass": "one-third",
                 "gridClass": "grid--stretch",
@@ -253,7 +260,7 @@
                         "class": "readmore",
                         "text": "Zu den Beiträgen"
                     }
-                ], 
+                ],
                 "content_right_bottom": [
                     {
                         "pattername": "atoms-heading--sectiontitle",

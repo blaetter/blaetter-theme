@@ -1,5 +1,39 @@
 $teaser-namespace:              $namespace !default;
 
+@mixin mobile-image-styles() {
+    @include media-query('palm') {
+        // make 16:9 image to 1:1
+        .image {
+            width:          30vw;
+            height:         17vw;
+            float:          left;
+            margin:         20px;
+            overflow:       hidden;
+            position:       relative;
+            img {
+                position:   absolute;
+                top:        0;
+                width:      auto;
+                margin:     auto;
+            }
+        }
+    }
+    @include media-query('smallest') {
+        .image {
+            width:          100%;
+            height:         auto;
+            margin:         0;
+            padding:        $largeGapPx 0 $largeGapPx 0;
+            border-right:   solid $largeGapPx $white; // as a workaround for overflow:hidden and padding-right not working as expected.
+            border-left:    solid $largeGapPx $white;
+            img {
+                position:   relative;
+                width:      100%;
+            }
+        }
+    }
+}
+
 #{$teaser-namespace}.teaser {
     position:                   relative;
     .heading, h2, h3 {
@@ -16,7 +50,7 @@ $teaser-namespace:              $namespace !default;
         display:                none !important;
     }
     .image {
-        width:                  30%;
+        width:                  30vw;
         float:                  left;
         margin-right:           1em;
         margin-bottom:           1em;
@@ -40,6 +74,9 @@ $teaser-namespace:              $namespace !default;
     .author-name {
         color:          $linkColor;
     }
+    &.teaser--standard {
+        @include mobile-image-styles();
+    }
     &.teaser--vertical {
         background-color:           $white;
         .image {
@@ -50,37 +87,7 @@ $teaser-namespace:              $namespace !default;
         .inner {
             padding:                $teaserInnerPadding;
         }
-        @include media-query('palm') {
-            // make 16:9 image to 1:1
-            .image {
-                width:          30vw;
-                height:         17vw;
-                float:          left;
-                margin:         20px;
-                overflow:       hidden;
-                position:       relative;
-                img {
-                    position:   absolute;
-                    top:        0;
-                    width:      auto;
-                    margin:     auto;
-                }
-            }
-        }
-        @include media-query('smallest') {
-            .image {
-                width:          100%;
-                height:         auto;
-                margin:         0;
-                padding:        $largeGapPx 0 $largeGapPx 0;
-                border-right:   solid $largeGapPx $white; // as a workaround for overflow:hidden and padding-right not working as expected.
-                border-left:    solid $largeGapPx $white;
-                img {
-                    position:   relative;
-                    width:      100%;
-                }
-            }
-        }
+        @include mobile-image-styles();
     }
     &.teaser--archive {
         background-color:           transparent;
@@ -168,6 +175,7 @@ $teaser-namespace:              $namespace !default;
                 min-height:             225px; //
             }
         }
+
         .heading, h2, h3 {
             color:                  $white;
             font-size:              1.5em;
@@ -226,7 +234,7 @@ $teaser-namespace:              $namespace !default;
             font-size:                  1.2em;
         }
         .inner {
-            padding:                 $teaserInnerPadding;
+            padding:                        $teaserInnerPadding;
         }
     }
     &.teaser--aktuelle-ausgabe {
@@ -242,6 +250,17 @@ $teaser-namespace:              $namespace !default;
     }
     .field--name-body {
         margin-bottom:                  0;
+    }
+    &.block--white {
+        .image {
+            padding:                    0;
+            border-right:               none; // overriding some cases where image containers are in white boxes
+            border-left:                none;
+            margin:                     0 $largeGapPx $largeGapPx 0;
+            @include media-query('smallest') {
+                margin:                 0 0 $largeGapPx 0;
+            }
+        }
     }
 }
 
