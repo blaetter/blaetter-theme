@@ -99,33 +99,26 @@
                 "pattername": "atoms-heading--sectiontitle",
                 "text": "Weitere Beiträge zum Thema Postwachstum"
             },{
-                "pattername": "organisms-teasergrid",
-                "gridItenClass": "one-third",
-                "gridClass": "grid--stretch",
-                "content": [
-                    {
-                        "pattername": "molecules-teaser",
-                        "class": "teaser--vertical",
-                        "title": "Die Rückkehr der Grenzen",
-                        "text": "Es sind keineswegs nur rechte Bewegungen, die heute eine Rückkehr zum klassischen Nationalstaat betreiben. Auch in der Linken ...",
-                        "author": "Micha Brumlik",
-                        "imageurl": "https://picsum.photos/300/169/?image=883"
-                    },{
-                        "pattername": "molecules-teaser",
-                        "class": "teaser--vertical",
-                        "title": "Das Versagen der politischen Mitte",
-                        "text": "Überall in Europa – von Finnland bis Griechenland – sprießen dieser Tage rechtspopulistische Parteien wie Pilze aus dem Boden. ",
-                        "author": "Ulrike Guérot",
-                        "imageurl": "https://picsum.photos/300/169/?image=690"
-                    },{
-                        "pattername": "molecules-teaser",
-                        "class": "teaser--vertical",
-                        "title": "Safranfarbene Schocktherapie",
-                        "text": "Zum Jahreswechsel schwang sich der indische Premierminister Narendra Modi wieder einmal zu einer großen Ansprache an seine Landsleute auf.",
-                        "author": "Thomas Stauber",
-                        "imageurl": "https://picsum.photos/300/169/?image=448"
-                    }
-                ]
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "title": "Die Rückkehr der Grenzen",
+                "text": "Es sind keineswegs nur rechte Bewegungen, die heute eine Rückkehr zum klassischen Nationalstaat betreiben. Auch in der Linken ...",
+                "author": "Micha Brumlik",
+                "imageurl": "https://picsum.photos/300/169/?image=883"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "title": "Das Versagen der politischen Mitte",
+                "text": "Überall in Europa – von Finnland bis Griechenland – sprießen dieser Tage rechtspopulistische Parteien wie Pilze aus dem Boden. ",
+                "author": "Ulrike Guérot",
+                "imageurl": "https://picsum.photos/300/169/?image=690"
+            },{
+                "pattername": "molecules-teaser",
+                "class": "teaser--marginal",
+                "title": "Safranfarbene Schocktherapie",
+                "text": "Zum Jahreswechsel schwang sich der indische Premierminister Narendra Modi wieder einmal zu einer großen Ansprache an seine Landsleute auf.",
+                "author": "Thomas Stauber",
+                "imageurl": "https://picsum.photos/300/169/?image=448"
             }
         ],
         "content_left": [
