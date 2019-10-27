@@ -2,15 +2,27 @@ $issue-container-width:              400px;
 
 article.node-type--story {
     .teaser--aktuelle-ausgabe {
-        margin:     $largeGapPx $largeGapPx $largeGapPx (-$issue-container-width/2);
-        width:      $issue-container-width;
-        border:     1px solid $greyBorder;
-        padding:    $largeGapPx;
-        float:      left;
-        background: $white;
-        @include media-query(palm) {
-            width:  100%;
-            margin: $largeGapPx 0;
+        border:         1px solid $greyBorder;
+        padding:        $largeGapPx;
+        float:          left;
+        background:     $white;
+        width:          100%;
+        @include media-query('smallest-and-up') {
+            margin:         $largeGapPx 0;
+        }
+        @include media-query('lap-and-up') {
+            margin:         $largeGapPx;
+            margin-left:    0;
+            width:          $issue-container-width;
+        }
+        @include media-query('big-screen') {
+            margin:         $largeGapPx;
+            margin-left:    -$pagePaddingPx;
+            width:          $issue-container-width;
+        }
+        @include media-query('bigger-screen') {
+            margin:         $largeGapPx $largeGapPx $largeGapPx (-$issue-container-width/2);
+            width:          $issue-container-width;
         }
     }
 }
