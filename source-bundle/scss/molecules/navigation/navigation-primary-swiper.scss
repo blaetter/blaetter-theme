@@ -17,13 +17,13 @@ $navigation-primary-swiper-namespace:              $namespace !default;
                     display:            inline-block;
                     font-weight:        normal;
                     @include transition(margin-top 0.3s ease);
-                    
+
                 }
                 a {
                     color:              $white;
-                    text-decoration:    none; 
+                    text-decoration:    none;
                 }
-                .fa-icon{ 
+                .fa-icon{
                     display:            block;
                     font-size:          2.3em;
                     line-height:        1em;
@@ -45,7 +45,7 @@ $navigation-primary-swiper-namespace:              $namespace !default;
                 }
             }
         }
-    }  
+    }
 }
 
 
@@ -69,7 +69,7 @@ $navigation-primary-swiper-namespace:              $namespace !default;
                     display:        none;
                 }
                 .inner {
-                    padding:        0.938em 1.563rem 0.938em; 
+                    padding:        0.938em 1.563rem 0.938em;
                     padding-left:   0;
                     display:        inline-block;
                     text-align:     center;
@@ -79,7 +79,7 @@ $navigation-primary-swiper-namespace:              $namespace !default;
     }
 }
 
-@include media-query(desk) {
+@include media-query('desk') {
     #{$navigation-primary-swiper-namespace}#navigation-primary-swiper {
         .swiper-wrapper {
             .swiper-slide {
