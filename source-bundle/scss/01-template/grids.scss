@@ -59,6 +59,11 @@ $grid-namespace:            $namespace !default;
             width:          25%;
         }
     }
+    @include media-query('big-screen') {
+        > .grid__item.six-tenths {
+            margin:         auto 10%;
+        }
+    }
     @include media-query('bigger-screen') {
         > .auto {
             -webkit-flex:   1;
@@ -91,6 +96,7 @@ $grid-namespace:            $namespace !default;
         > .grid__item.six-tenths {
             @include flexgrid-item--base();
             width:          60%;
+            margin:         0;
         }
         > .grid__item.eight-tenths {
             @include flexgrid-item--base();
@@ -107,7 +113,7 @@ $grid-namespace:            $namespace !default;
 .grid > .grid__item {
     @include flexgrid-item--base();
     &.flexcontent-autoheight {
-        @include media-query(lap-and-up) {
+        @include media-query('lap-and-up') {
             // we can set the height of the widgetform or the tabcontainer to 100% height of its neighbor
             // (used on homepage and channelpage hero areas)
             display:                flex;
@@ -130,7 +136,7 @@ $grid-namespace:            $namespace !default;
     @include flexgrid--base();
     > [class*="grid__item"] {
         @include flexgrid-item--base();
-        @include media-query(lap-and-up) {
+        @include media-query('lap-and-up') {
             width:                  66.666%;
             &:nth-child(2n+0) {
                 width:              33.333%;
