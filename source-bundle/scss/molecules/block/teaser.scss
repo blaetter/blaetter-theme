@@ -7,7 +7,7 @@ $teaser-namespace:              $namespace !default;
             width:          30vw;
             height:         17vw;
             float:          left;
-            margin:         20px;
+            margin:         0 $largeGapPx $largeGapPx 0;
             overflow:       hidden;
             position:       relative;
             img {
@@ -23,9 +23,7 @@ $teaser-namespace:              $namespace !default;
             width:          100%;
             height:         auto;
             margin:         0;
-            padding:        $largeGapPx 0 $largeGapPx 0;
-            border-right:   solid $largeGapPx $white; // as a workaround for overflow:hidden and padding-right not working as expected.
-            border-left:    solid $largeGapPx $white;
+            margin-bottom:  $largeGapPx;
             img {
                 position:   relative;
                 width:      100%;
@@ -50,7 +48,7 @@ $teaser-namespace:              $namespace !default;
         display:                none !important;
     }
     .image {
-        width:                  30vw;
+        width:                  30%; // This is 30% not 30vs because vw is relative to the screen width, not the container width
         float:                  left;
         margin-right:           1em;
         margin-bottom:           1em;
@@ -88,6 +86,18 @@ $teaser-namespace:              $namespace !default;
             padding:                $teaserInnerPadding;
         }
         @include mobile-image-styles();
+        @include media-query('palm') {
+            .image {
+                margin:         $largeGapPx;
+            }
+        }
+        @include media-query('smallest') {
+            .image {
+                margin:        $largeGapPx 0 $largeGapPx 0;
+                border-right:   solid $largeGapPx $white; // as a workaround for overflow:hidden and padding-right not working as expected.
+                border-left:    solid $largeGapPx $white;
+            }
+        }
     }
     &.teaser--archive {
         background-color:           transparent;
@@ -109,7 +119,7 @@ $teaser-namespace:              $namespace !default;
                 width:          30vw;
                 height:         30vw;
                 float:          left;
-                margin-right:   20px;
+                margin-right:   $largeGapPx;
                 overflow:       hidden;
             }
         }
@@ -129,10 +139,6 @@ $teaser-namespace:              $namespace !default;
         .author {
             font-size:              1.0em;
         }
-        @include media-query('palm') {
-            //padding-left:           $pagePaddingPalmPx;
-            //padding-right:          $pagePaddingPalmPx;
-        }
     }
     &.teaser--marginal {
         background:                 transparent;
@@ -140,17 +146,14 @@ $teaser-namespace:              $namespace !default;
             padding:                0;
         }
         .image {
-            width:                  30%;
+            width:                  30%; // This is 30% not 30vs because vw is relative to the screen width, not the container width
             float:                  left;
-            margin-right:           1em;
+            margin-right:           $largeGapPx;
         }
         .source {
             display:                none;
         }
-        @include media-query('palm') {
-            //padding-left:           $pagePaddingPalmPx;
-            //padding-right:          $pagePaddingPalmPx;
-        }
+        @include mobile-image-styles();
     }
     &.teaser--poster {
         z-index:                    0;
@@ -197,7 +200,7 @@ $teaser-namespace:              $namespace !default;
             margin-right:       auto;
             position:           absolute;
             text-align:         left;
-            padding:            20px;
+            padding:            $largeGapPx;
             padding-top:        0;
             padding-bottom:     0;
             max-width:          100%;
@@ -238,8 +241,14 @@ $teaser-namespace:              $namespace !default;
         }
     }
     &.teaser--aktuelle-ausgabe {
-        img {
-            border:                     1px solid $greyBorder;
+        .image {
+            width:                      30%;
+            @include media-query('palm') {
+                width:                  30vw;
+            }
+            img {
+                border:                     1px solid $greyBorder;
+            }
         }
         .inner {
             display:                    block;
@@ -254,12 +263,7 @@ $teaser-namespace:              $namespace !default;
     &.block--white {
         .image {
             padding:                    0;
-            border-right:               none; // overriding some cases where image containers are in white boxes
-            border-left:                none;
             margin:                     0 $largeGapPx $largeGapPx 0;
-            @include media-query('smallest') {
-                margin:                 0 0 $largeGapPx 0;
-            }
         }
     }
 }
