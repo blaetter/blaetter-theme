@@ -56,15 +56,16 @@ $messageSuccessBg:              #dff0d8;
 $messageErrorBg:                #f2dede;
 
 // Dimensions
-$smallGapPx:                      12px;
-$mediumGapPx:                     16px;
-$largeGapPx:                      20px;
+$smallGapPx:                    12px;
+$mediumGapPx:                   16px;
+$largeGapPx:                    20px;
 $pageWidthDeskPx:               1420px;  // max width for hero units and header
 $contentWidthDeskPx:            940px; // max width for inner content units
 $contentWidthDeskArticlePx:     700px;
 $gridGutter:                    1.250rem; // 20px_16px;
 $blockPaddingPx:                $largeGapPx; // Grey Teaser...
 $pagePaddingPx:                 40px;
+$pagePaddingBigScreenPx:        120px; // huge padding for big but not the biggest screens, used in cases where small columns are not beeing displayed, but content should not be that wide...
 $pagePaddingPalmPx:             20px;
 $teaserInnerPadding:            $largeGapPx;
 $blockBottomMarginPx:           30px; // Teaser...
