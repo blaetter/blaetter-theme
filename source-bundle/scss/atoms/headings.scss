@@ -28,7 +28,7 @@ $heading-namespace:       $namespace !default;
     &.subtitle {
        font-weight:     normal;
        margin-top:      0.5em;
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             font-size:                  1.5em;
         }
     }
@@ -47,7 +47,7 @@ $heading-namespace:       $namespace !default;
     font-size:                      60px;
     line-height:                    1.3em;
     margin-bottom:                  0.2em;
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         font-size:                  2em;
         margin-bottom:              0.5em;
     }
@@ -86,7 +86,7 @@ $sectiontitleMarginBottom: 2em !default;
             color:                  $linkColor;
         }
     }
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         //padding-left:               $pagePaddingPalmPx;
        // padding-right:              $pagePaddingPalmPx;
     }
@@ -112,7 +112,7 @@ $sectiontitleMarginBottom: 2em !default;
         margin-bottom:              -4px;
     }
 
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
        // padding-left:               $pagePaddingPalmPx;
       //  padding-right:              $pagePaddingPalmPx;
     }

@@ -1,6 +1,6 @@
 #{$namespace}.homepage-dosierteaser {
     background:                 transparent;
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         background:             $white;
     }
     padding:                0;
@@ -11,7 +11,7 @@
         padding:                $blockPaddingPx;
     }
     .teaser.teaser--poster {
-        @include media-query('lap-and-up') {
+        @include media-query($breakpoint_medium) {
             .heading {
                 font-size:          3.5em;
                 line-height:        1.2;

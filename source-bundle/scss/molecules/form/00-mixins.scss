@@ -18,7 +18,7 @@
     @include transition((border-color 0.16s ease-in-out 0s, box-shadow 0.16s ease-in-out 0s));
     max-width:              $formfieldMaxWidth;
     @include getRem('min-height', $formInputHeightPx);
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         @include getRem('min-height', $formInputHeightPalmPx);
     }
     &:focus {
@@ -33,7 +33,7 @@
     .label,
     legend,
     .legend,
-    .validation-feedback { 
+    .validation-feedback {
         color:              $color;
     }
     input,
@@ -51,7 +51,7 @@
 
 
 @mixin form--prependlabel() {
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         // 1) we cant display fieldsets as table or table-row so we have to use divs
         // display:                table; // makes problems in complex forms
         div.form-group {
@@ -116,7 +116,7 @@
         margin:         0;
         vertical-align: top;
         @include getRem('height', $formInputHeightPx);
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             @include getRem('height', $formInputHeightPalmPx);
         }
     }

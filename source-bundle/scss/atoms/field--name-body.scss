@@ -3,7 +3,7 @@
     margin-bottom:  40px;
     h2 {
         font-size: $font-size-h2 * 0.65;
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             font-size:                  1.5em;
         }
     }

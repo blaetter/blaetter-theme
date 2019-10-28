@@ -36,7 +36,7 @@ $breadcrumb-namespace:              $namespace !default;
 }
 
 
-@include media-query(palm) {
+@include media-query($breakpoint_phone) {
     #{$breadcrumb-namespace}.breadcrumb {
         display:            none;
     }

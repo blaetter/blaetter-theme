@@ -1,6 +1,6 @@
 $pagination-namespace:              $namespace !default;
 
-#{$pagination-namespace}.pagination { 
+#{$pagination-namespace}.pagination {
     @include clearfix();
     @include getRem('margin-bottom', $blockBottomMarginPx);
     ul {
@@ -15,6 +15,6 @@ $pagination-namespace:              $namespace !default;
             min-width:                      2.4em;
         }
     }
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
     }
 }

@@ -71,13 +71,7 @@ $teaserInnerPadding:            $largeGapPx;
 $blockBottomMarginPx:           30px; // Teaser...
 $teaserBorderedPaddingPx:       $mediumGapPx;
 $teaserBorderedMarginTopPx:     $largeGapPx;
-$breakointSmallest:             (420px / 16px) * 1rem;
-$breakointPalm:                 (720px / 16px) * 1rem;
-$breakointBigScreen:            (1000px / 16px) * 1rem;
-$breakointBiggerScreen:         (1200px / 16px) * 1rem;
-$breakointDesk:                 ($pageWidthDeskPx / 16px) * 1rem;
 $articleImageMaxHeightPx:       468px;
-$pageWidthDesk:                 $breakointDesk;
 $formInputHeightPx:             40px;
 $formInputHeightPalmPx:         50px;
 $btn-heightPx:                  $formInputHeightPx;
@@ -130,17 +124,36 @@ $font-weight-h3:                700;
 $font-weight-h4:                700;
 $font-weight-a:                 400;
 
-// Breakpoints
+// Breakpoint naming definitions - theese can be used in the mixin
+$breakpoint_smallest:           'smallest';
+$breakpoint_smallest_and_up:    'smallest-and-up';
+$breakpoint_phone:              'phone';
+$breakpoint_medium:             'medium';
+$breakpoint_big:                'big';
+$breakpoint_large:              'large';
+
+// Breakpoint definitions
+$breakpoint_width_smallest:      (420px / 16px) * 1rem;
+$breakpoint_width_phone:         (720px / 16px) * 1rem;
+$breakpoint_width_medium:        (1000px / 16px) * 1rem;
+$breakpoint_width_big:           (1200px / 16px) * 1rem;
+$breakpoint_width_large:         ($pageWidthDeskPx / 16px) * 1rem;
+$pageWidthDesk:                  $breakpoint_width_large;
+
+// Breakpoints for media-query-mixin
 $breakpoints: (
-    'smallest' '(max-width: '+$breakointSmallest+')',
-    'smallest-and-up' '(min-width: '+($breakointSmallest + 0.001rem)+')',
-    'palm' '(max-width: '+$breakointPalm+')',
-    'lap' '(min-width: '+($breakointPalm + 0.001rem)+') and (max-width: '+($breakointDesk - 0.001rem)+')',
-    "lap-and-up" '(min-width: '+($breakointPalm + 0.001rem)+')',
-    "portable" '(max-width: '+($breakointDesk - 0.001rem)+')',
-    "big-screen" '(min-width: '+$breakointBigScreen+')',
-    "bigger-screen" '(min-width: '+$breakointBiggerScreen+')',
-    'desk' '(min-width: '+$breakointDesk+')',
+    // exactly smallest screens
+    $breakpoint_smallest '(max-width: '+$breakpoint_width_smallest+')',
+    // everything bigger than small screen sizes
+    $breakpoint_smallest_and_up '(min-width: '+($breakpoint_width_smallest + 0.001rem)+')',
+    // everything with max phone width
+    $breakpoint_phone '(max-width: '+$breakpoint_width_phone+')',
+    // every bigger than phone width
+    $breakpoint_medium '(min-width: '+($breakpoint_width_phone + 0.001rem)+')',
+    // every screen with at least the size of big breakpoint
+    $breakpoint_big '(min-width: '+$breakpoint_width_big+')',
+    // every screen with at least the size of the large breakpoint
+    $breakpoint_large '(min-width: '+$breakpoint_width_large+')',
 );
 
 // Do we need some normalize rules (normalize.scss)?

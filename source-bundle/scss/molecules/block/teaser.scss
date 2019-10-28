@@ -1,7 +1,7 @@
 $teaser-namespace:              $namespace !default;
 
 @mixin mobile-image-styles() {
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         // make 16:9 image to 1:1
         .image {
             width:          30vw;
@@ -18,7 +18,7 @@ $teaser-namespace:              $namespace !default;
             }
         }
     }
-    @include media-query('smallest') {
+    @include media-query($breakpoint_smallest) {
         .image {
             width:          100%;
             height:         auto;
@@ -40,7 +40,7 @@ $teaser-namespace:              $namespace !default;
         a {
             color:              $baseTextColor;
         }
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             font-size:              1.2em;
         }
     }
@@ -86,12 +86,12 @@ $teaser-namespace:              $namespace !default;
             padding:                $teaserInnerPadding;
         }
         @include mobile-image-styles();
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             .image {
                 margin:         $largeGapPx;
             }
         }
-        @include media-query('smallest') {
+        @include media-query($breakpoint_smallest) {
             .image {
                 margin:        $largeGapPx 0 $largeGapPx 0;
                 border-right:   solid $largeGapPx $white; // as a workaround for overflow:hidden and padding-right not working as expected.
@@ -114,7 +114,7 @@ $teaser-namespace:              $namespace !default;
             font-size:              1em;
             font-weight:            bold;
         }
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             .image {
                 width:          30vw;
                 height:         30vw;
@@ -183,7 +183,7 @@ $teaser-namespace:              $namespace !default;
             color:                  $white;
             font-size:              1.5em;
             line-height:            1.2;
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 font-size:          8vw;
             }
             a {
@@ -243,7 +243,7 @@ $teaser-namespace:              $namespace !default;
     &.teaser--aktuelle-ausgabe {
         .image {
             width:                      30%;
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 width:                  30vw;
             }
             img {
@@ -252,7 +252,7 @@ $teaser-namespace:              $namespace !default;
         }
         .inner {
             display:                    block;
-            @include media-query('lap-and-up') {
+            @include media-query($breakpoint_medium) {
                 display:                table; // display buttons in line with text on large screens
             }
         }
@@ -270,7 +270,7 @@ $teaser-namespace:              $namespace !default;
 
 
 
-@include media-query('lap-and-up') {
+@include media-query($breakpoint_medium) {
     .one-fourth .teaser--poster {
         .heading, h2, h3 {
             font-size:      1.3em;

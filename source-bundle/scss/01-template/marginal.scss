@@ -4,7 +4,7 @@
      > *:first-child {
         margin-top:                 0;
      }
-     @include media-query('palm') {
+     @include media-query($breakpoint_phone) {
          display:                   none;
     }
 }

@@ -22,7 +22,7 @@ $footerBGColor:                 $white !default;
         margin-bottom:      0.4em;
     }
     .author {
-        color:              $linkColor;   
+        color:              $linkColor;
         display:            block;
         margin-bottom:      0.6em;
     }
@@ -31,7 +31,7 @@ $footerBGColor:                 $white !default;
         display:            block;
         margin-bottom:      0.6em;
     }
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         &.hide {
             display:        none;
         }

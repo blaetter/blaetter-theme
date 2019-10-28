@@ -6,7 +6,7 @@ $namespace:              $namespace !default;
     .image {
         padding:                    0;
         text-align:                 center;
-        @include media-query('lap-and-up') {
+        @include media-query($breakpoint_medium) {
             max-width:                  190px;
             float:                      left;
             margin-right:               50px;
@@ -28,7 +28,7 @@ $namespace:              $namespace !default;
     }
 
     .text {
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             text-align:                 center;
             display:                    table;
         }

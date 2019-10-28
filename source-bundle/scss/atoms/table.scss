@@ -79,7 +79,7 @@ table {
     @extend .table--base;
     th, td {
         border-bottom:          1px solid #f0f0f0;
-        
+
     }
     tr:last-child {
         th, td {
@@ -111,7 +111,7 @@ table {
 
 #{$table-namespace}.table--collapse {
     @extend .table--base;
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         display:                        block;
         thead {
             border:                     none;
@@ -153,7 +153,7 @@ table {
                 border:                 1px solid $greyBorder;
                 border-width:           1px 1px 0 1px;
                 &:last-child {
-                    border-bottom-width:1px;      
+                    border-bottom-width:1px;
                 }
             }
         }

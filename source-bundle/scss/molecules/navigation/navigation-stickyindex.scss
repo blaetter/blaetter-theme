@@ -19,7 +19,7 @@ $stickyheaderIndex_ItemPadding: 13px;
     @include getRem('margin-left', -$pagePaddingPx);
     background-color:           $blue;
     color:                      $white;
-    @include getRem('height', $stickyheaderIndex_Height); 
+    @include getRem('height', $stickyheaderIndex_Height);
     overflow:                   visible;
     z-index:                    2000000;
     top:                        -$stickyheaderIndex_Height;
@@ -31,22 +31,22 @@ $stickyheaderIndex_ItemPadding: 13px;
         }
     }
     &:not(.show) {
-        > * { 
+        > * {
             display:                    none;  // Barrierfreiheit: Disable Tabbing through hidden links
-        } 
+        }
     }
-    .menu-items, 
+    .menu-items,
     .collect-container {
-        @include getRem('height', $stickyheaderIndex_Height); 
-        overflow:               hidden; 
+        @include getRem('height', $stickyheaderIndex_Height);
+        overflow:               hidden;
     }
     /*
     .sticky-logo {
-        @include getRem('width', 82px); 
+        @include getRem('width', 82px);
         box-sizing:             content-box;
-        @include getRem('padding-top', 10px); 
-        @include getRem('padding-left', $pagePaddingPx); 
-        @include getRem('padding-right', $stickyheaderIndex_ItemPadding); 
+        @include getRem('padding-top', 10px);
+        @include getRem('padding-left', $pagePaddingPx);
+        @include getRem('padding-right', $stickyheaderIndex_ItemPadding);
         @include getRem('margin-right', $stickyheaderIndex_ItemSpace - $stickyheaderIndex_ItemPadding*2);
     }
     */
@@ -56,7 +56,7 @@ $stickyheaderIndex_ItemPadding: 13px;
         max-width:              96%;
         > li {
             float:              left;
-            @include getRem('height', $stickyheaderIndex_Height); 
+            @include getRem('height', $stickyheaderIndex_Height);
             white-space:        nowrap;
             padding:            0;
             margin:             0 0 0 0;
@@ -81,17 +81,17 @@ $stickyheaderIndex_ItemPadding: 13px;
     .collect-container {
         @include channel-navigation--base();
         position:               absolute;
-        right:                  0; 
+        right:                  0;
         top:                    0;
         overflow:               visible;
         display:                none;
-        > .toggler { 
+        > .toggler {
             @include __addNavigationItemArrow();
             &::after {
                 @include getRem('margin-left', 16px);
                 transform:      rotate(90deg);
                 color:          inherit;
-            }  
+            }
             color:              $white;
             float:              right;
             padding:            $stickyheaderIndex_ItemPadding;
@@ -105,7 +105,7 @@ $stickyheaderIndex_ItemPadding: 13px;
             @include box-shadow(2px, 2px, 5px, 0px, rgba(100,100,100,0.2));
             padding:            0 0.5em;
             position:           absolute;
-            @include getRem('top', $stickyheaderIndex_Height);  
+            @include getRem('top', $stickyheaderIndex_Height);
             right:              10%;
             width:              300px;
             max-height:         90vh;
@@ -117,7 +117,7 @@ $stickyheaderIndex_ItemPadding: 13px;
                 height:             auto;
                 overflow:           auto;
             }
-            > .toggler { 
+            > .toggler {
                 &::after {
                     transform: rotate(-90deg);
                 }
@@ -130,7 +130,7 @@ $stickyheaderIndex_ItemPadding: 13px;
 }
 
 
-@include media-query(palm) {
+@include media-query($breakpoint_phone) {
     #{$navigation-stickyindex-namespace}#navigation-stickyindex {
         width:                  100%;
         max-width:              100%;

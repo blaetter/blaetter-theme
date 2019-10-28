@@ -3,7 +3,7 @@ $homepage-heroimage-namespace:              $namespace !default;
 #{$homepage-heroimage-namespace}.homepage-heroimage {
     position:               relative;
     margin-bottom:          $pagePaddingPx;
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         margin-bottom:          $pagePaddingPalmPx;
     }
     display:                block;
@@ -62,7 +62,7 @@ $homepage-heroimage-namespace:              $namespace !default;
             color:          $white;
             margin:         0;
             font-size:      8vw;
-            @include media-query('big-screen'){
+            @include media-query($breakpoint_big){
                 font-size:  80px;
             }
             line-height:    1.2;
@@ -74,7 +74,7 @@ $homepage-heroimage-namespace:              $namespace !default;
         .author {
             color:          $greyAuthor;
             font-size:      5vw;
-            @include media-query('big-screen'){
+            @include media-query($breakpoint_big){
                 font-size:  40px;
             }
             line-height:    1.2;

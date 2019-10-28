@@ -3,11 +3,11 @@
         margin-top:             0;
         &.primary {
             padding:            0;
-            @include media-query('bigger-screen') {
+            @include media-query($breakpoint_large) {
                 margin-left:        -$pagePaddingPx;
             }
             a {
-                @include media-query('bigger-screen') {
+                @include media-query($breakpoint_large) {
                     padding:        0.5em 1em 0.5em $pagePaddingPx;
                 }
                 padding:        0.5em 1em;

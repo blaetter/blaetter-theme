@@ -1,11 +1,11 @@
 $imageframe-namespace:              $namespace !default;
 
 // Add an Backgroundimage to the form or block content
-#{$imageframe-namespace}.imageframe { 
+#{$imageframe-namespace}.imageframe {
     .imageframe__image {
         display:                    none;
     }
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         padding:                            $imageframePaddingRem;
         overflow:                           hidden;
         > h2, h3 {
@@ -30,7 +30,7 @@ $imageframe-namespace:              $namespace !default;
             left:                       0;
             min-height:                 100%;
             max-width:                  none;
-        } 
+        }
     }
 }
 

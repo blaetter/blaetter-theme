@@ -7,11 +7,11 @@ $content-wrapper-namespace:              $namespace !default;
 .page-wrapper {
     background-color:   $page-background-color;
     position:           relative;
-    @include media-query(palm) {
+    @include media-query($breakpoint_phone) {
         width:          100%;
         margin:         0;
     }
-    @include media-query(lap-and-up) {
+    @include media-query($breakpoint_medium) {
         width:              100%;
         max-width:          $pageWidthDesk;
         margin:             0 auto;
@@ -38,7 +38,7 @@ $content-wrapper-namespace:              $namespace !default;
         margin-left:    -$pagePaddingPx;
         margin-right:   -$pagePaddingPx;
     }
-    @include media-query(palm) {
+    @include media-query($breakpoint_phone) {
         padding:        $blockPaddingPx $pagePaddingPalmPx;
         .hero {
             margin-left:    -$pagePaddingPalmPx;
@@ -51,7 +51,7 @@ $content-wrapper-namespace:              $namespace !default;
     padding:            $blockPaddingPx $pagePaddingPx;
     background-color:   $grey;
     margin-bottom:      5em;
-    @include media-query(palm) {
+    @include media-query($breakpoint_phone) {
         padding:        $blockPaddingPx $pagePaddingPalmPx;
     }
 }
@@ -60,7 +60,7 @@ $content-wrapper-namespace:              $namespace !default;
     padding:            $blockPaddingPx $pagePaddingPx;
     background-color:   $grey;
     margin-bottom:      5em;
-    @include media-query(palm) {
+    @include media-query($breakpoint_phone) {
         padding:        $blockPaddingPx $pagePaddingPalmPx;
     }
 }

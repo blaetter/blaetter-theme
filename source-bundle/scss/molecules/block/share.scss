@@ -5,7 +5,7 @@ $share-namespace:              $namespace !default;
     min-height:     2.75em; // reserve place
     @media print {
         display:    none;
-    } 
+    }
     ul.orientation-horizontal {
         // shariff css is loading very late, so we make a basic list styling
         display: flex;
@@ -15,7 +15,7 @@ $share-namespace:              $namespace !default;
             margin-right: 1.8%;
         }
     }
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         ul.orientation-horizontal li {
             min-width: auto;
             flex-grow: 0;

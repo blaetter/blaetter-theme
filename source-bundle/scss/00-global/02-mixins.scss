@@ -426,7 +426,7 @@
  * .foo {
  *     color: green;
  *
- *     @include media-query(palm) {
+ *     @include media-query(phone) {
  *         color: red;
  *     }
  *
@@ -447,7 +447,7 @@
             // note:
             // Opera Browser seems to have 530px width in print layout (so it turns tomobile layout)
             // so we have to add screen and print mediatype
-            @if $alias == "palm" {
+            @if $alias == "phone" {
                 @media screen and #{$condition} {
                     @content;
                 }
@@ -489,7 +489,7 @@
         margin-top:                 0;
         line-height:                1rem;
         @include getRem('min-height', $btn-heightPx);
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             @include getRem('min-height', $btn-heightPalmPx);
         }
     }

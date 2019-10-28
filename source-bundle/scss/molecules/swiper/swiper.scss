@@ -2,8 +2,8 @@ $swiper-namespace:       $namespace !default;
 
 #{$swiper-namespace}.swiper {
     .swiper-container {
-        padding-bottom:             0; 
-        z-index:                    0; // overwrite, sticky header problem        
+        padding-bottom:             0;
+        z-index:                    0; // overwrite, sticky header problem
     }
     ul.swiper-wrapper {
         //@include list--no-arrows();
@@ -48,8 +48,8 @@ $swiper-namespace:       $namespace !default;
         background:             $black;
         opacity:                0.5;
     }
-    // Make Headlines smaller in Swiperwidget 
-    @include media-query('smallest-and-up') {
+    // Make Headlines smaller in Swiperwidget
+    @include media-query($breakpoint_smallest_and_up) {
         .swiper-wrapper .swiper-slide > * > h3 {
             @include getRem('font-size', 14px);
             margin-bottom:      0.7em;
@@ -61,7 +61,7 @@ $swiper-namespace:       $namespace !default;
             display:            block;
         }
     }
-    
+
     // PREV/NEXT BUTTONS:
     .swiper-button-next,
     .swiper-button-prev {
@@ -117,8 +117,8 @@ $swiper-namespace:       $namespace !default;
             margin-right:           1px;
         }
     }
-    
-   
+
+
 }
 
 

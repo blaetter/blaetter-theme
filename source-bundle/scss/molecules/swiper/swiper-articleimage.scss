@@ -20,10 +20,10 @@ $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth:    948px * 1 / 2;
     p {
         text-align:                 left;
     }
-    
+
     // Add some extra space for image counter:
     .swiper-container {
-        margin-top:                 1.5em; 
+        margin-top:                 1.5em;
         overflow:                   visible;
          .swiper-pagination {
             top:                    -1.5em;
@@ -31,18 +31,18 @@ $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth:    948px * 1 / 2;
             font-weight:            bold;
         }
     }
-    
+
     // Move Buttons to the vertical middle of the image (important for slides with differnt text heights)
     .swiper-button-next,
     .swiper-button-prev {
-        @include media-query(lap-and-up) {
-            @include getRem('top', $swiper-articleimage--minHeight-desktopPx/2 );       
+        @include media-query($breakpoint_medium) {
+            @include getRem('top', $swiper-articleimage--minHeight-desktopPx/2 );
         }
-        @include media-query(palm) {
-            top:                    $swiper-articleimage--minHeight-mobileVw/2;     
-        }      
+        @include media-query($breakpoint_phone) {
+            top:                    $swiper-articleimage--minHeight-mobileVw/2;
+        }
     }
-    
+
     // Align image and set container dimensions:
     .image {
         margin-bottom:              0.3em;
@@ -51,7 +51,7 @@ $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth:    948px * 1 / 2;
             display:                block;
             margin:                 0 auto;
             width: auto;
-            @include media-query(lap-and-up) {
+            @include media-query($breakpoint_medium) {
                 @include getRem('max-height', $swiper-articleimage--minHeight-desktopPx);
             }
         }
@@ -62,22 +62,22 @@ $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth:    948px * 1 / 2;
         }
         // Set container dimensions
         .swiper-zoom-container {
-            @include media-query(palm) {
+            @include media-query($breakpoint_phone) {
                 height:                 $swiper-articleimage--minHeight-mobileVw;
             }
-            @include media-query(lap-and-up) {
+            @include media-query($breakpoint_medium) {
                 @include getRem('height', $swiper-articleimage--minHeight-desktopPx);
             }
         }
     }
-    
+
     .swiper-lazy-preloader {
-        @include media-query(lap-and-up) {
-            @include getRem('top', $swiper-articleimage--minHeight-desktopPx/2 );     
+        @include media-query($breakpoint_medium) {
+            @include getRem('top', $swiper-articleimage--minHeight-desktopPx/2 );
         }
-        @include media-query(palm) {
-            top:                 $swiper-articleimage--minHeight-mobileVw/2;     
-        }   
+        @include media-query($breakpoint_phone) {
+            top:                 $swiper-articleimage--minHeight-mobileVw/2;
+        }
    }
 }
 
@@ -86,44 +86,44 @@ $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth:    948px * 1 / 2;
 #{$swiper-articleimage-namespace}.swiper-articleimage.swiper-articleimage--16x9 {
     .swiper-button-next,
     .swiper-button-prev {
-        @include media-query(lap-and-up) {
-            //@include getRem('top', $swiper-articleimage--minHeight-desktopPx-16x9/2 );       
+        @include media-query($breakpoint_medium) {
+            //@include getRem('top', $swiper-articleimage--minHeight-desktopPx-16x9/2 );
         }
-        @include media-query(palm) {
-            //top:                    $swiper-articleimage--minHeight-mobileVw-16x9/2;     
-        }      
+        @include media-query($breakpoint_phone) {
+            //top:                    $swiper-articleimage--minHeight-mobileVw-16x9/2;
+        }
     }
     .image {
         img {
-            @include media-query(lap-and-up) {
+            @include media-query($breakpoint_medium) {
                //@include getRem('max-height', $swiper-articleimage--minHeight-desktopPx-16x9);
             }
         }
         .swiper-zoom-container {
-            @include media-query(palm) {
+            @include media-query($breakpoint_phone) {
                 height:                 $swiper-articleimage--minHeight-mobileVw-16x9;
             }
-            @include media-query(lap-and-up) {
+            @include media-query($breakpoint_medium) {
                 @include getRem('height', $swiper-articleimage--minHeight-desktopPx-16x9);
             }
         }
     }
     .swiper-button-next,
     .swiper-button-prev {
-        @include media-query(lap-and-up) {
-            //@include getRem('top', $swiper-articleimage--minHeight-desktopPx-16x9/2 );       
+        @include media-query($breakpoint_medium) {
+            //@include getRem('top', $swiper-articleimage--minHeight-desktopPx-16x9/2 );
         }
-        @include media-query(palm) {
-            //top:                    $swiper-articleimage--minHeight-mobileVw-16x9/2;     
-        }      
+        @include media-query($breakpoint_phone) {
+            //top:                    $swiper-articleimage--minHeight-mobileVw-16x9/2;
+        }
     }
     .swiper-lazy-preloader {
-        @include media-query(lap-and-up) {
-            @include getRem('top', $swiper-articleimage--minHeight-desktopPx-16x9/2 );     
+        @include media-query($breakpoint_medium) {
+            @include getRem('top', $swiper-articleimage--minHeight-desktopPx-16x9/2 );
         }
-        @include media-query(palm) {
-            top:                 $swiper-articleimage--minHeight-mobileVw-16x9/2;     
-        }   
+        @include media-query($breakpoint_phone) {
+            top:                 $swiper-articleimage--minHeight-mobileVw-16x9/2;
+        }
     }
 }
 */
@@ -132,25 +132,25 @@ $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth:    948px * 1 / 2;
 #{$swiper-articleimage-namespace}.swiper-articleimage.swiper-articleimage--2x1-fullwidth {
     .image {
         img {
-            @include media-query(lap-and-up) {
+            @include media-query($breakpoint_medium) {
                @include getRem('max-height', $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth);
             }
         }
         .swiper-zoom-container {
-            @include media-query(palm) {
+            @include media-query($breakpoint_phone) {
                 height:                 $swiper-articleimage--minHeight-mobileVw-2x1-fullwidth;
             }
-            @include media-query(lap-and-up) {
+            @include media-query($breakpoint_medium) {
                 @include getRem('height', $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth);
             }
         }
     }.swiper-lazy-preloader {
-        @include media-query(lap-and-up) {
-            @include getRem('top', $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth/2 );     
+        @include media-query($breakpoint_medium) {
+            @include getRem('top', $swiper-articleimage--minHeight-desktopPx-2x1-fullwidth/2 );
         }
-        @include media-query(palm) {
-            top:                 $swiper-articleimage--minHeight-mobileVw-2x1-fullwidth/2;     
-        }   
+        @include media-query($breakpoint_phone) {
+            top:                 $swiper-articleimage--minHeight-mobileVw-2x1-fullwidth/2;
+        }
     }
 }
 

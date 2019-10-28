@@ -50,7 +50,7 @@
     input[type=checkbox]:disabled + label + .close {
         cursor:             not-allowed;
         &:after {
-            //content:          "\f00c"; 
+            //content:          "\f00c";
             color:              $greyDisabled;
         }
     }
@@ -59,7 +59,7 @@
         position:               absolute;
         z-index:                -1;
     }
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         display:                block;
         margin-right:           0em;
     }

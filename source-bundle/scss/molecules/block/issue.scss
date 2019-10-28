@@ -7,20 +7,20 @@ article.node-type--story {
         float:          left;
         background:     $white;
         width:          100%;
-        @include media-query('smallest-and-up') {
+        @include media-query($breakpoint_smallest_and_up) {
             margin:         $largeGapPx 0;
         }
-        @include media-query('lap-and-up') {
+        @include media-query($breakpoint_medium) {
             margin:         $largeGapPx;
             margin-left:    0;
             width:          $issue-container-width;
         }
-        @include media-query('big-screen') {
+        @include media-query($breakpoint_big) {
             margin:         $largeGapPx;
             margin-left:    -$pagePaddingPx;
             width:          $issue-container-width;
         }
-        @include media-query('bigger-screen') {
+        @include media-query($breakpoint_large) {
             margin:         $largeGapPx $largeGapPx $largeGapPx (-$issue-container-width/2);
             width:          $issue-container-width;
         }

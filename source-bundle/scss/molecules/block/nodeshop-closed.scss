@@ -1,4 +1,4 @@
-.nodeshop-closed {
+article.nodeshop-closed {
     // Article Fade Out:
     .field--name-body {
         margin-bottom:          4em;
@@ -34,10 +34,11 @@
     .teaser--aktuelle-ausgabe {
         margin-left:            0;
         width:                  100%;
-        padding:                $largeGapPx;
+        padding:                0;
         float:                  none;
         background:             transparent;
-        @include media-query(palm) {
+        border:                 none;
+        @include media-query($breakpoint_phone) {
             width:                  100%;
             margin:                 $largeGapPx 0;
         }

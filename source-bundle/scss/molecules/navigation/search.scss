@@ -27,10 +27,10 @@ $pageSearchFontColor:                $white;
     @media print {
         display:                        none !important;
     }
-    @include media-query(lap-and-up) {
+    @include media-query($breakpoint_medium) {
 
     }
-    @include media-query(palm) {
+    @include media-query($breakpoint_phone) {
 
     }
 }

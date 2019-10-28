@@ -2,7 +2,7 @@ $responsive-tools-namespace:           $namespace !default;
 
 // Some simple responsive helper classes
 
-@include media-query(lap-and-up) {
+@include media-query($breakpoint_medium) {
     #{$responsive-tools-namespace}.desk-hide {
         display:    none !important;
     }
@@ -11,13 +11,13 @@ $responsive-tools-namespace:           $namespace !default;
     }
 }
 
-@include media-query(lap-and-up) {
+@include media-query($breakpoint_medium) {
     #{$responsive-tools-namespace}.palm-show {
         display:    none !important;
     }
 }
 
-@include media-query(palm) {
+@include media-query($breakpoint_phone) {
     #{$responsive-tools-namespace}.palm-hide {
         display:    none !important;
     }
@@ -26,7 +26,7 @@ $responsive-tools-namespace:           $namespace !default;
     }
 }
 
-@include media-query(smallest) {
+@include media-query($breakpoint_smallest) {
     #{$responsive-tools-namespace}.smallest-hide {
         display:    none !important;
     }

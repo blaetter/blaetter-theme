@@ -16,7 +16,7 @@ $btn-border-color:              $blue !default;
 }
 
 #{$button-namespace}.btn {
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         width:              100%;
         line-height:        2em;
     }
@@ -175,7 +175,7 @@ $btn-border-color:              $blue !default;
     width:                          100%;
     text-align:                     center;
     @include getRem('min-height', $btn-heightPx);
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         @include getRem('min-height', $btn-heightPalmPx);
     }
     &:hover,

@@ -61,7 +61,7 @@ $form-namespace:            $namespace !default;
         display:        flex;
         align-items:  center;
         @include getRem('min-height', $formInputHeightPx);
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             @include getRem('min-height', $formInputHeightPalmPx);
         }
     }
@@ -179,7 +179,7 @@ $form-namespace:            $namespace !default;
         }
         input[type="date"] {
             @include getRem('height', $formInputHeightPx);
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 @include getRem('height', $formInputHeightPalmPx);
             }
         }
@@ -192,7 +192,7 @@ $form-namespace:            $namespace !default;
             font-family:        FontAwesome;
             display:            block;
             @include getRem('height', $formInputHeightPx);
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 @include getRem('height', $formInputHeightPalmPx);
             }
             position:           absolute;
@@ -201,7 +201,7 @@ $form-namespace:            $namespace !default;
             width:              $icon-width;
             text-align:         center;
             line-height:        $formInputHeightPx;
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 line-height:        $formInputHeightPalmPx;
             }
         }
@@ -286,7 +286,7 @@ $form-namespace:            $namespace !default;
 #{$form-namespace}.form-actions {
     @include clearfix();
     @include getRem('margin-top', $formgoupBottomMarginPx);
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         display:                flex;
         justify-content:        flex-end;
         align-items:            center;
@@ -299,7 +299,7 @@ $form-namespace:            $namespace !default;
             margin-left:        1em;
         }
     }
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         display:                    block;
         > * {
             width:                  100%;
@@ -319,7 +319,7 @@ $form-namespace:            $namespace !default;
     //     margin-left:            0;
     // }
 }
-@include media-query('lap-and-up') {
+@include media-query($breakpoint_medium) {
     #{$form-namespace}form .grid + .form-actions {
         margin-top:                 0;
     }
@@ -351,7 +351,7 @@ $form-namespace:            $namespace !default;
     padding:                0 0px 0 2px;
     min-height:             2.1em; // ie fix
     @include getRem ('height',$formInputHeightPx);
-    @include media-query('palm') {
+    @include media-query($breakpoint_phone) {
         @include getRem('height', $formInputHeightPalmPx);
     }
 }
@@ -373,7 +373,7 @@ $form-namespace:            $namespace !default;
 
 // Split the formgroups in two rows
 #{$form-namespace}.form--split {
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         .logo {
             position:                       absolute;
             width:                          8em;
@@ -403,7 +403,7 @@ $form-namespace:            $namespace !default;
 
 // Form with all inputs in one row
 #{$form-namespace}.form--inarow {
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         .inner {
             display:                    flex;
             align-items:                center;

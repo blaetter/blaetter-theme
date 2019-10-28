@@ -20,7 +20,7 @@ $portalSearchButtonWidth:           2.1875rem !default; //35px_16px
         }
         input {
             width:                  100%;
-            border:                 1px solid transparent; // Barrierefreiheit 
+            border:                 1px solid transparent; // Barrierefreiheit
             padding:                5px;
             margin:                 0;
             display:                inline-block;
@@ -43,12 +43,12 @@ $portalSearchButtonWidth:           2.1875rem !default; //35px_16px
             text-align:             center;
             border:                 0 none;
             line-height:            1rem;
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 line-height:        2em;
             }
             display:                flex;
             @include getRem('min-height', $btn-heightPx);
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 @include getRem('min-height', $btn-heightPalmPx);
             }
             &::before {
@@ -63,10 +63,10 @@ $portalSearchButtonWidth:           2.1875rem !default; //35px_16px
         }
     }
     */
-} 
+}
 
 
-@include media-query(palm) {
+@include media-query($breakpoint_phone) {
     /*
     #{$portal-search-namespace}.portal-search {
         width:                  100%;

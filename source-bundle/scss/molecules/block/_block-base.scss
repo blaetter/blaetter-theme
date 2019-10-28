@@ -220,7 +220,7 @@
  *  But not in: DESKTOP view in a TWO or THREE COLUMNED layout!
  *  Here we can set our exceptions
  */
-@include media-query(lap-and-up) {
+@include media-query($breakpoint_medium) {
     #{$namespace}.clearimagefloat,
     #{$namespace}.one-half:not(.marginal),
     #{$namespace}.one-third:not(.marginal),

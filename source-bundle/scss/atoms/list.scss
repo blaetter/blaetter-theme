@@ -71,7 +71,7 @@ $list-namespace:                $namespace !default;
     @include list--horizontal($itemBorder: true);
 }
 
-@include media-query(palm) {
+@include media-query($breakpoint_phone) {
     #{$list-namespace}.list-footer-portallinks {
         margin-left:            0;
         li {
@@ -83,7 +83,7 @@ $list-namespace:                $namespace !default;
 
 // Listitems(!) have half width
 #{$list-namespace}ul.list--double {
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         display: flex;
         flex-wrap: wrap;
         > li {
@@ -96,7 +96,7 @@ $list-namespace:                $namespace !default;
 
 // Listitems(!) have third width
 #{$list-namespace}ul.list--triple {
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         display: flex;
         flex-wrap: wrap;
         > li {
@@ -117,7 +117,7 @@ $list-namespace:                $namespace !default;
                   page-break-inside: avoid;
                        break-inside: avoid;
     }
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         column-count:               2;
         padding-left:               0;
         li {
@@ -143,7 +143,7 @@ $list-namespace:                $namespace !default;
 
 #{$list-namespace}.dl--horizontal {
     display: table;
-    @include media-query('smallest') {
+    @include media-query($breakpoint_smallest) {
         display: unset;
     }
     dt {

@@ -3,8 +3,8 @@ $multicheckboxselect-namespace:              $namespace !default;
 
 // We build a list of checkboxes from a multiselect via js. Only Desktop!
 
-#{$multicheckboxselect-namespace}.js-multiselect2checkboxes {    
-    @include media-query('lap-and-up') {
+#{$multicheckboxselect-namespace}.js-multiselect2checkboxes {
+    @include media-query($breakpoint_medium) {
         position:                   relative;
         background:                 $white !important; // because of downarrow
         .arrow:before {
@@ -41,7 +41,7 @@ $multicheckboxselect-namespace:              $namespace !default;
                     float:      right;
                 }
             }
-        } 
+        }
     }
 }
 

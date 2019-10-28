@@ -6,11 +6,11 @@
     }
     table {
         width:          100%;
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             display:    block;
         }
         thead {
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 display:    none;
             }
             th {
@@ -22,19 +22,19 @@
             }
         }
         tbody {
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 display:    block;
             }
             tr {
                 border-bottom: 1px solid $greyDark;
-                @include media-query('palm') {
+                @include media-query($breakpoint_phone) {
                     display:    block;
                     padding-bottom: $blockBottomMarginPx;
                     margin-bottom: $blockBottomMarginPx;
                 }
             }
             td {
-                @include media-query('lap-and-up') {
+                @include media-query($breakpoint_medium) {
                     padding-right:  30px;
                     padding-top:    12px;
                     padding-bottom: 12px;
@@ -42,7 +42,7 @@
                         padding-right:  0px;
                     }
                 }
-                @include media-query('palm') {
+                @include media-query($breakpoint_phone) {
                     padding-top:    0;
                     padding-bottom: 0;
                     display:    block;
@@ -67,7 +67,7 @@
             img {
                 display:    block;
                 max-width:  150px;
-                @include media-query('palm') {
+                @include media-query($breakpoint_phone) {
                     max-width:  100%;
                 }
             }
@@ -86,7 +86,7 @@
     }
     #paypal-button {
         display: inline-block;
-        @include media-query('palm') {
+        @include media-query($breakpoint_phone) {
             margin-top: 1em;
             text-align: center;
         }

@@ -22,7 +22,7 @@ $image-namespace:              $namespace !default;
     }
     width:              100%;
     float:              none;
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         width:          30.5%;
     }
 }

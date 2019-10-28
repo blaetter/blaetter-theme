@@ -17,7 +17,7 @@ $headerTransitionTimespan:      0.4s;
         .claim {
             margin-left:        $pagePaddingPx/3;
             width:              120px;
-            @include media-query('palm') {
+            @include media-query($breakpoint_phone) {
                 display:        none;
             }
         }
@@ -72,7 +72,7 @@ $headerTransitionTimespan:      0.4s;
     #{$header-namespace}#header,
     #header#{$header-namespace} {
         .logo {
-            @include media-query('lap-and-up') {
+            @include media-query($breakpoint_medium) {
                 .palm {
                     display:        none;
                 }

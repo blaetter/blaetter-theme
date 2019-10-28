@@ -1,7 +1,7 @@
 
 .book-navigation {
     display:            none;
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         display:        block;
     }
     .book-pager {

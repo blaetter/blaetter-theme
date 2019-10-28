@@ -37,7 +37,7 @@ $grid-namespace:            $namespace !default;
 
 #{$grid-namespace}.grid {
     @include flexgrid--base();
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         > .grid__item.one-half {
             @include flexgrid-item--base();
             width:          50%;
@@ -59,12 +59,13 @@ $grid-namespace:            $namespace !default;
             width:          25%;
         }
     }
-    @include media-query('big-screen') {
+    @include media-query($breakpoint_big) {
         > .grid__item.six-tenths {
+            width:          80%;
             margin:         auto 10%;
         }
     }
-    @include media-query('bigger-screen') {
+    @include media-query($breakpoint_large) {
         > .auto {
             -webkit-flex:   1;
                     flex:   1;
@@ -113,7 +114,7 @@ $grid-namespace:            $namespace !default;
 .grid > .grid__item {
     @include flexgrid-item--base();
     &.flexcontent-autoheight {
-        @include media-query('lap-and-up') {
+        @include media-query($breakpoint_medium) {
             // we can set the height of the widgetform or the tabcontainer to 100% height of its neighbor
             // (used on homepage and channelpage hero areas)
             display:                flex;
@@ -136,7 +137,7 @@ $grid-namespace:            $namespace !default;
     @include flexgrid--base();
     > [class*="grid__item"] {
         @include flexgrid-item--base();
-        @include media-query('lap-and-up') {
+        @include media-query($breakpoint_medium) {
             width:                  66.666%;
             &:nth-child(2n+0) {
                 width:              33.333%;
@@ -148,7 +149,7 @@ $grid-namespace:            $namespace !default;
 
 // make grid content container 100% height
 .grid.grid--stretch {
-    @include media-query('lap-and-up') {
+    @include media-query($breakpoint_medium) {
         align-items:            stretch;
     }
     > .grid__item {

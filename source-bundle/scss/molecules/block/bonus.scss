@@ -25,7 +25,7 @@ $bonus-namespace:              $namespace !default;
     }
     .nodeshop-bonus-footer {
         .btn {
-            @include media-query(lap-and-up) {
+            @include media-query($breakpoint_medium) {
                 width:  auto;
             }
         }

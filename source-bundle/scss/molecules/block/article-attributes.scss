@@ -11,7 +11,7 @@ $article-attributes-namespace:              $namespace !default;
             line-height:        1.5;
             > * {
                 display:        table-cell;
-                @include media-query(palm) {
+                @include media-query($breakpoint_phone) {
                     display:    block;
                 }
                 padding-bottom: 0.2em;
@@ -27,10 +27,10 @@ $article-attributes-namespace:              $namespace !default;
                 }
             }
             .text {
-                @include media-query(palm) {
+                @include media-query($breakpoint_phone) {
                     margin-bottom:  0.75em;
                 }
-            }      
+            }
         }
     }
 }
