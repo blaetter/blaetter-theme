@@ -1,5 +1,5 @@
-FROM registry.gitlab.berlinonline.net/docker/php/7.1/apache:xenial
-LABEL Name="patternlab-test" Version="1"
+FROM registry.berlinonline.net/library/php:apache-7.3
+LABEL Name="blaetter-theme" Version="1"
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 

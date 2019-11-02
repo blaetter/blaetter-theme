@@ -1,8 +1,8 @@
 www:
-  image: registry.gitlab.berlinonline.net/portalbetrieb/bde-corporate-masterlayout/www
+  image: blaetter-theme:latest
   volumes:
     - "./:/app"
   environment:
-    - VIRTUAL_HOST=www.bde-corporate.site
+    - VIRTUAL_HOST=blaetter-theme.local
   ports:
     - "80"
