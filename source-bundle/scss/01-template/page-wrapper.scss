@@ -38,6 +38,9 @@ $content-wrapper-namespace:              $namespace !default;
         margin-left:    -$pagePaddingPx;
         margin-right:   -$pagePaddingPx;
     }
+    #block-palm-page-title {
+        display:        none; // avoid page title of the homepage to be displayed
+    }
     @include media-query($breakpoint_phone) {
         padding:        $blockPaddingPx $pagePaddingPalmPx;
         .hero {
