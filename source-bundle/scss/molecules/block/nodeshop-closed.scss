@@ -10,8 +10,8 @@ article.nodeshop-closed {
             position:           absolute;
             left:               0;
             top:                0;
-            background: -webkit-linear-gradient(top, transparent 0%,transparent 55%,$grey 100%);
-            background:         linear-gradient(to bottom, transparent 0%,transparent 55%,$grey 100%);
+            background: -webkit-linear-gradient(rgba(255,255,255,0.001) 0%,rgba(255,255,255,0.001) 55%,$grey 100%);
+            background:         linear-gradient(rgba(255,255,255,0.001) 0%,rgba(255,255,255,0.001) 55%,$grey 100%);
           }
     }
     // Teaser Add Lock:
