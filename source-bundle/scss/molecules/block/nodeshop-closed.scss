@@ -1,7 +1,6 @@
 article.nodeshop-closed {
     // Article Fade Out:
     .field--name-body {
-        margin-bottom:          4em;
         position:               relative;
         &:before {
             content:            '';
@@ -13,6 +12,11 @@ article.nodeshop-closed {
             background: -webkit-linear-gradient(rgba(255,255,255,0.001) 0%,rgba(255,255,255,0.001) 55%,$grey 100%);
             background:         linear-gradient(rgba(255,255,255,0.001) 0%,rgba(255,255,255,0.001) 55%,$grey 100%);
           }
+    }
+    &.node-type--story {
+        .field--name-body {
+            margin-bottom:      4em;
+        }
     }
     // Teaser Add Lock:
     &.teaser,
