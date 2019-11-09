@@ -117,7 +117,6 @@ $teaser-namespace:              $namespace !default;
         @include media-query($breakpoint_phone) {
             .image {
                 width:          30vw;
-                height:         30vw;
                 float:          left;
                 margin-right:   $largeGapPx;
                 overflow:       hidden;
