@@ -24,5 +24,12 @@ article.node-type--story {
             margin:         $largeGapPx $largeGapPx $largeGapPx (-$issue-container-width/2);
             width:          $issue-container-width;
         }
+        .image {
+            width:                      100%;
+            margin-right:                0;
+            img {
+                border:                     1px solid $greyBorder;
+            }
+        }
     }
 }
