@@ -1,6 +1,7 @@
 
 .book-navigation {
     display:            none;
+    margin-top:         $gridGutter;
     @include media-query($breakpoint_medium) {
         display:        block;
     }
@@ -10,7 +11,6 @@
         align-items:            flex-start;
         padding:                0;
         margin:                 0;
-        margin-top:             $gridGutter;
         .book-pager__item {
             display:        inline-block;
             list-style-type:none;

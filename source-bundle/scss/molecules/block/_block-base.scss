@@ -3,7 +3,8 @@
  */
 
 @mixin block--base() {
-    @include getRem('margin-bottom', $blockBottomMarginPx);
+    //@include getRem('margin-bottom', $blockBottomMarginPx);
+    margin-bottom:              $gridGutter;
     @include clearfix();
     width:                      100%;
     overflow:                   visible;
