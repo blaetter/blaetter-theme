@@ -54,7 +54,7 @@ $heading-namespace:       $namespace !default;
 }
 
 // Headline for subsections on indexpages, grey border
-$sectiontitleMarginTop: $gridGutter*2 !default;
+$sectiontitleMarginTop: 0 !default;
 $sectiontitleMarginBottom: $gridGutter !default;
 #{$heading-namespace}.heading--sectiontitle {
     font-size:                      18px;

@@ -2,10 +2,6 @@ $homepage-heroimage-namespace:              $namespace !default;
 
 #{$homepage-heroimage-namespace}.homepage-heroimage {
     position:               relative;
-    margin-bottom:          $pagePaddingPx;
-    @include media-query($breakpoint_phone) {
-        margin-bottom:          $pagePaddingPalmPx;
-    }
     display:                block;
     overflow:               hidden;
     z-index:                0;
