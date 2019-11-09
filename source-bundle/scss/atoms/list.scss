@@ -182,13 +182,25 @@ nav.tabs {
     margin-top:   60px;
 }
 ul.tabs {
-    //font-family: droid-sans, Arial,sans-serif;
-    .primary {
-
+    margin: auto 0;
+    border-bottom: 4px solid $white;
+    @include media-query($breakpoint_phone) {
+        margin: auto 0;
     }
+    @include media-query($breakpoint_big) {
+        margin:    auto 10% ;
+    }
+    @include media-query($breakpoint_large) {
+       margin-left: 0;
+       margin-right: 0;
+       border-bottom: none;
+    }
+    //font-family: droid-sans, Arial,sans-serif;
     li {
-        float: none;
-        display: block;
+        display: inline-flex;
+        @include media-query($breakpoint_large) {
+            display: block;
+        }
     }
     .is-active {
         background: $white;
@@ -203,10 +215,5 @@ ul.tabs {
     a {
         padding-left: $blockPaddingPx*2;
     }
-}
-ul.tabs {
-    //font-family: droid-sans, Arial,sans-serif;
-    .is-active {
 
-          }
 }
