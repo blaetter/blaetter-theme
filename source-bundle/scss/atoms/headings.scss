@@ -54,7 +54,8 @@ $heading-namespace:       $namespace !default;
 }
 
 // Headline for subsections on indexpages, grey border
-$sectiontitleMarginBottom: 2em !default;
+$sectiontitleMarginTop: $gridGutter*2 !default;
+$sectiontitleMarginBottom: $gridGutter !default;
 #{$heading-namespace}.heading--sectiontitle {
     font-size:                      18px;
     font-family:                    'droid-sans', Arial, sans-serif;
@@ -65,7 +66,7 @@ $sectiontitleMarginBottom: 2em !default;
     border-top:                     0px solid $greyBorder;
     border-bottom:                  4px solid $greyBorder;
     padding:                        0.8em 0 0.7em 0;
-    margin:                         3em 0 $sectiontitleMarginBottom 0;
+    margin:                         $sectiontitleMarginTop 0 $sectiontitleMarginBottom 0;
     + .spaceless {
         margin-top:                 -$sectiontitleMarginBottom;
     }
@@ -102,7 +103,7 @@ $sectiontitleMarginBottom: 2em !default;
     text-transform:                 uppercase;
     border-bottom:                  4px solid $greyBorder;
     padding:                        0.8em 0 0 0;
-    margin:                         3em 0 2em 0;
+    margin:                         $sectiontitleMarginTop 0 $sectiontitleMarginBottom 0;
     color:                          $red;
     .text {
         display:                    inline-block;
