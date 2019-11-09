@@ -19,5 +19,8 @@ $drupal-messages-namespace:               $namespace !default;
         .messages:last-child {
             margin-bottom: $pagePaddingPx*1.5;
         }
+        @include media-query($breakpoint_medium) {
+            padding-left:    200px;
+        }
     }
 }
