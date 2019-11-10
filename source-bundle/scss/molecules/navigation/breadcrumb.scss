@@ -33,11 +33,12 @@ $breadcrumb-namespace:              $namespace !default;
             }
         }
     }
-}
-
-
-@include media-query($breakpoint_phone) {
-    #{$breadcrumb-namespace}.breadcrumb {
+    @include media-query(print) {
+        display:        none;
+    }
+    @include media-query($breakpoint_phone) {
         display:            none;
     }
 }
+
+

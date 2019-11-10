@@ -94,7 +94,9 @@
     a {
         color:              $font-color-h1;
     }
-    @media print {
+    @include media-query(print) {
+        font-size:              $font-size-h1 * 0.6;
+        line-height:            $line-height-h1 * 0.6;
         page-break-after:   avoid !important;
     }
 }
@@ -110,7 +112,9 @@
     a {
         color:              $font-color-h2;
     }
-    @media print {
+    @include media-query(print) {
+        font-size:              $font-size-h2 * 0.7;
+        line-height:            $line-height-h2 * 0.7;
         page-break-before:  auto;
         page-break-after:   avoid !important;
     }
@@ -127,7 +131,9 @@
     a {
         color:              $blue;
     }
-    @media print {
+    @include media-query(print) {
+        font-size:              $font-size-h3 * 0.8;
+        line-height:            $line-height-h3 * 0.8;
         page-break-before:  auto;
         page-break-after:   avoid !important;
     }
@@ -143,7 +149,7 @@
     a {
         color:              $blue;
     }
-    @media print {
+    @include media-query(print) {
         page-break-after:   avoid;
     }
 }

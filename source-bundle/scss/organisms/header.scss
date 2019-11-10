@@ -65,6 +65,10 @@ $headerTransitionTimespan:      0.4s;
             left:           0;
             width:          1%;
         }
+        @include media-query(print) {
+            position:       relative;
+            height:         auto;
+        }
     }
 }
 

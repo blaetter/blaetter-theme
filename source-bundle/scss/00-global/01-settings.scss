@@ -154,6 +154,8 @@ $breakpoints: (
     $breakpoint_big '(min-width: '+$breakpoint_width_big+')',
     // every screen with at least the size of the large breakpoint
     $breakpoint_large '(min-width: '+$breakpoint_width_large+')',
+    // print media query
+    'print' 'print'
 );
 
 // Do we need some normalize rules (normalize.scss)?

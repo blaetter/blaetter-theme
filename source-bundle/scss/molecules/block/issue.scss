@@ -2,7 +2,6 @@ $issue-container-width:              400px;
 
 article.node-type--story {
     .teaser--aktuelle-ausgabe {
-        border:         1px solid $greyBorder;
         padding:        $largeGapPx;
         float:          left;
         background:     $white;
@@ -30,6 +29,9 @@ article.node-type--story {
             img {
                 border:                     1px solid $greyBorder;
             }
+        }
+        @include media-query(print) {
+            display:        none;
         }
     }
 }

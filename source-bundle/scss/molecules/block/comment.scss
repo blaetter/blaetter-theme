@@ -2,11 +2,14 @@ $comment-namespace:              $namespace !default;
 
 #{$comment-namespace}.comment {
     .text {
-        
+
     }
     .meta {
         color:          $lightestTextGrey;
         font-size:      $smallest-font-size;
+    }
+    @include media-query(print) {
+        display: none;
     }
 }
 

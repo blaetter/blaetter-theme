@@ -30,6 +30,22 @@ $teaser-namespace:              $namespace !default;
             }
         }
     }
+    @include media-query(print) {
+        .image {
+            width:          30vw;
+            height:         17vw;
+            float:          left;
+            margin:         0 $largeGapPx $largeGapPx 0;
+            overflow:       hidden;
+            position:       relative;
+            img {
+                position:   absolute;
+                top:        0;
+                width:      auto;
+                margin:     auto;
+            }
+        }
+    }
 }
 
 #{$teaser-namespace}.teaser {

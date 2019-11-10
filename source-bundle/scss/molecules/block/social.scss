@@ -33,4 +33,7 @@
     .instagram {
         background: #2C2C2C;
     }
+    @include media-query(print) {
+        display:            none;
+    }
 }

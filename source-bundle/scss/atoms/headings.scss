@@ -26,8 +26,8 @@ $heading-namespace:       $namespace !default;
 #{$heading-namespace}h2 {
     @include headline2();
     &.subtitle {
-       font-weight:     normal;
-       margin-top:      0.5em;
+        font-weight:     normal;
+        margin-top:      0.5em;
         @include media-query($breakpoint_phone) {
             font-size:                  1.5em;
         }
@@ -50,6 +50,10 @@ $heading-namespace:       $namespace !default;
     @include media-query($breakpoint_phone) {
         font-size:                  2em;
         margin-bottom:              0.5em;
+    }
+    @include media-query(print) {
+        font-size:              $font-size-h1 * 0.6;
+        line-height:            $line-height-h1 * 0.6;
     }
 }
 
@@ -87,10 +91,6 @@ $sectiontitleMarginBottom: $gridGutter !default;
             color:                  $linkColor;
         }
     }
-    @include media-query($breakpoint_phone) {
-        //padding-left:               $pagePaddingPalmPx;
-       // padding-right:              $pagePaddingPalmPx;
-    }
 }
 
 
@@ -111,11 +111,6 @@ $sectiontitleMarginBottom: $gridGutter !default;
         border-bottom:              4px solid $red;
         padding:                    0 0 0.7em 0;
         margin-bottom:              -4px;
-    }
-
-    @include media-query($breakpoint_phone) {
-       // padding-left:               $pagePaddingPalmPx;
-      //  padding-right:              $pagePaddingPalmPx;
     }
 }
 

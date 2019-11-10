@@ -5,6 +5,9 @@
     @include media-query($breakpoint_medium) {
         display:        block;
     }
+    @include media-query(print) {
+        display:        none;
+    }
     .book-pager {
         display:                flex;
         justify-content:        space-between;

@@ -112,10 +112,6 @@ $navigationPrimaryFontColor:                $white;
         }
 
     }
-
-    @media print {
-        display:                        none !important;
-    }
     @include media-query($breakpoint_medium) {
 
     }
@@ -125,6 +121,9 @@ $navigationPrimaryFontColor:                $white;
         .navigation-wrapper {
             width:                      100%;
         }
+    }
+    @include media-query(print) {
+            display:            none;
     }
 }
 

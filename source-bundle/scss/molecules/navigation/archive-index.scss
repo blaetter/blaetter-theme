@@ -31,4 +31,7 @@
     .swiper-button-disabled {
         display:                    none !important;
     }
+    @include media-query(print) {
+        display:        none;
+    }
 }
