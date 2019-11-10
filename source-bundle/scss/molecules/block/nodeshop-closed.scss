@@ -42,6 +42,10 @@ article.nodeshop-closed {
         float:                  none;
         background:             transparent;
         border:                 none;
+        .image {
+            width:              30%;
+            margin-right:           $gridGutter;
+        }
         @include media-query($breakpoint_phone) {
             width:                  100%;
             margin:                 $largeGapPx 0;
