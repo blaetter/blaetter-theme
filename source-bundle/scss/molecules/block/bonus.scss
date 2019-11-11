@@ -23,6 +23,22 @@ $bonus-namespace:              $namespace !default;
     }
 }
 
+.node-type--praemie {
+    .field--name-field-primary-picture {
+        margin:     0 $gridGutter $gridGutter 0;
+        float:      left;
+    }
+    @include media-query($breakpoint_phone) {
+        .field--name-field-primary-picture {
+            width:  100%;
+            float:  none;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 
 
