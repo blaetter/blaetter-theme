@@ -21,6 +21,9 @@ $content-wrapper-namespace:              $namespace !default;
     }
     &.fixed > main {
         padding-top:        90px;
+        @include media-query(print) {
+            padding-top:    $gridGutter;
+        }
     }
     &.fixed > #navigation-primary {
         .navigation-wrapper {

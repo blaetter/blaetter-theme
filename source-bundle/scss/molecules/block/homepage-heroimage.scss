@@ -9,17 +9,19 @@ $homepage-heroimage-namespace:              $namespace !default;
     display:                block;
     overflow:               hidden;
     z-index:                0;
-    &:before {
-        display: block;
-        content: " ";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: transparent;
-        background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.7));
-        z-index:                1;
+    @media screen {
+        &:before {
+            display: block;
+            content: " ";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.7));
+            z-index:                1;
+        }
     }
     .image {
         width:              100%; // because of portrait images
@@ -52,21 +54,27 @@ $homepage-heroimage-namespace:              $namespace !default;
         padding:            0 $largeGapPx;
         max-width:          100%;
         background-color:   transparent;
-        text-shadow:        1px 1px 4px rgba(0,0,0,0.4);
         height:     100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
+        @media screen {
+            text-shadow:        1px 1px 4px rgba(0,0,0,0.4);
+        }
         .heading {
             color:          $white;
             margin:         0;
             font-size:      8vw;
+            line-height:    1.2;
+            max-width:      1170px;
             @include media-query($breakpoint_big){
                 font-size:  80px;
             }
-            line-height:    1.2;
-            max-width:      1170px;
+            @include media-query(print) {
+                color:          $baseTextColor;
+                font-size:      8vw;
+            }
             a {
                 color:      $white;
             }

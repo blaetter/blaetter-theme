@@ -54,6 +54,7 @@ $heading-namespace:       $namespace !default;
     @include media-query(print) {
         font-size:              $font-size-h1 * 0.6;
         line-height:            $line-height-h1 * 0.6;
+        page-break-after:       avoid;
     }
 }
 
@@ -91,6 +92,9 @@ $sectiontitleMarginBottom: $gridGutter !default;
             color:                  $linkColor;
         }
     }
+    @include media-query(print) {
+        page-break-after:   avoid;
+    }
 }
 
 
@@ -112,6 +116,9 @@ $sectiontitleMarginBottom: $gridGutter !default;
         padding:                    0 0 0.7em 0;
         margin-bottom:              -4px;
     }
+    @include media-query(print) {
+        page-break-after:   avoid;
+    }
 }
 
 @mixin pagecategoryheadline() {
@@ -125,6 +132,9 @@ $sectiontitleMarginBottom: $gridGutter !default;
     padding:                        0.8em 0 0.7em 0;
     //margin:                         1em $pagePaddingPalmPx*2 0em $pagePaddingPalmPx*2;
     width:                          auto;
+    @include media-query(print) {
+        page-break-after:   avoid;
+    }
 }
 
 
