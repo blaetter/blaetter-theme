@@ -223,7 +223,7 @@ $teaser-namespace:              $namespace !default;
         }
         .inner {
             z-index:            2;
-            bottom:             16px;
+            bottom:             0;
             top:                auto;
             left:               0;
             right:              0;
@@ -233,7 +233,6 @@ $teaser-namespace:              $namespace !default;
             text-align:         left;
             padding:            $largeGapPx;
             padding-top:        0;
-            padding-bottom:     0;
             max-width:          100%;
             background-color:   transparent;
             height:             100%;
