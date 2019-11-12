@@ -247,6 +247,7 @@ $form-namespace:            $namespace !default;
         }
         > .details-wrapper {
             padding:        0;
+            box-sizing:     border-box; // explicit set box sizing due bug (?) in webkit
         }
     }
     .form-item,
