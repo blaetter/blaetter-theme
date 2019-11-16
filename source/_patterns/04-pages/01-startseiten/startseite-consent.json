@@ -1,0 +1,328 @@
+{
+    "pagetype": "pagetype-homepage",
+    "data": {
+        "title": "Blätter",
+        "titleclass": "aural",
+        "hero": [
+            {
+                "pattername": "molecules-homepage-heroimage",
+                "title": "Kuba: Vom Fidelismo zum Raúlismo",
+                "author": "Gerhard Drekonja-Kornat"
+            }
+        ],
+        "content":  [
+            {
+                "pattername": "molecules-teaser",
+                "class": "teaser--standard block--white",
+                "title": "Trump der Dumme",
+                "text": "Es sind keineswegs nur rechte Bewegungen, die heute eine Rückkehr zum klassischen Nationalstaat betreiben. Auch in der Linken ...",
+                "author": "Bernd das Brot",
+                "imageurl": "https://picsum.photos/id/845/300/169"
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-third",
+                "gridClass": "grid--stretch",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--vertical",
+                        "title": "Die Rückkehr der Grenzen",
+                        "text": "Es sind keineswegs nur rechte Bewegungen, die heute eine Rückkehr zum klassischen Nationalstaat betreiben. Auch in der Linken ...",
+                        "author": "Micha Brumlik",
+                        "imageurl": "https://picsum.photos/300/169/?image=883"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--vertical nodeshop-closed",
+                        "title": "Das Versagen der politischen Mitte",
+                        "text": "Überall in Europa – von Finnland bis Griechenland – sprießen dieser Tage rechtspopulistische Parteien wie Pilze aus dem Boden. ",
+                        "author": "Ulrike Guérot",
+                        "imageurl": "https://picsum.photos/300/169/?image=690"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--vertical",
+                        "title": "Safranfarbene Schocktherapie",
+                        "text": "Zum Jahreswechsel schwang sich der indische Premierminister Narendra Modi wieder einmal zu einer großen Ansprache an seine Landsleute auf.",
+                        "author": "Thomas Stauber",
+                        "imageurl": "https://picsum.photos/300/169/?image=448"
+                    }
+                ]
+            },{
+                "pattername": "atoms-heading--sectiontitle",
+                "targetPage": null,
+                "text": "<span class=\"text--red\">AKTUELLE AUSGABE</span> September 2018",
+                "asideText": null,
+                "asideTargetPage": null
+            },{
+                "pattername": "molecules-homepage-probeabo",
+                "text": "Algorithmen und Big Data bestimmen immer mehr unseren Alltag. Dabei sind diese Techniken keineswegs so harmlos und neutral, wie uns die Konzerne weismachen wollen. Vielmehr nehmen sie immer mehr Einfluss darauf, wie wir unsere Umwelt wahrnehmen, und verstärken damit nicht zuletzt bestehende Vorurteile. Gerade dies machen sich besonders rechte Agitatoren in ihren Deutungskriegen gezielt zunutze."
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-third",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "title": "Die Herrschaft der Superreichen",
+                        "author": "Harald Schumann",
+                        "imageurl": "https://picsum.photos/300/400/?image=972",
+                        "source": "picsum.photos"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster nodeshop-closed",
+                        "text": "false",
+                        "title": "Der graue Markt der Schattenbanken",
+                        "author": "Axel Troost, Nicola Liebert und Rainald Ötsch",
+                        "imageurl": "https://picsum.photos/300/400/?image=736",
+                        "source": "picsum.photos"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "title": "Gaza ohne Partner",
+                        "author": "Riad Othman",
+                        "imageurl": "https://picsum.photos/300/400/?image=657",
+                        "source": "picsum.photos"
+                    }
+                ]
+            },{
+                "pattername": "atoms-heading--sectiontitle",
+                "targetPage": null,
+                "text": "<span class=\"text--red\">DOSIER</span> ARMUT",
+                "asideText": "Übersicht",
+                "asideTargetPage": "#"
+            },{
+                "pattername": "molecules-homepage-teasergrid-dosiers",
+                "imageurl": "https://picsum.photos/300/400/?image=133",
+                "title": "Der globale Pflegenotstand",
+                "author": "Heino Güllemann"
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-fourth",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text nodeshop-closed",
+                        "text": "false",
+                        "title": "Freier Handel vs. freie Bürger",
+                        "author": "Steffen Vogel"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false",
+                        "title": "Von der Demokratie zur Lobbykratie",
+                        "author": "Paul Mason"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false",
+                        "title": "Das Ende des progressiven Neoliberalismus",
+                        "author": "Nancy Fraser"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false",
+                        "title": "Emanzipation oder Backlash",
+                        "author": "Richard Gebhardt"
+                    }
+                ]
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-fourth",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false",
+                        "title": "Untergraben wir den Kapitalismus!",
+                        "author": "Erik Olin Wright"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text nodeshop-closed",
+                        "text": "false",
+                        "title": "»Von diesem Moment an heißt es: Amerika zuerst«",
+                        "author": "Paul Mason"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false",
+                        "title": "Die automobile Republik",
+                        "author": "Harald Welzer"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "text": "false",
+                        "title": "Arbeitskampf oder Korporatismus",
+                        "author": "Klaus Dörre"
+                    }
+                ]
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridItenClass": "one-fourth",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/220/295/?image=320",
+                        "source": "picsum.photos",
+                        "title": "Wir stehen auf für Menschlichkeit und Toleranz",
+                        "author": "Steffen Vogel"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/220/295/?image=355",
+                        "source": "picsum.photos",
+                        "title": "Die Wiederkehr der Dreißiger Jahre?",
+                        "author": "Paul Mason"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster nodeshop-closed",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/220/295/?image=580",
+                        "source": "picsum.photos",
+                        "title": "Das Dilemma der Loyalität",
+                        "author": "Norman Birnbaum"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--poster",
+                        "text": "false",
+                        "imageurl": "https://picsum.photos/220/295/?image=473",
+                        "source": "picsum.photos",
+                        "title": "Die Mär vom unpolitischen Hooligan",
+                        "author": "Richard Gebhardt"
+                    }
+                ]
+            },{
+                "pattername": "organisms-homepage-teasergrid-infobox",
+                "content_left": [
+                    {
+                        "pattername": "atoms-heading--sectiontitle",
+                        "class": "red",
+                        "text": "Aktuelle Dokumente"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true",
+                        "title": "»Die Armut in Deutschland hat ein neuerliches Rekordhoch erreicht.«",
+                        "text": "Armutsbericht des Paritätischen Wohlfahrtsverbands, 19.2.2015"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text nodeshop-closed",
+                        "hideAuthor": "true",
+                        "title": "Die Politisierung Europas",
+                        "text": "Sondervotum des Wirtschaftsweisen Peter Bofinger zum Jahresgutachten 2017, 8.11.2017"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true",
+                        "title": "Jacques Mourad und die Liebe in Syrien",
+                        "text": "Armutsbericht des Paritätischen Wohlfahrtsverbands, 19.2.2015"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true",
+                        "title": "»Wir sind stolz auf das kubanische Volk«",
+                        "text": "Rede von US-Präsident Barack Obama anlässlich der Annäherung an Kuba, 18.12.2014"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true",
+                        "title": "Von Kindesbeinen an: Im Teufelskreis der Armut",
+                        "text": "Armutsbericht des Paritätischen Wohlfahrtsverbands, 19.2.2015"
+                    }
+                ],
+                "content_right_top": [
+                    {
+                        "pattername": "atoms-heading--sectiontitle",
+                        "class": "red",
+                        "text": "Zurückgeblättert"
+                    },{
+                        "pattername": "atoms-paragraph",
+                        "class": "text--big",
+                        "text": "Anfang des Jahres starb im Alter von 88 Jahren der bekannte Anwalt Heinrich Senfft. Wir erinnern an den engagierten Verteidiger des Rechtsstaats, der den »Blättern« als langjähriger Autor eng verbunden war, mit seiner schonungslosen Abrechnung mit dem Prozess der Wiedervereinigung."
+                    },{
+                        "pattername": "atoms-anker",
+                        "class": "readmore",
+                        "text": "Zu den Beiträgen"
+                    }
+                ],
+                "content_right_bottom": [
+                    {
+                        "pattername": "atoms-heading--sectiontitle",
+                        "class": "red",
+                        "text": "Blog"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true",
+                        "title": "ARD-Pressclub zur Agenda2010",
+                        "text": "Insgesamt  zielt  die  von  der  Mehrheit  geforderte  „Neujustierung  der  Wirtschaftspolitik“  darauf  ab,  die  Handlungs-  und  Gestaltungsfähigkeit  des  Staates durch eine Beschränkung und Reduzierung seiner Ressourcen zu schwächen."
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text nodeshop-closed",
+                        "hideAuthor": "true",
+                        "title": "Peter Bofinger glaubt nicht an die D-MArk",
+                        "text": "Die  nun  schon  seit  Jahren  ungewöhnlich gute  wirtschaftliche  Entwicklung  in  Deutschland, die aller Voraussicht nach noch mindestens bis zum Jahr 2019 anhalten  wird,  spricht  jedenfalls  nicht  für  einen  wirtschaftspolitischen  Kurswechsel."
+                    },{
+                        "pattername": "molecules-teaser",
+                        "hideTeaserImage": true,
+                        "class": "teaser--text",
+                        "hideAuthor": "true",
+                        "title": "Robert Reich hält die Democracy Lecture",
+                        "text": "Insgesamt ist bei den Vorschlägen der Mehrheit für die deutsche Wirtschaftspolitik  zu  befürchten,  dass  sie  die  Wettbewerbs-  und  Zukunftsfähigkeit der  deutschen Wirtschaft nicht stärken, sondern schwächen."
+                    },{
+                        "pattername": "atoms-anker",
+                        "class": "readmore",
+                        "text": "Weitere Blog-Artikel"
+                    }
+                ]
+            },{
+                "pattername": "atoms-heading--sectiontitle",
+                "text": "<span class=\"text--red\">BLÄTTER</span> - HERAUSGEBER"
+            },{
+                "pattername": "organisms-teasergrid",
+                "gridClass": "grid--stretch",
+                "gridItenClass": "one-third",
+                "content": [
+                    {
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--profile",
+                        "imageurl": "https://picsum.photos/g/250/250/?image=64",
+                        "source": "false",
+                        "hideAuthor": "true"
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--profile",
+                        "imageurl": "https://picsum.photos/g/250/250/?image=838",
+                        "source": "false",
+                        "hideAuthor": "true",
+                        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet."
+                    },{
+                        "pattername": "molecules-teaser",
+                        "class": "teaser--profile",
+                        "imageurl": "https://picsum.photos/g/250/250/?image=823",
+                        "source": "false",
+                        "hideAuthor": "true"
+                    }
+                ]
+            }
+        ]
+    }
+}

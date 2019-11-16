@@ -1,3 +1,6 @@
+    {% if cookie_consent %}
+    {% include "molecules-cookie-consent" %}
+    {% endif %}
     <div class="page-wrapper{% if body_class %} {{ body_class }}{% endif %}">
 
         <header id="header">
