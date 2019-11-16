@@ -1,6 +1,7 @@
 #block-palm-local-tasks {
     .tabs {
         margin-top:             0;
+        margin-bottom:          $gridGutter;
         &.primary {
             padding:            0;
             @include media-query($breakpoint_large) {
