@@ -85,10 +85,14 @@
         }
     }
     #paypal-button {
-        display: inline-block;
         @include media-query($breakpoint_phone) {
-            margin-top: 1em;
+            margin-top: 2em;
             text-align: center;
+        }
+    }
+    .nodeshop-update-cart {
+        @include media-query($breakpoint_medium) {
+            margin-right: $gridGutter * 2;
         }
     }
     .form-item-cart-fields-0-quantity {
