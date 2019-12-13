@@ -36,4 +36,16 @@ $footerBGColor:                 $white !default;
             display:        none;
         }
     }
+    ul.menu {
+      margin-left: 0;
+      padding-inline-start: 0;
+      padding-left: 0;
+      li {
+        list-style-type:    none;
+        display: inline;
+        a {
+          padding: $smallGapPx / 2;
+        }
+      }
+    }
 }
