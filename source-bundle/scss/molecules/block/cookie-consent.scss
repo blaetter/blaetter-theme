@@ -12,14 +12,15 @@ $drupal-cookie-consent-namespace:               $namespace !default;
       max-height:                     100%;
       overflow:                       scroll;
     }
+    .eu-cookie-complience-container {
+      margin:                     0 auto;
+      max-width:                  $pageWidthDesk;
+      width:                      100%;
+      display:                    flex;
+      justify-content:            space-between;
+      flex-direction:             row;
+      text-align:                 left;
       .eu-cookie-compliance-content {
-        margin:                     0 auto;
-        max-width:                  $pageWidthDesk;
-        width:                      100%;
-        display:                    flex;
-        justify-content:            space-between;
-        flex-direction:             row;
-        text-align:                 left;
         .eu-cookie-compliance-message {
           float:                      none;
           max-width:                  100%;
@@ -27,29 +28,23 @@ $drupal-cookie-consent-namespace:               $namespace !default;
           padding-bottom:             $gridGutter;
         }
       }
-      .eu-cookie-compliance-categories {
-          display:                flex;
-          justify-content:        space-between;
-          flex-direction:         row;
-          text-align:             left;
-          max-width:              $pageWidthDesk;
-        .eu-cookie-compliance-category {
-          margin-bottom: $gridGutter;
-          input {
-            width: $pagePaddingPx;
-            padding: 0;
-            margin:0;
-            vertical-align: middle;
-            position: relative;
-            top: -1px;
-          }
-          label {
-            display: block;
-          }
+      .eu-cookie-compliance-category {
+        margin-bottom: $gridGutter;
+        input {
+          width: $pagePaddingPx;
+          padding: 0;
+          margin:0;
+          vertical-align: middle;
+          position: relative;
+          top: -1px;
         }
-        .eu-cookie-compliance-category-description {
-          margin-bottom:    $gridGutter;
+        label {
+          display: block;
         }
+      }
+      .eu-cookie-compliance-category-description {
+        margin-bottom:    $gridGutter;
+        margin-left:      10px;
       }
       .eu-cookie-compliance-buttons {
         .button {
@@ -76,5 +71,6 @@ $drupal-cookie-consent-namespace:               $namespace !default;
           max-width:              100%;
         }
       }
+    }
   }
 }
