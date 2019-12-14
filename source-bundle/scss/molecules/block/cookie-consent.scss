@@ -20,13 +20,11 @@ $drupal-cookie-consent-namespace:               $namespace !default;
       justify-content:            space-between;
       flex-direction:             row;
       text-align:                 left;
-      .eu-cookie-compliance-content {
-        .eu-cookie-compliance-message {
-          float:                      none;
-          max-width:                  100%;
-          padding-right:              $gridGutter;
-          padding-bottom:             $gridGutter;
-        }
+      .eu-cookie-compliance-message {
+        float:                      none;
+        max-width:                  100%;
+        padding-right:              $gridGutter;
+        padding-bottom:             $gridGutter;
       }
       .eu-cookie-compliance-category {
         margin-bottom: $gridGutter;
