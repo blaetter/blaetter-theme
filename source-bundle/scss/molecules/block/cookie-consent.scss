@@ -3,53 +3,78 @@ $drupal-cookie-consent-namespace:               $namespace !default;
 /* drupal messages container */
 
 #{$drupal-cookie-consent-namespace}.sliding-popup-bottom {
-    width:                          100%;
-    .eu-cookie-compliance-banner {
-        background:                     $white;
-        padding:                        $pagePaddingPx;
-        @include box-shadow(4px, 0, 3px, 1px, $greyBgMarginal);
-        .eu-cookie-compliance-content {
-            margin:                     0 auto;
-            max-width:                  $pageWidthDesk;
-            width:                      100%;
-            display:                    flex;
-            justify-content:            space-between;
-            flex-direction:             row;
-            text-align:                 left;
-            .eu-cookie-compliance-message {
-                float:                      none;
-                max-width:                  100%;
-                padding-right:              $gridGutter;
-                padding-bottom:             $gridGutter;
-            }
-            .eu-cookie-compliance-buttons {
-                display:                    flex;
-                flex-direction:             column;
-                justify-content:            space-around;
-                align-content:              space-around;
-                .button {
-                    font-weight:                bold;
-                }
-                float:                      none;
-                min-width:                  120px;
-                max-width:                  100%;
-            }
-        }
-        @include media-query($breakpoint_phone) {
-            padding:                        $pagePaddingPalmPx;
-            .eu-cookie-compliance-content {
-                display:                    block;
-                .eu-cookie-compliance-message {
-                    display:                block;
-                    width:                  100%;
-                    padding-right:          0;
-                }
-                .eu-cookie-compliance-buttons {
-                    display:                block;
-                    width:                  100%;
-                    max-width:              100%;
-                }
-            }
-        }
+  width:                          100%;
+  .eu-cookie-compliance-banner {
+    background:                     $white;
+    padding:                        $pagePaddingPx;
+    @include box-shadow(4px, 0, 3px, 1px, $greyBgMarginal);
+    .popup-content {
+      max-height:                     100%;
+      overflow:                       scroll;
     }
+      .eu-cookie-compliance-content {
+        margin:                     0 auto;
+        max-width:                  $pageWidthDesk;
+        width:                      100%;
+        display:                    flex;
+        justify-content:            space-between;
+        flex-direction:             row;
+        text-align:                 left;
+        .eu-cookie-compliance-message {
+          float:                      none;
+          max-width:                  100%;
+          padding-right:              $gridGutter;
+          padding-bottom:             $gridGutter;
+        }
+      }
+      .eu-cookie-compliance-categories {
+          display:                flex;
+          justify-content:        space-between;
+          flex-direction:         row;
+          text-align:             left;
+          max-width:              $pageWidthDesk;
+        .eu-cookie-compliance-category {
+          margin-bottom: $gridGutter;
+          input {
+            width: $pagePaddingPx;
+            padding: 0;
+            margin:0;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+          }
+          label {
+            display: block;
+          }
+        }
+        .eu-cookie-compliance-category-description {
+          margin-bottom:    $gridGutter;
+        }
+      }
+      .eu-cookie-compliance-buttons {
+        .button {
+          font-weight:                bold;
+        }
+        float:                      none;
+        min-width:                  240px;
+        max-width:                  100%;
+      }
+      @include media-query($breakpoint_phone) {
+        padding:            $pagePaddingPalmPx;
+        .eu-cookie-compliance-content,
+        .eu-cookie-compliance-categories {
+          display:                    block;
+          .eu-cookie-compliance-message {
+            display:                block;
+            width:                  100%;
+            padding-right:          0;
+          }
+        }
+        .eu-cookie-compliance-buttons {
+          display:                block;
+          width:                  100%;
+          max-width:              100%;
+        }
+      }
+  }
 }
