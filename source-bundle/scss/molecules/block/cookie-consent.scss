@@ -7,11 +7,9 @@ $drupal-cookie-consent-namespace:               $namespace !default;
   .eu-cookie-compliance-banner {
     background:                     $white;
     padding:                        $pagePaddingPx;
+    max-height:                     90vh;
+    overflow-y:                     scroll;
     @include box-shadow(4px, 0, 3px, 1px, $greyBgMarginal);
-    .popup-content {
-      max-height:                     100%;
-      overflow:                       scroll;
-    }
     .eu-cookie-complience-container {
       margin:                     0 auto;
       max-width:                  $pageWidthDesk;
@@ -52,18 +50,27 @@ $drupal-cookie-consent-namespace:               $namespace !default;
         min-width:                  240px;
         max-width:                  100%;
       }
-      @include media-query($breakpoint_phone) {
-        padding:            $pagePaddingPalmPx;
-        .eu-cookie-compliance-content,
-        .eu-cookie-compliance-categories {
-          display:                    block;
-          .eu-cookie-compliance-message {
-            display:                block;
-            width:                  100%;
-            padding-right:          0;
+      details {
+        border:                     none;
+        summary {
+          padding-left:             0;
+          color:                    $linkColor;
+          &:hover {
+            text-decoration:        underline;
           }
         }
-        .eu-cookie-compliance-buttons {
+      }
+    }
+    @include media-query($breakpoint_phone) {
+      padding:            $pagePaddingPalmPx;
+      .eu-cookie-complience-container {
+        display:                  block;
+        .eu-cookie-compliance-message {
+          display:                block;
+          width:                  100%;
+          padding-right:          0;
+        }
+        .button {
           display:                block;
           width:                  100%;
           max-width:              100%;
