@@ -4,6 +4,11 @@ $drupal-cookie-consent-namespace:               $namespace !default;
 
 #{$drupal-cookie-consent-namespace}.sliding-popup-bottom {
   width:                          100%;
+  &.initial {
+    margin-top:                     $gridGutter;
+    position:                       relative !important;
+    bottom:                         0 !important;
+  }
   .eu-cookie-compliance-banner {
     background:                     $white;
     padding:                        $pagePaddingPx;
