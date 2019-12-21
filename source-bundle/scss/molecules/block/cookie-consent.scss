@@ -4,18 +4,38 @@ $drupal-cookie-consent-namespace:               $namespace !default;
 
 #{$drupal-cookie-consent-namespace}.sliding-popup-bottom {
   width:                          100%;
-  &.initial {
-    margin-top:                     $gridGutter;
-    position:                       relative !important;
-    bottom:                         0 !important;
+  display:                        flex;
+  justify-content:                center;
+  align-items:                    stretch;
+  flex-direction:                 column;
+  bottom:                         -4000px !important;
+  .eu-cookie-withdraw-tab {
+    z-index:                        1;
+    width:                          auto;
+    max-width:                      $breakpoint_width_smallest;
+    margin:                         0 auto;
+    border-bottom:                  0 !important;
+    border-radius:                  unset;
+  }
+  &.visible {
+    height:                       100%;
+    bottom:                       0 !important;
+    .eu-cookie-compliance-banner {
+      @include box-shadow(0, 0, 20px, 240px, rgba(0,0,0, 0.75));
+    }
   }
   .eu-cookie-compliance-banner {
-    background:                     $white;
+    margin:                         0 auto;
     padding:                        $pagePaddingPx;
+    max-width:                      $breakpoint_width_medium;
+    min-width:                      $breakpoint_width_smallest;
+    width:                          90%;
     max-height:                     90vh;
+    min-height:                     45vh;
+    height:                         80%;
+    background:                     $white;
     overflow-y:                     scroll;
-    @include box-shadow(4px, 0, 3px, 1px, $greyBgMarginal);
-    .eu-cookie-complience-container {
+    .eu-cookie-compliance-container {
       margin:                     0 auto;
       max-width:                  $pageWidthDesk;
       width:                      100%;
@@ -66,9 +86,9 @@ $drupal-cookie-consent-namespace:               $namespace !default;
         }
       }
     }
-    @include media-query($breakpoint_phone) {
+    @include media-query($breakpoint_medium_max) {
       padding:            $pagePaddingPalmPx;
-      .eu-cookie-complience-container {
+      .eu-cookie-compliance-container {
         display:                  block;
         .eu-cookie-compliance-message {
           display:                block;

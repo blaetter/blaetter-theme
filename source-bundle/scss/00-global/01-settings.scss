@@ -128,6 +128,7 @@ $font-weight-a:                 400;
 $breakpoint_smallest:           'smallest';
 $breakpoint_smallest_and_up:    'smallest-and-up';
 $breakpoint_phone:              'phone';
+$breakpoint_medium_max:         'medium-max';
 $breakpoint_medium:             'medium';
 $breakpoint_big:                'big';
 $breakpoint_large:              'large';
@@ -148,6 +149,8 @@ $breakpoints: (
     $breakpoint_smallest_and_up '(min-width: '+($breakpoint_width_smallest + 0.001rem)+')',
     // everything with max phone width
     $breakpoint_phone '(max-width: '+$breakpoint_width_phone+')',
+    // every up to medium breakpoint size
+    $breakpoint_medium_max '(max-width: '+$breakpoint_width_medium+')',
     // every bigger than phone width
     $breakpoint_medium '(min-width: '+($breakpoint_width_phone + 0.001rem)+')',
     // every screen with at least the size of big breakpoint
