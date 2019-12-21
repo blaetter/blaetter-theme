@@ -5,7 +5,7 @@
 export default function consent_fix() {
 
     var elPopup = $('#sliding-popup');
-    var bottom_navigation = $('#block-footerlinks > .menu');
+    var bottom_navigation = $('#block-fussbereich > .menu');
     // only show consent by default if user did not choose anything before.
     if (null === Drupal.eu_cookie_compliance.getCurrentStatus()) {
       if (null !== elPopup) {
