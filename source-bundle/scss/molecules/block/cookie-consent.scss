@@ -25,6 +25,7 @@ $drupal-cookie-consent-namespace:               $namespace !default;
     }
     &.initial {
       height:                       auto;
+      max-height:                   40vh;
       .eu-cookie-compliance-banner {
         @include box-shadow(0, 0, 10px, 2px, rgba(0,0,0, 0.5));
         width:                        100%;
@@ -86,6 +87,9 @@ $drupal-cookie-consent-namespace:               $namespace !default;
         float:                      none;
         min-width:                  360px;
         max-width:                  100%;
+        @include media-query($breakpoint_phone) {
+          min-width:                auto;
+        }
       }
     }
     @include media-query($breakpoint_medium_max) {
