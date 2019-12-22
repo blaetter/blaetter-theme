@@ -30,6 +30,7 @@ $footerBGColor:                 $white !default;
         color:              $greyAuthor;
         display:            block;
         margin-bottom:      0.6em;
+        margin-top:         $largeGapPx*2;
     }
     @include media-query($breakpoint_phone) {
         &.hide {
