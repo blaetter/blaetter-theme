@@ -40,7 +40,7 @@ $drupal-cookie-consent-namespace:               $namespace !default;
     margin:                         0 auto;
     padding:                        $pagePaddingPx;
     max-width:                      $breakpoint_width_medium;
-    min-width:                      $breakpoint_width_smallest;
+    min-width:                      320px;
     width:                          90%;
     max-height:                     90vh;
     min-height:                     20vh;
