@@ -31,7 +31,8 @@ $pageSearchFontColor:                $white;
 
     }
     @include media-query($breakpoint_phone) {
-
+      padding:                      $pagePaddingPalmPx/2;
+      font-size:                    10px;
     }
 }
 
