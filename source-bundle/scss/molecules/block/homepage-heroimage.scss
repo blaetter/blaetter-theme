@@ -28,14 +28,26 @@ $homepage-heroimage-namespace:              $namespace !default;
         display:            block;
         margin:             0 auto; // center portait images
         overflow:           hidden;
-        .image-placeholder {
-            width: 100%;
-            display: block;
-            width: 100%;
-        }
         img {
-            display:        block;
-            height:         auto;
+          display:        block;
+          height:         auto;
+        }
+        @include media-query($breakpoint_phone) {
+          height:           400px;
+          overflow:         hidden;
+          img {
+            max-width:      unset;
+            max-height:     unset;
+            position:       absolute;
+            height:         120%;
+            width:          auto;
+            left:           -18vw;
+          }
+        }
+        @include media-query($breakpoint_smallest) {
+          img {
+            left:           -50vw;
+          }
         }
     }
     .source {
