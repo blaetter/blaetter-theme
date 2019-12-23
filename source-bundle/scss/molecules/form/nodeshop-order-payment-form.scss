@@ -36,3 +36,13 @@
         @include nodeshop_white_box();
     }
 }
+
+.nodeshop_order_process_login {
+  .grid {
+    &.grid--stretch {
+      .block--white {
+        height:         100%;
+      }
+    }
+  }
+}
