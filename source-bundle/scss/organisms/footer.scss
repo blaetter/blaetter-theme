@@ -5,7 +5,7 @@ $footerBGColor:                 $white !default;
 
 #footer {
     padding:                $gridGutter $pagePaddingPx;
-    @include getRem('padding-top', 20px);
+    @include getRem('padding-top', 60px);
     background-color:       $footerBGColor;
     text-align:             left;
     color:                  $footerFontColor;
@@ -30,7 +30,7 @@ $footerBGColor:                 $white !default;
         color:              $greyAuthor;
         display:            block;
         margin-bottom:      0.6em;
-        margin-top:         $largeGapPx*2;
+        @include getRem('margin-top', 120px);
     }
     @include media-query($breakpoint_phone) {
         &.hide {
