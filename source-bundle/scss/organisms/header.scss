@@ -29,7 +29,7 @@ $headerTransitionTimespan:      0.4s;
         display:            none;
     }
     &.fixed {
-        height:             60px;
+        height:             auto;
         @include fontsize($base-font-size*0.8);
         line-height:        $base-line-height / $base-font-size * 0.8;
         transition:         height $headerTransitionTimespan ease-out;

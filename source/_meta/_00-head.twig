@@ -28,5 +28,5 @@
         <script id="echo-behavior-js" src="../../themes/contrib/palm/bundle/palm.js?{{ cacheBuster }} "></script>
 {% endblock %}
     </head>
-    <body>
+    <body {% if body_class %}class="{{ body_class }}"{% endif %}>
 
