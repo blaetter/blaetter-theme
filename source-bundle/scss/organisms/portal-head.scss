@@ -67,6 +67,14 @@ $portal-head-namespace:              $namespace !default;
     }
 }
 
+.fixed {
+  .portal-head__cart {
+    .counter {
+      padding: 2px;
+    }
+  }
+}
+
 .portal-head__user {
     position:           relative;
     .login-state {
@@ -83,6 +91,14 @@ $portal-head-namespace:              $namespace !default;
       font-size:      0.7em;
       padding:        1px 2px;
     }
+}
+
+.fixed {
+  .portal-head__user {
+    .login-state {
+      padding: 2px;
+    }
+  }
 }
 
 .portal-head__hamburger {
