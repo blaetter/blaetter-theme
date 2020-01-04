@@ -88,14 +88,11 @@
             },{
                 "pattername": "atoms-heading--sectiontitle",
                 "targetPage": null,
-                "text": "<span class=\"text--red\">DOSIER</span> ARMUT",
-                "asideText": "Übersicht",
-                "asideTargetPage": "#"
+                "text": "<span class=\"text--red\">DOSIER</span> ARMUT"
             },{
-                "pattername": "molecules-homepage-teasergrid-dosiers",
+                "pattername": "molecules-homepage-teasergrid-dossiers",
                 "imageurl": "https://picsum.photos/300/400/?image=133",
-                "title": "Der globale Pflegenotstand",
-                "author": "Heino Güllemann"
+                "title": "Der globale Pflegenotstand"
             },{
                 "pattername": "organisms-teasergrid",
                 "gridItenClass": "one-fourth",

@@ -1,6 +1,6 @@
 {
     "pagetype": "pagetype-homepage",
-    "homepage": {  
+    "homepage": {
         "title": "Startseite",
         "hero": [
             {
@@ -66,7 +66,7 @@
                 "asideText": "Übersicht",
                 "asideTargetPage": "#"
             },{
-                "pattername": "molecules-homepage-teasergrid-dosiers"
+                "pattername": "molecules-homepage-teasergrid-dossiers"
             },{
                 "pattername": "organisms-teasergrid",
                 "gridItenClass": "one-fourth",
@@ -201,7 +201,7 @@
                         "class": "readmore",
                         "text": "Zu den Beiträgen"
                     }
-                ], 
+                ],
                 "content_right_bottom": [
                     {
                         "pattername": "atoms-heading--sectiontitle",

@@ -1,4 +1,4 @@
-#{$namespace}.homepage-dosierteaser {
+#{$namespace}.homepage-dossierteaser {
     background:                 transparent;
     @include media-query($breakpoint_medium) {
         background:             $white;
@@ -11,6 +11,9 @@
         padding:                $blockPaddingPx;
     }
     .teaser.teaser--poster {
+        .heading {
+            text-align:         center;
+        }
         @include media-query($breakpoint_medium) {
             .heading {
                 font-size:          3.5em;
