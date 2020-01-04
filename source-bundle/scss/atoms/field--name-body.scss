@@ -1,6 +1,9 @@
 article {
     .field--name-body {
         margin-bottom:  $pagePaddingPx;
+        .field--name-body {
+          margin-bottom: $gridGutter;
+        }
     }
 }
 
