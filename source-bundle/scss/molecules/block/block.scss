@@ -21,6 +21,9 @@ $block-namespace:              $namespace !default;
         display: block;
         margin-top: -1.3em;
     }
+    &.block--spacer {
+        margin-bottom:  $gridGutter * 2;
+    }
 }
 
 #{$block-namespace}.video-container {
