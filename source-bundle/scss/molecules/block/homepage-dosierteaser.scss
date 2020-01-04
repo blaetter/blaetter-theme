@@ -13,6 +13,7 @@
     .teaser.teaser--poster {
         .heading {
             text-align:         center;
+            width:              100%;
         }
         @include media-query($breakpoint_medium) {
             .heading {
