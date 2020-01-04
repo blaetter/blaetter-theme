@@ -94,6 +94,10 @@ $homepage-heroimage-namespace:              $namespace !default;
         .author {
             color:          $greyAuthor;
             font-size:      5vw;
+            margin-bottom:  1em;
+            @include media-query($breakpoint_phone) {
+              font-size:    1.2em;
+            }
             @include media-query($breakpoint_big){
                 font-size:  40px;
             }
