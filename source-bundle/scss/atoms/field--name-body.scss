@@ -3,6 +3,10 @@ article {
         margin-bottom:  $pagePaddingPx;
         .field--name-body {
           margin-bottom: $gridGutter;
+          p {
+            margin: 0;
+            padding: 0;
+          }
         }
     }
 }
