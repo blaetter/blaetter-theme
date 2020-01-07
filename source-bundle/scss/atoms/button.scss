@@ -108,6 +108,36 @@ $btn-border-color:              $blue !default;
     }
 }
 
+@mixin button--danger() {
+  @extend .btn;
+  background-color:       $red;
+  border:                 1px solid $red;
+  color:                  $white;
+  font-weight:            normal;
+  opacity:                1;
+  &:hover,
+  &:focus {
+      background-color:   lighten($red, 10%);
+      text-decoration:    none;
+      border-color:       lighten($red, 10%);
+  }
+}
+
+@mixin button--danger--reversed() {
+  @extend .btn;
+  background-color:       $white;
+  border:                 1px solid $red;
+  color:                  $red;
+  font-weight:            normal;
+  opacity:                1;
+  &:hover,
+  &:focus {
+      background-color:   $white;
+      text-decoration:    none;
+      border-color:       lighten($red, 10%);
+  }
+}
+
 @mixin button--disabled() {
     @extend .btn;
     background-color:       $grey;
@@ -216,6 +246,14 @@ $btn-border-color:              $blue !default;
 
 #{$button-namespace}.button--reversed {
     @include button--reversed();
+}
+
+#{$button-namespace}.button--danger {
+  @include button--danger();
+}
+
+#{$button-namespace}.button--danger--reversed {
+    @include button--danger--reversed();
 }
 
 #{$button-namespace}.button--disabled {
