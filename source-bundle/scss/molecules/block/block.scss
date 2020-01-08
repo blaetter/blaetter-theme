@@ -47,4 +47,12 @@ $block-namespace:              $namespace !default;
     @include nodeshop_white_box();
 }
 
+#{$block-namespace}.block--red {
+    @include nodeshop_white_box();
+    border: 2px solid $red;
+}
 
+// remove rss icon block from site
+.feed-icons {
+  display: none;
+}
