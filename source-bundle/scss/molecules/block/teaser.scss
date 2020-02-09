@@ -78,13 +78,12 @@ $teaser-namespace:              $namespace !default;
         }
     }
     .author,
-    .author--article {
+    .articleinfo.info--big {
         color:          $greyAuthor;
         white-space:    nowrap;
         overflow:       hidden;
         text-overflow:  ellipsis;
-        font-size:      16px;
-        line-height:    25px;
+        line-height:    1.5;
         max-width:      100%;
         font-size:      1.2em;
     }

@@ -16,7 +16,7 @@
                 "text": "Ich bin ein Subtitel."
             },{
                 "pattername": "atoms-articleinfo",
-                "class": "author--article",
+                "class": "info--big",
                 "key": "von",
                 "value": "<a href=\"#\">Albrecht von Lucke</a>"
             },{
