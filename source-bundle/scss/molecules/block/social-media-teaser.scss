@@ -1,0 +1,13 @@
+.teaser--socialmedia {
+  text-align: center;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  img {
+    width: 16%;
+    max-width: 220px;
+    min-width: 60px;
+  }
+}

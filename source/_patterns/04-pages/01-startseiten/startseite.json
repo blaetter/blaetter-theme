@@ -46,7 +46,9 @@
                         "imageurl": "https://picsum.photos/300/169/?image=448"
                     }
                 ]
-            },{
+              },{
+                  "pattername": "molecules-social-media-teaser"
+              },{
                 "pattername": "atoms-heading--sectiontitle",
                 "targetPage": null,
                 "text": "<span class=\"text--red\">AKTUELLE AUSGABE</span> September 2018",
