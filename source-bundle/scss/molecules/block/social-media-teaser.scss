@@ -1,13 +1,24 @@
 .teaser--socialmedia {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
   a {
     &:hover {
       text-decoration: none;
     }
   }
   img {
-    width: 16%;
-    max-width: 220px;
-    min-width: 60px;
+    width: 40px;
+    @include media-query($breakpoint_phone) {
+      width: 60px;
+    }
+    @include media-query($breakpoint_medium) {
+      width: 100px;
+    }
+    @include media-query($breakpoint_big) {
+      width: 120px;
+    }
+  }
+  &::after {
+    display: none;
   }
 }
