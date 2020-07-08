@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "font-awesome": "^4.7",
-    "jquery": "^3.4",
+    "jquery": "^3.5.0",
     "swiper": "~4.4.6"
   }
 }
