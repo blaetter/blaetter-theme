@@ -6,6 +6,8 @@
 .project
 .settings
 .yarn
+backstop_data/bitmaps_tests/*
+backstop_data/html_report/*
 export/*
 node_modules
 public/*
