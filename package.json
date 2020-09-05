@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "make"
+    "build": "make",
+    "backstop": "./node_modules/.bin/backstop"
   },
   "keywords": [],
   "author": "Blaetter",
@@ -16,6 +17,7 @@
     "babel-eslint": "^8.2.5",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "backstopjs": "*",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",

@@ -1,0 +1,68 @@
+{
+  "id": "blaetter_theme",
+  "viewports": [
+    {
+      "label": "smallest",
+      "width": 420,
+      "height": 480
+    },
+    {
+      "label": "phone",
+      "width": 720,
+      "height": 800
+    },
+    {
+      "label": "medium",
+      "width": 1024,
+      "height": 800
+    },
+    {
+      "label": "big",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "label": "large",
+      "width": 1600,
+      "height": 800
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Homepage",
+      "url": "http://localhost/patterns/04-pages-01-startseiten-startseite/04-pages-01-startseiten-startseite.html",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
