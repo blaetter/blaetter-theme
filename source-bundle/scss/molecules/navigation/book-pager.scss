@@ -1,7 +1,7 @@
 
 .book-navigation {
     display:            none;
-    margin-top:         $gridGutter;
+    margin-top:         $pagePaddingPx;
     @include media-query($breakpoint_medium) {
         display:        block;
     }

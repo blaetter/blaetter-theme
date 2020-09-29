@@ -1,12 +1,22 @@
 article {
     .field--name-body {
         margin-bottom:  $pagePaddingPx;
+        margin-top:     $pagePaddingPx;
+        @include media-query($breakpoint_phone) {
+          margin-top:     $pagePaddingPalmPx;
+        }
         .field--name-body {
+          margin-top:     0;
           margin-bottom: $gridGutter;
           p {
             margin: 0;
             padding: 0;
           }
+        }
+        #ftn1 {
+          border-top: 1px solid $greyBorder;
+          padding-top: $pagePaddingPx;
+          margin-top: $pagePaddingPx;
         }
     }
 }

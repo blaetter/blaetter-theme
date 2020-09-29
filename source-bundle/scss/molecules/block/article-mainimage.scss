@@ -6,7 +6,7 @@ $swiper-articleimage--minHeight-desktopPx:    700px * 9 / 16;
 #{$article-mainimage-namespace}.article-mainimage {
     position:               relative;
     margin-bottom:          50px;
-    margin-top:             35px;
+    // margin-top:             35px;
     img {
         width:              100%;
         max-width:          100%;
@@ -24,5 +24,6 @@ $swiper-articleimage--minHeight-desktopPx:    700px * 9 / 16;
     }
     @include media-query($breakpoint_phone) {
        // @include block-source--overlay();
+       margin-bottom:          $pagePaddingPalmPx;
     }
 }

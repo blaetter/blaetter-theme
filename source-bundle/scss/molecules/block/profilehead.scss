@@ -26,13 +26,6 @@ $namespace:              $namespace !default;
             margin:                 20px 6px 14px 6px;
         }
     }
-
-    .text {
-        @include media-query($breakpoint_phone) {
-            text-align:                 center;
-            display:                    table;
-        }
-    }
 }
 
 

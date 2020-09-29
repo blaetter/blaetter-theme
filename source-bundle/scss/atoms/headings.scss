@@ -46,10 +46,10 @@ $heading-namespace:       $namespace !default;
 #{$heading-namespace}.heading--article {
     font-size:                      60px;
     line-height:                    1.3em;
-    margin-bottom:                  0.2em;
+    margin-bottom:                  .4em;
     @include media-query($breakpoint_phone) {
         font-size:                  2em;
-        margin-bottom:              0.5em;
+        margin-bottom:              .5em;
     }
     @include media-query(print) {
         font-size:              $font-size-h1 * 0.6;

@@ -80,6 +80,10 @@ $homepage-heroimage-namespace:              $namespace !default;
             font-size:      8vw;
             line-height:    1.2;
             max-width:      1170px;
+            margin-bottom:  20px;
+            @include media-query($breakpoint_phone) {
+              margin-bottom:  16px;
+            }
             @include media-query($breakpoint_big){
                 font-size:  80px;
             }
