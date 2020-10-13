@@ -10,7 +10,6 @@ export default function consent_fix() {
     // we need to check the existance of the cookie-agreed cookie, as the withdraw sets this to  null but obtains
     // the cookie itself so only if the cookie is not existing, the banner should be promted as this seems to be
     // the first visit of the user
-    console.log(typeof($.cookie('cookie-agreed')));
     if (typeof($.cookie('cookie-agreed')) === "undefined") {
       if (null !== elPopup) {
         elPopup.addClass('visible');
