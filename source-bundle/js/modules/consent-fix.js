@@ -3,12 +3,15 @@
  */
 
 export default function consent_fix() {
-
-  if (typeof(Drupal) !== "undefined") {
+  if (typeof(Drupal) !== "undefined" && typeof(Drupal.eu_cookie_compliance) !== "undefined") {
     var elPopup = $('#sliding-popup');
     var bottom_navigation = $('#block-fussbereich > .menu');
     // only show consent by default if user did not choose anything before.
-    if (null === Drupal.eu_cookie_compliance.getCurrentStatus()) {
+    // we need to check the existance of the cookie-agreed cookie, as the withdraw sets this to  null but obtains
+    // the cookie itself so only if the cookie is not existing, the banner should be promted as this seems to be
+    // the first visit of the user
+    console.log(typeof($.cookie('cookie-agreed')));
+    if (typeof($.cookie('cookie-agreed')) === "undefined") {
       if (null !== elPopup) {
         elPopup.addClass('visible');
         elPopup.addClass('initial');
