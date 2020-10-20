@@ -50,6 +50,10 @@ export: public/latest-change.txt public/themes/contrib/palm/bundle/palm.js publi
 	$(PATTERNLAB) --export
 	cp -a public/themes/contrib/palm/bundle export/
 
+.PHONY: tests
+tests:
+	$(NPM) run backstop test
+
 public/latest-change.txt: $(PL_SOURCES)
 	$(PATTERNLAB) --generate
 
