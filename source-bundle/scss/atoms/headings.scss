@@ -34,6 +34,12 @@ $heading-namespace:       $namespace !default;
     }
 }
 
+.blaetter-type--1856 {
+  h2 {
+    margin-top: 2em;
+  }
+}
+
 #{$heading-namespace}h3 {
     @include headline3();
 }
