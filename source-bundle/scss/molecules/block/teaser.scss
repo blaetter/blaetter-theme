@@ -60,6 +60,12 @@ $teaser-namespace:              $namespace !default;
             font-size:              1.2em;
         }
     }
+    h4 {
+        font-size:              1.2em;
+        font-weight:            normal;
+        margin-top:             0;
+        margin-bottom:          .8em;
+    }
     @include media-query(print) {
         page-break-inside:      avoid;
     }
