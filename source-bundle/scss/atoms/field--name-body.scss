@@ -19,6 +19,14 @@ article {
           margin-top: $pagePaddingPx;
         }
     }
+    &.node-type--story {
+        .field--name-body {
+            p {
+              -webkit-hyphens: auto;
+              hyphens: auto;
+            }
+        }
+    }
 }
 
 .field--name-body {
