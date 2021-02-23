@@ -86,9 +86,9 @@ $teaser-namespace:              $namespace !default;
     .author,
     .articleinfo.info--big {
         color:          $greyAuthor;
-        white-space:    nowrap;
-        overflow:       hidden;
-        text-overflow:  ellipsis;
+        // white-space:    nowrap;
+        // overflow:       hidden;
+        // text-overflow:  ellipsis;
         max-width:      100%;
         font-size:      1.2em;
         margin-bottom:  .6em;
