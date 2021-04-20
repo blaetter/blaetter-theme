@@ -36,6 +36,6 @@
   "dependencies": {
     "font-awesome": "^4.7",
     "jquery": "^3.5.0",
-    "swiper": "~4.4.6"
+    "swiper": "~6.5.1"
   }
 }
