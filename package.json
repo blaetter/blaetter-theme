@@ -17,7 +17,7 @@
     "babel-eslint": "^8.2.5",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "backstopjs": "*",
+    "backstopjs": "^5.3.0",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",
@@ -25,7 +25,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "resolve-url-loader": "^3.0.0",
+    "resolve-url-loader": "^3.1.2",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.1",
@@ -36,6 +36,7 @@
   "dependencies": {
     "font-awesome": "^4.7",
     "jquery": "^3.5.0",
+    "latest": "^0.2.0",
     "swiper": "~6.5.1"
   }
 }
