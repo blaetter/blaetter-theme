@@ -10,7 +10,7 @@ export function init(callback) {
 	}
 
 	BLAETTER.set_webpack_publicpath();
-	import(/* webpackMode: "lazy" */'swiper/dist/css/swiper.css');
+	import(/* webpackMode: "lazy" */'swiper/swiper-bundle.min.css');
 	import(/* webpackMode: "lazy" */'swiper')
 		.then(
 			function (Module) {
