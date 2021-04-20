@@ -40,13 +40,14 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libxi6 \
     libxrandr2 \
     libxrender1 \
+    libxshmfence-dev \
     libxss1 \
     libxtst6 \
     lsb-release \
     wget \
     xdg-utils
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
     && curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
     && apt-get update \
