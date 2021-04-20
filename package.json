@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "make",
-    "backstop": "./node_modules/.bin/backstop"
+    "backstop": "./node_modules/.bin/backstop",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "Blaetter",
@@ -37,6 +39,8 @@
     "font-awesome": "^4.7",
     "jquery": "^3.5.0",
     "latest": "^0.2.0",
-    "swiper": "~6.5.1"
-  }
+    "swiper": "~6.5.1",
+    "snyk": "^1.563.0"
+  },
+  "snyk": true
 }
