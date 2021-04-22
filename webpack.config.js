@@ -92,30 +92,30 @@ module.exports = {
 					}
 				]
 			},
-            {
-                test: /\.js$/,
-                exclude: [
-                    /node_modules/,
-                    /source/
-                ],
-                loader: 'eslint-loader',
-                options: {
-                    // eslint options (if necessary)
-                }
-            },
-            {
-                test: /\.js$/, // Check for all js files
-                exclude: [
-                    /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
-                    /source-bundle/
-                ],
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['babel-preset-env']
-                    }
-                }
-            },
+      {
+          test: /\.js$/,
+          exclude: [
+              /node_modules/,
+              /source/
+          ],
+          loader: 'eslint-loader',
+          options: {
+              // eslint options (if necessary)
+          }
+      },
+      {
+          test: /\.js$/, // Check for all js files
+          exclude: [
+              /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/,
+              /source-bundle/
+          ],
+          use: {
+              loader: 'babel-loader',
+              options: {
+                  presets: ['babel-preset-env']
+              }
+          }
+      },
 			{
 				test: /\.(woff2?|ttf|eot|svg|png|gif|jpg)$/,
 				use: [
