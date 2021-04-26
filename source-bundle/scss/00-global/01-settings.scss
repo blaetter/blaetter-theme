@@ -93,7 +93,7 @@ $borderRadius:                  4px; // border radius for buttons etc.
 // Font
 $base-font-family:              'droid-sans', Arial, sans-serif;
 $serif-font-family:             'droid-serif', serif;
-$baseTextColor:                 #000000;
+$baseTextColor:                 $black;
 $fontInactiveColor:             #999999;
 $linkColor:                     $blue;
 $inlineBottomGutter:            0.7em; // Margin bottom for paragraphs, lists, ...
