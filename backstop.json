@@ -33,74 +33,22 @@
     {
       "label": "Homepage",
       "url": "http://localhost/patterns/04-pages-01-startseiten-startseite/04-pages-01-startseiten-startseite.html",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": "",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
-    },
-    {
-      "label": "Article open",
-      "url": "http://localhost/patterns/04-pages-02-artikelseiten-wachstum/04-pages-02-artikelseiten-wachstum.html",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": "",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
+      "misMatchThreshold" : 0.001
     },
     {
       "label": "Article closed",
       "url": "http://localhost/patterns/04-pages-02-artikelseiten-wachstum-closed/04-pages-02-artikelseiten-wachstum-closed.html",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": "",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
+      "misMatchThreshold" : 0.001
+    },
+    {
+      "label": "Article open",
+      "url": "http://localhost/patterns/04-pages-02-artikelseiten-wachstum/04-pages-02-artikelseiten-wachstum.html",
+      "misMatchThreshold" : 0.001
     },
     {
       "label": "Archive",
       "url": "http://localhost/patterns/04-pages-07-Archiv-archiv/04-pages-07-Archiv-archiv.html",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": "",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
+      "misMatchThreshold" : 0.001
     }
   ],
   "paths": {
@@ -110,7 +58,7 @@
     "html_report": "backstop_data/html_report",
     "ci_report": "backstop_data/ci_report"
   },
-  "report": ["browser"],
+  "report": ["json", "browser"],
   "engine": "puppeteer",
   "engineOptions": {
     "args": ["--no-sandbox"]
