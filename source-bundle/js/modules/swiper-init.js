@@ -10,8 +10,8 @@ export function init(callback) {
 	}
 
 	BLAETTER.set_webpack_publicpath();
-	import(/* webpackMode: "lazy" */'swiper/swiper-bundle.min.css');
-	import(/* webpackMode: "lazy" */'swiper')
+	import('swiper/swiper.min.css');
+	import('swiper/bundle')
 		.then(
 			function (Module) {
 				(callback)(Module.default);
@@ -21,7 +21,6 @@ export function init(callback) {
 			function (err) { console.log(err); }
 		);
 }
-
 
 export function slidesperview(el, options) {
 	var slidesperview = el && $(el).data('slidesperview');
@@ -38,48 +37,40 @@ export function slidesperview(el, options) {
 }
 
 export function apply(Swiper) {
-
-	// SWIPER: galleryselect
-
-	var archiveindexSelector = '.swiper.archive-index';
+  // SWIPER: galleryselect
+	var archiveindexSelector = '.swiper';
 	var archiveindexOptions = {
-		grabCursor: true,
-		slideToClickedSlide: false,
-		direction: 'horizontal',
-		slidesPerView: 6,
-		slidesPerGroup: 5,
-		spaceBetween: 24,
-		slidesOffsetBefore: 12,
-		slidesOffsetAfter: 12,
-		loop: false,
-		preloadImages: false,
-		touchReleaseOnEdges: true,
 		autoHeight: true,
-		touchEventsTarget: 'wrapper',  // do not touch our navigation buttons
-		watchOverflow: true,
-		wrapperClass: 'view-content',
-		freeMode: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
 		breakpoints: {
-			1200: {
-				// bigger
-				slidesPerView: 3,
-				slidesPerGroup: 3,
-			},
 			720: {
 				// palm
-				slidesPerView: 2,
 				slidesPerGroup: 2,
 			},
 			420: {
-				// smallest
-				slidesPerView: 2,
+				// small
 				slidesPerGroup: 2,
 			},
-		}
+			320: {
+				// smallest
+				slidesPerGroup: 2,
+			}
+		},
+		direction: 'horizontal',
+		freeMode: true,
+    grabCursor: true,
+    navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+    slidesOffsetAfter: 12,
+		slidesOffsetBefore: 12,
+		slidesPerGroup: 5,
+		slidesPerView: 5,
+		spaceBetween: 24,
+		touchEventsTarget: 'wrapper',  // do not touch our navigation buttons
+		// touchReleaseOnEdges: true,
+		watchOverflow: true,
+		wrapperClass: 'view-content'
 	};
-	new Swiper(archiveindexSelector, archiveindexOptions);
+	var swiper = new Swiper(archiveindexSelector, archiveindexOptions);
 }

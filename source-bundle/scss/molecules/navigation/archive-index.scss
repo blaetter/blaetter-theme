@@ -19,14 +19,16 @@
     .swiper-button-next {
         position:                   absolute;
         right:                      0;
-        background: rgba(240,240,240,0.9);
+        background:               rgba(240,240,240,0.9);
         padding:                    12px;
+        color:                      $baseTextColor;
     }
     .swiper-button-prev {
         position:                   absolute;
         left:                       0;
-        background: rgba(240,240,240,0.9);
+        background:               rgba(240,240,240,0.9);
         padding:                    12px;
+        color:                      $baseTextColor;
     }
     .swiper-button-disabled {
         display:                    none !important;
