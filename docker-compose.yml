@@ -1,8 +1,9 @@
-www:
-  image: blaetter-theme:latest
-  volumes:
-    - "./:/app"
-  environment:
-    - VIRTUAL_HOST=blaetter-theme.local
-  ports:
-    - "80"
+services:
+  www:
+    image: blaetter-theme:latest
+    volumes:
+      - "./:/app"
+    environment:
+      - VIRTUAL_HOST=blaetter-theme.local
+    ports:
+      - "80"
