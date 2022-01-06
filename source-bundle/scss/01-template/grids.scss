@@ -37,6 +37,13 @@ $grid-namespace:            $namespace !default;
 
 #{$grid-namespace}.grid {
     @include flexgrid--base();
+    @include media-query($breakpoint_phone) {
+        > .grid__item.one-third {
+          > .block {
+            margin-bottom: 0;
+          }
+        }
+    }
     @include media-query($breakpoint_medium) {
         > .grid__item.one-half {
             @include flexgrid-item--base();
