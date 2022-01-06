@@ -37,13 +37,6 @@ $grid-namespace:            $namespace !default;
 
 #{$grid-namespace}.grid {
     @include flexgrid--base();
-    @include media-query($breakpoint_phone) {
-        > .grid__item.one-third {
-          > .block {
-            margin-bottom: 0;
-          }
-        }
-    }
     @include media-query($breakpoint_medium) {
         > .grid__item.one-half {
             @include flexgrid-item--base();
@@ -166,6 +159,13 @@ $grid-namespace:            $namespace !default;
 .grid.grid--stretch {
     @include media-query($breakpoint_medium) {
         align-items:            stretch;
+    }
+    @include media-query($breakpoint_phone) {
+      > .grid__item.one-third {
+        > .block {
+          margin-bottom: 0;
+        }
+      }
     }
     > .grid__item {
         //display: flex; // not flex!
