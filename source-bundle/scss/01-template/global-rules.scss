@@ -26,3 +26,9 @@
     width: 1px;
     word-wrap: normal;
 }
+
+#{$namespace}.print--hidden {
+    @include media-query(print) {
+        display: none;
+    }
+}
