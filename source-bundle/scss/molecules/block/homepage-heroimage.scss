@@ -1,14 +1,13 @@
-$homepage-heroimage-namespace:              $namespace !default;
-
+$homepage-heroimage-namespace: $namespace !default;
 #{$homepage-heroimage-namespace}.homepage-heroimage {
-    position:               relative;
-    margin-bottom:          $pagePaddingPx;
+    position: relative;
+    margin-bottom: $pagePaddingPx;
     @include media-query($breakpoint_phone) {
-        margin-bottom:          $pagePaddingPalmPx;
+        margin-bottom: $pagePaddingPalmPx;
     }
-    display:                block;
-    overflow:               hidden;
-    z-index:                0;
+    display: block;
+    overflow: hidden;
+    z-index: 0;
     @media screen {
         &:before {
             display: block;
@@ -19,100 +18,99 @@ $homepage-heroimage-namespace:              $namespace !default;
             top: 0;
             left: 0;
             background-color: transparent;
-            background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,.7));
-            z-index:                1;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .7));
+            z-index: 1;
         }
     }
     .image {
-        width:              100%; // because of portrait images
-        display:            block;
-        margin:             0 auto; // center portait images
-        overflow:           hidden;
+        width: 100%; // because of portrait images
+        display: block;
+        margin: 0 auto; // center portait images
         img {
-          display:        block;
-          height:         auto;
+            display: block;
+            height: auto;
         }
         @include media-query($breakpoint_phone) {
-          height:           400px;
-          overflow:         hidden;
-          img {
-            max-width:      unset;
-            max-height:     unset;
-            position:       absolute;
-            height:         120%;
-            width:          auto;
-            left:           -18vw;
-          }
+            height: 400px;
+            overflow: hidden;
+            img {
+                max-width: unset;
+                max-height: unset;
+                position: absolute;
+                height: auto;
+                width: auto;
+                left: -50%; //-18vw;
+                top: -20%
+            }
         }
         @include media-query($breakpoint_smallest) {
-          img {
-            left:           -50vw;
-          }
+            img {
+                left: -100%; //-50vw;
+            }
         }
     }
     .source {
         display: none;
     }
     .body {
-        bottom:             0;
-        top:                auto;
-        left:               0;
-        right:              0;
-        margin-left:        auto;
-        margin-right:       auto;
-        position:           absolute;
-        z-index:            2;
-        text-align:         center;
-        padding:            0 $largeGapPx;
-        max-width:          100%;
-        background-color:   transparent;
-        height:     100%;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        z-index: 2;
+        text-align: center;
+        padding: 0 $largeGapPx;
+        max-width: 100%;
+        background-color: transparent;
+        height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
         @media screen {
-            text-shadow:        1px 1px 4px rgba(0,0,0,0.4);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
         }
         .heading {
-            color:          $white;
-            margin:         0;
-            font-size:      8vw;
-            line-height:    1.2;
-            max-width:      1170px;
-            margin-bottom:  20px;
+            color: $white;
+            margin: 0;
+            font-size: 8vw;
+            line-height: 1.2;
+            max-width: 1170px;
+            margin-bottom: 20px;
             @include media-query($breakpoint_phone) {
-              margin-bottom:  16px;
+                margin-bottom: 16px;
             }
-            @include media-query($breakpoint_big){
-                font-size:  80px;
+            @include media-query($breakpoint_big) {
+                font-size: 80px;
             }
             @include media-query(print) {
-                color:          $baseTextColor;
-                font-size:      8vw;
+                color: $baseTextColor;
+                font-size: 8vw;
             }
             a {
-                color:      $white;
+                color: $white;
             }
         }
         .author {
-            color:          $greyAuthor;
-            font-size:      5vw;
-            margin-bottom:  1em;
+            color: $greyAuthor;
+            font-size: 5vw;
+            margin-bottom: 1em;
             @include media-query($breakpoint_phone) {
-              font-size:    1.2em;
+                font-size: 1.2em;
             }
-            @include media-query($breakpoint_big){
-                font-size:  40px;
+            @include media-query($breakpoint_big) {
+                font-size: 40px;
             }
-            line-height:    1.2;
-            font-family:    'droid-sans', sans-serif, Arial;
+            line-height: 1.2;
+            font-family: 'droid-sans',
+            sans-serif,
+            Arial;
         }
         .author a {
-            color:          $blueAuthor;
+            color: $blueAuthor;
         }
     }
-
-
 }
-
