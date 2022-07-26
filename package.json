@@ -34,7 +34,6 @@
     "webpack-cli": "^3.0"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001296",
     "font-awesome": "^4.7",
     "jquery": "^3.5.0",
     "swiper": "~6.5.1"
