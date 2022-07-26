@@ -37,15 +37,14 @@ $homepage-heroimage-namespace: $namespace !default;
                 max-width: unset;
                 max-height: unset;
                 position: absolute;
-                height: auto;
+                height: 120%;
                 width: auto;
-                left: -50%; //-18vw;
-                top: -20%
+                left: -18vw;
             }
         }
         @include media-query($breakpoint_smallest) {
             img {
-                left: -100%; //-50vw;
+                left: -50vw;
             }
         }
     }
