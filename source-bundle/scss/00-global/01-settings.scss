@@ -134,11 +134,11 @@ $breakpoint_big:                'big';
 $breakpoint_large:              'large';
 
 // Breakpoint definitions
-$breakpoint_width_smallest:      (420px / 16px) * 1rem;
-$breakpoint_width_phone:         (720px / 16px) * 1rem;
-$breakpoint_width_medium:        (1000px / 16px) * 1rem;
-$breakpoint_width_big:           (1200px / 16px) * 1rem;
-$breakpoint_width_large:         ($pageWidthDeskPx / 16px) * 1rem;
+$breakpoint_width_smallest:      calc(420px / 16px) * 1rem;
+$breakpoint_width_phone:         calc(720px / 16px) * 1rem;
+$breakpoint_width_medium:        calc(1000px / 16px) * 1rem;
+$breakpoint_width_big:           calc(1200px / 16px) * 1rem;
+$breakpoint_width_large:         calc($pageWidthDeskPx / 16px) * 1rem;
 $pageWidthDesk:                  $breakpoint_width_large;
 
 // Breakpoints for media-query-mixin
