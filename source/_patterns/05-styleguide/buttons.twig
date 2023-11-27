@@ -1,10 +1,10 @@
 {% extends "main-styleguide.twig" %}
 
 {% block content %}
- 
+
 
     <h2>Buttons und Links</h2>
-    
+
     <h3>Default Anker</h3>
     <div class="sg-element">
         {% include "atoms-anker" %}
@@ -16,42 +16,54 @@
     <h3>Standard Button</h3>
     {% include "atoms-button-default" %}
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-default" %}</code></pre>
-    
+
     <h3>Reversed Button</h3>
     {% include "atoms-button-reversed" %}
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-reversed" %}</code></pre>
-    
+
     <h3>Disabled Button</h3>
     {% include "atoms-button-disabled" %}
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-disabled" %}</code></pre>
-    
+
     <h3>Kaufen Button</h3>
     {% include "atoms-button-buy" with {data: {"text": "14 Beiträge kaufen", "text_right": "(7,00 €)"}} %}
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-buy" with {data: {"text": "14 Beiträge kaufen", "text_right": "(7,00 €)"}}  %}</code></pre>
-    
+
+    <h3>Promo Button</h3>
+    {% include "atoms-button-promo" with {data: {"text": ""}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-promo" with {data: {"text": "Abo"}}  %}</code></pre>
+
+    <h3>Danger Button</h3>
+    {% include "atoms-button-danger" with {data: {"text": "Inhalt löschen"}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-danger" with {data: {"text": "Inhalt löschen"}}  %}</code></pre>
+
+    <h3>Danger Button reversed</h3>
+    {% include "atoms-button-danger-reversed" with {data: {"text": "Inhalt löschen"}} %}
+    <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-danger-reversed" with {data: {"text": "Inhalt löschen"}}  %}</code></pre>
+
     <h3>Drupal Form Submit Button</h3>
     <form>
         <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Anmelden" class="button js-form-submit form-submit">
     </form>
     {#
-    
+
     <div style="background-color: #253276; padding: 1em; color:#ffffff;">
     <h3 style="color:#ffffff;margin-top:0;">Ghost Button</h3>
     {% include "atoms-button-ghost" %}
     </div>
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-ghost" %}</code></pre>
-    
+
     <div style="background-color: #253276; padding: 1em; color:#ffffff;">
     <h3 style="color:#ffffff;margin-top:0;">White Button</h3>
     {% include "atoms-button-white" %}
     </div>
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-button-white" %}</code></pre>
-    
+
     #}
 
     <h3>Link as Button</h3>
     {% include "atoms-anker-button" %}
     <pre class="js-collapse-me sg-collapse" data-closetext="Markup ausblenden" data-opentext="Markup anzeigen"><code>{% include "atoms-anker-button" %}</code></pre>
-       
+
 
 {% endblock %}

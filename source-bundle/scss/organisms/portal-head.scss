@@ -46,6 +46,19 @@ $portal-head-namespace:              $namespace !default;
             padding:        0.5em;
             margin-left:    15px;
         }
+        .button--promo {
+          margin-bottom:    0;
+          white-space:      nowrap;
+          .fa {
+            color:          $red;
+          }
+          &:hover,
+          &:focus {
+              .fa {
+                color:                $white;
+              }
+          }
+        }
     }
 }
 

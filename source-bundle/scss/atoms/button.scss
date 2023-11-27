@@ -132,9 +132,30 @@ $btn-border-color:              $blue !default;
   opacity:                1;
   &:hover,
   &:focus {
-      background-color:   $white;
+      background-color:   lighten($red, 40%);
       text-decoration:    none;
       border-color:       lighten($red, 10%);
+  }
+}
+
+@mixin button--promo() {
+  @extend .btn;
+  background-color:       $white;
+  border:                 1px solid $red;
+  color:                  $red;
+  font-weight:            normal;
+  opacity:                1;
+  .fa {
+    color:                $red;
+  }
+  &:hover,
+  &:focus {
+      background-color:   $red;
+      text-decoration:    none;
+      color:              $white;
+      .fa {
+        color:                $white;
+      }
   }
 }
 
@@ -250,6 +271,10 @@ $btn-border-color:              $blue !default;
 
 #{$button-namespace}.button--danger {
   @include button--danger();
+}
+
+#{$button-namespace}.button--promo {
+  @include button--promo();
 }
 
 #{$button-namespace}.button--danger--reversed {
