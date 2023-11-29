@@ -1,12 +1,12 @@
 {% extends "main-styleguide.twig" %}
 
 {% block content %}
- 
+
     <script>
         jQuery(function($) {
             /* write the original background color of the elements below the element */
             var hexDigits = new Array
-            ("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"); 
+            ("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f");
             //Function to convert rgb color to hex format
             function rgb2hex(rgb) {
                 rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
@@ -26,45 +26,45 @@
             });
         });
     </script>
-    
-    
+
+
     <h2>Schrift und Text</h2>
-    
+
     <p>
-        Hauptschrift ist immer Arial. Hier werden alle existierenden Schriftschnitte für unterschiedliche 
+        Hauptschrift ist immer Droid-Sans. Fallback ist Arial bzw. Sans-Serif. Hier werden alle existierenden Schriftschnitte für unterschiedliche
         Verwendungen gezeigt. Andere Schriften oder Schriftschnitte kommen nicht vor und von ihrer Verwendung ist abzusehen.
     </p>
-    
+
     <div class="styleguide-fonts">
-        
+
         <div class="sg-element">
             {% include "atoms-heading1" %}
             {% include "atoms-heading1" with {data: {'text': 'Heading 1, verlinkt', 'targetPage':'#'}} %}
             <span class="sg-def-h1"></span>
         </div>
         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading1") %}</code></pre>
-        
+
         <div class="sg-element">
             {% include ("atoms-heading2") %}
             {% include "atoms-heading2" with {data: {'text': 'Heading 2, verlinkt', 'targetPage':'#'}} %}
             <span class="sg-def-h2"></span>
         </div>
         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading2") %}</code></pre>
-         
+
         <div class="sg-element">
             {% include ("atoms-heading3") %}
             {% include "atoms-heading3" with {data: {'text': 'Heading 3, verlinkt', 'targetPage':'#'}} %}
             <span class="sg-def-h3"></span>
         </div>
         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading3") %}</code></pre>
-        
+
         <div class="sg-element">
             {% include ("atoms-heading4") %}
             {% include "atoms-heading4" with {data: {'text': 'Heading 4, verlinkt', 'targetPage':'#'}} %}
             <span class="sg-def-h4"></span>
         </div>
         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include ("atoms-heading4") %}</code></pre>
-        
+
         <div class="sg-element__">
             {% include ("atoms-heading--sectiontitle") %}
         </div>
@@ -74,7 +74,7 @@
             {% include "atoms-heading--sectiontitle" with {data:{"targetPage":"#","text": "Heading Sectiontitle, verlinkt"}} %}
         </div>
         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-heading--sectiontitle" with {data:{"targetPage":"#","text": "Heading Sectiontitle, verlinkt"}} %}</code></pre>
-        
+
         <div class="sg-element__">
             {% include "atoms-heading--sectiontitle" with {data: {
                     "targetPage": null,
@@ -123,14 +123,14 @@
             <span class="sg-def-p"></span>
         </div>
         <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-paragraph" with {data: {text: "Lorem ipsum dolor [...] Cras dapibus." }} %}</code></pre>
-        
+
         <h3>Link</h3>
         <div class="sg-element">
             {% include "atoms-anker" %}
             <span class="sg-def-a"></span>
          </div>
          <pre class="js-collapse-me sg-collapse" data-opentext="Markup anzeigen"><code>{% include "atoms-anker" %}</code></pre>
-       
+
         {#
         <h3>Bildunterschrift</h3>
         <code>.image-caption</code>
@@ -141,7 +141,7 @@
         #}
 
         <br /><br />
-        
+
         <h2>Ausrichtungen</h2>
 
         <code>.text--small</code>
@@ -207,5 +207,5 @@
     </div>
 
 
-    
+
 {% endblock %}
