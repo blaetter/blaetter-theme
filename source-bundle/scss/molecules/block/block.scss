@@ -52,6 +52,128 @@ $block-namespace:              $namespace !default;
     border: 2px solid $red;
 }
 
+#{$block-namespace}.block--promo {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  .promo--background-wrapper {
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background-image: url('/images/promo_banner_arrow_right.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 120px;
+    @include media-query($breakpoint_phone) {
+      height: 100px;
+    }
+    @include media-query($breakpoint_small) {
+      height: 130px;
+    }
+    .promo--wrapper {
+      background: $red;
+      height: 100%;
+      margin-right: 36px;
+      @include media-query($breakpoint_phone) {
+        margin-right: 30px;
+      }
+      @include media-query($breakpoint_small) {
+        margin-right: 38px;
+      }
+      .inner {
+        color: $white;
+        @include media-query($breakpoint_phone) {
+            width:          100%;
+            margin:         0;
+        }
+        @include media-query($breakpoint_medium) {
+            width:              100%;
+            max-width:          $pageWidthDesk;
+            margin:             0 auto;
+        }
+        h2 {
+          background-image: url('/images/logo_palm_snow.svg');
+          background-position: top right;
+          background-repeat: no-repeat;
+          color: $white;
+          padding: $largeGapPx;
+          margin: 0;
+          min-width: 360px;
+          width: 30%;
+          @include media-query($breakpoint_phone) {
+            width: 50%;
+            font-size: 1.8rem;
+            min-width: 260px;
+          }
+          @include media-query($breakpoint_small) {
+            width: 100%;
+            margin-right: 20px;
+            padding-bottom: $smallGapPx;
+          }
+        }
+        p {
+          color: $white;
+          font-weight: bold;
+          padding: $largeGapPx;
+          white-space: nowrap;
+          width: 30%;
+          @include media-query($breakpoint_phone) {
+            width: 50%;
+            font-size: 0.9rem;
+          }
+          @include media-query($breakpoint_small) {
+            width: 100%;
+            padding-top: 0;
+          }
+          &.placeholder {
+            @include media-query($breakpoint_phone) {
+              display:none;
+            }
+          }
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .promo-close {
+        color: $white;
+        padding: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+      }
+    }
+  }
+  .promo-image {
+    display: block;
+    position: absolute;
+    z-index: 101;
+    @include media-query($breakpoint_phone) {
+      display: none;
+    }
+    @include media-query($breakpoint_medium_max) {
+      display: none;
+    }
+    @include media-query($breakpoint_medium) {
+      width:  25%;
+      right: 10%;
+      bottom: -50px;
+    }
+    @include media-query($breakpoint_big) {
+      bottom: -160px;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 // remove rss icon block from site
 .feed-icons {
   display: none;

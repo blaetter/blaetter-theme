@@ -127,6 +127,7 @@ $font-weight-a:                 400;
 // Breakpoint naming definitions - theese can be used in the mixin
 $breakpoint_smallest:           'smallest';
 $breakpoint_smallest_and_up:    'smallest-and-up';
+$breakpoint_small:              'small';
 $breakpoint_phone:              'phone';
 $breakpoint_medium_max:         'medium-max';
 $breakpoint_medium:             'medium';
@@ -135,6 +136,7 @@ $breakpoint_large:              'large';
 
 // Breakpoint definitions
 $breakpoint_width_smallest:      calc(420px / 16px) * 1rem;
+$breakpoint_width_small:         calc(560px / 16px) * 1rem;
 $breakpoint_width_phone:         calc(720px / 16px) * 1rem;
 $breakpoint_width_medium:        calc(1000px / 16px) * 1rem;
 $breakpoint_width_big:           calc(1200px / 16px) * 1rem;
@@ -147,6 +149,8 @@ $breakpoints: (
     $breakpoint_smallest '(max-width: '+$breakpoint_width_smallest+')',
     // everything bigger than small screen sizes
     $breakpoint_smallest_and_up '(min-width: '+($breakpoint_width_smallest + 0.001rem)+')',
+    // everything up to small screen width
+    $breakpoint_small '(max-width: '+$breakpoint_width_small+')',
     // everything with max phone width
     $breakpoint_phone '(max-width: '+$breakpoint_width_phone+')',
     // every up to medium breakpoint size

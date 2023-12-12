@@ -1,0 +1,10 @@
+#{$namespace}.header-message {
+  //background-color: rgb(231, 24, 53, .6)
+  background-color: $red;
+  color: $white;
+
+  @include media-query($breakpoint_phone) {
+    text-align: center;
+  }
+
+}
