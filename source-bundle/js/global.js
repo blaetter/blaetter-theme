@@ -5,6 +5,7 @@ import nav_menu_flyout from 'nav-menu-flyout';
 import search_flyout from 'search-flyout';
 import header_fix from 'header-fix';
 import consent_fix from 'consent-fix';
+import promo_close from 'promo-close';
 
 window._paq = typeof window._paq === "object" ? window._paq : [];
 window._gaq = typeof window._gaq === "object" ? window._gaq : [];
@@ -17,4 +18,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	search_flyout();
   header_fix();
   consent_fix();
+  promo_close();
 });
