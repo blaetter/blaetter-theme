@@ -109,11 +109,13 @@ $block-namespace:              $namespace !default;
             width: 50%;
             font-size: 1.8rem;
             min-width: 260px;
+            padding-left: 40px;
           }
           @include media-query($breakpoint_small) {
             width: 100%;
             margin-right: 20px;
             padding-bottom: $smallGapPx;
+            padding-left: 40px;
           }
         }
         p {
@@ -129,6 +131,7 @@ $block-namespace:              $namespace !default;
           @include media-query($breakpoint_small) {
             width: 100%;
             padding-top: 0;
+            padding-left: 40px;
           }
           &.placeholder {
             @include media-query($breakpoint_phone) {
@@ -149,6 +152,16 @@ $block-namespace:              $namespace !default;
         cursor: pointer;
       }
     }
+    .promo-arrow {
+      position:absolute;
+      top:0;
+      right:0;
+      width: 60px;
+      height: 100%;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   .promo-image {
     display: block;
@@ -161,12 +174,12 @@ $block-namespace:              $namespace !default;
       display: none;
     }
     @include media-query($breakpoint_medium) {
-      width:  25%;
+      width:  20%;
       right: 10%;
       bottom: -50px;
     }
     @include media-query($breakpoint_big) {
-      bottom: -160px;
+      bottom: -100px;
     }
     &:hover {
       text-decoration: none;

@@ -98,11 +98,6 @@ $headerTransitionTimespan:      0.4s;
                 .palm {
                     display:    block;
                 }
-                .claim {
-                    display:    block;
-                    width:      100px;
-                    transition: width $headerTransitionTimespan ease-out;
-                }
                 .tongue {
                     top:     -400px;
                     transition: top $headerTransitionTimespan*2 linear;
