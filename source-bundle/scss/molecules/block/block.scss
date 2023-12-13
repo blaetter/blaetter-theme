@@ -65,7 +65,7 @@ $block-namespace:              $namespace !default;
     bottom: 0;
     position: absolute;
     width: 100%;
-    background-image: url('/images/promo_banner_arrow_right.svg');
+    background-image: url('../source/images/promo_banner_arrow_right.svg');
     background-repeat: no-repeat;
     background-position: top right;
     height: 120px;
@@ -97,7 +97,7 @@ $block-namespace:              $namespace !default;
             margin:             0 auto;
         }
         h2 {
-          background-image: url('/images/logo_palm_snow.svg');
+          background-image: url('../source/images/logo_palm_snow.svg');
           background-position: top right;
           background-repeat: no-repeat;
           color: $white;
