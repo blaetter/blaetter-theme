@@ -178,11 +178,11 @@ $block-namespace:              $namespace !default;
       right: 10%;
       bottom: -50px;
     }
-    @include media-query($breakpoint_big) {
-      bottom: -100px;
-    }
     &:hover {
       text-decoration: none;
+    }
+    img {
+      max-height: 350px;
     }
   }
 }
