@@ -106,6 +106,7 @@ $block-namespace:              $namespace !default;
           min-width: 360px;
           width: 30%;
           &.winter {
+            background-position: right top;
             background-image: url('../source/images/logo_palm_snow.svg');
           }
           @include media-query($breakpoint_phone) {
