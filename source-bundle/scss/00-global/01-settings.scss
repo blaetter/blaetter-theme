@@ -93,6 +93,7 @@ $borderRadius:                  4px; // border radius for buttons etc.
 // Font
 $base-font-family:              'droid-sans', Arial, sans-serif;
 $serif-font-family:             'droid-serif', serif;
+$headline-font-family:          'playfair', 'droid-serif', serif;
 $baseTextColor:                 $black;
 $fontInactiveColor:             #999999;
 $linkColor:                     $blue;
@@ -114,9 +115,9 @@ $font-color-h1:                 $baseTextColor;
 $font-color-h2:                 $baseTextColor;
 $font-color-h3:                 $baseTextColor;
 $font-color-h4:                 $baseTextColor;
-$font-family-h1:                'droid-sans', Arial, sans-serif;//'droid-serif', serif;
-$font-family-h2:                'droid-sans', Arial, sans-serif;//'droid-serif', serif;
-$font-family-h3:                'droid-sans', Arial, sans-serif;//'droid-serif', serif;
+$font-family-h1:                $headline-font-family;
+$font-family-h2:                $headline-font-family;
+$font-family-h3:                $headline-font-family;
 $font-family-h4:                $base-font-family;
 $font-weight-h1:                700;
 $font-weight-h2:                700;
