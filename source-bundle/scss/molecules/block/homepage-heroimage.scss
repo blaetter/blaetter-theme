@@ -60,14 +60,15 @@ $homepage-heroimage-namespace: $namespace !default;
         margin-right: auto;
         position: absolute;
         z-index: 2;
-        text-align: center;
-        padding: 0 $largeGapPx;
+        //text-align: center;
+        //padding: 0 $largeGapPx;
+        padding: 0 $pagePaddingPx;
         max-width: 100%;
         background-color: transparent;
         height: 100%;
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        //align-items: center;
         flex-direction: column;
         @media screen {
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
