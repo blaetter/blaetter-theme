@@ -194,7 +194,6 @@ ul.tabs {
        margin-right: 0;
        border-bottom: none;
     }
-    //font-family: droid-sans, Arial,sans-serif;
     li {
         display: inline-flex;
         @include media-query($breakpoint_large) {

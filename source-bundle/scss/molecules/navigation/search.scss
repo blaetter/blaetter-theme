@@ -19,7 +19,7 @@ $pageSearchFontColor:                $white;
     visibility:                     visible;
     overflow:                       hidden;
     width:                          100%;
-    font-family:                    droid-sans,Arial,sans-serif;
+    font-family:                    $base-font-family;
     font-size:                      15px;
     &.opened {
         display:                    block;

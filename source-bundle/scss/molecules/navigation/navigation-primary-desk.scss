@@ -29,7 +29,7 @@ $navigationPrimaryFontColor:                $white;
         overflow:                       scroll;
         visibility:                     visible;
         width:                          300px;
-        font-family:                    droid-sans,Arial,sans-serif;
+        font-family:                    $base-font-family;
         font-size:                      15px;
         .block.navigation {
             margin-bottom:              0;

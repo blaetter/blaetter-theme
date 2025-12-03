@@ -105,9 +105,7 @@ $homepage-heroimage-namespace: $namespace !default;
                 font-size: 40px;
             }
             line-height: 1.2;
-            font-family: 'droid-sans',
-            sans-serif,
-            Arial;
+            font-family: $base-font-family
         }
         .author a {
             color: $blueAuthor;

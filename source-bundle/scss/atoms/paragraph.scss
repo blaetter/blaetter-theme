@@ -22,7 +22,7 @@ $paragraph-namespace:                $namespace !default;
 #{$paragraph-namespace}.quote,
 #{$paragraph-namespace}.content-wrapper-article blockquote,
 #{$paragraph-namespace}.content-wrapper-three-columns blockquote {
-    font-family:       'droid-serif', serif;
+    font-family:       $serif-font-family;
     font-size:          50px;
     font-weight:        400;
     line-height:        70px;
