@@ -69,7 +69,7 @@ $sectiontitleMarginTop: 0 !default;
 $sectiontitleMarginBottom: $gridGutter !default;
 #{$heading-namespace}.heading--sectiontitle {
     font-size:                      18px;
-    font-family:                    'droid-sans', Arial, sans-serif;
+    font-family:                    $base-font-family;
     line-height:                    1em;
     display:                        flex;
     flex-wrap:                      wrap;
@@ -106,7 +106,7 @@ $sectiontitleMarginBottom: $gridGutter !default;
 
 #{$heading-namespace}.heading--sectiontitle-marginal {
     font-size:                      18px;
-    font-family:                    'droid-sans', Arial, sans-serif;
+    font-family:                    $base-font-family;
     line-height:                    1em;
     display:                        block;
     flex-wrap:                      wrap;
@@ -128,7 +128,7 @@ $sectiontitleMarginBottom: $gridGutter !default;
 }
 
 @mixin pagecategoryheadline() {
-    font-family:                    'droid-sans', Arial, sans-serif;
+    font-family:                    $base-font-family;
     font-size:                      18px;
     line-height:                    1em;
     display:                        block;
