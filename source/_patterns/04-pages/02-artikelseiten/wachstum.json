@@ -8,7 +8,7 @@
         "content":  [
             {
                 "pattername": "atoms-html",
-                "html": "<article class=\"node-type--story\">"
+                "html": "<article class=\"node-type--story field\">"
             },
             {
                 "pattername": "atoms-heading2",

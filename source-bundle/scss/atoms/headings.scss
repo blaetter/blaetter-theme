@@ -34,6 +34,12 @@ $heading-namespace:       $namespace !default;
     }
 }
 
+.field {
+  h2 {
+    font-family:  $base-font-family;
+  }
+}
+
 .blaetter-type--1856 {
   h2 {
     margin-top: 2em;
