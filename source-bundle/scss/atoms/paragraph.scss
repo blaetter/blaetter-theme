@@ -23,9 +23,9 @@ $paragraph-namespace:                $namespace !default;
 #{$paragraph-namespace}.content-wrapper-article blockquote,
 #{$paragraph-namespace}.content-wrapper-three-columns blockquote {
     font-family:       $serif-font-family;
-    font-size:          50px;
+    font-size:          42px;
     font-weight:        400;
-    line-height:        70px;
+    line-height:        72px;
     display:            flex;
     color:               $lightestTextGrey;
     margin:              $inlineBottomGutter 0;
@@ -38,7 +38,7 @@ $paragraph-namespace:                $namespace !default;
     }
     @include media-query($breakpoint_phone) {
         font-size:       28px;
-        line-height:     42px;
+        line-height:     44px;
         &:before {
             margin-right:   15px;
         }
