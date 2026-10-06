@@ -38,6 +38,9 @@ $portal-head-namespace:              $namespace !default;
         display:                flex;
         align-items:            center;
         float:                  right;
+        // Context for the palm:button component (promo link)
+        --palm-button-padding:      0.5em;
+        --palm-button-white-space:  nowrap;
         .fa {
             color:          $baseTextColor;
             font-size:      1.3em;
@@ -45,6 +48,7 @@ $portal-head-namespace:              $namespace !default;
         > * {
             padding:        0.5em;
             margin-left:    15px;
+            --palm-button-space-after: 0;
         }
         .button--promo {
           margin-bottom:    0;
