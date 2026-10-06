@@ -2,6 +2,8 @@
  *   Styleguide styles. 
  *   Do not use these classes in production
  */
+// Same cascade layer as palm.css, so both behave as before the layers.
+@layer legacy {
 @import "../scss/00-global/01-settings"; 
 @import "../scss/00-global/02-mixins";
  
@@ -320,5 +322,4 @@ body .sg-layout-content {
     display:        block;
      margin-bottom:  0.7em;
 }
-
-
+}
