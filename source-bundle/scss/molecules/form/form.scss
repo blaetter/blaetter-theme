@@ -299,6 +299,7 @@ $form-namespace:            $namespace !default;
             float:              none;
             margin-bottom:      0em;
             margin-left:        1em;
+            --palm-button-space-after: 0; // same for palm:button
         }
     }
     @include media-query($breakpoint_phone) {
@@ -306,6 +307,7 @@ $form-namespace:            $namespace !default;
         > * {
             width:                  100%;
              margin-bottom:         1em;
+            --palm-button-space-after: 1em; // same for palm:button
         }
     }
     .form-helptext {

@@ -74,6 +74,7 @@
         }
         .form-number {
             width: 4em;
+            --palm-field-width: 4em; // same for palm:input
         }
         .price,
         .total-title {
