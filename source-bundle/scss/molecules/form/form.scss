@@ -37,11 +37,13 @@ $form-namespace:            $namespace !default;
         @include fontsize($smallest-font-size);
         display:                    block;
         color:                      $lightestTextGrey;
+        margin-top:                 0.4em; // same gap as below the labels
         margin-bottom:              0;
     }
     label,
     .legend,
-    .fieldset-legend {
+    .fieldset-legend,
+    .captcha__title { // legend of the CAPTCHA module
         display:        block;
         font-weight:    bold;
         margin-bottom:  0.4em;
