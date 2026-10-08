@@ -10,6 +10,10 @@
             &:first-child {
                 padding-left: 0;
             }
+            // Buttons take the full width on phones, so no indent.
+            @include media-query($breakpoint_phone) {
+                padding: 0;
+            }
         }
     }
 }
