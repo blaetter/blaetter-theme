@@ -1,6 +1,7 @@
 $searchFieldHeight:         60px;
 $searchfieldBorderColor:    $blue;
 
+// Only for the Patternlab pattern navigation/search; Drupal renders palm:search-form.
 .form--navigationsearch {
     position:               relative;
     height:                 $searchFieldHeight;
@@ -36,47 +37,5 @@ $searchfieldBorderColor:    $blue;
         font-weight:        700;
         font-size:          $base-font-size;
         padding:            16px;
-    }
-}
-
-.search-form {
-    .form-wrapper {
-        display:            flex;
-        label {
-            display:            none;
-        }
-        .form-item {
-            display:            block;
-            width:              100%;
-            background:         $white;
-            border:             2px solid $searchfieldBorderColor;
-            height:             $searchFieldHeight;
-            color:              $black;
-            min-height:         auto;
-            overflow:           hidden;
-            // Context for the palm:input component
-            --palm-field-padding:   8px 16px;
-            --palm-field-border:    none;
-            input {
-                padding:        8px 16px;
-                border:         none;
-            }
-        }
-        .form-submit{
-            height:             $searchFieldHeight;
-            background:         $searchfieldBorderColor;
-            color:              $white;
-            text-transform:     uppercase;
-            border:             1px solid $searchfieldBorderColor;
-            font-weight:        700;
-            font-size:          $base-font-size;
-            padding:            8px 16px;
-            max-width:          100px;
-            border-radius:      0;
-            // Context for the palm:button component
-            --palm-button-padding:      8px 16px;
-            --palm-button-radius:       0;
-            --palm-button-font-weight:  700;
-        }
     }
 }
