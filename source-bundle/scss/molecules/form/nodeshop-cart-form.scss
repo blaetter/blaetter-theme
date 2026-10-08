@@ -99,45 +99,10 @@
     .form-item-cart-fields-0-quantity {
         padding-right:  40px;
     }
-    // Submit button of the cart form; Drupal adds the generic .button classes, so their box rules are reset here.
+    // Remove button (palm:icon-button in the Palm theme); only its position in the quantity cell is set here.
     .nodeshop_cart_remove_item {
-        -webkit-appearance: none;
-        appearance:     none;
-        box-sizing:     border-box;
-        padding:        0;
-        margin:         0;
-        min-height:     0;
-        font-family:    $base-font-family;
-        cursor:         pointer;
-        background:     $greyBorder;
-        color:          $white;
-        border:         1px solid $greyBorder;
-        border-radius:  24px;
-        width:          24px;
-        height:         24px;
-        font-size:      24px;
-        font-weight:    bold;
-        display:        block;
-        line-height:    23px;
-        text-align:     center;
-        text-transform: uppercase;
         position:       absolute;
         top:            20px;
         left:           4em;
-        &:hover,
-        &:focus {
-            text-decoration:    none;
-            background:         $greyDark;
-            border-color:       $greyDark;
-            color:              $white;
-        }
-        &:focus {
-            outline:            1px dotted black;
-            outline-offset:     1px;
-        }
-        @include media-query($breakpoint_phone) {
-            width:              24px;
-            line-height:        23px;
-        }
     }
 }
