@@ -228,28 +228,7 @@ $form-namespace:            $namespace !default;
         color:              $red;
     }
 
-    details {
-        border: 1px solid $greyBorder;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        > .details-wrapper {
-            padding: 0.5em 1.5em;
-        }
-        summary {
-            cursor: pointer;
-            padding: 0.2em 0em;
-        }
-    }
-    > details {
-        border:             0 none;
-        > summary {
-            font-size:      1.5em;
-        }
-        > .details-wrapper {
-            padding:        0;
-            box-sizing:     border-box; // explicit set box sizing due bug (?) in webkit
-        }
-    }
+    // Details (collapsible groups): palm:details in the Palm theme.
     // Spacing of form items, fieldsets and form actions: palm:form-item,
     // palm:fieldset and palm:form-actions in the Palm theme.
     .confirm-parent, .password-parent {
