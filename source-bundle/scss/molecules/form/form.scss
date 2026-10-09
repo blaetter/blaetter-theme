@@ -26,6 +26,8 @@ $form-namespace:            $namespace !default;
         margin-top:                 0;
         margin-bottom:              0.5em;
     }
+    // Fieldsets of Drupal's form elements: palm:fieldset (Palm theme); this
+    // rule remains for the fieldset of the CAPTCHA module.
     fieldset {
         margin-bottom:              $gridGutter;
         &:last-child {
@@ -41,8 +43,8 @@ $form-namespace:            $namespace !default;
         margin-bottom:              0;
     }
     // Labels of form items: palm:form-item in the Palm theme.
+    // Legends of fieldsets: palm:fieldset in the Palm theme.
     .legend,
-    .fieldset-legend,
     .captcha__title { // legend of the CAPTCHA module
         display:        block;
         font-weight:    bold;
@@ -248,17 +250,8 @@ $form-namespace:            $namespace !default;
             box-sizing:     border-box; // explicit set box sizing due bug (?) in webkit
         }
     }
-    // Form items get their spacing from palm:form-item (Palm theme), which
-    // wins over this rule; it remains for fieldsets of option groups, which
-    // Drupal gives the class form-item as well.
-    .form-item,
-    .form-actions {
-        margin-top:         $mediumGapPx;
-        margin-bottom:      $mediumGapPx;
-        &:first-child {
-            margin-top:    0;
-        }
-    }
+    // Spacing of form items, fieldsets and form actions: palm:form-item,
+    // palm:fieldset and palm:form-actions in the Palm theme.
     .confirm-parent, .password-parent {
         clear: left;
         margin: 0;
@@ -288,47 +281,10 @@ $form-namespace:            $namespace !default;
     @include form--prependlabel();
 }
 
-#{$form-namespace}.form-actions {
-    @include clearfix();
-    @include getRem('margin-top', $formgoupBottomMarginPx);
-    @include media-query($breakpoint_medium) {
-        display:                flex;
-        justify-content:        flex-end;
-        align-items:            center;
-        > *,
-        button,
-        .button {
-            width:              auto;
-            float:              none;
-            margin-bottom:      0em;
-            margin-left:        1em;
-            --palm-button-space-after: 0; // same for palm:button
-        }
-    }
-    @include media-query($breakpoint_phone) {
-        display:                    block;
-        > * {
-            width:                  100%;
-             margin-bottom:         1em;
-            --palm-button-space-after: 1em; // same for palm:button
-        }
-    }
-    .form-helptext {
-        display:                    inline-block;
-        margin:                     0;
-        @include getRem('margin-top', $btn-heightPx/3.5);
-    }
-    .quicklinks {
-        display:                inline-block;
-    }
-    // > button:last-child,
-    // > .button:last-child {
-    //     margin-left:            0;
-    // }
-}
+// Bar of the form buttons: palm:form-actions in the Palm theme.
 @include media-query($breakpoint_medium) {
     #{$form-namespace}form .grid + .form-actions {
-        margin-top:                 0;
+        --palm-form-actions-space-before: 0; // context for palm:form-actions
     }
 }
 

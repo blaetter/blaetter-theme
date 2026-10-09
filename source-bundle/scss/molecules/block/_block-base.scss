@@ -11,12 +11,14 @@
     position:                   relative;
     > *:last-child {
         margin-bottom:          0;
-        --palm-button-space-after: 0; // same for palm:button and palm:form-item
+        --palm-button-space-after: 0; // same for palm:button, palm:form-item and palm:form-actions
         --palm-form-item-space-after: 0;
+        --palm-form-actions-space-after: 0;
         > *:last-child {
             margin-bottom:      0;
             --palm-button-space-after: 0;
             --palm-form-item-space-after: 0;
+            --palm-form-actions-space-after: 0;
         }
     }
 }
