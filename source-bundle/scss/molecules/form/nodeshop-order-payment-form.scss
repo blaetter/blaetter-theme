@@ -27,9 +27,10 @@
         .nodeshop_price {
             float:          right;
         }
+        // Context for palm:form-item
         &.form-item {
-            margin-top: $mediumGapPx;
-            margin-bottom: 0;
+            --palm-form-item-space-before: #{$mediumGapPx};
+            --palm-form-item-space-after: 0;
         }
     }
     .nodeshop_order_address {

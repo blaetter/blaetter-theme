@@ -40,7 +40,7 @@ $form-namespace:            $namespace !default;
         margin-top:                 0.4em; // same gap as below the labels
         margin-bottom:              0;
     }
-    label,
+    // Labels of form items: palm:form-item in the Palm theme.
     .legend,
     .fieldset-legend,
     .captcha__title { // legend of the CAPTCHA module
@@ -226,11 +226,6 @@ $form-namespace:            $namespace !default;
         color:              $red;
     }
 
-    // Drupal overwrite
-    label.option {
-        display: inline;
-        font-weight: normal;
-    }
     details {
         border: 1px solid $greyBorder;
         margin-top: 1em;
@@ -253,6 +248,9 @@ $form-namespace:            $namespace !default;
             box-sizing:     border-box; // explicit set box sizing due bug (?) in webkit
         }
     }
+    // Form items get their spacing from palm:form-item (Palm theme), which
+    // wins over this rule; it remains for fieldsets of option groups, which
+    // Drupal gives the class form-item as well.
     .form-item,
     .form-actions {
         margin-top:         $mediumGapPx;
@@ -264,6 +262,9 @@ $form-namespace:            $namespace !default;
     .confirm-parent, .password-parent {
         clear: left;
         margin: 0;
+        // Context for palm:form-item
+        --palm-form-item-space-before: 0;
+        --palm-form-item-space-after: 0;
         max-width: none;
         overflow: visible;
         width:  100%;

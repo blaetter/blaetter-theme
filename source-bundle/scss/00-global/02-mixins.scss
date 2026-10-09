@@ -403,10 +403,12 @@
     margin:                 0 0 $blockPaddingPx 0;
     > *:first-child {
         margin-top:         0;
+        --palm-form-item-space-before: 0; // same for palm:form-item
     }
     > *:last-child {
         margin-bottom:         0;
         --palm-button-space-after: 0; // same for palm:button
+        --palm-form-item-space-after: 0; // same for palm:form-item
     }
 }
 @mixin nodeshop-heading-with-edit-link() {
