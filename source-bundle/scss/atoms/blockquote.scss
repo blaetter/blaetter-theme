@@ -11,5 +11,6 @@ $blockquote-namespace:              $namespace !default;
     color:              lighten($baseTextColor, 20%);
     > *:last-child {
         margin-bottom:  0;
+        --palm-button-space-after: 0; // same for palm:button
     }
 }

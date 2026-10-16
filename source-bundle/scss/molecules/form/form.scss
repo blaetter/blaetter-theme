@@ -13,6 +13,7 @@ $form-namespace:            $namespace !default;
         }
         > *:last-child {
             margin-bottom:              0;
+            --palm-button-space-after: 0; // same for palm:button
         }
     }
 }
@@ -25,6 +26,8 @@ $form-namespace:            $namespace !default;
         margin-top:                 0;
         margin-bottom:              0.5em;
     }
+    // Fieldsets of Drupal's form elements: palm:fieldset (Palm theme); this
+    // rule remains for the fieldset of the CAPTCHA module.
     fieldset {
         margin-bottom:              $gridGutter;
         &:last-child {
@@ -36,11 +39,13 @@ $form-namespace:            $namespace !default;
         @include fontsize($smallest-font-size);
         display:                    block;
         color:                      $lightestTextGrey;
+        margin-top:                 0.4em; // same gap as below the labels
         margin-bottom:              0;
     }
-    label,
+    // Labels of form items: palm:form-item in the Palm theme.
+    // Legends of fieldsets: palm:fieldset in the Palm theme.
     .legend,
-    .fieldset-legend {
+    .captcha__title { // legend of the CAPTCHA module
         display:        block;
         font-weight:    bold;
         margin-bottom:  0.4em;
@@ -223,44 +228,15 @@ $form-namespace:            $namespace !default;
         color:              $red;
     }
 
-    // Drupal overwrite
-    label.option {
-        display: inline;
-        font-weight: normal;
-    }
-    details {
-        border: 1px solid $greyBorder;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        > .details-wrapper {
-            padding: 0.5em 1.5em;
-        }
-        summary {
-            cursor: pointer;
-            padding: 0.2em 0em;
-        }
-    }
-    > details {
-        border:             0 none;
-        > summary {
-            font-size:      1.5em;
-        }
-        > .details-wrapper {
-            padding:        0;
-            box-sizing:     border-box; // explicit set box sizing due bug (?) in webkit
-        }
-    }
-    .form-item,
-    .form-actions {
-        margin-top:         $mediumGapPx;
-        margin-bottom:      $mediumGapPx;
-        &:first-child {
-            margin-top:    0;
-        }
-    }
+    // Details (collapsible groups): palm:details in the Palm theme.
+    // Spacing of form items, fieldsets and form actions: palm:form-item,
+    // palm:fieldset and palm:form-actions in the Palm theme.
     .confirm-parent, .password-parent {
         clear: left;
         margin: 0;
+        // Context for palm:form-item
+        --palm-form-item-space-before: 0;
+        --palm-form-item-space-after: 0;
         max-width: none;
         overflow: visible;
         width:  100%;
@@ -284,45 +260,10 @@ $form-namespace:            $namespace !default;
     @include form--prependlabel();
 }
 
-#{$form-namespace}.form-actions {
-    @include clearfix();
-    @include getRem('margin-top', $formgoupBottomMarginPx);
-    @include media-query($breakpoint_medium) {
-        display:                flex;
-        justify-content:        flex-end;
-        align-items:            center;
-        > *,
-        button,
-        .button {
-            width:              auto;
-            float:              none;
-            margin-bottom:      0em;
-            margin-left:        1em;
-        }
-    }
-    @include media-query($breakpoint_phone) {
-        display:                    block;
-        > * {
-            width:                  100%;
-             margin-bottom:         1em;
-        }
-    }
-    .form-helptext {
-        display:                    inline-block;
-        margin:                     0;
-        @include getRem('margin-top', $btn-heightPx/3.5);
-    }
-    .quicklinks {
-        display:                inline-block;
-    }
-    // > button:last-child,
-    // > .button:last-child {
-    //     margin-left:            0;
-    // }
-}
+// Bar of the form buttons: palm:form-actions in the Palm theme.
 @include media-query($breakpoint_medium) {
     #{$form-namespace}form .grid + .form-actions {
-        margin-top:                 0;
+        --palm-form-actions-space-before: 0; // context for palm:form-actions
     }
 }
 
