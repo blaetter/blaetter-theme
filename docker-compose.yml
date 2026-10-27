@@ -6,4 +6,5 @@ services:
     environment:
       - VIRTUAL_HOST=blaetter-theme.local
     ports:
-      - "80"
+      # Random host port, only on the loopback interface (not reachable from the network).
+      - "127.0.0.1::80"

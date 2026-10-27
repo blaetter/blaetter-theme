@@ -14,7 +14,7 @@ Definition und Styleguide von Blaetter.de mit Hilfe von [Pattern Lab](http://pat
 ### Docker
 
 * [`bin/docker-build`](bin/docker-build) – build docker image using [Dockerfile](/Dockerfile) - needs to be executed at least once after checking out
-* [`bin/docker-update-shell`](/bin/docker-update-shell) – run image, show dynamic allocated port, open shell in container
+* [`bin/docker-update-shell`](/bin/docker-update-shell) – run image, show dynamic allocated port (bound to 127.0.0.1 only), open shell in container
 
 ### In den Container gehen
 * @see [`bin/docker-update-shell`](/bin/docker-update-shell)
