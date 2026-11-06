@@ -125,7 +125,7 @@ $form-namespace:            $namespace !default;
        @include color-inputelement($textSuccessColor, $white);
     }
     .has-error {
-        @include color-inputelement($textErrorColor, #FFF8F7);
+        @include color-inputelement($textErrorColor, $white);
     }
     .validation-feedback {
         @include fontsize($smallest-font-size);

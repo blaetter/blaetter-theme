@@ -2,13 +2,13 @@ $blockquote-namespace:              $namespace !default;
 
 #{$blockquote-namespace}blockquote {
     background-color:   $grey;
-    border-left:        5px solid darken($grey, 10%);
+    border-left:        5px solid $greyBorder;
     margin-left:        $gridGutter;
     background:         none;
     border:             0 none;
     padding:            0;
     @include getRem('margin-bottom', $blockBottomMarginPx);
-    color:              lighten($baseTextColor, 20%);
+    color:              $muted;
     > *:last-child {
         margin-bottom:  0;
         --palm-button-space-after: 0; // same for palm:button

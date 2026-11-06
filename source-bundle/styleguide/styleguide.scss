@@ -4,6 +4,7 @@
  */
 // Same cascade layer as palm.css, so both behave as before the layers.
 @layer legacy {
+@import "../scss/00-global/00-blaetter-tokens";
 @import "../scss/00-global/01-settings"; 
 @import "../scss/00-global/02-mixins";
  
@@ -207,7 +208,7 @@ $styleguide-namespace:              $namespace !default;
     .sg-def-sourceDesk {
         display:    block;
         &::after {
-            content:    "font: normal #{$smallest-font-size}/1.2 #{$base-font-family}; color: #{$greySourceDesk}";
+            content:    "font: normal #{$smallest-font-size}/1.2 #{$base-font-family}; color: #{$greySource}";
         }
     }
     .sg-color-greyBorder {

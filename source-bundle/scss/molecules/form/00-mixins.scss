@@ -22,8 +22,8 @@
         @include getRem('min-height', $formInputHeightPalmPx);
     }
     &:focus {
-        border-color:       #66afe9;
-        box-shadow:         0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+        border-color:       $focus;
+        box-shadow:         0 0 0 1px $focus; // 2 px frame with the border, no glow
         outline:            0 none;
     }
 }
@@ -43,7 +43,7 @@
         background-color:   $bgColor;
         &:focus {
             border-color:   $color;
-            box-shadow:     0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $color;
+            box-shadow:     0 0 0 1px $color;
         }
     }
 }
