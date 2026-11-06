@@ -20,7 +20,8 @@ all: \
 	public/latest-change.txt \
 	public/themes/contrib/palm/bundle/palm.js \
 	public/themes/contrib/palm/bundle/palm.css \
-	export
+	export \
+	colors-check
 
 .PHONY: deps
 deps:
@@ -49,6 +50,12 @@ public/themes/contrib/palm/bundle/palm.js public/themes/contrib/palm/bundle/palm
 export: public/latest-change.txt public/themes/contrib/palm/bundle/palm.js public/themes/contrib/palm/bundle/palm.css
 	$(PATTERNLAB) --export
 	cp -a public/themes/contrib/palm/bundle export/
+
+# Every colour of palm.css must be a token of blaetter-design (copy in
+# source-bundle/scss/00-global/00-blaetter-tokens.scss) or a listed exception.
+.PHONY: colors-check
+colors-check: public/themes/contrib/palm/bundle/palm.css
+	$(PHP) bin/colors-check.php public/themes/contrib/palm/bundle/palm.css
 
 .PHONY: tests
 tests:

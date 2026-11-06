@@ -21,22 +21,27 @@ $namespace:                       null; //".mynamespace "; // to use as a wrappe
 // [...]
 
 // Base Colors
-$white:                         #FFFFFF;
-$black:                         #000000;
-$red:                           #E51736; // the red of the logo; values: blaetter-design (tokens.json)
-$blue:                          #086D9A;
-$bluelight:                     #4ac6ff;
-$grey:                          #f2f2f2; // page wrapper background
-$greyDark:                      #e3e3e3; //
-$greyLight:                     #808080;
-$greyDisabled:                  $greyLight;
+// All colours come from blaetter-design (tokens.json): 00-blaetter-tokens.scss is a
+// verbatim copy of its dist/tokens.scss. Only point to its variables here, never
+// write a colour value; `make colors-check` fails on colours that are no tokens.
+$white:                         $blaetter-color-page;
+$black:                         $blaetter-color-text;
+$red:                           $blaetter-color-red;        // the red of the logo
+$red-dark:                      $blaetter-color-red-dark;   // hover of red buttons
+$blue:                          $blaetter-color-link;
+$bluelight:                     $blaetter-color-link-on-dark; // links on dark ground
+$grey:                          $blaetter-color-surface;    // page wrapper background
+$greyDark:                      $blaetter-color-rule;
+$greyLight:                     $blaetter-color-boundary;   // borders of controls only, never text
+$muted:                         $blaetter-color-muted;      // grey text
+$focus:                         $blaetter-color-focus;
+$greyDisabled:                  $muted;
 $greyBgMarginal:                $greyDark; // Marginal Background Color
 // Special Colors
-$lightestTextGrey:              $greyLight; // quote
-$greyBorder:                    #CCCCCC;
-$greyInputBorder:               $greyBorder;
+$lightestTextGrey:              $muted; // quote
+$greyBorder:                    $blaetter-color-rule-strong; // rules and dividers
+$greyInputBorder:               $greyLight;                 // fields, checkboxes, light buttons
 $greySource:                    $lightestTextGrey;
-$greySourceDesk:                darken($white, 12%);
 $greyAuthor:                    $lightestTextGrey;
 $blueAuthor:                    $bluelight;
 $greyAnzeige:                   $lightestTextGrey;
@@ -46,14 +51,13 @@ $labelColorLight:               $lightestTextGrey;
 $formElementBorderColor:        $greyInputBorder;
 $formgoupBottomMarginPx:        14px;
 // TextColors in validated forms and messageboxes
-$textSuccessColor:              #008000; // checklist icon
-$textWarningColor:              #f0ad4e;
-$textInfoColor:                 #FFBF00;
+$textSuccessColor:              $blaetter-color-success; // checklist icon
+$textInfoColor:                 $blue;
 $textErrorColor:                $red;
-// message box colors:
-$messageBaseBg:                 #fcf8e3;
-$messageSuccessBg:              #dff0d8;
-$messageErrorBg:                #f2dede;
+// message box colors: one ground, the kind shows in the rule at the left and the icon
+$messageBaseBg:                 $grey;
+// Font Awesome (.fa-border)
+$fa-border-color:               $greyDark;
 
 // Dimensions
 $smallGapPx:                    12px;
@@ -95,7 +99,6 @@ $base-font-family:              'droid-sans', Arial, sans-serif;
 $serif-font-family:             'droid-serif', serif;
 $headline-font-family:          'playfair', 'droid-serif', serif;
 $baseTextColor:                 $black;
-$fontInactiveColor:             #999999;
 $linkColor:                     $blue;
 $inlineBottomGutter:            0.7em; // Margin bottom for paragraphs, lists, ...
 $base-font-size:                18px;

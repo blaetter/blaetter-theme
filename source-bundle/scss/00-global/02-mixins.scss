@@ -347,7 +347,7 @@
 // new: with list wrapper
 @mixin paginator-item() {
     > * {
-        border:                         1px solid $greyBorder;
+        border:                         1px solid $greyInputBorder;
         margin-right:                   -1px;
         color:                          $linkColor;
         min-height:                     2.4em;

@@ -1,7 +1,7 @@
 $button-namespace:              $namespace !default;
 $buttonMargin:                  0em !default;
 $btn-background:                $blue !default;
-$btn-background-hover:          lighten($btn-background, 5%) !default;
+$btn-background-hover:          $blaetter-color-link-hover !default;
 $btn-font-color:                $white !default;
 $btn-border-color:              $blue !default;
 
@@ -95,7 +95,7 @@ $btn-border-color:              $blue !default;
 @mixin button--reversed() {
     @extend .btn;
     background-color:       $white !important;
-    border:                 1px solid $greyBorder !important;
+    border:                 1px solid $greyInputBorder !important;
     color:                  $linkColor !important;
     font-weight:            normal !important;
     opacity:                1 !important;
@@ -104,7 +104,7 @@ $btn-border-color:              $blue !default;
         background-color:   $white !important;
         color:              $linkColor !important;
         text-decoration:    none !important;
-        border-color:       $greyDark !important;
+        border-color:       $greyInputBorder !important;
     }
 }
 
@@ -117,9 +117,9 @@ $btn-border-color:              $blue !default;
   opacity:                1;
   &:hover,
   &:focus {
-      background-color:   lighten($red, 10%);
+      background-color:   $red-dark;
       text-decoration:    none;
-      border-color:       lighten($red, 10%);
+      border-color:       $red-dark;
   }
 }
 
@@ -132,9 +132,10 @@ $btn-border-color:              $blue !default;
   opacity:                1;
   &:hover,
   &:focus {
-      background-color:   lighten($red, 40%);
+      background-color:   $red;
       text-decoration:    none;
-      border-color:       lighten($red, 10%);
+      border-color:       $red;
+      color:              $white;
   }
 }
 
@@ -162,7 +163,7 @@ $btn-border-color:              $blue !default;
 @mixin button--disabled() {
     @extend .btn;
     background-color:       $grey;
-    border:                 1px solid $greyDisabled;
+    border:                 1px solid $greyLight;
     color:                  $greyDisabled;
     font-weight:            normal;
     opacity:                1;
@@ -214,7 +215,7 @@ $btn-border-color:              $blue !default;
 #{$button-namespace}button.searchmore,
 #{$button-namespace}.button--pagination {
     @include getRem('margin-bottom', $blockBottomMarginPx);
-    border:                         1px solid $greyBorder;
+    border:                         1px solid $greyInputBorder;
     color:                          $linkColor;
     font-size:                      $base-font-size;
     text-align:                     center;
