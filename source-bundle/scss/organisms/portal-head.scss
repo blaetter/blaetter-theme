@@ -3,8 +3,9 @@ $portal-head-namespace:              $namespace !default;
 
 #{$portal-head-namespace}.portal-head {
     @include clearfix();
-    @include getRem('padding-top', 10px);
-    @include getRem('padding-bottom', 10px);
+    // Spacing from the 4 px scale of blaetter-design: s (12 px) above and below
+    @include getRem('padding-top', $smallGapPx);
+    @include getRem('padding-bottom', $smallGapPx);
     @include getRem('padding-left', $pagePaddingPx);
     @include getRem('padding-right', $pagePaddingPx);
     display:                    flex;
@@ -14,8 +15,8 @@ $portal-head-namespace:              $namespace !default;
     margin:                     0;
     background-color:           $white;
     @include media-query($breakpoint_phone) {
-        @include getRem('padding', 12px);
-        @include getRem('padding-bottom', 12px/2);
+        @include getRem('padding', $smallGapPx);
+        @include getRem('padding-bottom', 8px); // xs of the spacing scale
         @include getRem('padding-left', $pagePaddingPalmPx);
         @include getRem('padding-right', $pagePaddingPalmPx);
         .portal-logo {
@@ -47,7 +48,7 @@ $portal-head-namespace:              $namespace !default;
         }
         > * {
             padding:        0.5em;
-            margin-left:    15px;
+            margin-left:    $mediumGapPx;
             --palm-button-space-after: 0;
         }
         .button--promo {
